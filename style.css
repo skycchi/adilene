@@ -13,7 +13,7 @@
     box-sizing: border-box;
     scrollbar-color:#e74492 #fff;
     scrollbar-width:thin;
-    cursor:url('/arrow.png'), pointer;
+    cursor:url('https://files.catbox.moe/h0vf27.png'), pointer;
 }
 
 ::-webkit-scrollbar{
@@ -62,27 +62,27 @@ a:hover{
 
 @font-face{
     font-family:'Legacy';
-    src:url(/fonts/LegacySansStd-Medium.otf);
+    src:url("https://files.catbox.moe/tfa25v.otf");
 }
 
 @font-face{
     font-family:'Pixel Operator';
-    src:url(/fonts/PixelOperator.ttf);
+    src:url("https://files.catbox.moe/kyguk9.ttf");
 }
 
 @font-face{
     font-family:'Orbitron';
-    src:url(/fonts/Orbitron.ttf);
+    src:url("https://files.catbox.moe/cckohn.ttf");
 }
 
 @font-face{
     font-family:'YTTD';
-    src:url(/fonts/mplus-1m-regular.ttf);
+    src:url("https://files.catbox.moe/0f9tqg.ttf");
 }
 
 @font-face{
     font-family:'Yuzu';
-    src:url(/fonts/Yuzu.ttf);
+    src:url("https://files.catbox.moe/4hipgc.ttf");
 }
 
 body {
