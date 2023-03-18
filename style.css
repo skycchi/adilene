@@ -62,27 +62,27 @@ a:hover{
 
 @font-face{
     font-family:'Legacy';
-    src:url("https://files.catbox.moe/tfa25v.otf");
+    src:url(https://adilene.neocities.org/fonts/LegacySansStd-Medium.otf);
 }
 
 @font-face{
     font-family:'Pixel Operator';
-    src:url("https://files.catbox.moe/kyguk9.ttf");
+    src:url(https://adilene.neocities.org/fonts/PixelOperator.ttf);
 }
 
 @font-face{
     font-family:'Orbitron';
-    src:url("https://files.catbox.moe/cckohn.ttf");
+    src:url(https://adilene.neocities.org/fonts/Orbitron.ttf);
 }
 
 @font-face{
     font-family:'YTTD';
-    src:url("https://files.catbox.moe/0f9tqg.ttf");
+    src:url(https://adilene.neocities.org/fonts/mplus-1m-regular.ttf);
 }
 
 @font-face{
     font-family:'Yuzu';
-    src:url("https://files.catbox.moe/4hipgc.ttf");
+    src:url(https://adilene.neocities.org/fonts/Yuzu.ttf);
 }
 
 body {
