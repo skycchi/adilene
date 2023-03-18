@@ -1,0 +1,77 @@
+/* onionring.js is made up of four files - onionring-widget.js, onionring-index.js, onionring-variables.js and onionring.css (this one!)
+// it's licensed under the cooperative non-violent license (CNPL) v4+ (https://thufie.lain.haus/NPL.html)
+// it was originally made by joey + mord of allium (蒜) house, last updated 2020-10-24 */
+
+/* === ONIONRING.CSS === */
+/* this file affects the style of the widget. remember to replace all instances of #meikoring with whatever value you have for ringID in the onionring-widget.js file. make sure it still has the # at the front, though! probably easiest to use find+replace to do it */
+
+@font-face{
+    font-family:'Orbitron';
+    src:url(https://adilene.net/fonts/Orbitron-Regular.ttf);
+}
+
+@font-face{
+    font-family:'Pixel Operator';
+    src:url(https://adilene.net/fonts/PixelOperator.ttf);
+}
+
+.meikocontainer::selection {
+    background: #bf4812;
+    color:white;
+}
+ 
+.meikocontainer::-moz-selection {
+    background: #bf4812;
+    color:white;
+}
+
+.meikocontainer{
+    width:200px;
+    height: 200px;
+    padding:10px 10px 0px 10px;
+}
+
+#meikoring {
+    margin: 10px auto;
+    background-color: #ffb594;
+    border:3px solid #bf4812;
+    width:200px;
+}
+
+#meikoring table {
+    margin: 0 auto;
+}
+
+#meikoring .webring-info {
+    text-align:center;
+    font-family:Orbitron;
+    color:#bf4812;
+    font-size:20px;
+}
+
+#meikoring .webring-links{
+    font-size:18px;
+    font-family:Pixel Operator;
+    color:#bf4812;
+}
+
+#meikoring .webring-links a{
+    text-decoration: none;
+    color:#bf4812;
+    text-shadow: 2px 2px 1px #bf8146;
+    transition:0.3s;
+}
+
+#meikoring .webring-links a:hover{
+    
+    letter-spacing: normal;
+}
+
+img {
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}

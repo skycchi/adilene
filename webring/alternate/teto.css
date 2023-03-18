@@ -1,0 +1,70 @@
+@font-face{
+    font-family:'Orbitron';
+    src:url(https://adilene.net/fonts/Orbitron-Regular.ttf);
+}
+
+@font-face{
+    font-family:'Pixel Operator';
+    src:url(https://adilene.net/fonts/PixelOperator.ttf);
+}
+
+.tetocontainer::selection {
+    background: #eb757e;
+    color:white;
+}
+ 
+.tetocontainer::-moz-selection {
+    background: #eb757e;
+    color:white;
+}
+
+.tetocontainer{
+    width:200px;
+    height: 200px;
+    padding:10px 10px 0px 10px;
+}
+
+#tetoring {
+    margin: 10px auto;
+    background-color: #eb757e;
+    border:3px solid #5d6964;
+    width:200px;
+}
+
+#tetoring table {
+    margin: 0 auto;
+}
+
+#tetoring .webring-info {
+    text-align:center;
+    font-family:Orbitron;
+    color:#5d6964;
+    font-size:20px;
+}
+
+#tetoring .webring-links{
+    font-size:18px;
+    font-family:Pixel Operator;
+    color:#5d6964;
+}
+
+#tetoring .webring-links a{
+    text-decoration: none;
+    color:#5d6964;
+    text-shadow: 2px 2px 1px #eb757e;
+    transition:0.3s;
+}
+
+#tetoring .webring-links a:hover{
+    
+    letter-spacing: normal;
+}
+
+img {
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}

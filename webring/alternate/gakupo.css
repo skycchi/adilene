@@ -1,0 +1,79 @@
+/* onionring.js is made up of four files - onionring-widget.js, onionring-index.js, onionring-variables.js and onionring.css (this one!)
+// it's licensed under the cooperative non-violent license (CNPL) v4+ (https://thufie.lain.haus/NPL.html)
+// it was originally made by joey + mord of allium (蒜) house, last updated 2020-10-24 */
+
+/* === ONIONRING.CSS === */
+/* this file affects the style of the widget. remember to replace all instances of #gakuporing with whatever value you have for ringID in the onionring-widget.js file. make sure it still has the # at the front, though! probably easiest to use find+replace to do it */
+
+@font-face{
+    font-family:'Orbitron';
+    src:url(https://adilene.net/fonts/Orbitron-Regular.ttf);
+}
+
+@font-face{
+    font-family:'Pixel Operator';
+    src:url(https://adilene.net/fonts/PixelOperator.ttf);
+}
+
+.gakupocontainer::selection {
+    background: #b13d8e;
+    color:white;
+}
+ 
+.gakupocontainer::-moz-selection {
+    background: #b13d8e;
+    color:white;
+}
+
+.gakupocontainer{
+    width:200px;
+    height: 200px;
+    padding:10px 10px 0px 10px;
+}
+
+#gakuporing {
+    margin: 10px auto;
+    border:3px solid #b13d8e;
+    background-color: #d0b9c9;
+    width:200px;
+}
+
+#gakuporing table {
+    margin: 0 auto;
+}
+
+#gakuporing .webring-info {
+    text-align:center;
+    font-family:Orbitron;
+    color:#177eb8;
+    font-size:20px;
+}
+
+#gakuporing .webring-links{
+    font-size:18px;
+    font-family:Pixel Operator;
+    color:#177eb8;
+}
+
+#gakuporing .webring-links a{
+    font-size:18px;
+    font-family:Pixel Operator;
+    text-decoration: none;
+    color:#177eb8;
+    text-shadow: 2px 2px 1px #819baa;
+    transition:0.3s;
+}
+
+#gakuporing .webring-links a:hover{
+    
+    letter-spacing: normal;
+}
+
+img {
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
