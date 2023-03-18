@@ -22,22 +22,22 @@ let track_list = [
     {
         name:"Bug",
         artist:"Kairiki Bear",
-        path:"/music/Bug.mp3"
+        path:"https://adilene.neocities.org/music/Bug.mp3"
     },
     {
         name:"RRRRafflesia",
         artist:"Utsu-P",
-        path:"/music/RRRRafflesia.mp3"
+        path:"https://adilene.neocities.org//music/RRRRafflesia.mp3"
     },
     {
         name: "Rinne",
         artist:"Hachi",
-        path: "/music/Rinne.mp3",
+        path: "https://adilene.neocities.org//music/Rinne.mp3",
     },
     {
         name:"Play With Fire",
         artist:"Camellia",
-        path:"/music/Play With Fire.mp3"
+        path:"https://adilene.neocities.org//music/Play With Fire.mp3"
     },
 
 ];
