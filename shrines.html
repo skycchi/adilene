@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>VIRTUAL DIVA</title>
+        <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+        <script src="https://kit.fontawesome.com/f936906ae0.js" crossorigin="anonymous"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="/scripts/rightclick.js"></script>
+    </head>
+    <style>
+        body{
+            background-color:white;
+            overflow:auto;
+            text-align:center;
+            background-image:none;
+            margin:10px;
+        }
+        
+        @keyframes fadeEffect {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        
+        img{
+            max-width:100%;
+            max-height:100%;
+            transition:0.3s;
+            z-index:1;
+        }
+        
+        .buttons{
+            display:flex;
+            flex-direction:column;
+            margin-top:-5px;
+        }
+        
+        .buttonsrow{
+            display:flex;
+            flex-direction:row;
+            justify-content:space-around;
+            padding-bottom:10px;
+            margin:auto;
+            width:100%;
+            max-width:570px;
+        }
+        
+        .thumbnail{
+            display:flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+        }
+        
+        .thumbnail img{
+            width:258.5px;
+            height:258.5px;
+            object-fit:cover;
+            border: var(--bw) var(--bt) var(--bc);
+            box-sizing: border-box;
+            padding:10px;
+            background-color:#dbfcff;
+        }
+        
+        .thumbnail:hover{
+            letter-spacing: 0;
+        }
+        
+        img:hover{
+            opacity:0.8;
+            transition:0.3s;
+        }
+        
+        .wrap{
+            max-width:100%;
+            gap:10px;
+            margin:auto;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+    </style>
+    <body>
+        
+        <header>SHRINES</header>
+        
+        Welcome to my shrines! Click on any link below to view its respective shrine.
+        <br><br>
+        Autoplay is recommended.
+        <br><br>
+        <div class="wrap">
+            <div class="thumbnail">
+                <a href="yourturntodie.html" target="_parent"><img src="https://adilene.neocities.org/images/yttd/thumbnail.jpeg"></a> <a href="yourturntodie.html" target="_parent">Your Turn To Die</a><br>
+            </div>
+            <div class="thumbnail">
+                <a href="mirainikki.html" target="_parent"><img src="https://adilene.neocities.org/images/mirainikki/thumbnail.jpeg" style="object-position: 0px -1px"></a>  <a href="mirainikki.html" target="_parent">Mirai Nikki</a> (WIP)
+            </div>
+            <div class="thumbnail">
+                <a href="capybara.html" target="_parent"><img src="https://adilene.neocities.org/images/thumbnail.jpg"></a> <a href="capybara.html" target="_parent">Capybaras</a>
+            </div>
+            <div class="thumbnail">
+                <a href="madokamagica.html" target="_parent"><img src="https://adilene.neocities.org/images/pmmm/thumbnail.jpg"></a> <a href="madokamagica.html" target="_parent">Puella Magi Madoka Magica</a> (Desktop only)
+            </div>
+        </div>
+        <br>
+        
+        <header>SHRINE STAMPS</header>
+        
+        Your Turn To Die<br><br>
+        <div class="buttons">
+            <div class="buttonsrow" style="max-width:440px">
+                <img src="https://adilene.neocities.org/images/stamps/yttd/stamp1.png" draggable="false">
+                <img src="https://adilene.neocities.org/images/stamps/yttd/stamp6.png" draggable="false">
+                <img src="https://adilene.neocities.org/images/stamps/yttd/stamp3.png" draggable="false">
+                <img src="https://adilene.neocities.org/images/stamps/yttd/stamp8.png" draggable="false">
+            </div>
+            <div class="buttonsrow" style="max-width:440px">
+                <img src="https://adilene.neocities.org/images/stamps/yttd/stamp5.png" draggable="false">
+                <img src="https://adilene.neocities.org/images/stamps/yttd/stamp2.png" draggable="false">
+                <img src="https://adilene.neocities.org/images/stamps/yttd/stamp7.png" draggable="false">
+                <img src="https://adilene.neocities.org/images/stamps/yttd/stamp4.png" draggable="false">
+            </div>
+        </div>
+        
+        Mirai Nikki<br><br>
+        <div class="buttons">
+            <div class="buttonsrow" style="max-width:440px">
+                <img src="https://adilene.neocities.org/images/stamps/mn/stamp1.gif" draggable="false">
+                <img src="https://adilene.neocities.org/images/stamps/mn/stamp2.gif" draggable="false">
+                <img src="https://adilene.neocities.org/images/stamps/mn/stamp3.gif" draggable="false">
+                <img src="https://adilene.neocities.org/images/stamps/mn/stamp4.gif" draggable="false">
+            </div>
+            <div class="buttonsrow" style="max-width:440px">
+                <img src="https://adilene.neocities.org/images/stamps/mn/stamp5.png" draggable="false">
+                <img src="https://adilene.neocities.org/images/stamps/mn/stamp8.png" draggable="false">
+                <img src="https://adilene.neocities.org/images/stamps/mn/stamp6.png" draggable="false">
+                <img src="https://adilene.neocities.org/images/stamps/mn/stamp7.png" draggable="false">
+            </div>
+        </div>
+        
+    </body>
+</html>
