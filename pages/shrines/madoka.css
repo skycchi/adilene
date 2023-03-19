@@ -1,0 +1,422 @@
+
+::selection{
+    background-color:#fa8391;
+    color:white;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+body{
+    animation: none;
+    background-image: url("https://adilene.neocities.org/images/pmmm/background.jpeg");
+    margin:0;
+    color:#000;
+    font-family:'legacy';
+    font-size:18px;
+    overflow:auto;
+    background-color:#fff;
+}
+
+@font-face{
+    font-family:'Shqip';
+    src:url(https://adilene.neocities.org/fonts/Shqip.otf)
+}
+
+@font-face{
+    font-family:'Hangyaku';
+    src:url(https://adilene.neocities.org/fonts/Hangyaku.ttf)
+}
+
+@font-face{
+    font-family:'Madomagi';
+    src:url(https://adilene.neocities.org/fonts/madomagi.otf)
+}
+
+@font-face{
+    font-family:'Runes';
+    src:url(https://adilene.neocities.org/fonts/runes.ttf)
+}
+
+@font-face{
+    font-family:'Legacy';
+    src:url(https://adilene.neocities.org/fonts/legacy.otf)
+}
+
+.full img{
+    height:500px;
+    margin-left:50px;
+    bottom:0;
+    left:0;
+    position:absolute;
+    z-index:99999;
+}
+
+.cutin img{
+    position:absolute;
+    top:100px;
+    right:0;
+    width:440px;
+    z-index:1;
+}
+
+.mask{
+    -webkit-mask-image: url(https://adilene.neocities.org/images/pmmm/blur.png);
+    -webkit-mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: top;
+}
+
+#madoka, #homura, #sayaka, #mami, #kyoko{
+    border-radius:20px;
+    margin:-20px -20px -20px -20px;
+    height:600px;
+    background-color: #ffffff;
+    background-position:  50px 0, 50px 0, 0 0, 0 0;
+    background-size: 50px 50px;
+    background-repeat: repeat;
+    scroll-behavior: smooth;
+/*
+    -webkit-mask-image: url(/images/pmmm/blur_edges.png);
+    -webkit-mask-size: 105%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+*/
+}
+
+#madoka{
+    background-image:  linear-gradient(135deg, #fff0f4 25%, transparent 25%), linear-gradient(225deg, #fff0f4 25%, transparent 25%), linear-gradient(45deg, #fff0f4 25%, transparent 25%), linear-gradient(315deg, #fff0f4 25%, #ffffff 25%);
+}
+
+.madoka{
+    border-width: 16px;
+    border-style: solid;
+    border-image:url('https://files.catbox.moe/q0pyaq.png') 34 round;
+}
+
+#homura{
+    background-image:  linear-gradient(135deg, #e9eaff 25%, transparent 25%), linear-gradient(225deg, #e9eaff 25%, transparent 25%), linear-gradient(45deg, #e9eaff 25%, transparent 25%), linear-gradient(315deg, #e9eaff 25%, #ffffff 25%);
+}
+
+.homura{
+    border-width: 16px;
+    border-style: solid;
+    border-image:url('https://files.catbox.moe/5875me.png') 34 round;
+}
+
+#sayaka{
+    background-image:  linear-gradient(135deg, #ddf0f7 25%, transparent 25%), linear-gradient(225deg, #ddf0f7 25%, transparent 25%), linear-gradient(45deg, #ddf0f7 25%, transparent 25%), linear-gradient(315deg, #ddf0f7 25%, #ffffff 25%);
+}
+
+.sayaka{
+    border-width: 16px;
+    border-style: solid;
+    border-image:url('https://files.catbox.moe/4ncfbv.png') 34 round;
+}
+
+#mami{
+    background-image:  linear-gradient(135deg, #f5ecd8 25%, transparent 25%), linear-gradient(225deg, #f5ecd8 25%, transparent 25%), linear-gradient(45deg, #f5ecd8 25%, transparent 25%), linear-gradient(315deg, #f5ecd8 25%, #ffffff 25%);
+}
+
+.mami{
+    border-width: 16px;
+    border-style: solid;
+    border-image:url('https://files.catbox.moe/cyfuhb.png') 34 round;
+}
+
+#kyoko{
+    background-image:  linear-gradient(135deg, #f9dee3 25%, transparent 25%), linear-gradient(225deg, #f9dee3 25%, transparent 25%), linear-gradient(45deg, #f9dee3 25%, transparent 25%), linear-gradient(315deg, #f9dee3 25%, #ffffff 25%);
+}
+
+.kyoko{
+    border-width: 16px;
+    border-style: solid;
+    border-image:url('https://files.catbox.moe/mgsuud.png') 34 round;
+}
+
+#title{
+    font-family:'Hangyaku';
+    font-size:90px;
+    margin:-10px 0px 0px 50px;
+    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+}
+
+.subtitle{
+    font-family:'Hangyaku';
+    font-size:35px;
+    margin-left:20px;
+    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+}
+
+.description{
+    z-index:1;
+    border:5px solid transparent;
+    width:50%;
+    height: 225px;
+    overflow: auto;
+    margin-left:45px;
+    text-align:left;
+    padding:10px 10px 10px 240px;
+    background-color:white;
+    border-radius:20px;
+    word-break: keep-all;
+}
+
+.screencap{
+    display: flex;
+    margin: 30px auto;
+    justify-content: center;
+}
+
+.screencap img:nth-child(1){
+    /*transform:rotate(-5deg);*/
+    margin-top:20px;
+    object-fit: contain;
+    background-color:white;
+}
+
+.screencap img:nth-child(2){
+    /*transform:rotate(-5deg);*/
+    margin-left:-20px;
+    margin-bottom:20px;
+    z-index:1;
+}
+
+.screencap img:nth-child(3){
+    /*transform:rotate(-5deg);*/
+    margin-top:20px;
+    margin-left:-20px;
+}
+
+.screencap img{
+    border:5px solid transparent;
+    width:313px;
+    height:180px;
+    display:block;
+    border-radius:20px;
+    /*transform: rotate(5deg);*/
+}
+
+#curtain img{
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index: 9999999999999999999999999999999999999999999999;
+}
+
+#splash img{
+    width:100%;
+    object-fit:cover;
+    animation: floating 3s infinite ease-in-out;
+
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, 0px); }    
+}
+
+#logo{
+    text-align: left;
+    width:780px;
+    font-family:'Madomagi';
+    color:#f08389;
+    font-size:95px;
+    margin:auto;
+    -webkit-text-stroke: 1px #fff;
+    text-shadow: -2px 0 #fa8391, 0 2px #fa8391, 2px 0 #fa8391, 0 -2px #fa8391;
+    word-break:keep-all;
+}
+
+#mado, #two{
+    font-family:'Madomagi';
+    font-size:70px;
+    text-align: center;
+    padding:20px;
+    color:#fa8391;
+    -webkit-text-stroke: 1px #fff;
+    text-shadow: -2px 0 #fa8391, 0 2px #fa8391, 2px 0 #fa8391, 0 -2px #fa8391;
+}
+
+.desc{
+    height:fit-content;
+    height:moz-fit-content;
+    overflow:auto;
+    text-align: center;
+    margin:0px 40px 40px 40px;
+    font-size:8px;
+    font-style:italic;
+    padding:10px;
+    word-break: keep-all;
+    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+}
+
+#kyubey{
+    text-align: center;
+    padding:0px 50px 0px 50px;
+    margin-top:50px;
+}
+
+#kyubey img{
+    width:300px;
+    margin:auto;
+    display:flex;
+    height:auto;
+}
+
+#wrapper{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    overflow:auto;
+    height:100vh;
+    width:1200px;
+    margin:auto;
+    border:5px solid #f08389;
+    border-image-slice: 153 133 153 133;
+    border-image-width: 40px 40px 40px 40px;
+    border-image-outset: 40px;
+    border-image-repeat:round round;
+    border-image-source: url(https://files.catbox.moe/yuhego.png);
+    border-style: solid;
+    border-top:none;
+    border-bottom:none;
+    padding:50px 0px;
+    z-index:999;
+    gap:50px;
+    background-color:white;
+}
+
+.carousel{
+    width:1020px;
+    padding:20px 20px;
+    position:relative;
+    z-index: 999999999999999999;
+    
+}
+
+.border{
+    border:5px solid #f08389;
+    border-image-slice: 153 133 153 133;
+    border-image-width: 40px 40px 40px 40px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: round round;
+    border-image-source: url(https://files.catbox.moe/yuhego.png);
+    border-style: solid;
+}
+
+.borderblack{
+    border:5px solid #f08389;
+    border-image-slice: 153 133 153 133;
+    border-image-width: 40px 40px 40px 40px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: round round;
+    border-image-source: url(https://files.catbox.moe/krfqf1.png);
+    border-style: solid;
+}
+
+.inner{
+    border:5px solid #f08389;
+    border-radius:20px;
+    height:632px;
+    background-color:#fef2f5;
+    text-align:center;
+}
+
+.innertwo{
+    background-color:#f2f2f2;
+    height:632px;
+    border-width: 20px;
+    padding:20px;
+    border-style: solid;
+    border-color:#22190d;
+}
+
+#runes{
+    font-family:'runes';
+    font-size:50px;
+    color:#22190d;
+    -webkit-text-stroke: 1px #fff;
+    text-shadow: -2px 0 #22190d, 0 2px #22190d, 2px 0 #22190d, 0 -2px #22190d;
+}
+
+#runesdesc{
+    width:300px;
+    font-family:'runes';
+    font-size:30px;
+    color:#22190d;
+    -webkit-text-stroke: 1px #fff;
+    text-shadow: -2px 0 #22190d, 0 2px #22190d, 2px 0 #22190d, 0 -2px #22190d;
+}
+
+.glowpink{
+    animation: blinkpink 0.5s infinite alternate;
+}
+
+.glowpurple{
+    animation: blinkpurple 0.5s infinite alternate;
+}
+.glowyellow{
+    animation: blinkyellow 0.5s infinite alternate;
+}
+.glowblue{
+    animation: blinkblue 0.5s infinite alternate;
+}
+.glowred{
+    animation: blinkred 0.5s infinite alternate;
+}
+
+
+@-webkit-keyframes blinkpink {
+    100% {
+        filter: drop-shadow(0 0 20px #fb8391);
+    }
+    
+    0%{
+        filter: drop-shadow(0 0 20px #fff);
+    }
+}
+
+@-webkit-keyframes blinkpurple {
+    100% {
+        filter: drop-shadow(0 0 20px #6f5a73);
+    }
+    
+    0%{
+        filter: drop-shadow(0 0 20px #fff);
+    }
+}
+@-webkit-keyframes blinkyellow {
+    100% {
+        filter: drop-shadow(0 0 20px #eac775);
+    }
+    
+    0%{
+        filter: drop-shadow(0 0 20px #fff);
+    }
+}
+@-webkit-keyframes blinkblue {
+    100% {
+        filter: drop-shadow(0 0 20px #5d7396);
+    }
+    
+    0%{
+        filter: drop-shadow(0 0 20px #fff);
+    }
+}
+@-webkit-keyframes blinkred {
+    100% {
+        filter: drop-shadow(0 0 20px #7f3946);
+    }
+    
+    0%{
+        filter: drop-shadow(0 0 20px #fff);
+    }
+}

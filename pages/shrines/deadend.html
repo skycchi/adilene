@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="https://em-content.zobj.net/thumbs/240/apple/325/kitchen-knife_1f52a.png">
+        <title>DEAD END.</title>
+        <script src="https://kit.fontawesome.com/f936906ae0.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    </head>
+    <style>
+        body{
+            margin:0;
+        }
+        
+        #tilt{
+            background-image: linear-gradient(rgba(0,0,0, 0.2), rgba(0,0,0, 0.2)),url(https://adilene.neocities.org/images/mirainikki/fence.png"), url(https://adilene.neocities.org/images/mirainikki/sky.jpg");
+            background-color:rgb(218,47,34);
+            background-size: calc(100% + 50px);
+            width:100vw;
+            height:100vh;
+        }
+    
+    </style>
+    <body>
+        <audio autoplay id="2.0">
+            <source src="https://adilene.neocities.org/music/introversion.mp3">
+        </audio>
+        
+        <script>
+            var audio = document.getElementById("2.0");
+            audio.volume = 0.5;
+        </script>
+        
+        <div id="tilt"></div>
+        <script>
+            $(document).ready(function() {
+            var movementStrength = 25;
+            var height = movementStrength / $(window).height();
+            var width = movementStrength / $(window).width();
+            $("#tilt").mousemove(function(e){
+            var pageX = e.pageX - ($(window).width() / 2);
+            var pageY = e.pageY - ($(window).height() / 2);
+            var newvalueX = width * pageX * -1 - 25;
+            var newvalueY = height * pageY * -1 - 50;
+            $('#tilt').css("background-position", newvalueX+"px     "+newvalueY+"px");
+            $('#tilt').css("background-position", newvalueX+"px     "+newvalueY+"px");
+            });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>capybara club</title>
+        <link rel="shortcut icon" href="https://adilene.neocities.org/images/capybara.gif">
+        <script src="https://kit.fontawesome.com/f936906ae0.js" crossorigin="anonymous"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    </head>
+    <style>
+        
+        @font-face {
+            src:url(https://dl.dropbox.com/s/mes7b666uvig5wc/Winkle-Regular.otf);
+            font-family:winkle;
+        }
+        
+        @font-face{
+            src:url(/fonts/Questrial-Regular.otf);
+            font-family:questrial;
+        }
+        
+        ::selection {
+            background: #ab937a;
+            color:white;
+        }
+
+        ::-moz-selection {
+            background: #ab937a;
+            color:white;
+        }
+        
+        /* ===== Scrollbar CSS ===== */
+        /* Firefox */
+        * {
+        scrollbar-width: thin;
+        scrollbar-color: #ab937a #ffffff;
+        }
+
+        /* Chrome, Edge, and Safari */
+        *::-webkit-scrollbar {
+        width: 12px;
+        }
+
+        *::-webkit-scrollbar-track {
+        background: #ffffff;
+        }
+
+        *::-webkit-scrollbar-thumb {
+        background-color: #ab937a;
+        border-radius: 5px;
+        border: 3px solid #ffffff;
+        }
+        
+        body{
+            background-color:white;
+            background-image:url(/images/capybara/background.jpeg);
+            color:black;
+            font-size:22px;
+            animation:fadeEffect 0.5s;
+            font-family:questrial;
+            text-align:center;
+            overflow:auto;
+        }
+        
+        a{
+            color:#ab937a;
+            filter: drop-shadow(1px 1px 0 black) drop-shadow(-1px 1px 0 black) drop-shadow(0 -1px 0 black) drop-shadow(1px 0 black);
+        }
+        
+        #title{
+            margin-top:25px;
+            filter: drop-shadow(5px 5px 0 black) drop-shadow(-1px 1px 0 black) drop-shadow(0 -1px 0 black) drop-shadow(1px 0 black);
+            font-family:winkle;
+            font-size:100px;
+            color:#ab937a;
+        }
+        
+        #titletwo{
+            margin-top:20px;
+            font-size:40px;
+            filter: drop-shadow(1px 1px 0 #ab937a) drop-shadow(-1px 1px 0 black) drop-shadow(0 -1px 0 black) drop-shadow(1px 0 black);
+        }
+        
+        .bounce{
+            animation: bounce 3s infinite; 
+            animation-timing-function: cubic-bezier(0.25, 0.85, 0.4, 1);
+            
+        }
+        
+        .float{
+            animation: floating 3s infinite ease-in-out;
+        }
+        
+        @keyframes floating {
+            0% { transform: translate(0,  0px); }
+            50%  { transform: translate(0, 15px); }
+            100%   { transform: translate(0, -0px); }    
+        }
+        
+        .letterone { animation-delay:0s; display:inline-block;}
+        .lettertwo { animation-delay:0.2s; display:inline-block;}
+        .letterthree { animation-delay:0.4s; display:inline-block; }
+        .letterfour { animation-delay:0.6s; display:inline-block;}
+        .letterfive { animation-delay:0.8s; display:inline-block;}
+        .lettersix { animation-delay:1s; display:inline-block;}
+        .letterseven { animation-delay:1.2s; display:inline-block;}
+        .lettereight { animation-delay:1.4s; display:inline-block;}
+        .letternine { animation-delay:1.6s; display:inline-block;}
+        .letterten { animation-delay:1.8s; display:inline-block;}
+        .lettereleven { animation-delay:2s; display:inline-block; }
+        .lettertwelve { animation-delay:2.2s; display:inline-block;}
+        
+        
+        @keyframes bounce { 0% { transform: scale(1,1) translateY(0); } 10% { transform: scale(1.1,.9) translateY(0); } 30% { transform: scale(.9,1.1) translateY(-30px); } 50% { transform: scale(1.05,.95) translateY(0); } 60% { transform: scale(1,1) translateY(-4px); } 100% { transform: scale(1,1) translateY(0); } }
+        
+        @keyframes fadeEffect {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        
+        #capy{
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            border:10px double #ab937a;
+            background-color:white;
+            width:50%;
+            height:50%;
+            margin:20px auto;
+            padding:20px;
+        }
+        
+        #description{
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            border:10px double #ab937a;
+            background-color:white;
+            width:70%;
+            height:50%;
+            margin:20px auto;
+            padding:20px;
+        }
+        
+        #description2{
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            border:10px double #ab937a;
+            background-color:white;
+            width:70%;
+            height:50%;
+            margin:20px auto;
+            padding:20px;
+            display:flex;
+            gap:10px;
+            justify-content: space-between;
+        }
+        
+        #description img{
+            width:100%;
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            border:10px double #ab937a;
+            box-sizing: border-box;
+            
+        }
+        
+        #capy img{
+            width:300px;
+            max-width:100%;
+        }
+        
+        #capy img:active{
+            animation:smol 0.15s alternate ease-in;;
+        }
+        
+        @keyframes smol{
+            0%{
+                transform:scale(1);
+            }
+            50%{
+                transform:scale(0.95);
+            }
+            100%{
+                transform:scale(1);
+            }
+        }
+        
+        #count{
+            margin:10px;
+        }
+        
+        #clicks{
+            margin:10px;
+        }
+        
+        td{
+            padding: 0.8125em 2%;
+            border-bottom: 1px solid #ab937a;
+        }
+        
+        summary::marker {
+            display: none;
+            color:#ab937a;
+        }
+        
+    </style>
+    <body>
+        <audio autoplay loop id="mars">
+            <source src="/music/cats%20on%20mars.mp3">
+        </audio>
+        
+        <div id="titletwo" class="float">welcome to the</div>
+        <div id="title" class="float"><span class="bounce letterone">C</span><span class="bounce lettertwo">A</span><span class="bounce letterthree">P</span><span class="bounce letterfour">Y</span><span class="bounce letterfive">B</span><span class="bounce lettersix">A</span><span class="bounce letterseven">R</span><span class="bounce lettereight">A</span> <span class="bounce letternine">C</span><span class="bounce letterten">L</span><span class="bounce lettereleven">U</span><span class="bounce lettertwelve">B</span></div>
+        
+        <div id="capy">
+            <img src="https://adilene.neocities.org/images/capybara/capybara.png" onclick="capyClicks()" draggable="false">
+            <div id="clicks">click the capy!</div>
+            <div id="count"></div>
+        </div>
+        
+        <div id="description" style="margin:auto;">
+            <div id="titletwo">wait... what the hell is a capybara?</div>
+            <br>
+            capybaras are the biggest rodents in the world. they are also the best animal.
+            <br><br>
+            <img src="https://pyxis.nymag.com/v1/imgs/6ab/753/eb7f186c80dc1e468bbdd4ca116204a2da-26-capybara-yuzu.jpg">
+            <br><br>
+            capybaras are the chillest animals you will ever encounter.
+            <div id="titletwo">why do you like them so much?</div>
+            <br>
+            because they're so cute and huggable.
+            <div id="titletwo">where can i see a capybara?</div>
+            <br>
+            capybaras live in central and south america. if you're not near any of those places, the zoo is your best bet. 
+            <br><br>
+            <details>
+            <summary>
+            here is a list of zoos that house capybaras!
+            </summary>
+            <table>
+            <tbody>
+            <tr>
+            <td width="88"></td>
+            <td width="353"><strong>United States</strong></td>
+            <td width="352"><u>&nbsp;</u></td>
+            </tr>
+            <tr>
+            <td width="88">AL</td>
+            <td width="353">Montgomery Zoo</td>
+            <td width="352"><a href="http://www.montgomeryzoo.com/" target="_blank" rel="noopener"><u>http://www.montgomeryzoo.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">AR</td>
+            <td width="353">Little Rock Zoo</td>
+            <td width="352"><a href="http://www.littlerockzoo.com/" target="_blank" rel="noopener"><u>http://www.littlerockzoo.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">AZ</td>
+            <td width="353">Out of Africa Wildlife Park, Camp Verde</td>
+            <td width="352"><a href="http://outofafricapark.com/" target="_blank" rel="noopener"><u>http://outofafricapark.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">AZ</td>
+            <td width="353">Reid Park Zoo, Tucson</td>
+            <td width="352"><a href="https://reidparkzoo.org/" target="_blank" rel="noopener"><u>https://reidparkzoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">AZ</td>
+            <td width="353">Wildlife World Zoo &amp; Aquarium, Litchfield Park</td>
+            <td width="352"><a href="http://www.wildlifeworld.com/" target="_blank" rel="noopener"><u>http://www.wildlifeworld.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">CA</td>
+            <td width="353">Fresno Chaffee Zoo, Fresno</td>
+            <td width="352"><a href="http://www.fresnochaffeezoo.org/" target="_blank" rel="noopener"><u>http://www.fresnochaffeezoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">CA</td>
+            <td width="353">Happy Hollow Zoo, San Jose</td>
+            <td width="352"><a href="http://www.hhpz.org/" target="_blank" rel="noopener"><u>http://www.hhpz.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">CA</td>
+            <td width="353">San Diego Zoo</td>
+            <td width="352"><a href="http://www.sandiegozoo.org/" target="_blank" rel="noopener"><u>http://www.sandiegozoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">CA</td>
+            <td width="353">San Francisco Zoo</td>
+            <td width="352"><a href="http://www.sfzoo.org/" target="_blank" rel="noopener"><u>http://www.sfzoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">CO</td>
+            <td width="353">Denver Zoological Gardens</td>
+            <td width="352"><a href="http://www.denverzoo.org/" target="_blank" rel="noopener"><u>http://www.denverzoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">DE</td>
+            <td width="353">Brandywine Zoo, Wilmington</td>
+            <td width="352"><a href="https://brandywinezoo.org/" target="_blank" rel="noopener"><u>https://brandywinezoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">FL</td>
+            <td width="353">Brevard Zoo, Melbourne</td>
+            <td width="352"><a href="https://brevardzoo.org/" target="_blank" rel="noopener"><u>https://brevardzoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">FL</td>
+            <td width="353">Jacksonville Zoo</td>
+            <td width="352"><a href="http://www.jacksonvillezoo.org/" target="_blank" rel="noopener"><u>http://www.jacksonvillezoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">FL</td>
+            <td width="353">Palm Beach Zoo and Conservation Society, West Palm Beach</td>
+            <td width="352"><a href="http://www.palmbeachzoo.org/" target="_blank" rel="noopener"><u>http://www.palmbeachzoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">FL</td>
+            <td width="353">Zooworld, Panama City Beach</td>
+            <td width="352"><a href="http://zooworldpcb.com/" target="_blank" rel="noopener"><u>http://zooworldpcb.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">GA</td>
+            <td width="353">North Georgia Wildlife Park, Cleveland</td>
+            <td width="352"><a href="https://www.northgeorgiazoo.com/" target="_blank" rel="noopener"><u>https://www.northgeorgiazoo.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">ID</td>
+            <td width="353">Zoo Boise, Boise</td>
+            <td width="352"><a href="https://zooboise.org/" target="_blank" rel="noopener"><u>https://zooboise.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">IL</td>
+            <td width="353">Scovill Children’s Zoo, Decatur</td>
+            <td width="352"><a href="http://www.decatur-parks.org/scovill-zoo/" target="_blank" rel="noopener"><u>http://www.decatur-parks.org/scovill-zoo/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">KS</td>
+            <td width="353">Rolling Hills Zoo, Salina</td>
+            <td width="352"><a href="http://www.rollinghillszoo.org/" target="_blank" rel="noopener"><u>http://www.rollinghillszoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">KS</td>
+            <td width="353">Sedgwick County Zoo, Wichita</td>
+            <td width="352"><a href="https://www.scz.org/" target="_blank" rel="noopener"><u>https://www.scz.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">LA</td>
+            <td width="353">Alexandria Zoo, Alexandria</td>
+            <td width="352"><a href="http://www.thealexandriazoo.com/" target="_blank" rel="noopener"><u>http://www.thealexandriazoo.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">LA</td>
+            <td width="353">Audubon Nature Institute, New Orleans</td>
+            <td width="352"><a href="http://audubonnatureinstitute.org/zoo" target="_blank" rel="noopener"><u>http://audubonnatureinstitute.org/zoo</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">LA</td>
+            <td width="353">Baton Rouge Zoo</td>
+            <td width="352"><a href="http://www.brzoo.org/" target="_blank" rel="noopener"><u>http://www.brzoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">MA</td>
+            <td width="353">Forest Park Zoo, Springfield</td>
+            <td width="352"><a href="https://www.forestparkzoo.org/" target="_blank" rel="noopener"><u>https://www.forestparkzoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">MA</td>
+            <td width="353">Franklin Park Zoo/Stone Zoo, Boston</td>
+            <td width="352"><a href="http://www.zoonewengland.org/franklin-park-zoo" target="_blank" rel="noopener"><u>http://www.zoonewengland.org/franklin-park-zoo</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">MA</td>
+            <td width="353">Southwick’s Zoo, Menden</td>
+            <td width="352"><a href="http://southwickszoo.com/" target="_blank" rel="noopener"><u>http://southwickszoo.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">MD</td>
+            <td width="353">Salisbury Zoological Park, Salisbury</td>
+            <td width="352"><a href="http://www.salisburyzoo.org/" target="_blank" rel="noopener"><u>http://www.salisburyzoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">ME</td>
+            <td width="353">York’s Wild Kingdom, York</td>
+            <td width="352"><a href="http://www.yorkswildkingdom.com/" target="_blank" rel="noopener"><u>http://www.yorkswildkingdom.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">MI</td>
+            <td width="353">John Ball Zoo, Grand Rapids</td>
+            <td width="352"><a href="http://www.jbzoo.org/" target="_blank" rel="noopener"><u>http://www.jbzoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">MO</td>
+            <td width="353">Kansas City Zoo, Kansas City</td>
+            <td width="352"><a href="https://www.kansascityzoo.org/" target="_blank" rel="noopener"><u>https://www.kansascityzoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">MO</td>
+            <td width="353">Saint Louis Zoological Park</td>
+            <td width="352"><a href="https://www.stlzoo.org/" target="_blank" rel="noopener"><u>https://www.stlzoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">MS</td>
+            <td width="353">Hattiesburg Zoo</td>
+            <td width="352"><a href="http://www.zoohattiesburg.com/" target="_blank" rel="noopener"><u>http://www.zoohattiesburg.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">NJ</td>
+            <td width="353">Bergen County Zoological Park, Paramus</td>
+            <td width="352"><a href="http://www.co.bergen.nj.us/437/Bergen-County-Zoo" target="_blank" rel="noopener"><u>http://www.co.bergen.nj.us/437/Bergen-County-Zoo</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">NJ</td>
+            <td width="353">Cape May County Park Zoo</td>
+            <td width="352"><a href="http://www.cmczoo.com/" target="_blank" rel="noopener"><u>http://www.cmczoo.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">NM</td>
+            <td width="353">Albuquerque Biological Park</td>
+            <td width="352"><a href="http://www.cabq.gov/culturalservices/biopark/zoo" target="_blank" rel="noopener"><u>http://www.cabq.gov/culturalservices/biopark/zoo</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">NY</td>
+            <td width="353">Animal Adventure Park, Harpursville</td>
+            <td width="352"><a href="http://theanimaladventurepark.com/" target="_blank" rel="noopener"><u>http://theanimaladventurepark.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">NY</td>
+            <td width="353">Buffalo Zoological Gardens</td>
+            <td width="352"><a href="https://buffalozoo.org/" target="_blank" rel="noopener"><u>https://buffalozoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">NY</td>
+            <td width="353">Staten Island Zoo</td>
+            <td width="352"><a href="http://www.statenislandzoo.org/" target="_blank" rel="noopener"><u>http://www.statenislandzoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">OH</td>
+            <td width="353">African Safari Wildlife Park, Port Clinton</td>
+            <td width="352"><a href="http://www.africansafariwildlifepark.com/" target="_blank" rel="noopener"><u>http://www.africansafariwildlifepark.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">OH</td>
+            <td width="353">Akron Zoological Park, Akron</td>
+            <td width="352"><a href="http://www.akronzoo.org/" target="_blank" rel="noopener"><u>http://www.akronzoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">OH</td>
+            <td width="353">Cincinnati Zoo &amp; Botanical Garden</td>
+            <td width="352"><a href="http://cincinnatizoo.org/" target="_blank" rel="noopener"><u>http://cincinnatizoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">OH</td>
+            <td width="353">Cleveland Metroparks Zoo</td>
+            <td width="352"><a href="https://www.clevelandmetroparks.com/zoo" target="_blank" rel="noopener"><u>https://www.clevelandmetroparks.com/zoo</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">OR</td>
+            <td width="353">West Coast Game Park, Bandon</td>
+            <td width="352"><a href="http://www.westcoastgameparksafari.com/" target="_blank" rel="noopener"><u>http://www.westcoastgameparksafari.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">PA</td>
+            <td width="353">Erie Zoo</td>
+            <td width="352"><a href="https://www.eriezoo.org/" target="_blank" rel="noopener"><u>https://www.eriezoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">PA</td>
+            <td width="353">Lake Tobias Zoo, Halifax</td>
+            <td width="352"><a href="https://www.laketobias.com/" target="_blank" rel="noopener"><u>https://www.laketobias.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">PA</td>
+            <td width="353">Pittsburgh Zoo &amp; PPG Aquarium</td>
+            <td width="352"><a href="http://www.pittsburghzoo.org/" target="_blank" rel="noopener"><u>http://www.pittsburghzoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">SC</td>
+            <td width="353">Waccatee Zoological Farm, Myrtle Beach</td>
+            <td width="352"><a href="http://www.waccateezoo.com/" target="_blank" rel="noopener"><u>http://www.waccateezoo.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">TN</td>
+            <td width="353">Brights Zoo, Limestone</td>
+            <td width="352"><a href="http://www.brightszoo.com/" target="_blank" rel="noopener"><u>http://www.brightszoo.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">TN</td>
+            <td width="353">Chattanooga Zoo</td>
+            <td width="352"><a href="http://www.chattzoo.org/" target="_blank" rel="noopener"><u>http://www.chattzoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">TN</td>
+            <td width="353">Memphis Zoo</td>
+            <td width="352"><a href="https://www.memphiszoo.org/" target="_blank" rel="noopener"><u>https://www.memphiszoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">TX</td>
+            <td width="353">Caldwell Zoo, Tyler</td>
+            <td width="352"><a href="http://caldwellzoo.org/" target="_blank" rel="noopener"><u>http://caldwellzoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">TX</td>
+            <td width="353">Cameron Park Zoo, Waco</td>
+            <td width="352"><a href="http://www.cameronparkzoo.com/" target="_blank" rel="noopener"><u>http://www.cameronparkzoo.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">TX</td>
+            <td width="353">Dallas World Aquarium</td>
+            <td width="352"><a href="http://www.dwazoo.com/" target="_blank" rel="noopener"><u>http://www.dwazoo.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">TX</td>
+            <td width="353">Dallas Zoo</td>
+            <td width="352"><a href="http://www.dallaszoo.com/" target="_blank" rel="noopener"><u>http://www.dallaszoo.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">TX</td>
+            <td width="353">El Paso Zoo</td>
+            <td width="352"><a href="http://www.elpasozoo.org/" target="_blank" rel="noopener"><u>http://www.elpasozoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">TX</td>
+            <td width="353">Gladys Porter Zoo, Brownsville</td>
+            <td width="352"><a href="http://gpz.org/" target="_blank" rel="noopener"><u>http://gpz.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">TX</td>
+            <td width="353">Houston Zoo</td>
+            <td width="352"><a href="http://www.houstonzoo.org/" target="_blank" rel="noopener"><u>http://www.houstonzoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">TX</td>
+            <td width="353">San Antonio Zoological Gardens and Aquarium</td>
+            <td width="352"><a href="https://sazoo.org/" target="_blank" rel="noopener"><u>https://sazoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">TX</td>
+            <td width="353">Sharkarosa Park, Pilot Point</td>
+            <td width="352"><a href="https://www.sharkarosa.com/" target="_blank" rel="noopener"><u>https://www.sharkarosa.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">TX</td>
+            <td width="353">Snake Farm, New Braunfels</td>
+            <td width="352"><a href="http://www.awsfzoo.com/" target="_blank" rel="noopener"><u>http://www.awsfzoo.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">TX</td>
+            <td width="353">TDS Game Ranch, Creedmore</td>
+            <td width="352"><a href="http://www.texasdisposal.com/exotic-game-ranch/" target="_blank" rel="noopener"><u>http://www.texasdisposal.com/exotic-game-ranch/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">VA</td>
+            <td width="353">Roer’s Zoofari, Reston</td>
+            <td width="352"><a href="http://www.roerszoofari.com/" target="_blank" rel="noopener"><u>http://www.roerszoofari.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">WI</td>
+            <td width="353">Henry Vilas Zoo, Madison</td>
+            <td width="352"><a href="http://www.vilaszoo.org/" target="_blank" rel="noopener"><u>http://www.vilaszoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88"></td>
+            <td width="353"><strong>Canada</strong></td>
+            <td width="352"></td>
+            </tr>
+            <tr>
+            <td width="88">Alberta</td>
+            <td width="353">Edmonton Valley Zoo, Edmonton</td>
+            <td width="352"><a href="https://www.edmonton.ca/attractions_events/edmonton-valley-zoo.aspx" target="_blank" rel="noopener"><u>https://www.edmonton.ca/attractions_events/edmonton-valley-zoo.aspx</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">B.C.</td>
+            <td width="353">Aldergrove Zoo, Vancouver</td>
+            <td width="352"><a href="http://gvzoo.com/" target="_blank" rel="noopener"><u>http://gvzoo.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">B.C.</td>
+            <td width="353">Kangaroo Creek Farm, Winfield</td>
+            <td width="352"><a href="http://kangaroocreekfarm.com/" target="_blank" rel="noopener"><u>http://kangaroocreekfarm.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Ontario</td>
+            <td width="353">Bervie Zoological Park, Kincardine</td>
+            <td width="352"><a href="https://www.facebook.com/Bervie-Zoological-Park-483709711689878/" target="_blank" rel="noopener"><u>https://www.facebook.com/Bervie-Zoological-Park-483709711689878/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Ontario</td>
+            <td width="353">Riverview Park and Zoo, Peterborough</td>
+            <td width="352"><a href="http://www.peterboroughutilities.ca/Park_and_Zoo.htm" target="_blank" rel="noopener"><u>http://www.peterboroughutilities.ca/Park_and_Zoo.htm</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Ontario</td>
+            <td width="353">Toronto Zoo, Scarborough</td>
+            <td width="352"><a href="http://www.torontozoo.com/" target="_blank" rel="noopener"><u>http://www.torontozoo.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Ontario</td>
+            <td width="353">High Park Zoo, Toronto</td>
+            <td width="352"><a href="https://www.highparkzoo.ca/" target="_blank" rel="noopener"><u>https://www.highparkzoo.ca/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Ontario</td>
+            <td width="353">Bowmanville Zoo, Toronto</td>
+            <td width="352"><a href="http://www.bowmanvillezoo.com/" target="_blank" rel="noopener"><u>http://www.bowmanvillezoo.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Quebec</td>
+            <td width="353">Biodome, Montreal</td>
+            <td width="352"><a href="http://ville.montreal.qc.ca/" target="_blank" rel="noopener"><u>http://ville.montreal.qc.ca/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Quebec</td>
+            <td width="353">Granby Zoo, Granby</td>
+            <td width="352"><a href="https://zoodegranby.com/en/" target="_blank" rel="noopener"><u>https://zoodegranby.com/en/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88"></td>
+            <td width="353"><strong>Europe</strong></td>
+            <td width="352"><u>&nbsp;</u></td>
+            </tr>
+            <tr>
+            <td width="88">Austria</td>
+            <td width="353">Vienna Zoo (Tiergarten Schonbrunn)</td>
+            <td width="352"><a href="http://www.zoovienna.at/" target="_blank" rel="noopener"><u>http://www.zoovienna.at/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Belgium</td>
+            <td width="353">Dierenpark Planckendael, Mechelem</td>
+            <td width="352"><a href="https://www.planckendael.be/en/" target="_blank" rel="noopener"><u>https://www.planckendael.be/en/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Belarus</td>
+            <td width="353">Minsk Zoo</td>
+            <td width="352"><a href="http://minskzoo.by/en/" target="_blank" rel="noopener"><u>http://minskzoo.by/en/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Czech Republic</td>
+            <td width="353">Zoological Garden in Jihlava (Zoologická Zahrada Jihlava)</td>
+            <td width="352"><a href="http://www.zoojihlava.cz/en/" target="_blank" rel="noopener"><u>http://www.zoojihlava.cz/en/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Denmark</td>
+            <td width="353">Copenhagen</td>
+            <td width="352"><a href="http://www.zoo.dk/" target="_blank" rel="noopener"><u>http://www.zoo.dk/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">England</td>
+            <td width="353">Birmingham Wildlife Conservation Park</td>
+            <td width="352"><a href="https://www.birmingham.gov.uk/bhamconservationpark" target="_blank" rel="noopener"><u>https://www.birmingham.gov.uk/bhamconservationpark</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">England</td>
+            <td width="353">Chessington Zoo, Surrey</td>
+            <td width="352"><a href="https://www.chessington.com/explore/chessington-zoo/" target="_blank" rel="noopener"><u>https://www.chessington.com/explore/chessington-zoo/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">England</td>
+            <td width="353">Chester Zoo, Upton-by-Chester</td>
+            <td width="352"><a href="http://www.chesterzoo.org/" target="_blank" rel="noopener"><u>http://www.chesterzoo.org/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">England</td>
+            <td width="353">Combe Martin Wildlife and Dinosaur Park, Ilfracombe</td>
+            <td width="352"><a href="http://www.wildlifedinosaurpark.co.uk/" target="_blank" rel="noopener"><u>http://www.wildlifedinosaurpark.co.uk/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">England</td>
+            <td width="353">Cotswold Wildlife Park &amp; Gardens, Bradwell Grove, Burford, Oxfordshire</td>
+            <td width="352"><a href="http://www.cotswoldwildlifepark.co.uk/" target="_blank" rel="noopener"><u>http://www.cotswoldwildlifepark.co.uk/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">England</td>
+            <td width="353">Dartmoor Zoological Park, Sparkwell, Plymouth, Devon</td>
+            <td width="352"><a href="http://www.dartmoorzoo.org.uk/" target="_blank" rel="noopener"><u>http://www.dartmoorzoo.org.uk/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">England</td>
+            <td width="353">Drusillas Park, Alfriston, East Sussex</td>
+            <td width="352"><a href="http://www.drusillas.co.uk/" target="_blank" rel="noopener"><u>http://www.drusillas.co.uk/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">England</td>
+            <td width="353">Exmoor Zoo, South Stowford, Bratton Fleming, Barnstaple, North Devon</td>
+            <td width="352"><a href="http://www.exmoorzoo.co.uk/" target="_blank" rel="noopener"><u>http://www.exmoorzoo.co.uk/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">England</td>
+            <td width="353">Newquay Zoo, Trenance Gardens, Newquay, Cornwall</td>
+            <td width="352"><a href="http://www.newquayzoo.org.uk/" target="_blank" rel="noopener"><u>http://www.newquayzoo.org.uk/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">England</td>
+            <td width="353">Peak Wildlife Park, Winkhill, Leek</td>
+            <td width="352"><a href="http://www.peakwildlifepark.co.uk/" target="_blank" rel="noopener"><u>http://www.peakwildlifepark.co.uk/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">England</td>
+            <td width="353">Port Lympne Reserve, Nr. Ashford, Kent</td>
+            <td width="352"><a href="https://www.aspinallfoundation.org/port-lympne/" target="_blank" rel="noopener"><u>https://www.aspinallfoundation.org/port-lympne/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">England</td>
+            <td width="353">Safari Zoo, Melton Terrace, Lindal-in-Furness, Ulverston, Cumbria</td>
+            <td width="352"><a href="https://www.southlakessafarizoo.com/" target="_blank" rel="noopener"><u>https://www.southlakessafarizoo.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">England</td>
+            <td width="353">Shepreth Wildlife Park, Station Road, Shepreth, Nr Royston, Herts, SG8 6PZ</td>
+            <td width="352"><a href="https://sheprethwildlifepark.co.uk/" target="_blank" rel="noopener"><u>https://sheprethwildlifepark.co.uk/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Germany</td>
+            <td width="353">Zoo Berlin, Germany</td>
+            <td width="352"><a href="http://https://www.zoo-berlin.de/en" target="_blank" rel="noopener"><u>https://www.zoo-berlin.de/en</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Germany</td>
+            <td width="353">Tierpark Chemnitz, Chemnitz, Germany</td>
+            <td width="352"><a href="http://www.tierpark-chemnitz.de/" target="_blank" rel="noopener"><u>http://www.tierpark-chemnitz.de/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Germany</td>
+            <td width="353">Erlebnis Zoo, Hannover, Germany</td>
+            <td width="352"><a href="https://www.zoo-hannover.de/de" target="_blank" rel="noopener"><u>https://www.zoo-hannover.de/de</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Germany</td>
+            <td width="353">Zoo Schwerin, Germany</td>
+            <td width="352"><a href="http://www.zoo-schwerin.de/" target="_blank" rel="noopener"><u>http://www.zoo-schwerin.de/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Holland</td>
+            <td width="353">Burgers’ Zoo, Arnhem, The Netherlands</td>
+            <td width="352"><a href="https://www.burgerszoo.com/" target="_blank" rel="noopener"><u>https://www.burgerszoo.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Holland</td>
+            <td width="353">Apenheul Primate Park, Apeldoorn, The Netherlands</td>
+            <td width="352"><a href="https://www.apenheul.nl/" target="_blank" rel="noopener"><u>https://www.apenheul.nl/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Holland</td>
+            <td width="353">Artis Zoo, Amsterdam, The Netherlands</td>
+            <td width="352"><a href="https://www.artis.nl/nl/" target="_blank" rel="noopener"><u>https://www.artis.nl/nl/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Hungary</td>
+            <td width="353">Budapest Zoo and Botanical Garden, Hungary</td>
+            <td width="352"><a href="http://www.zoobudapest.com/" target="_blank" rel="noopener"><u>http://www.zoobudapest.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Ireland</td>
+            <td width="353">Fota Island Wildlife Park,&nbsp;Ireland</td>
+            <td width="352"><a href="http://www.fotawildlife.ie/" target="_blank" rel="noopener"><u>http://www.fotawildlife.ie/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Northern Ireland</td>
+            <td width="353">Belfast Zoo</td>
+            <td width="352"><a href="http://www.belfastzoo.co.uk/" target="_blank" rel="noopener"><u>http://www.belfastzoo.co.uk/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Norway</td>
+            <td width="353">Belfast Zoo</td>
+            <td width="352"><a href="https://www.dyreparken.no/" target="_blank" rel="noopener"><u>http://https://www.dyreparken.no/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Russia</td>
+            <td width="353">Krasnoyarsk Park of Flora and Fauna</td>
+            <td width="352"><a href="https://roev.ru/" target="_blank" rel="noopener"><u>https://roev.ru/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Russia</td>
+            <td width="353">Moscow Zoo, Russia</td>
+            <td width="352"><a href="http://moscowzoo.su/" target="_blank" rel="noopener"><u>http://moscowzoo.su/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Russia</td>
+            <td width="353">Limpopo Zoo, Yaroshenko</td>
+            <td width="352"><a href="http://www.nnzoo.ru/" target="_blank" rel="noopener"><u>http://www.nnzoo.ru/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Russia</td>
+            <td width="353">Novosibirsk Zoo</td>
+            <td width="352"><a href="http://zoonovosib.ru/" target="_blank" rel="noopener"><u>http://zoonovosib.ru/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Russia</td>
+            <td width="353">Perm Zoo</td>
+            <td width="352"><a href="http://www.zoo.perm.ru/" target="_blank" rel="noopener"><u>http://www.zoo.perm.ru/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Russia</td>
+            <td width="353">Rostov-on-Don Zoo, Rostov</td>
+            <td width="352"><a href="http://www.zoopark-rostov.ru/" target="_blank" rel="noopener"><u>http://www.zoopark-rostov.ru/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Slovakia</td>
+            <td width="353">Zoo Bratislava</td>
+            <td width="352"><a href="http://www.zoobratislava.sk/" target="_blank" rel="noopener"><u>http://www.zoobratislava.sk/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Slovenia</td>
+            <td width="353">Ljubljana Zoo, Slovenia</td>
+            <td width="352"><a href="http://www.zoo.si/" target="_blank" rel="noopener"><u>http://www.zoo.si/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Spain</td>
+            <td width="353">Barcelona Zoo, Barcelona</td>
+            <td width="352"><a href="http://www.zoobarcelona.cat/" target="_blank" rel="noopener"><u>http://www.zoobarcelona.cat/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Spain</td>
+            <td width="353">Faunia, Madrid</td>
+            <td width="352"><a href="http://https://www.faunia.es/" target="_blank" rel="noopener"><u>http://https://www.faunia.es/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Sweden</td>
+            <td width="353">Kolmarden Animal Park, Norrkoping</td>
+            <td width="352"><a href="http://www.kolmarden.com/" target="_blank" rel="noopener"><u>http://www.kolmarden.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Sweden</td>
+            <td width="353">Parken Zoo, Eskiltuna</td>
+            <td width="352"><a href="http://www.parkenzoo.se/" target="_blank" rel="noopener"><u>http://www.parkenzoo.se/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Switzerland</td>
+            <td width="353">Berne Animal Park, Berne, Switzerland</td>
+            <td width="352"><a href="http://www.tierpark-bern.ch/" target="_blank" rel="noopener"><u>http://www.tierpark-bern.ch/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Switzerland</td>
+            <td width="353">Zurich Zoo , Switzerland</td>
+            <td width="352"><a href="http://www.zoo.ch/" target="_blank" rel="noopener"><u>http://www.zoo.ch/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Ukraine</td>
+            <td width="353">Kiev Zoo</td>
+            <td width="352"><a href="http://zoo.kiev.ua/" target="_blank" rel="noopener"><u>http://zoo.kiev.ua/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Ukraine</td>
+            <td width="353">Rivne Zoo</td>
+            <td width="352"><a href="http://zoopark.rv.ua/" target="_blank" rel="noopener"><u>http://zoopark.rv.ua/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Wales</td>
+            <td width="353">Folly Farm, Begelly, Kilgetty, Pembrokeshire</td>
+            <td width="352"><a href="https://www.folly-farm.co.uk/zoo" target="_blank" rel="noopener"><u>https://www.folly-farm.co.uk/zoo</u></a></td>
+            </tr>
+            <tr>
+            <td width="88"></td>
+            <td width="353"><strong>Latin America</strong></td>
+            <td width="352"></td>
+            </tr>
+            <tr>
+            <td width="88">Bolivia</td>
+            <td width="353">Santa Cruz Zoo, Bolivia</td>
+            <td width="352"><a href="http://www.boliviabella.com/santa-cruz-zoo.html" target="_blank" rel="noopener"><u>http://www.boliviabella.com/santa-cruz-zoo.html</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Brazil</td>
+            <td width="353">Bosque dos Jequitibas, Campinas, Sao Paulo</td>
+            <td width="352"><a href="http://www.campinas.sp.gov.br/sobre-campinas/atracoes-naturais.php" target="_blank" rel="noopener"><u>http://www.campinas.sp.gov.br/sobre-campinas/atracoes-naturais.php</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Brazil</td>
+            <td width="353">Rio Zoo, Rio de Janeiro</td>
+            <td width="352"><a href="http://riozoo.com.br/" target="_blank" rel="noopener"><u>http://riozoo.com.br/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Brazil</td>
+            <td width="353">Jardim Zoologico de Sao Paulo</td>
+            <td width="352"><a href="http://www.zoologico.com.br/" target="_blank" rel="noopener"><u>http://www.zoologico.com.br/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Mexico</td>
+            <td width="353">Chapultepec Zoo, Mexico City</td>
+            <td width="352"><a href="http://data.sedema.cdmx.gob.mx/zoo_chapultepec/" target="_blank" rel="noopener"><u>http://data.sedema.cdmx.gob.mx/zoo_chapultepec/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Uruguay</td>
+            <td width="353">Eco-Zoologico Reserve, Baños de Agua Santa</td>
+            <td width="352"><a href="http://ecozoosanmartin.com/" target="_blank" rel="noopener"><u>http://ecozoosanmartin.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88"></td>
+            <td width="353"><strong>Asia</strong></td>
+            <td width="352"></td>
+            </tr>
+            <tr>
+            <td width="88">Hong Kong</td>
+            <td width="353">Ocean Park</td>
+            <td width="352"><a href="https://www.oceanpark.com.hk/en" target="_blank" rel="noopener"><u>https://www.oceanpark.com.hk/en</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Japan</td>
+            <td width="353">Izu Shaboten Zoological Park (Izu Cactus Park), Ito</td>
+            <td width="352"><a href="http://capybara.eek.jp/navi-sabo.html" target="_blank" rel="noopener"><u>http://capybara.eek.jp/navi-sabo.html</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Japan</td>
+            <td width="353">Nagasaki Bio Park</td>
+            <td width="352"><a href="http://www.biopark.co.jp/en/" target="_blank" rel="noopener"><u>http://www.biopark.co.jp/en/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Japan</td>
+            <td width="353">Nasu Animal Kingdom, Nasu-machi</td>
+            <td width="352"><a href="http://www.nasu-oukoku.com/" target="_blank" rel="noopener"><u>http://www.nasu-oukoku.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Japan</td>
+            <td width="353">Saitama Children’s Zoo</td>
+            <td width="352"><a href="http://www.parks.or.jp/sczoo/" target="_blank" rel="noopener"><u>http://www.parks.or.jp/sczoo/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Japan</td>
+            <td width="353"><em>Many other zoos in Japan feature capybaras:</em></td>
+            <td width="352"><a href="http://capybara.eek.jp/navi.html" target="_blank" rel="noopener"><u>http://capybara.eek.jp/navi.html</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Malaysia</td>
+            <td width="353">Zoo Negara, Malaysia</td>
+            <td width="352"><a href="http://www.zoonegaramalaysia.my/" target="_blank" rel="noopener"><u>http://www.zoonegaramalaysia.my/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Singapore</td>
+            <td width="353">Night Safari of Singapore</td>
+            <td width="352"><a href="http://www.nightsafari.com.sg/" target="_blank" rel="noopener"><u>http://www.nightsafari.com.sg/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Taiwan</td>
+            <td width="353">Taipei Zoo, Taiwan</td>
+            <td width="352"><a href="http://www.zoo.gov.taipei/" target="_blank" rel="noopener"><u>http://www.zoo.gov.taipei/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88"></td>
+            <td width="353"><strong>Elsewhere</strong></td>
+            <td width="352"></td>
+            </tr>
+            <tr>
+            <td width="88">Antilles</td>
+            <td width="353">St. Maarten Zoo, Philipsburg, St. Maarten, Netherlands Antilles</td>
+            <td width="352"><a href="http://www.stmaartenzoo.com/" target="_blank" rel="noopener"><u>http://www.stmaartenzoo.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Australia</td>
+            <td width="353">Adelaide Zoo, South Australia</td>
+            <td width="352"><a href="https://www.adelaidezoo.com.au/" target="_blank" rel="noopener"><u>https://www.adelaidezoo.com.au/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Australia</td>
+            <td width="353">Wildlife HQ Zoo, Queensland</td>
+            <td width="352"><a href="https://whqzoo.com/" target="_blank" rel="noopener"><u>https://whqzoo.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Australia</td>
+            <td width="353">Toronga Zoo, Sydney</td>
+            <td width="352"><a href="https://taronga.org.au/" target="_blank" rel="noopener"><u>https://https://taronga.org.au/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Bahamas</td>
+            <td width="353">Ardastra Gardens, Zoo &amp; Conservation Centre, Nassau</td>
+            <td width="352"><a href="http://www.ardastra.com/" target="_blank" rel="noopener"><u>http://www.ardastra.com/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">South Africa</td>
+            <td width="353">Joburg Zoo, Johannesburg, South Africa</td>
+            <td width="352"><a href="http://www.jhbzoo.org.za/" target="_blank" rel="noopener"><u>http://www.jhbzoo.org.za/</u></a></td>
+            </tr>
+            <tr>
+            <td width="88">Trinidad</td>
+            <td width="353">Emperor Valley Zoo,&nbsp;Port of Spain, Trinidad</td>
+            <td width="352"><a href="http://www.zstt.org/" target="_blank" rel="noopener"><u>http://www.zstt.org/</u></a></td>
+            </tr>
+            </tbody>
+            </table>
+            <br>
+            source: <a href="https://petcapybara.com/2017/07/05/which-zoos-have-capybaras/">petcapybara.com</a>
+            </details>
+            <div id="titletwo">donate to capybara conservation!</div>
+            <br>
+            <a href="https://gifts.worldwildlife.org/gift-center/gifts/Species-Adoptions/Capybara">Adopt a Capybara!</a><br>
+            <a href="https://petcapybara.com/2021/12/11/the-capybara-rescue-fund/">Stacy's Funny Farm</a><br>
+            <a href="https://www.patreon.com/capybara_land">Capybara Land</a>
+        </div>
+        
+        <div style="display:flex;gap:20px;width:100%;justify-content: center;;margin:20px auto">
+            <div id="description" style="width:36.5%;margin:0;box-sizing: border-box;">
+                <iframe style="max-width:100%;width:100%;height:350px;" src="https://www.youtube.com/embed/QUqCWkPlLLc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div id="description" style="width:36.5%;margin:0;box-sizing: border-box;">
+                <iframe style="max-width:100%;width:100%;height:350px;" src="https://www.youtube.com/embed/YaYwasi72K8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div id="description">
+             <div id="titletwo" style="width:100%">want to join the capybara club?</div><br>
+            add this secret button to your website. if someone asks, tell them you're a part of the secret capybara club. do not elaborate.
+            <br><br>
+            <img src="https://adilene.neocities.org/images/buttons/capybara.gif" style="width:88px;height:auto; border:none;border-radius:0px;">
+        </div>
+        
+        <div id="description2" style="margin:auto">
+            <img src="https://files.catbox.moe/g5gelu.gif"><img src="https://files.catbox.moe/z0lf3s.gif"><img src="https://files.catbox.moe/c1zl8i.gif"><img src="https://files.catbox.moe/7eo8t9.gif"><img src="https://files.catbox.moe/clh3rq.gif"><img src="https://files.catbox.moe/7rz6tp.gif"><img src="https://files.catbox.moe/umj4q9.gif"><img src="https://files.catbox.moe/9sqpok.gif"><img src="https://files.catbox.moe/hcojr6.gif"><img src="https://files.catbox.moe/aoumcs.gif">
+        </div>
+    
+        
+        
+        
+        
+        <script>
+            var audio = document.getElementById("mars");
+            audio.volume = 0.3;
+        </script>
+    
+        <script>
+            var count = 1;
+            function capyClicks() {
+              $('#blank').hide();
+                var audio = new Audio("/music/sounds/squeak.mp3");
+                audio.play();
+                audio.volume = 0.3;
+              document.getElementById("clicks").innerHTML = "capy clicks: " + count++;
+                if (count == 11){
+                    document.getElementById("count").innerHTML = "the capy has been clicked 10 times! yay!";
+                }
+                if (count == 51){
+                    document.getElementById("count").innerHTML = "the capy has been clicked 50 times! very cool!";
+                }
+                if (count == 101){
+                    document.getElementById("count").innerHTML = "the capy has been clicked 100 times! woah...";
+                }
+                if (count == 501){
+                    document.getElementById("count").innerHTML = "the capy has been clicked 500 times! you must like capys more than me...";
+                }
+                if (count == 1001){
+                    document.getElementById("count").innerHTML = "the capy has been clicked 1000 times! i understand.";
+                }
+                if (count == 5001){
+                    document.getElementById("count").innerHTML = "the capy has been clicked 5000 times! are you ok?";
+                }
+                if (count == 10001){
+                    document.getElementById("count").innerHTML = "the capy has been clicked 10000 times! you have won a special prize: 10000 capy clicks.";
+                }
+                if (count == 50001){
+                    document.getElementById("count").innerHTML = "the capy has been clicked 50000 times! the capy and i are a little worried about you.";
+                }
+                if (count == 100001){
+                    document.getElementById("count").innerHTML = "the capy has been clicked 100000 times! you're using an automatic clicker, aren't you? cheater.";
+                }
+                if (count == 500001){
+                    document.getElementById("count").innerHTML = "the capy has been clicked 500000 times! why.";
+                }
+                if (count == 1000001){
+                    document.getElementById("count").innerHTML = "the capy has been clicked 1000000 times! congrats! now get a life!";
+                }
+            }
+        </script>
+    </body>
+</html>

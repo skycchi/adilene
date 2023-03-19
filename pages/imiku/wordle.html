@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet/less" type="text/css" href="/wordle.less" />
+        <script src="https://cdn.jsdelivr.net/npm/less" ></script>
+        <link href="/games.css" rel="stylesheet">
+    </head>
+    <style>
+        
+    </style>
+    <body>
+        <header>WORDLE</header>
+        <div>
+            Directions: Use the keyboard or keys down below to guess a random five letter word. You have six tries to guess the correct word.
+        </div>
+        <div id="game">
+            <div id="game-container"></div>
+            <div id="keyboard"></div>
+        </div>
+        <div id="controls">
+            <button id="newGameButton">New Game</button>
+            <button id="giveUpButton">Give Up</button>
+        </div>
+        
+        <div>Source code: <a href="https://codepen.io/jfledd/pen/ExwGqrz" target="_blank">Codepen</a></div>
+        
+        <script src="/scripts/wordle.js"></script>
+    </body>
+</html>
