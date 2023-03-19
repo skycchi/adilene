@@ -31,7 +31,6 @@ var sites = [
     "https://haruokumura.neocities.org/",
     "https://90z-ash.neocities.org/",
     "https://puddingpudds.neocities.org/",
-    "https://zoneoverimagination.neocities.org/",
     "https://speedmaggots.neocities.org/",
     "https://meko.neocities.org/",
     "https://shadowfae.neocities.org/",
@@ -65,7 +64,6 @@ var sites = [
     "https://mikufan3939.neocities.org/",
     "https://crescentmirror.neocities.org/",
     "https://leanneu.neocities.org/",
-    "https://ophanimkei.com/",
     "https://sunny-cities.neocities.org/",
     "https://retrovampz.neocities.org/",
     "https://pirupi.neocities.org/"
