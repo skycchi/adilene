@@ -109,7 +109,7 @@
                     </script>
 
                     <div>Hits: <span id="hitcount"></span></div>
-                    <div>Last Updated: <span class="demo"></span></div>
+                    <div>Last Updated: <span id="demo"></span></div>
                 </div>
             </div>
             
@@ -208,35 +208,8 @@
         </script>
         
         <script>
-            const desiredRepo = "adilene";
-            const dateTagClass = ".date";
-
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function()
-            {
-              if (this.readyState == 4 && this.status == 200)
-              {
-                let repos = JSON.parse(this.responseText);
-
-                repos.forEach((repo)=>{
-                  if (repo.name == desiredRepo)
-                  {
-                    var lastUpdated = new Date(repo.updated_at);
-                    var day = lastUpdated.getDate();
-                    var month = lastUpdated.getMonth() + 1;
-                    var year = lastUpdated.getFullYear();
-                    $(dateTagClass).text(`Last Updated: ${month}.${day}.${year}`);
-                  }
-                });
-              }
-            };
-            xhttp.open("GET", "https://api.github.com/users/skycchi/repos", true);
-            xhttp.send();
-        </script>
-        
-        <script>
-            let text = document.lastModified;
-            document.getElementById("demo").innerHTML = text;
+            const date = new Date(document.lastModified);
+            document.getElementById('demo').innerHTML = parseFloat(date.getMonth()) + 1 + "." + date.getDate() + "." + date.getFullYear().toString().substr(-2);
         </script>
         
         <script type="text/javascript">
