@@ -108,7 +108,7 @@
                     document.head.appendChild(fhs);document.write("<span id='o_"+fhs_id+"'></span>");
                     </script>
 
-                    <div>Hits: <span id="hitcount"></span></div>
+                    <div>Hits: <span class="website-counter"></span></div>
                     <div class="date"></div>
                 </div>
             </div>
@@ -186,6 +186,18 @@
         
         <script src="/scripts/music.js"></script>
         <script>     
+            var counterContainer = document.querySelector(".website-counter");
+            var visitCount = localStorage.getItem("page_view");
+
+            // Check if page_view entry is present
+            if (visitCount) {
+              visitCount = Number(visitCount) + 1;
+              localStorage.setItem("page_view", visitCount);
+            } else {
+              visitCount = 1;
+              localStorage.setItem("page_view", 1);
+            }
+            
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
@@ -195,11 +207,9 @@
                     for (i = 0; i < num_arr.length; i++) {
                         num_str += num_arr[i];
                         if ( (num_arr.length-1 - i) % 3 == 0 && (num_arr.length-1 - i) != 0 ) {num_str += ",";}
-                        var date_str = site_data.info.last_updated;
-                        var date_obj = new Date(site_data.info.last_updated);
-                        document.getElementById("lastupdate").innerHTML = (date_obj.getMonth()+1) + "." + date_obj.getDate() + "." + date_obj.getFullYear();
                     }
-                    document.getElementById("hitcount").innerHTML = num_str;
+                    var total =  parseFloat(num_str) + parseFloat(visitCount);
+                    counterContainer.innerHTML = total;
                 }
             };
             xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=adilene", true);
@@ -207,30 +217,30 @@
         </script>
         
         <script>
-        const desiredRepo = "adilene";
-        const dateTagClass = ".date";
+            const desiredRepo = "adilene";
+            const dateTagClass = ".date";
 
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function()
-        {
-          if (this.readyState == 4 && this.status == 200)
-          {
-            let repos = JSON.parse(this.responseText);
-
-            repos.forEach((repo)=>{
-              if (repo.name == desiredRepo)
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function()
+            {
+              if (this.readyState == 4 && this.status == 200)
               {
-                var lastUpdated = new Date(repo.updated_at);
-                var day = lastUpdated.getDate();
-                var month = lastUpdated.getMonth() + 1;
-                var year = lastUpdated.getFullYear();
-                $(dateTagClass).text(`Last Updated: ${month}.${day}.${year}`);
+                let repos = JSON.parse(this.responseText);
+
+                repos.forEach((repo)=>{
+                  if (repo.name == desiredRepo)
+                  {
+                    var lastUpdated = new Date(repo.updated_at);
+                    var day = lastUpdated.getDate();
+                    var month = lastUpdated.getMonth() + 1;
+                    var year = lastUpdated.getFullYear();
+                    $(dateTagClass).text(`Last Updated: ${month}.${day}.${year}`);
+                  }
+                });
               }
-            });
-          }
-        };
-        xhttp.open("GET", "https://api.github.com/users/skycchi/repos", true);
-        xhttp.send();
+            };
+            xhttp.open("GET", "https://api.github.com/users/skycchi/repos", true);
+            xhttp.send();
         </script>
         
         <script type="text/javascript">
