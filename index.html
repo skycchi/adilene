@@ -109,7 +109,7 @@
                     </script>
 
                     <div>Hits: <span id="hitcount"></span></div>
-                    <div class="date"></div>
+                    <div>Last Updated: <span class="demo"></span></div>
                 </div>
             </div>
             
@@ -232,6 +232,11 @@
             };
             xhttp.open("GET", "https://api.github.com/users/skycchi/repos", true);
             xhttp.send();
+        </script>
+        
+        <script>
+            let text = document.lastModified;
+            document.getElementById("demo").innerHTML = text;
         </script>
         
         <script type="text/javascript">
