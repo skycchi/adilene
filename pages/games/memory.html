@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+
+      <link rel="stylesheet" href="/style.css">
+    </head>
+    <style>
+        * {
+            box-sizing: border-box;
+            scrollbar-color:#e74492 #fff;
+            scrollbar-width:thin;
+            cursor:url('/arrow.png'), pointer;
+        }
+        
+        body {
+            height:100vh;
+            background: #fff;
+            margin:10px;
+            overflow:auto;
+        }
+        
+        #wrapper{
+            display:flex;
+        }
+
+        .memory-game {
+            width: 100%;
+            margin: 0 auto;
+            height:315px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            perspective: 1000px;
+            gap:10px;
+            padding-bottom:10px;
+        }
+
+        .memory-card {
+            width: 224px;
+            height: 224px;
+            box-sizing: border-box;
+            position: relative;
+            transform: scale(1);
+            transform-style: preserve-3d;
+            transition: transform .5s;
+            
+        }
+        
+        .memory-card img{
+            width:100%;
+            height:100%;
+            object-fit: contain;
+        }
+
+        .memory-card:active {
+            transform: scale(0.97);
+            transition: transform .2s;
+        }
+
+        .memory-card.flip {
+            transform: rotateY(180deg);
+        }
+
+        .front-face,
+        .back-face {
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            position: absolute;
+            border:3px solid #34f2ff;
+            border-radius: 10px;
+            background: #dbfcff;
+            backface-visibility: hidden;
+            
+        }
+
+        .front-face {
+            transform: rotateY(180deg);
+        }
+        
+    </style>
+    <body>
+        <header style='text-align: center;'>MIKU MATCH</header>
+        <div style="text-align: center;">Directions: Click on any card to flip it over. Try matching all of the cards!</div><br>
+        <div id="wrapper">
+            <section class="memory-game" style="height:100%">
+                <div class="memory-card" data-framework="miku">
+                    <img class="front-face" src="https://adilene.neocities.org/images/memory/miku.png" alt="miku" />
+                    <div class="back-face"></div>
+                </div>
+                <div class="memory-card" data-framework="miku">
+                    <img class="front-face" src="https://adilene.neocities.org/images/memory/miku.png" alt="miku" />
+                    <div class="back-face"></div>
+                </div>
+
+                <div class="memory-card" data-framework="rin">
+                    <img class="front-face" src="https://adilene.neocities.org/images/memory/rin.png" alt="rin" />
+                    <div class="back-face"></div>
+                </div>
+                <div class="memory-card" data-framework="rin">
+                    <img class="front-face" src="https://adilene.neocities.org/images/memory/rin.png" alt="Vue" />
+                    <div class="back-face"></div>
+                </div>
+
+                <div class="memory-card" data-framework="len">
+                  <img class="front-face" src="https://adilene.neocities.org/images/memory/len.png" alt="len" />
+                  <div class="back-face"></div>
+                </div>
+                <div class="memory-card" data-framework="len">
+                    <img class="front-face" src="https://adilene.neocities.org/images/memory/len.png" alt="len" />
+                    <div class="back-face"></div>
+                </div>
+
+                <div class="memory-card" data-framework="luka">
+                    <img class="front-face" src="https://adilene.neocities.org/images/memory/luka.png" alt="luka" />
+                    <div class="back-face"></div>
+                </div>
+                <div class="memory-card" data-framework="luka">
+                    <img class="front-face" src="https://adilene.neocities.org/images/memory/luka.png" alt="luka" />
+                    <div class="back-face"></div>
+                </div>
+
+
+                <div class="memory-card" data-framework="kaito">
+                    <img class="front-face" src="https://adilene.neocities.org/images/memory/kaito.png" alt="kaito" />
+                    <div class="back-face"></div>
+                </div>
+                <div class="memory-card" data-framework="kaito">
+                    <img class="front-face" src="https://adilene.neocities.org/images/memory/kaito.png" alt="kaito" />
+                    <div class="back-face"></div>
+                </div>
+
+                <div class="memory-card" data-framework="meiko">
+                    <img class="front-face" src="https://adilene.neocities.org/images/memory/meiko.png" alt="meiko" />
+                    <div class="back-face"></div>
+                </div>
+                <div class="memory-card" data-framework="meiko">
+                    <img class="front-face" src="https://adilene.neocities.org/images/memory/meiko.png" alt="meiko" />
+                    <div class="back-face"></div>
+                </div>
+            </section>
+            <script src="/scripts/memory.js"></script>
+        </div>
+        
+        <div style="display:flex;justify-content:center;flex-direction:column;align-items: center;padding-bottom:10px;"><button onclick="location.reload();">New Game</button>
+        <div style="margin-top:10px;">Source code: <a href="https://github.com/code-sketch/memory-game" target="_blank">Github</a></div></div>
+    </body>
+</html>
