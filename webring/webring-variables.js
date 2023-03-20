@@ -66,7 +66,8 @@ var sites = [
     "https://leanneu.neocities.org/",
     "https://sunny-cities.neocities.org/",
     "https://retrovampz.neocities.org/",
-    "https://pirupi.neocities.org/"
+    "https://pirupi.neocities.org/",
+    "https://ophanimkei.com/"
 ];
 
 //the name of the ring
