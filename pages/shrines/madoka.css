@@ -18,7 +18,7 @@ body{
     background-image: url("https://adilene.neocities.org/images/pmmm/background.jpeg");
     margin:0;
     color:#000;
-    font-family:'legacy';
+    font-family:'Legacy';
     font-size:18px;
     overflow:auto;
     background-color:#fff;
@@ -26,27 +26,27 @@ body{
 
 @font-face{
     font-family:'Shqip';
-    src:url(https://adilene.neocities.org/fonts/Shqip.otf)
+    src:url("https://files.catbox.moe/htvgfc.otf")
 }
 
 @font-face{
     font-family:'Hangyaku';
-    src:url(https://adilene.neocities.org/fonts/Hangyaku.ttf)
+    src:url("https://files.catbox.moe/w631ni.ttf")
 }
 
 @font-face{
     font-family:'Madomagi';
-    src:url(https://adilene.neocities.org/fonts/madomagi.otf)
+    src:url("https://files.catbox.moe/9bu1lv.otf")
 }
 
 @font-face{
     font-family:'Runes';
-    src:url(https://adilene.neocities.org/fonts/runes.ttf)
+    src:url("https://files.catbox.moe/d1sdfx.ttf")
 }
 
 @font-face{
     font-family:'Legacy';
-    src:url(https://adilene.neocities.org/fonts/legacy.otf)
+    src:url("https://files.catbox.moe/tfa25v.otf")
 }
 
 .full img{
