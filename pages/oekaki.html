@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>VIRTUAL DIVA</title>
+        <link rel="shortcut icon" href="https://files.catbox.moe/j2aivj.gif">
+        <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+        <script src="https://kit.fontawesome.com/f936906ae0.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    </head>
+    <style>
+        body{
+            background-color:var(--bg);
+            text-align:center;
+            margin:10px;
+            padding:0;
+            overflow-x:hidden;
+            animation:fadeEffect 0.5s;
+            height:100%;
+        }
+        
+        @keyframes fadeEffect {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        
+        #container {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        #toolbar {
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+            width: 70px;
+            background-color: #202020;
+        }
+        
+        #drawing-board{
+            border:var(--bw) var(--bt) var(--bc);
+        }
+        
+        #drawing-board:hover{
+            cursor:url('https://adilene.neocities.org/pen.png'), sw-resize;
+        }
+        
+        #toolbar {
+            display:flex;
+            flex-direction: column;
+            padding: 10px;
+            width: 120px;
+            text-align:center;
+            background-color: var(--h);
+            border:var(--bw) var(--bt) var(--bc);
+            border-right:0;
+            height:100%;
+        }
+
+        #toolbar * {
+            margin-bottom:10px;
+        }
+
+        #toolbar label {
+        }
+
+        #toolbar input {
+            width: 100%;
+            border:var(--bw) var(--bt) var(--bc);
+        }
+        
+        .thumbnail{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+        }
+
+        .thumbnail img{
+            width: 400px;
+            height: 213px;
+            object-fit: cover;
+            box-sizing: border-box;
+            padding:10px;
+            background-color:#dbfcff;
+            border: var(--bw) var(--bt) var(--bc);
+        }
+
+        .thumbnail img:hover{
+            opacity:0.8;
+            transition:0.3s;
+        }
+
+        .wrap{
+            overflow:auto;
+            gap:10px;
+            display: flex;
+            flex-wrap: wrap;
+            padding:10px;
+            flex-direction: row;
+            justify-content: center;
+        }
+    </style>
+    <body>
+        <section id="container">
+            <div id="toolbar">
+                <header>OEKAKI</header>
+                <label for="stroke">Stroke Color</label>
+                <input id="stroke" name="stroke" type="color">
+                <label for="lineWidth">Line Width</label>
+                <input id="lineWidth" name="lineWidth" type="number" value="3">
+                <button id="pen">Pen</button>
+                <button id="erase">Eraser</button>
+                <button class="download" onclick="save()">Save</button>
+                <div>Feel free to link your images in the chatbox for a chance to be featured!</div>
+                <br><br><br><br><br>
+                <button id="clear" style="margin-bottom:0px">Clear</button>
+            </div>
+            <div class="drawing-board">
+                <canvas id="drawing-board" height="646" width="1095"></canvas>
+            </div>
+        </section>
+        
+        <div class="wrap" style="margin-top:-5px;">
+            <a class="thumbnail" href="https://adilene.neocities.org/images/features/tslxkp.png" target="_blank">
+                <img src="https://adilene.neocities.org/images/features/tslxkp.png" style="">
+                by @meko
+            </a>
+            <a class="thumbnail" href="https://adilene.neocities.org/images/features/65kcfi.png" target="_blank">
+                <img src="https://adilene.neocities.org/images/features/65kcfi.png">
+                by @chippy
+            </a>
+            <a class="thumbnail" href="https://adilene.neocities.org/images/features/6QJLJaW.png" target="_blank">
+                <img src="https://adilene.neocities.org/images/features/6QJLJaW.png">
+                by @Pepyo
+            </a>
+            <a class="thumbnail" href="https://adilene.neocities.org/images/features/4fbfdd.png" target="_blank">
+                <img src="https://adilene.neocities.org/images/features/4fbfdd.png">
+                by @mirrorteru
+            </a>
+            <a class="thumbnail" href="https://adilene.neocities.org/images/features/0vvn67.png" target="_blank">
+                <img src="https://adilene.neocities.org/images/features/0vvn67.png">
+                by @PKLucky
+            </a>
+            <a class="thumbnail" href="https://adilene.neocities.org/images/features/9p0nw2.png">
+                <img src="https://adilene.neocities.org/images/features/9p0nw2.png">
+                by @MoonlightGamingYT
+            </a>
+        </div>
+        
+        <script>
+            const canvas = document.getElementById('drawing-board');
+            const toolbar = document.getElementById('toolbar');
+            const ctx = canvas.getContext('2d');
+
+            const canvasOffsetX = canvas.offsetLeft;
+            const canvasOffsetY = canvas.offsetTop;
+
+            let isPainting = false;
+            let lineWidth = 5;
+            let startX;
+            let startY;
+
+            toolbar.addEventListener('click', e => {
+                if (e.target.id === 'clear') {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                }
+                if (e.target.id === 'erase') {
+                    ctx.globalCompositeOperation = 'destination-out';
+                }
+                if (e.target.id === 'pen') {
+                    ctx.strokeStyle = e.target.value;
+                    ctx.globalCompositeOperation = 'source-over'
+                }
+            });
+
+            toolbar.addEventListener('change', e => {
+                if(e.target.id === 'stroke') {
+                    ctx.strokeStyle = e.target.value;
+                }
+
+                if(e.target.id === 'lineWidth') {
+                    lineWidth = e.target.value;
+                }
+
+            });
+
+            const draw = (e) => {
+                if(!isPainting) {
+                    return;
+                }
+
+                ctx.lineWidth = lineWidth;
+                ctx.lineCap = 'round';
+
+                ctx.lineTo(e.clientX - canvasOffsetX, e.clientY);
+                ctx.stroke();
+            }
+
+            canvas.addEventListener('mousedown', (e) => {
+                isPainting = true;
+                startX = e.clientX;
+                startY = e.clientY;
+            });
+
+            canvas.addEventListener('mouseup', e => {
+                isPainting = false;
+                ctx.stroke();
+                ctx.beginPath();
+            });
+
+            canvas.addEventListener('mousemove', draw);
+
+            
+            function save(){
+                var canvas = document.querySelector("#can1");
+                var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+
+                var element = document.createElement('a');
+                var filename = 'drawing.png';
+                element.setAttribute('href', image);
+                element.setAttribute('download', filename);
+                element.click();
+            }
+        </script>
+    </body>
+</html>
