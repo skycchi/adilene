@@ -137,7 +137,7 @@
             cursor:url('https://files.catbox.moe/h0vf27.png'), pointer;
         }
         
-        #name input{
+        #name input, #url input{
             border:var(--bw) var(--bt) var(--bc);
             background-color:white;
         }
@@ -173,6 +173,9 @@
         <form name="contact" netlify>
             <p>
                 <label id="name">Name: <input type="text" name="name" required/></label>
+            </p>
+            <p>
+                <label id="url">Site URL: <input type="text" name="url"/></label>
             </p>
             <p>
                 <input type="file" id="myFile" name="filename" required>
