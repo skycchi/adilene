@@ -68,12 +68,17 @@
             margin-bottom:10px;
         }
 
-        #toolbar label {
+        label {
         }
 
         #toolbar input {
             width: 100%;
             border:var(--bw) var(--bt) var(--bc);
+        }
+        
+        input{
+            border:var(--bw) var(--bt) var(--bc);
+            background-color:white;
         }
         
         .thumbnail{
@@ -108,6 +113,10 @@
             flex-direction: row;
             justify-content: center;
         }
+        
+        canvas {
+            touch-action: none;
+        }
     </style>
     <body>
         <section id="container">
@@ -120,8 +129,8 @@
                 <button id="pen">Pen</button>
                 <button id="erase">Eraser</button>
                 <button class="download" onclick="save()">Save</button>
-                <div>Feel free to link your images in the chatbox for a chance to be featured!</div>
-                <br><br><br><br><br>
+                <div>Feel free to upload your images for a chance to be featured!</div>
+                <br><br><br><br><br><br><br>
                 <button id="clear" style="margin-bottom:0px">Clear</button>
             </div>
             <div class="drawing-board">
@@ -129,14 +138,19 @@
             </div>
         </section>
         
+        <BR>
+        <header>GALLERY</header>
+        
         <form name="contact" netlify>
-          <p>
-            <label>Name <input type="text" name="name" /></label>
+            <p>
+                <label>Name: <input type="text" name="name" /></label>
             </p>
-            <p><input type="file" id="myFile" name="filename"></p>
-          <p>
-            <button type="submit">Send</button>
-          </p>
+            <p>
+                <input type="file" id="myFile" name="filename">
+            </p>
+            <p>
+                <button type="submit">Send</button>
+            </p>
         </form>
         
         <div class="wrap" style="margin-top:-5px;">
