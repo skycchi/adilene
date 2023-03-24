@@ -313,6 +313,7 @@
 
                 ctx.lineTo(e.clientX - canvasOffsetX, e.clientY);
                 ctx.stroke();
+                e.preventDefault();
             }
 
             canvas.addEventListener('mousedown', (e) => {
