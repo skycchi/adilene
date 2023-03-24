@@ -307,8 +307,6 @@
                 if(!isPainting) {
                     return;
                 }
-
-                e.preventDefault();
                 
                 ctx.lineWidth = lineWidth;
                 ctx.lineCap = 'round';
@@ -319,6 +317,7 @@
 
             canvas.addEventListener('mousedown', (e) => {
                 isPainting = true;
+                e.preventDefault();
                 startX = e.clientX;
                 startY = e.clientY;
             });
