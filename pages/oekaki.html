@@ -308,12 +308,13 @@
                     return;
                 }
 
+                e.preventDefault();
+                
                 ctx.lineWidth = lineWidth;
                 ctx.lineCap = 'round';
 
                 ctx.lineTo(e.clientX - canvasOffsetX, e.clientY);
                 ctx.stroke();
-                e.preventDefault();
             }
 
             canvas.addEventListener('mousedown', (e) => {
