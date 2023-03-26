@@ -9,171 +9,201 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@44659d9/css/all.min.css" rel="stylesheet" type="text/css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.11.1/sass.min.js"></script>
-        <link href="/pages/shrines/madoka.css" rel="stylesheet">
     </head>
     <style>
- 
+        body{
+            margin:0;
+            font-size:35px;
+            font-family:ms gothic;
+            color:#f08389;
+            overflow:hidden;
+            text-shadow: rgb(255, 255, 255) 3px 0px 0px, rgb(255, 255, 255) 2.83487px 0.981584px 0px, rgb(255, 255, 255) 2.35766px 1.85511px 0px, rgb(255, 255, 255) 1.62091px 2.52441px 0px, rgb(255, 255, 255) 0.705713px 2.91581px 0px, rgb(255, 255, 255) -0.287171px 2.98622px 0px, rgb(255, 255, 255) -1.24844px 2.72789px 0px, rgb(255, 255, 255) -2.07227px 2.16926px 0px, rgb(255, 255, 255) -2.66798px 1.37182px 0px, rgb(255, 255, 255) -2.96998px 0.42336px 0px, rgb(255, 255, 255) -2.94502px -0.571704px 0px, rgb(255, 255, 255) -2.59586px -1.50383px 0px, rgb(255, 255, 255) -1.96093px -2.27041px 0px, rgb(255, 255, 255) -1.11013px -2.78704px 0px, rgb(255, 255, 255) -0.137119px -2.99686px 0px, rgb(255, 255, 255) 0.850987px -2.87677px 0px, rgb(255, 255, 255) 1.74541px -2.43999px 0px, rgb(255, 255, 255) 2.44769px -1.73459px 0px, rgb(255, 255, 255) 2.88051px -0.838247px 0px;
+            background-color:#fbcecd;
+            background-image: url("https://adilene.neocities.org/images/pmmm/background.jpeg");
+        }
         
+        #wrapper{
+            display:flex;
+            height:100vh;
+            
+        }
+        
+        .left, .right{
+            border:4px solid #f08389;
+        }
+        
+        .left{
+            width:80%;
+            display:flex;
+            align-items: flex-end;
+        }
+        
+        .right{
+            width:20%;
+            border-left:none;
+            background-color:#fbcecd;
+            background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(251,206,205,1) 100%);
+            padding:20px;
+            text-align:center;
+            display:flex;
+            flex-direction:column;
+            gap:20px;
+            user-select: none;
+        }
+        
+        .right > div:hover{
+            color:#b73c51;
+        }
+        
+        .dialogue{
+            width:70%;
+            border:4px solid #f08389;
+            margin: 50px auto;
+            padding:50px;
+            word-break: break-word;
+            background: repeating-linear-gradient(45deg,#fbcecd,#fbcecd 5%,#fff 5%,#fff 10%);
+            background-size: 100px 100px;
+            animation: move-it 2s linear infinite;
+            border-radius:40px;
+            outline:4px solid white;
+            z-index:9999999999999999999;
+            user-select: none;
+        }
+        
+        @keyframes move-it {
+            0% {
+                background-position: initial;
+            }
+            100% {
+                background-position: 100px 0px;
+            }
+        }
+        
+        @keyframes floating {
+            0% { transform: translate(0,  0px); }
+            50%  { transform: translate(0, 5px); }
+            100%   { transform: translate(0, -0px); }    
+        }
+        
+        .magica{
+            position: absolute;
+            z-index:-1;
+            left:0;
+            right:0;
+            bottom:-50px;
+            width:80%;
+            user-select: none;
+        }
+        
+        .magica img{
+            display:block;
+            width:auto;
+            height:700px;
+            margin:auto;
+            filter:drop-shadow(5px 0px 0px rgba(255,255,255,0.5));
+        }
+        
+        .hidden{
+            display:none;
+        }
+
+        .content{
+            width:100%;
+        }
+        
+        .red{
+            color:#b73c51;
+        }
+        
+        .circle{
+            border:4px solid #f08389;
+            padding:25px;
+            border-bottom-right-radius:50px;
+            background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(251,206,205,1) 100%);
+        }
     </style>
     <body>
-            
         <div id="wrapper">
-            
-                <div class="carousel border">
-                    <div class="inner">
-                        <div id="logo">
-                            <span style="color:#d4a77f;font-size:50px;">PUELLA MAGI</span> MADOKA<span style="margin:5px;font-family:Hangyaku;font-size:50px;color:#d4a77f">★</span>MAGICA
-                        </div>
-                        <div style="display:flex;justify-content:center;">
-                            <div style="width:50%">
-                                <span id="splash">
-                                    <img src="https://adilene.neocities.org/images/pmmm/chara.png">
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel border">
-                    <div class="inner">
-                        <span id="mado" style="font-size:50px;width:600px;height:fit-content;height:moz-fit-content;margin:auto;text-align:center;top:0;bottom:0;left:0;right:0;position:absolute;">ALWAYS<SPAN style="font-family:Hangyaku !important">,</SPAN> SOMEWHERE<SPAN style="font-family:Hangyaku !important">,</SPAN> SOMEONE IS FIGHTING FOR YOU. AS LONG AS YOU REMEMBER HER<span style="font-family:Hangyaku !important">,</span> YOU ARE NOT ALONE.
-                        <div id="kyubey">
-                            <img src="https://adilene.neocities.org/images/pmmm/kyubey.png">
-                        </div>
-                        </span>
-
-                    </div>
-                </div>
-
-                <div class="carousel madoka" style="margin-top:-20px;">
-                    <div id="madoka" class="tabcontent">
-                        <span id="title" style="color:#fb8391">kaname madoka</span> <span class="subtitle" style="color:#fb8391">(鹿目まどか)</span>
-                        <div class="description" style="border-color:#fb8391;">age: 14 (october 3)<br>soul gem: pink teardrop<br>weapon: bow<br><br>a gentle and friendly girl. living an ordinary life, madoka has a loving family and is surrounded by good friends. one day she has a dream of a mysterious girl fighting an ominous creature. the next day, akemi homura, the girl from her dream, comes to her class as a transfer student.</div>
-                        <div class="full">
-                            <img src="https://adilene.neocities.org/images/pmmm/full/madoka.png" style="filter:drop-shadow(5px 0px 0px rgba(251,131,145,0.5));">
-                        </div>
-                        <div class="cutin">
-                            <img src="https://adilene.neocities.org/images/pmmm/cut-in/madoka-ci.png" class="mask">
-                        </div>
-                        <div class="screencap">
-                            <img src="https://adilene.neocities.org/images/pmmm/screencaps/madoka-design.jpeg" style="border-color:#fb8391">
-                            <img src="https://adilene.neocities.org/images/pmmm/screencaps/madoka-bow.png" style="border-color:#fb8391">
-                            <img src="https://adilene.neocities.org/images/pmmm/screencaps/madoka-trans.gif" style="border-color:#fb8391">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel homura" style="margin-top:0px;">
-                    <div id="homura" class="tabcontent">
-                        <span id="title" style="color:#6f5a73">akemi homura</span> <span class="subtitle" style="color:#6f5a73">(暁美ほむら)</span>
-                        <div class="description" style="border-color:#6f5a73;">
-                            age: 14 (february 22)<br>soul gem: purple diamond<br>weapon: shield<br><br>a seemingly cold and antisocial girl, she is first seen by madoka in a dream of her fighting a monster in a desolate landscape of skyscrapers. the day after the dream, homura has transferred to madoka's school where she gives her ominous warnings.
-                        </div>
-                        <div class="full">
-                            <img src="https://adilene.neocities.org/images/pmmm/full/homura.png" style="margin-left:30px;filter:drop-shadow(5px 0px 0px rgba(111,90,115,0.5));">
-                        </div>
-                        <div class="cutin">
-                            <img src="https://adilene.neocities.org/images/pmmm/cut-in/homura-ci.png" class="mask">
-                        </div>
-                        <div class="screencap">
-                            <img src="https://adilene.neocities.org/images/pmmm/screencaps/homura-design.jpeg" style="border-color:#6f5a73">
-                            <img src="https://adilene.neocities.org/images/pmmm/screencaps/homura-fight.png" style="border-color:#6f5a73">
-                            <img src="https://adilene.neocities.org/images/pmmm/screencaps/homura-trans.gif" style="border-color:#6f5a73">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel sayaka" style="margin-top:0px;">
-                    <div id="sayaka" class="tabcontent">
-                        <span id="title" style="color:#5d7396">miki sayaka</span> <span class="subtitle" style="color:#5d7396">(美樹さやか)</span>
-                        <div class="description" style="border-color:#5d7396;">age: 14 (september 20)<br>weapon: cutlass<br>soul gem: blue crescent moon<br><br>she is madoka's best friend. tomboyish, confident, and a little brash, she upholds a strong sense of justice and adopts a heroic attitude as a magical girl.</div>
-                        <div class="full">
-                            <img src="https://adilene.neocities.org/images//pmmm/full/sayaka.png" style="margin-left:70px;filter:drop-shadow(5px 0px 0px rgba(93,115,150,0.5));">
-                        </div>
-                        <div class="cutin">
-                            <img src="https://adilene.neocities.org/images/pmmm/cut-in/sayaka-ci-blur.png" class="mask">
-                        </div>
-                        <div class="screencap">
-                            <img src="https://adilene.neocities.org/images/pmmm/screencaps/sayaka-design.jpeg" style="border-color:#5d7396">
-                            <img src="https://adilene.neocities.org/images/pmmm/screencaps/sayaka-fight.png" style="border-color:#5d7396">
-                            <img src="https://adilene.neocities.org/images/pmmm/screencaps/sayaka-trans.gif" style="border-color:#5d7396">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel mami" style="margin-top:0px;">
-                    <div id="mami" class="tabcontent">
-                        <span id="title" style="color:#eac775">tomoe mami</span> <span class="subtitle" style="color:#eac775">(巴マミ)</span>
-                        <div class="description" style="border-color:#eac775;">age: 15 (june 5)<br>weapon: ribbons (turns into muskets)<br>soul gem: yellow flower<br><br>a magical girl who rescues madoka and sayaka from a witch. she is a powerful and experienced veteran whom is already contracted to kyubey and offers to act as a mentor to the pair should they choose to become magical girls.</div>
-                        <div class="full">
-                            <img src="https://adilene.neocities.org/images/pmmm/full/mami.png" style="margin-left:70px;filter:drop-shadow(5px 0px 0px rgba(234,199,117,0.5));">
-                        </div>
-                        <div class="cutin">
-                            <img src="https://adilene.neocities.org/images/pmmm/cut-in/mami-ci-blur.png" class="mask">
-                        </div>
-                        <div class="screencap">
-                            <img src="https://adilene.neocities.org/images/pmmm/screencaps/mami-design.jpeg" style="border-color:#eac775">
-                            <img src="https://adilene.neocities.org/images/pmmm/screencaps/mami-tiro-finale.jpg" style="border-color:#eac775">
-                            <img src="https://adilene.neocities.org/images/pmmm/screencaps/mami-trans.gif" style="border-color:#eac775">
-                        </div>
-                    </div>  
-                </div>
-
-                <div class="carousel kyoko" style="margin-top:0px;">
-                    <div id="kyoko" class="tabcontent">
-                        <span id="title" style="color:#7f3946">sakura kyoko</span> <span class="subtitle" style="color:#7f3946">(佐倉杏子)</span>
-                        <div class="description" style="border-color:#7f3946;">age: 14<br>weapon: multi-jointed spear<br>soul gem: red eye<br><br>a veteran magical girl who is abrasive, fiery, and self-centered. she fights only for herself and is hostile towards other magical girls.</div>
-                        <div class="full">
-                            <img src="https://adilene.neocities.org/images/pmmm/full/kyoko.png" style="filter:drop-shadow(5px 0px 0px rgba(127,57,70,0.5));">
-                        </div>
-                        <div class="cutin">
-                            <img src="https://adilene.neocities.org/images/pmmm/cut-in/kyoko-ci.png" class="mask">
-                        </div>
-                        <div class="screencap">
-                            <img src="https://adilene.neocities.org/images/pmmm/screencaps/kyoko-design.jpeg" style="border-color:#7f3946">
-                            <img src="https://adilene.neocities.org/images/pmmm/screencaps/kyoko-fight.jpg" style="border-color:#7f3946">
-                            <img src="https://adilene.neocities.org/images/pmmm/screencaps/kyoko-trans.gif" style="border-color:#7f3946">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel borderblack">
-                    <div class="innertwo">
-                        <div id="runes" style="text-align:center;">WITCHES</div><br>
-                        <div id="runesdesc" style="width:100%;text-align:center;">The negative impulse that is called anxiety or suspicion, or excessive wrath or hatred spawns monsters called "witches" that spread the seeds of disaster across the world. </div>
-                        <img src="https://adilene.neocities.org/images/pmmm/witches/charlotte1.png" style="width:490px;height:auto;margin:auto;display: flex;margin: -55px auto;">
-                    </div>
-                </div>
-
-                <div class="carousel borderblack">
-                    <div class="innertwo" style="background-color: #e5e5f7;background-image: linear-gradient(45deg, #f2f2f2 50%, #fff 50%);background-size: 50px 50px;">
-                        <div id="runes" style="z-index:99999;position:absolute;">Walpurgisnacht</div><br><br><br><br>
-                        <div id="runesdesc" style="z-index:99999;position:absolute;">Walpurgisnacht•is the•strongest witch•Her•real name•is•unknown•Her true•nature•is kept•mysterious.</div>
-                        <img src="https://adilene.neocities.org/images/pmmm/witches/walpur.png" style="margin-top:-150px;margin-left:160px;height:700px;">
-                    </div>
-                </div>
-
-                <div class="carousel borderblack">
-                    <div class="innertwo" style="background-image:url('https://adilene.neocities.org/images/pmmm/witches/kriemhild.jpeg');">
-                        <div id="runes">KRIEMHILD<br>GRETCHEN</div><br>
-                        <div id="runesdesc">KRIEMHILD GRETCHEN•IS•THE•WITCH FORM•OF KANAME•MADOKA</div>
-                    </div>
-                </div>
-
-                <div class="carousel borderblack">
-                    <div class="innertwo">
-                        <div id="runes" style="width:100%;height:100%;text-align:center;display:flex;justify-content: center;align-content: center;align-items: center;">Witches are the final form of Magical Girls. When a girl's Soul Gem becomes too full of impurities and turns completely black, it transforms into a Grief Seed, and its Magical Girl becomes a Witch.</div>
-                    </div>
-                </div>
-            
-                <div style="width:100%;display:flex;flex-direction:row;justify-content:space-around;margin-left:20px;gap:10px;">
-                    <img src="https://adilene.neocities.org/images/pmmm/soulgem/madoka.png" class="glowpink" width="80">
-                    <img src="https://adilene.neocities.org/images/pmmm/soulgem/homura.png" class="glowpurple" width="80">
-                    <img src="https://adilene.neocities.org/images/pmmm/soulgem/mami.png" class="glowyellow" width="80">
-                    <img src="https://adilene.neocities.org/images/pmmm/soulgem/sayaka.png" class="glowblue" width="80">
-                    <img src="https://adilene.neocities.org/images/pmmm/soulgem/kyoko.png" class="glowred" width="80">
+            <div class="left">
+                <div style="position:absolute;top:0;left:0;display:flex;align-items: center;gap:10px;">
+                    <div class="circle"><i class="fa-solid fa-sun-cloud" style="font-size:75px;"></i></div>
+                    <div>Morning</div>
                 </div>
                 
+                <div class="content">
+                    <div class="magica">
+                        <img src="https://files.catbox.moe/eua3jl.png">
+                    </div>
+                    <div class="dialogue">
+                        A gentle and friendly girl living an ordinary life. <span class="red">Madoka</span> has a loving family and is surrounded by good friends.
+                    </div>
+                    
+                </div>
+                
+                 <div class="content hidden">
+                    <div class="magica">
+                        <img src="https://files.catbox.moe/89p2ng.png">
+                    </div>
+                    <div class="dialogue">
+                        A seemingly cold and antisocial girl, <span class="red">Homura</span> is first seen by Madoka in a dream of her fighting a monster.
+                    </div>
+                </div>
+                
+                <div class="content hidden">
+                    <div class="magica">
+                        <img src="https://files.catbox.moe/pvm4p2.png">
+                    </div>
+                    <div class="dialogue">
+                        She is Madoka's best friend. Tomboyish, confident, and a little brash, <span class="red">Sayaka</span> upholds a strong sense of justice.
+                    </div>
+                </div>
+                
+                <div class="content hidden">
+                    <div class="magica">
+                        <img src="https://files.catbox.moe/aq1idg.png">
+                    </div>
+                    <div class="dialogue">
+                        A magical girl who rescues Madoka and Sayaka from a witch. <span class="red">Mami</span> is a powerful and experienced veteran.
+                    </div>
+                </div>
+                
+                <div class="content hidden">
+                    <div class="magica">
+                        <img src="https://files.catbox.moe/ip3y9x.png">
+                    </div>
+                    <div class="dialogue">
+                        A veteran magical girl who is abrasive, fiery, and self-centered. <span class="red">Kyoko</span> fights only for herself.
+                    </div>
+                </div>
+                
+                
+                <div style="position:absolute;left:0;right:0;text-align:center;width:80%;bottom:50px;animation:floating 0.5s infinite ease-in-out;color:#f08389;z-index:3;">
+                    <i class="fa-sharp fa-solid fa-heart"></i>
+                </div>
             </div>
+            <div class="right">
+                <div>Save</div>
+                <div>Load</div>
+                <div>History</div>
+                <div>Skip</div>
+                <div>Auto</div>
+                <div>Settings</div>
+                <div>Quit</div>
+            </div>
+        </div>
+        
+        <script>
+            (function(){
+
+            var hints = $('.content');
+            var i = 0;
+
+            $('.dialogue').on('click', function(){
+                i = (i + 1) % hints.length;
+                hints.hide().eq(i).show();
+            });
+
+            })();
+        </script>
     </body>
 </html>
