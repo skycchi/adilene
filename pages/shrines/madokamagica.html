@@ -145,7 +145,7 @@
             z-index:-2;
         }
     </style>
-    <body>
+    <body onclick="clicksound.playclip()">
         <div id="wrapper">
             <div class="left">
                 <div style="position:absolute;top:0;left:0;display:flex;align-items: center;gap:10px;">
@@ -205,13 +205,13 @@
                 </div>
             </div>
             <div class="right">
-                <div>Save</div>
-                <div>Load</div>
-                <div>History</div>
-                <div>Skip</div>
-                <div>Auto</div>
-                <div>Settings</div>
-                <div class="red">Quit</div>
+                <div onmouseover="mouseoversound.playclip()" onclick="clicksound.playclip()">Save</div>
+                <div onmouseover="mouseoversound.playclip()" onclick="clicksound.playclip()">Load</div>
+                <div onmouseover="mouseoversound.playclip()" onclick="clicksound.playclip()">History</div>
+                <div onmouseover="mouseoversound.playclip()" onclick="clicksound.playclip()">Skip</div>
+                <div onmouseover="mouseoversound.playclip()" onclick="clicksound.playclip()">Auto</div>
+                <div onmouseover="mouseoversound.playclip()" onclick="clicksound.playclip()">Settings</div>
+                <div onmouseover="mouseoversound.playclip()" onclick="clicksound.playclip()" class="red">Quit</div>
             </div>
         </div>
         
@@ -227,6 +227,51 @@
             });
 
             })();
+        </script>
+        
+        <script>
+
+            // Mouseover/ Click sound effect- by JavaScript Kit (www.javascriptkit.com)
+            // Visit JavaScript Kit at http://www.javascriptkit.com/ for full source code
+
+            //** Usage: Instantiate script by calling: var uniquevar=createsoundbite("soundfile1", "fallbackfile2", "fallebacksound3", etc)
+            //** Call: uniquevar.playclip() to play sound
+
+            var html5_audiotypes={ //define list of audio file extensions and their associated audio types. Add to it if your specified audio file isn't on this list:
+            "mp3": "audio/mpeg",
+            "mp4": "audio/mp4",
+            "ogg": "audio/ogg",
+            "wav": "audio/wav"
+            }
+
+            function createsoundbite(sound){
+            var html5audio=document.createElement('audio')
+            if (html5audio.canPlayType){ //check support for HTML5 audio
+            for (var i=0; i<arguments.length; i++){
+            var sourceel=document.createElement('source')
+            sourceel.setAttribute('src', arguments[i])
+            if (arguments[i].match(/\.(\w+)$/i))
+            sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
+            html5audio.appendChild(sourceel)
+            }
+            html5audio.load()
+            html5audio.playclip=function(){
+            html5audio.pause()
+            html5audio.currentTime=0
+            html5audio.play()
+            }
+            return html5audio
+            }
+            else{
+            return {playclip:function(){throw new Error("Your browser doesn't support HTML5 audio unfortunately")}}
+            }
+            }
+
+            //Initialize two sound clips with 1 fallback file each:
+
+            var mouseoversound=createsoundbite("https://a.tumblr.com/tumblr_ojrn7aGBii1w2e2oyo1.mp3")
+            var clicksound=createsoundbite("https://a.tumblr.com/tumblr_ojrmy55yUN1w2e2oyo1.mp3")
+
         </script>
     </body>
 </html>
