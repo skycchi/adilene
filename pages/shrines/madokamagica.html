@@ -29,26 +29,33 @@
         }
         
         .left, .right{
-            border:4px solid #f08389;
+            border:5px solid #f08389;
         }
         
         .left{
             width:80%;
             display:flex;
             align-items: flex-end;
+            border-right:none;
         }
         
         .right{
             width:20%;
             border-left:none;
-            background-color:#fbcecd;
-            background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(251,206,205,1) 100%);
             padding:20px;
             text-align:center;
             display:flex;
             flex-direction:column;
             gap:20px;
             user-select: none;
+            justify-content: space-between;
+        }
+        
+        .right > div{
+            border:5px solid #f08389;
+            border-radius:25px;
+            padding:10px;
+            background: linear-gradient(0deg, rgba(251,206,205,1) 0%, rgba(255,255,255,1) 100%);
         }
         
         .right > div:hover{
@@ -57,7 +64,7 @@
         
         .dialogue{
             width:70%;
-            border:4px solid #f08389;
+            border:5px solid #f08389;
             margin: 50px auto;
             padding:50px;
             word-break: break-word;
@@ -116,18 +123,29 @@
         }
         
         .circle{
-            border:4px solid #f08389;
+            border:5px solid #f08389;
             padding:25px;
-            border-bottom-right-radius:50px;
-            background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(251,206,205,1) 100%);
+            border-bottom-right-radius:30px;
+            background: linear-gradient(0deg, rgba(251,206,205,1) 0%, rgba(255,255,255,1) 100%);
+        }
+        
+        .hearts{
+            padding:10px 30px 10px 20px;
+            margin-left:-10px;
+            border:5px solid #f08389;
+            border-left:none;
+            border-radius:0px 50px 10px 0px;
+            display:flex;
+            gap:10px;
+            background: linear-gradient(0deg, rgba(251,206,205,1) 0%, rgba(255,255,255,1) 100%);
         }
     </style>
     <body>
         <div id="wrapper">
             <div class="left">
                 <div style="position:absolute;top:0;left:0;display:flex;align-items: center;gap:10px;">
-                    <div class="circle"><i class="fa-solid fa-sun-cloud" style="font-size:75px;"></i></div>
-                    <div>Morning</div>
+                    <div class="circle"><i class="fa-duotone fa-sun-cloud" style="font-size:75px;--fa-primary-color: #f08389; --fa-secondary-color: #f08389; --fa-secondary-opacity: 1;"></i></div>
+                    <div class="hearts"><i class="fa-sharp fa-solid fa-heart"></i><i class="fa-sharp fa-solid fa-heart" ></i><i class="fa-sharp fa-solid fa-heart"></i></div> 
                 </div>
                 
                 <div class="content">
@@ -188,7 +206,7 @@
                 <div>Skip</div>
                 <div>Auto</div>
                 <div>Settings</div>
-                <div>Quit</div>
+                <div class="red">Quit</div>
             </div>
         </div>
         
