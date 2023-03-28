@@ -108,7 +108,6 @@
             width:auto;
             height:700px;
             margin:auto;
-            filter:drop-shadow(5px 0px 0px rgba(255,255,255,0.5));
         }
         
         .hidden{
@@ -146,6 +145,12 @@
         }
     </style>
     <body onclick="clicksound.playclip()">
+        <audio autoplay loop id="musicbox">
+            <source src="https://files.catbox.moe/5snybp.mp3">
+        </audio>
+        
+        
+        
         <div id="wrapper">
             <div class="left">
                 <div style="position:absolute;top:0;left:0;display:flex;align-items: center;gap:10px;">
@@ -272,6 +277,11 @@
             var mouseoversound=createsoundbite("https://a.tumblr.com/tumblr_ojrn7aGBii1w2e2oyo1.mp3")
             var clicksound=createsoundbite("https://a.tumblr.com/tumblr_ojrmy55yUN1w2e2oyo1.mp3")
 
+        </script>
+        
+        <script>
+            var audio = document.getElementById("musicbox");
+            audio.volume = 0.5;
         </script>
     </body>
 </html>
