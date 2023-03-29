@@ -124,14 +124,25 @@
         
         .circle{
             border:5px solid #f08389;
-            padding:25px;
-            border-bottom-right-radius:30px;
-            background: linear-gradient(0deg, rgba(251,206,205,1) 0%, rgba(255,255,255,1) 100%);
+            border-bottom-right-radius:70px;
+            background: #fff;
             outline:5px solid white;
             z-index:-1;
+            overflow:auto;
+            width:150px;
+            height:150px;
+        }
+        
+        .circle img{
+            position:absolute;
+            height:150px;
+            display:block;
+            transform: scaleX(-1);
+            margin-left:0px;
         }
         
         .hearts{
+            margin-top:-50px;
             padding:10px 30px 10px 20px;
             margin-left:-10px;
             border:5px solid #f08389;
@@ -154,11 +165,14 @@
         <div id="wrapper">
             <div class="left">
                 <div style="position:absolute;top:0;left:0;display:flex;align-items: center;gap:10px;">
-                    <div class="circle"><i class="fa-duotone fa-sun-cloud" style="font-size:75px;--fa-primary-color: #f08389; --fa-secondary-color: #f08389; --fa-secondary-opacity: 1;"></i></div>
+                    <div class="circle">
+                        <img src="https://litter.catbox.moe/zea91j.png">
+                    </div>
                     <div class="hearts"><i class="fa-sharp fa-solid fa-heart"></i><i class="fa-sharp fa-solid fa-heart" ></i><i class="fa-sharp fa-solid fa-heart"></i></div> 
                 </div>
                 
                 <div class="content">
+                    
                     <div class="magica">
                         <img src="https://files.catbox.moe/eua3jl.png">
                     </div>
