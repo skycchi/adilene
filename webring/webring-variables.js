@@ -49,7 +49,7 @@ var sites = [
     "https://expectationemesis.neocities.org/",
     "https://amihan.neocities.org/",
     "https://followthewhiterabbit.neocities.org/",
-    "https://sanguineroyal.neocities.org/",
+    "https://sanguineroyal.com/",
     "https://bp119.neocities.org/",
     "https://thegvttr.neocities.org/",
     "https://stupidbutcoolwebsitename.neocities.org/",
