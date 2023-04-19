@@ -67,7 +67,14 @@ var sites = [
     "https://sunny-cities.neocities.org/",
     "https://retrovampz.neocities.org/",
     "https://pirupi.neocities.org/",
-    "https://ophanimkei.com/"
+    "https://ophanimkei.com/",
+    "https://bebetcy.neocities.org/",
+    "https://chipsfunfun.neocities.org/",
+    "https://lovelyqats.neocities.org/",
+    "https://eternities.neocities.org/",
+    "https://mirrordomain.neocities.org/",
+    "https://sodagirl.neocities.org/",
+    "https://doqmeat.neocities.org/"
 ];
 
 //the name of the ring
