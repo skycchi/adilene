@@ -10,7 +10,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="https://static.tumblr.com/rtrqcib/VGGnlh8rf/jquery.style-my-tooltips.min.js"></script>
         <script>(function($){$(document).ready(function(){$("a[title]").style_my_tooltips({tip_follows_cursor:true,tip_delay_time:0,tip_fade_speed:0,attribute:"title"});});})(jQuery);</script>
-        <script src="/scripts/rightclick.js"></script>
+        <!--<script src="/scripts/rightclick.js"></script>-->
         
         <script type="text/javascript">
             var url = location.href;
@@ -118,7 +118,7 @@
                     </script>
 
                     <div>Hits: <span id="hitcount"></span></div>
-                    <div>Last Updated: 4.19.23</div>
+                    <div>Last Updated: <span id="updated"></span></div>
                 </div>
             </div>
             
@@ -217,8 +217,24 @@
         </script>
         
         <script>
-            const date = new Date(document.lastModified);
-            document.getElementById('demo').innerHTML = parseFloat(date.getMonth()) + 1 + "." + date.getDate() + "." + date.getFullYear().toString().substr(-2);
+            var xhttp = new XMLHttpRequest();
+
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                    let repos = JSON.parse(this.responseText);
+                    repos.forEach((repo)=>{
+                        const today = new Date(repo.updated_at);
+                        const yyyy = today.getFullYear().toString().substr(-2);
+                        let mm = today.getMonth() + 1; // Months start at 0!
+                        let dd = today.getDate();
+
+                        const formattedToday = mm + '.' + dd + '.' + yyyy;
+                        document.getElementById("updated").innerHTML = formattedToday;
+                });
+              }
+            };
+            xhttp.open("GET", "https://api.github.com/users/skycchi/repos", true);
+            xhttp.send();
         </script>
         
         <script type="text/javascript">
