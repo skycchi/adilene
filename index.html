@@ -225,7 +225,7 @@
                     repos.forEach((repo)=>{
                         const today = new Date(repo.updated_at);
                         const yyyy = today.getFullYear().toString().substr(-2);
-                        let mm = today.getMonth() + 1; // Months start at 0!
+                        let mm = today.getMonth() + 2; // Months start at 0!
                         let dd = today.getDate();
 
                         const formattedToday = mm + '.' + dd + '.' + yyyy;
