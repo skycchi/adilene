@@ -223,10 +223,10 @@
               if (this.readyState == 4 && this.status == 200) {
                     let repos = JSON.parse(this.responseText);
                     repos.forEach((repo)=>{
-                        const today = new Date(repo.updated_at);
-                        const yyyy = today.getFullYear().toString().substr(-2);
-                        let mm = today.getMonth() + 2; // Months start at 0!
-                        let dd = today.getDate();
+                        const lastUpdated = new Date(repo.updated_at);
+                        const yyyy = lastUpdated.getFullYear().toString().substr(-2);
+                        let mm = lastUpdated.getUTCMonth() + 2; // Months start at 0!
+                        let dd = lastUpdated.getUTCDate() + 1;
 
                         const formattedToday = mm + '.' + dd + '.' + yyyy;
                         document.getElementById("updated").innerHTML = formattedToday;
