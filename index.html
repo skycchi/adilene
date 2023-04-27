@@ -227,7 +227,7 @@
                         const lastUpdated = new Date(repo.updated_at);
                         const yyyy = lastUpdated.getFullYear().toString().substr(-2);
                         let mm = lastUpdated.getUTCMonth() + 2; // Months start at 0!
-                        let dd = lastUpdated.getUTCDate() + 1;
+                        let dd = lastUpdated.getUTCDate() + 3;
 
                         const formattedToday = mm + '.' + dd + '.' + yyyy;
                         document.getElementById("updated").innerHTML = formattedToday;
