@@ -539,4 +539,8 @@ iframe{
         display:flex;
         flex-direction:column; 
     }
+    
+    .updates{
+        display:none;
+    }
 }
