@@ -490,7 +490,7 @@ button{
     margin:2px 0px;
     transition:0.2s;
     color:#e74492;
-    width:84px;
+    min-width:84px;
 }
 
 button:hover{
