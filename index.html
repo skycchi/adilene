@@ -114,7 +114,7 @@
                     <header>STATS</header>
                 </div>
                 <div class="inner" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;text-align:center;color:var(--color);">
-                    <?php include("visitors.php");?>
+                    <div>Online Users: <span id="view_count_text"></span></div>
                     <div>Hits: <span id="hitcount"></span></div>
                     <div>Last Updated: <span id="updated"></span></div>
                 </div>
@@ -267,5 +267,52 @@
         <script type="text/javascript"
         src="https://www.statcounter.com/counter/counter.js" async>
         </script>
+        
+        <script type="module">
+          // Import the functions you need from the SDKs you need
+          import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+          // TODO: Add SDKs for Firebase products that you want to use
+          // https://firebase.google.com/docs/web/setup#available-libraries
+
+          // Your web app's Firebase configuration
+          const firebaseConfig = {
+            apiKey: "AIzaSyBi1a8cuNF0ifAtocFChBeQIqQHDY7YuBA",
+            authDomain: "realtime-view-counter-86cab.firebaseapp.com",
+            projectId: "realtime-view-counter-86cab",
+            storageBucket: "realtime-view-counter-86cab.appspot.com",
+            messagingSenderId: "1087941080908",
+            appId: "1:1087941080908:web:9a491e0dbd1ac9b6ff81e9"
+          };
+
+          // Initialize Firebase
+          const app = initializeApp(firebaseConfig);
+            
+            function get_viewers_ip(json){
+                viewers_ip = json.ip;
+                //count view with ip
+                count_view(viewers_ip);
+            }
+            
+            function count_view(viewers_ip){
+                var views;
+                var ip_to_string = viewers_ip.toString();
+                
+                for(var i, i = 0; i < ip_to_string.length; i++){
+                    ip_to_string = ip_to_string.replace(".", "-");
+                }
+                firebase.database().ref().child("page_views/" + ip_to_string).set({
+                    viewers_ip: viewers_ip
+                });
+                
+                firebase.database().ref().child("page_views").on("value", function(snapshot){
+                   views = snapshot.numChildren();
+                    document.getElementById("view_count_text").innerHTML = views;
+                });
+            }
+            
+            
+        </script>
+        
+        <script src="https://api.ipify.org?format=jsonp&callback=get_viewers_ip"></script>
     </body>
 </html>
