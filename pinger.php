@@ -56,7 +56,7 @@ for($i=0; $i<$nruvon; $i++) {
 $nrusr = $nruvon - $nrvst; // gets the users (total - visitors)
 
 // the HTML code with data to be displayed
-$reout = '<div id="uvon"><h4>Online Users: '. $nruvon. '</h4> </div>';
+$reout = '<div id="uvon">Online Users: '. $nruvon. ' </div>';
 
 // write data in $filetxt
 if(!file_put_contents($filetxt, implode("\n", $addrow))) $reout = 'Error: Recording file not exists, or is not writable';
