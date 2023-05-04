@@ -11,7 +11,7 @@
         <script src="https://static.tumblr.com/rtrqcib/VGGnlh8rf/jquery.style-my-tooltips.min.js"></script>
         <script>(function($){$(document).ready(function(){$("a[title]").style_my_tooltips({tip_follows_cursor:true,tip_delay_time:0,tip_fade_speed:0,attribute:"title"});});})(jQuery);</script>
         <meta name="description" content="A Hatsune Miku inspired website by a fan, for fans!">
-<!--        <script src="/scripts/rightclick.js"></script>-->
+        <script src="/scripts/rightclick.js"></script>
         
         <script type="text/javascript">
             var url = location.href;
@@ -121,7 +121,7 @@
                     document.head.appendChild(fhs);document.write("<span id='o_"+fhs_id+"'></span>");
                     </script>
 -->
-                    <?php include('pinger.php'); ?>
+                    <?php include('scripts/pinger.php'); ?>
                     <div>Hits: <span id="hitcount"></span></div>
                     <div>Last Updated: <span id="updated"></span></div>
                 </div>
