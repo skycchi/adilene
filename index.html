@@ -239,30 +239,6 @@
             xhttp.send();
         </script>
         
-        <script type="text/javascript" charset="utf-8">
-        $().ready(function (){
-          var token = '';
-          var pinger = setInterval(function (){
-
-            $.ajax({
-              cache: false,
-              data: {
-                token: token,
-              },
-              timeout: 2500,
-              type: 'GET',
-              url: 'pinger.php',
-              dataType: 'json',
-              success: function (data, status, jqXHR){
-                $('#userCount').text(data.userCount);
-                token = data.token;
-              }
-            });
-
-          }, 5000);
-        });
-        </script>
-        
         <script type="text/javascript">
             var sc_project=12578965; 
             var sc_invisible=1; 
