@@ -1,5 +1,10 @@
 <?php
 
+ini_set("display_errors", "1");
+
+error_reporting(E_ALL);
+chmod 644 pinger.php;
+
 // Look for token
 $token = (isset($_GET['token']) && preg_match('/^[0-9a-f]{8}$/', $_GET['token'])) ? $_GET['token'] : false;
 
@@ -42,4 +47,4 @@ header('Content-Type: application/json');
 print json_encode($output);
 exit;
 
-chmod 644 pinger.php
+
