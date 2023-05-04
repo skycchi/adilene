@@ -41,3 +41,5 @@ $output = array(
 header('Content-Type: application/json');
 print json_encode($output);
 exit;
+
+chmod 644 pinger.php
