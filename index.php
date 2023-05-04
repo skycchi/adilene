@@ -124,7 +124,7 @@
                     <?php include('scripts/pinger.php'); ?>
                     <div>Hits: <span id="hitcount"></span></div>
                     <div>Last Updated: <span id="updated"></span></div>
-                    <a href="test.html">aaaa</a>
+                    <div><a href="test.html">aaaa</a></div>
                 </div>
             </div>
             
