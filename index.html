@@ -114,11 +114,7 @@
                     <header>STATS</header>
                 </div>
                 <div class="inner" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;text-align:center;color:var(--color);">
-                    <script language="JavaScript">var fhs = document.createElement('script');var fhs_id = "5684639";
-                    var ref = (''+document.referrer+'');var pn =  window.location;var w_h = window.screen.width + " x " + window.screen.height;
-                    fhs.src = "//freehostedscripts.net/ocounter.php?site="+fhs_id+"&e1=Online User&e2=Online Users&r="+ref+"&wh="+w_h+"&a=1&pn="+pn+"";
-                    document.head.appendChild(fhs);document.write("<span id='o_"+fhs_id+"'></span>");
-                    </script>
+                   <div id="counter">Online Users: <span id="userCount">Loading…</span></div>
 
                     <div>Hits: <span id="hitcount"></span></div>
                     <div>Last Updated: <span id="updated"></span></div>
@@ -238,6 +234,30 @@
             };
             xhttp.open("GET", "https://api.github.com/users/skycchi/repos", true);
             xhttp.send();
+        </script>
+        
+        <script type="text/javascript" charset="utf-8">
+        $().ready(function (){
+          var token = '';
+          var pinger = setInterval(function (){
+
+            $.ajax({
+              cache: false,
+              data: {
+                token: token,
+              },
+              timeout: 2500,
+              type: 'GET',
+              url: 'pinger.php',
+              dataType: 'json',
+              success: function (data, status, jqXHR){
+                $('#userCount').text(data.userCount);
+                token = data.token;
+              }
+            });
+
+          }, 5000);
+        });
         </script>
         
         <script type="text/javascript">
