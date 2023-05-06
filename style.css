@@ -310,7 +310,7 @@ header{
     right: 0;
     bottom: 0;
     pointer-events: none;
-    background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, .5) 51%);
+    background: linear-xgradient(to bottom, transparent 50%, rgba(0, 0, 0, .5) 51%);
     background-size: 100% 4px;
     will-change: background, background-size; animation: scanlines 0.2s linear infinite;
 }
