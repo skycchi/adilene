@@ -14,7 +14,7 @@ $has_comments = (count($comments) > 0);
         <title>VIRTUAL DIVA</title>
         <link rel="shortcut icon" href="https://files.catbox.moe/j2aivj.gif">
         <link rel="stylesheet" href="/style.css">
-        <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@44659d9/css/all.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
         <script src="https://static.tumblr.com/rtrqcib/VGGnlh8rf/jquery.style-my-tooltips.min.js"></script>
         <script>(function($){$(document).ready(function(){$("a[title]").style_my_tooltips({tip_follows_cursor:true,tip_delay_time:0,tip_fade_speed:0,attribute:"title"});});})(jQuery);</script>
