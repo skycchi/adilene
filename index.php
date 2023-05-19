@@ -189,13 +189,13 @@ $has_comments = (count($comments) > 0);
                     <header>CHATBOX</header>
                 </div>
                 
-                <section id="comments" class="body" style="overflow:auto;border-bottom:3px solid var(--bc);padding:10px;">
+                <section id="comments" class="body" style="overflow-y:auto;overflow-x:hidden;display:flex;flex-direction:column;gap:10px;border-bottom:3px solid var(--bc);padding:10px;">
 
                     <div id="posts-list" class="hfeed<?php echo($has_comments?' has-comments':''); ?>">
                     <?php
                     foreach ($comments as &$comment) {
                       ?>
-                      <div><article id="comment_<?php echo($comment['id']); ?>" class="hentry" style="background:var(--h);margin:10px 0px 0px;padding:10px;">	
+                      <div><article id="comment_<?php echo($comment['id']); ?>" class="hentry" style="background:var(--h);padding:10px;">	
                                 <footer class="post-info">
                                     <abbr class="published">
                                         <?php echo( date('m.d.Y', strtotime($comment['date']) )); ?>
