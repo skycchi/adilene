@@ -74,10 +74,6 @@ class Persistence {
    * TODO: much more validation and sanitization. Use a library.
    */  
   private function validate_input($input) {
-    $input['email'] = filter_var($input['email'], FILTER_SANITIZE_EMAIL);
-    if (filter_var($input['email'], FILTER_VALIDATE_EMAIL) == false) {
-      return false;
-    }
     
     $input['comment_author'] = substr($input['comment_author'], 0, 70);
     if($this->check_string($input['comment_author']) == false) {
