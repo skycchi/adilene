@@ -560,16 +560,12 @@ iframe{
     width:-moz-fit-content;
 }
 
- input, textarea{
+#comment_author input, #comment input{
     border:var(--bw) var(--bt) var(--bc);
     background-color:white;
     font-family:'Pixel Operator';
     font-size:18px;
     resize: none;
-}
-
-#posts-list.has-comments li.no-comments {
-  display: none;
 }
 
 @media only screen and (max-width: 1000px) {
