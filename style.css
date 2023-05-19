@@ -560,14 +560,6 @@ iframe{
     width:-moz-fit-content;
 }
 
-#comment_author input, #comment input{
-    border:var(--bw) var(--bt) var(--bc);
-    background-color:white;
-    font-family:'Pixel Operator';
-    font-size:18px;
-    resize: none;
-}
-
 @media only screen and (max-width: 1000px) {
     #miku img{
         margin-left:0px;
