@@ -202,7 +202,7 @@ $has_comments = (count($comments) > 0);
                                         <?php echo( date('m.d.Y', strtotime($comment['date']) )); ?>
                                         </div>
                                         <div>
-                                        <?php echo( date("h:ia", strtotime($comment['date']))); ?>
+                                        <?php echo( date("H:i", strtotime($comment['date']))); ?>
                                         </div>
                                     </abbr>
 
