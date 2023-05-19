@@ -188,7 +188,7 @@ $has_comments = (count($comments) > 0);
                 <div class="title">
                     <header>CHATBOX</header>
                 </div>
-                
+                <div style="text-align:center">No more comments</div>
                 <section id="comments" class="body" style="overflow-y:auto;overflow-x:hidden;border-bottom:3px solid var(--bc);padding:10px;height:270.5px;">
                     <div id="posts-list" class="hfeed<?php echo($has_comments?' has-comments':''); ?>">
                     <?php
