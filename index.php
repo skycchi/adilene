@@ -199,7 +199,7 @@ $has_comments = (count($comments) > 0);
                                 <footer class="post-info">
                                     <abbr class="published">
                                         <?php echo( date('m.d.Y', strtotime($comment['date']) )); ?>
-                                        <?php echo( date("h:ia")); ?>
+                                        <?php echo( date("h:ia", strtotime($comment['date']))); ?>
                                     </abbr>
 
                                     <address class="vcard author">
