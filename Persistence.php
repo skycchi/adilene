@@ -41,7 +41,6 @@ class Persistence {
     $comment_post_ID = $vars['comment_post_ID'];
     $input = array(
      'comment_author' => $vars['comment_author'],
-     'email' => $vars['email'],
      'comment' => $vars['comment'],
      'comment_post_ID' => $comment_post_ID,
      'date' => date('r'));
