@@ -560,14 +560,14 @@ iframe{
     width:-moz-fit-content;
 }
 
-input[type="text"]:focus {
+:focus {
     outline: none;
     box-shadow: none;
     border:none;
     font-family:'Pixel Operator';
 }
 
-input[type="text"]:focus:hover {
+:focus:hover {
     outline: none;
     box-shadow: none;
     border:none;
