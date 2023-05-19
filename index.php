@@ -228,7 +228,7 @@ $has_comments = (count($comments) > 0);
 
                     <input type="text" name="comment_author" id="comment_author" value="" tabindex="1" required="required" placeholder="Name" style="width:100%;border:var(--bw) var(--bt) var(--bc);background-color:white;font-family:'Pixel Operator';font-size:18px;">
 
-                    <input name="comment" id="comment" rows="1" tabindex="2"  required="required" placeholder="Message" style="width:100%;margin:10px 0px;border:var(--bw) var(--bt) var(--bc);background-color:white;font-family:'Pixel Operator';font-size:18px;">
+                    <input type='text' name="comment" id="comment" rows="1" tabindex="2"  required="required" placeholder="Message" style="width:100%;margin:10px 0px;border:var(--bw) var(--bt) var(--bc);background-color:white;font-family:'Pixel Operator';font-size:18px;">
 
                     <input type="hidden" name="comment_post_ID" value="<?php echo($comment_post_ID); ?>" id="comment_post_ID" />
                       <button name="submit" type="submit" value="Submit" tabindex="3">Submit</button>
