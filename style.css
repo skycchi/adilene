@@ -55,12 +55,12 @@
 }
 
 ::selection {
-    background: #34f2ff;
+    background: var(--bc);
     color:white;
 }
  
 ::-moz-selection {
-    background: #34f2ff;
+    background: var(--bc);
     color:white;
 }
 
