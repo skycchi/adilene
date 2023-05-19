@@ -73,7 +73,31 @@ class Persistence {
   /**
    * TODO: much more validation and sanitization. Use a library.
    */  
+  private function validate_input($input) {
+    
+    $input['comment_author'] = substr($input['comment_author'], 0, 70);
+    if($this->check_string($input['comment_author']) == false) {
+      return false;
+    }
+    $input['comment_author'] = htmlentities($input['comment_author']);
 
+    $input['comment'] = substr($input['comment'], 0, 300);
+    if($this->check_string($input['comment'], 0) == false) {
+      return false;
+    }
+    $input['comment'] = htmlentities($input['comment']);
+
+    $input['comment_post_ID'] = filter_var($input['comment_post_ID'], FILTER_VALIDATE_INT);  
+    if (filter_var($input['comment_post_ID'], FILTER_VALIDATE_INT) == false) {
+      return false;
+    }
+
+    return true;
+  }
+  
+  private function check_string($string, $min_size = 1) {
+    return strlen(trim($string)) >= $min_size;
+  }
 }
 
 ?>
