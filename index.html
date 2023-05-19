@@ -1,11 +1,3 @@
-<?php
-require('Persistence.php');
-$comment_post_ID = 1;
-$db = new Persistence();
-$comments = $db->get_comments($comment_post_ID);
-$has_comments = (count($comments) > 0);
-?>
-
 <!doctype html>
 <html>
     <head>
@@ -19,7 +11,7 @@ $has_comments = (count($comments) > 0);
         <script src="https://static.tumblr.com/rtrqcib/VGGnlh8rf/jquery.style-my-tooltips.min.js"></script>
         <script>(function($){$(document).ready(function(){$("a[title]").style_my_tooltips({tip_follows_cursor:true,tip_delay_time:0,tip_fade_speed:0,attribute:"title"});});})(jQuery);</script>
         <meta name="description" content="A Hatsune Miku inspired website by a fan, for fans!">
-<!--        <script src="/scripts/rightclick.js"></script>-->
+        <script src="/scripts/rightclick.js"></script>
         <script src="/scripts/theme.js"></script>
         
         <script type="text/javascript">
@@ -188,56 +180,7 @@ $has_comments = (count($comments) > 0);
                 <div class="title">
                     <header>CHATBOX</header>
                 </div>
-                <section id="comments" class="body" style="overflow-y:auto;overflow-x:hidden;border-bottom:3px solid var(--bc);padding:10px;height:270.5px;">
-                    <div style="text-align:center">No more comments</div>
-                    <div id="posts-list" class="hfeed<?php echo($has_comments?' has-comments':''); ?>">
-                    <?php
-                    foreach ($comments as &$comment) {
-                      ?>
-                      <div><article id="comment_<?php echo($comment['id']); ?>" class="hentry" style="background:var(--h);padding:10px;margin:10px 0px 0px;">	
-                                <footer class="post-info">
-                                    <abbr class="published" style="display:flex;justify-content:space-between;">
-                                        <div>
-                                        <?php echo( date('m.d.y', strtotime($comment['date']) )); ?>
-                                        </div>
-                                        <div>
-                                        <?php echo( date("H:i", strtotime($comment['date']))); ?>
-                                        </div>
-                                    </abbr>
-
-                                    <div class="vcard author" style="word-break:break-word;">
-                                        <a class="url fn"><?php echo($comment['comment_author']); ?></a>
-                                    </div>
-                                </footer>
-
-                                <div class="entry-content" >
-                                    <div style="word-break:break-word;"><?php echo($comment['comment']); ?></div>
-                                </div>
-                            </article></div>
-                      <?php
-                    }
-                    ?>
-                    </div>
-			
-                </section>
-                
-                <script>
-                       $('#comments').scrollTop($('#comments')[0].scrollHeight);
-                </script>
-            
-                <div id="respond" style="padding:10px;text-align: center;">
-
-                    <form action="post_comment.php" method="post" id="commentform" style='position:sticky;'>
-
-                    <input type="text" name="comment_author" id="comment_author" value="" tabindex="1" required="required" placeholder="Name" style="width:100%;border:var(--bw) var(--bt) var(--bc);background-color:white;font-family:'Pixel Operator';font-size:18px;">
-
-                    <input type='text' name="comment" id="comment" rows="1" tabindex="2"  required="required" placeholder="Message" style="width:100%;margin:10px 0px;border:var(--bw) var(--bt) var(--bc);background-color:white;font-family:'Pixel Operator';font-size:18px;">
-
-                    <input type="hidden" name="comment_post_ID" value="<?php echo($comment_post_ID); ?>" id="comment_post_ID" />
-                      <button name="submit" type="submit" value="Submit" tabindex="3">Submit</button>
-                    </form>
-
-                </div>  
+                <iframe src="https://www3.cbox.ws/box/?boxid=3504875&boxtag=M7VuQ8" width="100%" height="100%" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
             </div>
             
             <div class="banner">
