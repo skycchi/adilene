@@ -199,7 +199,7 @@ $has_comments = (count($comments) > 0);
                                 <footer class="post-info">
                                     <abbr class="published" style="display:flex;justify-content:space-between;">
                                         <div>
-                                        <?php echo( date('mm.d.yy', strtotime($comment['date']) )); ?>
+                                        <?php echo( date('m.d.y', strtotime($comment['date']) )); ?>
                                         </div>
                                         <div>
                                         <?php echo( date("H:i", strtotime($comment['date']))); ?>
