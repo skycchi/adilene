@@ -594,4 +594,8 @@ input[type="text"]:focus:hover {
         background-size:cover;
         background-repeat: no-repeat;
     }
+    
+    #chatbox{
+        height:400px;
+    }
 }
