@@ -202,9 +202,9 @@ $has_comments = (count($comments) > 0);
                                         <?php echo( date("h:ia", strtotime($comment['date']))); ?>
                                     </abbr>
 
-                                    <address class="vcard author">
+                                    <div class="vcard author">
                                         <a class="url fn"><?php echo($comment['comment_author']); ?></a>
-                                    </address>
+                                    </div>
                                 </footer>
 
                                 <div class="entry-content">
