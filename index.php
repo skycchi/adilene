@@ -203,12 +203,12 @@ $has_comments = (count($comments) > 0);
                                     </abbr>
 
                                     <address class="vcard author">
-                                        <div class="url fn" href="#"><?php echo($comment['comment_author']); ?></div>
+                                        <a class="url fn"><?php echo($comment['comment_author']); ?></a>
                                     </address>
                                 </footer>
 
                                 <div class="entry-content">
-                                    <p><?php echo($comment['comment']); ?></p>
+                                    <div><?php echo($comment['comment']); ?></div>
                                 </div>
                             </article></div>
                       <?php
