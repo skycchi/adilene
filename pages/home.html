@@ -9,6 +9,7 @@
         <script src="https://kit.fontawesome.com/f936906ae0.js" crossorigin="anonymous"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="/scripts/rightclick.js"></script>
+        <script src="/scripts/theme.js"></script>
     </head>
     <style>        
         body{
@@ -34,7 +35,15 @@
             border: var(--bw) var(--bt) var(--bc);
             box-sizing: border-box;
             padding:10px;
-            background-color:#dbfcff;
+            background-color:var(--h);
+            margin-bottom:5px;
+        }
+
+        .software{
+            border: var(--bw) var(--bt) var(--bc);
+            box-sizing: border-box;
+            padding:10px;
+            background-color:var(--h);
             margin-bottom:5px;
         }
         
@@ -59,14 +68,6 @@
             justify-content: center;
             align-content: center;
             align-items: center;
-        }
-        
-        .software{
-            border: var(--bw) var(--bt) var(--bc);
-            box-sizing: border-box;
-            padding:10px;
-            background-color:#dbfcff;
-            margin-bottom:5px;
         }
         
         .software img{

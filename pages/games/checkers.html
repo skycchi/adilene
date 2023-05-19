@@ -13,7 +13,8 @@
         <script src="/scripts/checkers/Message.js"></script>
         <script src="/scripts/checkers/Logger.js"></script>
         <script src="/scripts/checkers/index.js"></script>
-        <link href="/pages/games.css" rel="stylesheet">
+        <link href="/style.css" rel="stylesheet">
+        <script src="/scripts/theme.js"></script>
         
     </head>
     <style>
@@ -115,7 +116,7 @@
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        border:3px solid #34f2ff;
+        border:3px solid var(--bc);
     }
 
     .tileRow {
@@ -261,15 +262,15 @@
         transition-duration: 0.3s;
     }
     </style>
-    <body>
-        <header>CHECKERS</header>
+    <body style="text-align: center">
+        <header >CHECKERS</header>
         <div style="text-align: center">Directions: Move the white pieces and capture the black pieces.</div>
         <div id="log" style="display:none"></div>
-        <div id="board">
+        <div id="board" style="margin:auto;">
         <div class="tiles"></div>
         </div>
         <div class="buttons">
-            <button onclick="Play()">New Game</button>
+            <button onclick="Play()" style="margin:10px auto;">New Game</button>
         </div>
         <div>Source code: <a href="https://github.com/stroibot/Checkers" target="_blank">Github</a></div>
     </body>

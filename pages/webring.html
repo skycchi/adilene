@@ -15,6 +15,7 @@
         <link href="https://adilene.neocities.org/webring/alternate/luka.css" rel="stylesheet">
         <link href="https://adilene.neocities.org/webring/alternate/teto.css" rel="stylesheet">
         <script src="/scripts/rightclick.js"></script>
+        <script src="/scripts/theme.js"></script>
     </head>
     <style>
         body{
@@ -45,13 +46,13 @@
         }
         
         .collapsible, .collapsible2 {
-            background-color: #dbfcff;
+            background-color: var(--h);
             color: white;
             padding: 12px 10px 8px 10px;
             width: 100%;
             text-align: center;
             transition:0.5s;
-            color:#e74492;
+            color:var(--pink);
             font-family:'Orbitron';
             
             font-size:20px;
@@ -59,7 +60,7 @@
         }
         
         .activated, .activated2, .collapsible:hover, .collapsible2:hover {
-            background-color: #e74492;
+            background-color: var(--pink);
             transition:0.5s;
             color:white;
         }
@@ -363,7 +364,7 @@
         <header>JOIN</header>
         Interested in joining? Shoot me an email at <a href="mailto:a@adilene.net">a@adilene.net</a> and use the following format:
         <br>
-        <div style="border: var(--bw) var(--bt) var(--bc);max-width:700px;margin:5px auto;text-align:left;padding:10px;background:#dbfcff;">
+        <div style="border: var(--bw) var(--bt) var(--bc);max-width:700px;margin:5px auto;text-align:left;padding:10px;background:var(--h);">
             Name:<br>
             Site URL:<br>
             Favorite Vocaloid:<br>

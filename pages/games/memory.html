@@ -6,13 +6,14 @@
         <link rel="shortcut icon" href="https://files.catbox.moe/j2aivj.gif">
         <link rel="stylesheet" href="/style.css">
         <script src="/scripts/rightclick.js"></script>
+        <script src="/scripts/theme.js"></script>
     </head>
     <style>
         * {
             box-sizing: border-box;
-            scrollbar-color:#e74492 #fff;
+            scrollbar-color:var(--pink) #fff;
             scrollbar-width:thin;
-            cursor:url('/arrow.png'), pointer;
+            cursor:url('https://files.catbox.moe/h0vf27.png'), pointer;
         }
         
         body {
@@ -70,9 +71,9 @@
             height: 100%;
             padding: 20px;
             position: absolute;
-            border:3px solid #34f2ff;
+            border:3px solid var(--bc);
             border-radius: 10px;
-            background: #dbfcff;
+            background: var(--h);
             backface-visibility: hidden;
             
         }

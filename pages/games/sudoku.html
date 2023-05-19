@@ -2,15 +2,16 @@
     <head>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src='/scripts/sudoku.js'></script>
-        <link href="/pages/games.css" rel="stylesheet">
+        <link href="/style.css" rel="stylesheet">
         <script src="/scripts/rightclick.js"></script>
         <title>VIRTUAL DIVA</title>
         <link rel="shortcut icon" href="https://files.catbox.moe/j2aivj.gif">
+        <script src="/scripts/theme.js"></script>
     </head>
     <style>
         
         #sudoku{
-            border: 3px solid #34f2ff;
+            border: 3px solid var(--bc);
             box-sizing: border-box;
             display: inline-block;
         }
@@ -27,7 +28,7 @@
         .sudoku-board-cell {
             display: inline-block;
             position: relative;
-            border: 1px solid #dbfcff;
+            border: 1px solid var(--h);
             background: white;
             max-width: 11.11111%;
             
@@ -38,24 +39,24 @@
         [data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(9n+1){
             border-left-width: 3px;
             border-style: solid;
-            border-left-color: #34f2ff;
+            border-left-color: var(--bc);
         }
         [data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(n):nth-of-type(-n+9){
             border-top-width: 3px;
             border-style: solid;
-            border-top-color: #34f2ff;
+            border-top-color: var(--bc);
         }
         [data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(3n){
             border-right-width: 3px;
             border-style: solid;
-            border-right-color: #34f2ff;
+            border-right-color: var(--bc);
         }
         [data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(n+19):nth-of-type(-n+27),
         [data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(n+46):nth-of-type(-n+54),
         [data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(n+73):nth-of-type(-n+81){
             border-bottom-width: 3px;
             border-style: solid;
-            border-bottom-color: #34f2ff;
+            border-bottom-color: var(--bc);
         }
 
         /* the input for the value of each cell (i.e. 1-9 or empty for standard sudoku*/
@@ -135,12 +136,12 @@
         }
     </style>
     <body>
-        <header>SUDOKU</header>
+        <header style="text-align: center;">SUDOKU</header>
         <div style="text-align: center;">Directions: Use the keyboard to fill in the grid.</div>
         <div id="wrap">
             <div class='sudoku-board'></div>
         </div>
-        <div style="display:flex;flex-direction: column;gap:10px;width:fit-content;margin: auto;align-items: center;margin-top:-20px;">
+        <div style="display:flex;flex-direction: column;gap:10px;width:fit-content;margin: auto;align-items: center;margin-top:-12px;">
             <span>
                 <button onclick="location.reload();">New Game</button>
                 <button onclick="mySudokuJS.solveStep();">Hint</button>
@@ -154,7 +155,7 @@
             </span> 
         </div>
         
-        <div style="text-align: center;margin-top:0px;">Source code: <a href="https://github.com/pocketjoso/sudokuJS" target="_blank">Github</a></div>
+        <div style="text-align: center;margin-top:10px;">Source code: <a href="https://github.com/pocketjoso/sudokuJS" target="_blank">Github</a></div>
 
         <script>
 
