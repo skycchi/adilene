@@ -190,7 +190,6 @@ $has_comments = (count($comments) > 0);
                 </div>
                 
                 <section id="comments" class="body" style="overflow-y:auto;overflow-x:hidden;border-bottom:3px solid var(--bc);padding:10px;">
-                    No more comments
                     <div id="posts-list" class="hfeed<?php echo($has_comments?' has-comments':''); ?>">
                     <?php
                     foreach ($comments as &$comment) {
@@ -221,6 +220,12 @@ $has_comments = (count($comments) > 0);
                     </div>
 			
                 </section>
+                
+                <script>
+                    var out = document.getElementById("comments");
+                    // allow 1px inaccuracy by adding 1
+                    var isScrolledToBottom = out.scrollHeight - out.clientHeight <= out.scrollTop + 1;
+                </script>
             
                 <div id="respond" style="padding:10px;text-align: center;">
 
