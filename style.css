@@ -589,9 +589,9 @@ input[type="text"]:focus:hover {
     }
     
     #mikuheader{
-        margin-left:0px; 
-        height:100%;
-        width:100%;
-        background-size:contain;
+        margin-left:0;
+        height:130px;
+        background-size:cover;
+        background-repeat: no-repeat;
     }
 }
