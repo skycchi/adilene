@@ -54,20 +54,20 @@ $has_comments = (count($comments) > 0);
                 </div>
                 
                 <div class="inner">
-                    <div class="update">5.19.23 Added the option to change themes!</div>
-                    <div class="update">5.2.23 Site has been moved to Hostinger! Oekaki page has been updated!</div>
-                    <div class="update">4.27.23 Added a voting system to the Oekaki Gallery! New diary entry! Added one new song!</div>
-                    <div class="update">4.19.23 Webring updated!</div>
-                    <div class="update">4.14.23 Figure Reviews are on hold until my move is complete!</div>
-                    <div class='update'>3.26.23 Reworked the Puella Magi Madoka Magica shrine!</div>
-                    <div class="update">3.21.23 Added an Oekaki page! Retired iMiku!</div>
-                    <div class="update">3.20.23 Site has been moved to Netlify! </div>
-                    <div class="update">3.19.23 Site is completely moved to AWS! Neocities profile will no longer be updated!</div>
-                    <div class="update">3.17.23 Site is in the process of being moved to AWS! Some pages and images may not load properly!</div>
-                    <div class="update">2.10.23 Added a Sitemap!</div>
-                    <div class="update">2.1.23 Diary is back!</div>
-                    <div class="update">1.27.23 New look to Figures!</div>
-                    <div class="update">1.26.23 Added two new songs!</div>
+                    <div class="update">05.19.23 Added the option to change themes!</div>
+                    <div class="update">05.2.23 Site has been moved to Hostinger! Oekaki page has been updated!</div>
+                    <div class="update">04.27.23 Added a voting system to the Oekaki Gallery! New diary entry! Added one new song!</div>
+                    <div class="update">04.19.23 Webring updated!</div>
+                    <div class="update">04.14.23 Figure Reviews are on hold until my move is complete!</div>
+                    <div class='update'>03.26.23 Reworked the Puella Magi Madoka Magica shrine!</div>
+                    <div class="update">03.21.23 Added an Oekaki page! Retired iMiku!</div>
+                    <div class="update">03.20.23 Site has been moved to Netlify! </div>
+                    <div class="update">03.19.23 Site is completely moved to AWS! Neocities profile will no longer be updated!</div>
+                    <div class="update">03.17.23 Site is in the process of being moved to AWS! Some pages and images may not load properly!</div>
+                    <div class="update">02.10.23 Added a Sitemap!</div>
+                    <div class="update">02.1.23 Diary is back!</div>
+                    <div class="update">01.27.23 New look to Figures!</div>
+                    <div class="update">01.26.23 Added two new songs!</div>
                     <div class="update" style="margin-bottom:0;">1.19.23 Welcome to VIRTUAL DIVA V3!</div>
                 </div>
             </div>
@@ -130,7 +130,7 @@ $has_comments = (count($comments) > 0);
                     document.head.appendChild(fhs);document.write("<span id='o_"+fhs_id+"'></span>");
                     </script>
                     <div>Hits: <span id="hitcount"></span></div>
-                    <div>Last Updated: 5.19.23</div>
+                    <div>Last Updated: 05.19.23</div>
                 </div>
             </div>
             
