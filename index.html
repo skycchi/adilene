@@ -180,9 +180,48 @@
                 <div class="title">
                     <header>CHATBOX</header>
                 </div>
-                <div class="inner" style="padding:0;overflow:hidden;">
-                    <iframe class="chatbox" src="https://www3.cbox.ws/box/?boxid=3504875&boxtag=M7VuQ8" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" style="background-color:transparent;margin-bottom:-5px;border:none;height: 406px;"></iframe>
-                </div>
+                             <section id="comments" class="body" style="overflow:auto;border-bottom:3px solid var(--bc);padding:10px;">
+
+                    <div id="posts-list" class="hfeed<?php echo($has_comments?' has-comments':''); ?>">
+                    <div class="no-comments">Be the first to add a comment.</div>
+                    <?php
+                    foreach ($comments as &$comment) {
+                      ?>
+                      <div><article id="comment_<?php echo($comment['id']); ?>" class="hentry" style="background:var(--h);margin:10px 0px 0px;padding:10px;">	
+                                <footer class="post-info">
+                                    <abbr class="published" title="<?php echo($comment['date']); ?>">
+                                        <?php echo( date('d F Y', strtotime($comment['date']) ) ); ?>
+                                    </abbr>
+
+                                    <address class="vcard author">
+                                        <a class="url fn" href="#"><?php echo($comment['comment_author']); ?></a>
+                                    </address>
+                                </footer>
+
+                                <div class="entry-content">
+                                    <p><?php echo($comment['comment']); ?></p>
+                                </div>
+                            </article></div>
+                      <?php
+                    }
+                    ?>
+                    </div>
+			
+                </section>
+            
+                <div id="respond" style="padding:10px;margin-bottom:-20px;text-align: center;">
+
+                    <form action="post_comment.php" method="post" id="commentform" style='position:sticky;'>
+
+                    <input type="text" name="comment_author" id="comment_author" value="" tabindex="1" required="required" placeholder="Name" style="width:100%;">
+
+                    <input name="comment" id="comment" rows="1" tabindex="2"  required="required" placeholder="Message" style="width:100%;margin:10px 0px;">
+
+                    <input type="hidden" name="comment_post_ID" value="<?php echo($comment_post_ID); ?>" id="comment_post_ID" />
+                      <button name="submit" type="submit" value="Submit" tabindex="3">Submit</button>
+                    </form>
+
+                </div>  
             </div>
             
             <div class="banner">
