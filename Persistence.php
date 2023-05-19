@@ -74,10 +74,6 @@ class Persistence {
    * TODO: much more validation and sanitization. Use a library.
    */  
 
-  
-  private function check_string($string, $min_size = 1) {
-    return strlen(trim($string)) >= $min_size;
-  }
 }
 
 ?>
