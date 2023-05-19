@@ -187,10 +187,19 @@ $has_comments = (count($comments) > 0);
                 <div class="title">
                     <header>CHATBOX</header>
                 </div>
-                <section id="comments" class="body">
+                
+                <section id="comments" class="body" style="overflow:auto;height:400px;border-bottom:3px solid var(--bc)">
 
     <ol id="posts-list" class="hfeed<?php echo($has_comments?' has-comments':''); ?>">
       <li class="no-comments">Be the first to add a comment.</li>
+        <li class="no-comments">Be the first to add a comment.</li>
+        <li class="no-comments">Be the first to add a comment.</li>
+        <li class="no-comments">Be the first to add a comment.</li>
+        <li class="no-comments">Be the first to add a comment.</li>
+        <li class="no-comments">Be the first to add a comment.</li>
+        <li class="no-comments">Be the first to add a comment.</li>
+        <li class="no-comments">Be the first to add a comment.</li>
+        <li class="no-comments">Be the first to add a comment.</li>
       <?php
         foreach ($comments as &$comment) {
           ?>
@@ -213,25 +222,22 @@ $has_comments = (count($comments) > 0);
         }
       ?>
 		</ol>
-		
-		<div id="respond">
-
-      <form action="post_comment.php" method="post" id="commentform">
-
-        <label for="comment_author" class="required">Name</label>
-        <input type="text" name="comment_author" id="comment_author" value="" tabindex="1" required="required">
-
-        <label for="comment" class="required">Message</label>
-        <textarea name="comment" id="comment" rows="10" tabindex="4"  required="required"></textarea>
-
-        <input type="hidden" name="comment_post_ID" value="<?php echo($comment_post_ID); ?>" id="comment_post_ID" />
-        <input name="submit" type="submit" value="Submit comment" />
-        
-      </form>
-      
-    </div>
 			
 	</section>
+            		<div id="respond" style="padding:10px;">
+
+      <form action="post_comment.php" method="post" id="commentform" style='position:sticky;'>
+
+        <input type="text" name="comment_author" id="comment_author" value="" tabindex="1" required="required" placeholder="Name">
+
+        <textarea name="comment" id="comment" rows="1" tabindex="2"  required="required" placeholder="Message"></textarea>
+
+        <input type="hidden" name="comment_post_ID" value="<?php echo($comment_post_ID); ?>" id="comment_post_ID" />
+          <button name="submit" type="submit" value="Submit" tabindex="3">Submit</button>
+      </form>
+      
+    </div>    
+                
             </div>
             
             <div class="banner">
