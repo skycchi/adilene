@@ -188,7 +188,8 @@ $has_comments = (count($comments) > 0);
                 <div class="title">
                     <header>CHATBOX</header>
                 </div>
-                             <section id="comments" class="body" style="overflow:auto;border-bottom:3px solid var(--bc);padding:10px;">
+                
+                <section id="comments" class="body" style="overflow:auto;border-bottom:3px solid var(--bc);padding:10px;">
 
                     <div id="posts-list" class="hfeed<?php echo($has_comments?' has-comments':''); ?>">
                     <div class="no-comments">Be the first to add a comment.</div>
