@@ -197,7 +197,7 @@ $has_comments = (count($comments) > 0);
                       ?>
                       <div><article id="comment_<?php echo($comment['id']); ?>" class="hentry" style="background:var(--h);margin:10px 0px 0px;padding:10px;">	
                                 <footer class="post-info">
-                                    <abbr class="published" title="<?php echo($comment['date']); ?>">
+                                    <abbr class="published">
                                         <?php echo( date('F.d.Y', strtotime($comment['date']) ) ); ?>
                                     </abbr>
 
