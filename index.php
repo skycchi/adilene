@@ -198,11 +198,11 @@ $has_comments = (count($comments) > 0);
                       <div><article id="comment_<?php echo($comment['id']); ?>" class="hentry" style="background:var(--h);margin:10px 0px 0px;padding:10px;">	
                                 <footer class="post-info">
                                     <abbr class="published">
-                                        <?php echo( date('F.d.Y', strtotime($comment['date']) ) ); ?>
+                                        <?php echo( date('m.d.Y', strtotime($comment['date']) ) ); ?>
                                     </abbr>
 
                                     <address class="vcard author">
-                                        <a class="url fn" href="#"><?php echo($comment['comment_author']); ?></a>
+                                        <div class="url fn" href="#"><?php echo($comment['comment_author']); ?></div>
                                     </address>
                                 </footer>
 
