@@ -560,6 +560,20 @@ iframe{
     width:-moz-fit-content;
 }
 
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: none;
+    border:none;
+    font-family:'Pixel Operator';
+}
+
+input[type="text"]:focus:hover {
+    outline: none;
+    box-shadow: none;
+    border:none;
+    border-radius:0;
+}
+
 @media only screen and (max-width: 1000px) {
     #miku img{
         margin-left:0px;
