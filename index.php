@@ -189,7 +189,7 @@ $has_comments = (count($comments) > 0);
                     <header>CHATBOX</header>
                 </div>
                 
-                <section id="comments" class="body" style="overflow-y:auto;overflow-x:hidden;display:flex;flex-direction:column;gap:10px;border-bottom:3px solid var(--bc);padding:10px;">
+                <section id="comments" class="body" style="overflow-y:auto;overflow-x:hidden;border-bottom:3px solid var(--bc);padding:10px;">
 
                     <div id="posts-list" class="hfeed<?php echo($has_comments?' has-comments':''); ?>">
                     <?php
@@ -206,13 +206,13 @@ $has_comments = (count($comments) > 0);
                                         </div>
                                     </abbr>
 
-                                    <div class="vcard author">
+                                    <div class="vcard author" style="word-break:break-word;">
                                         <a class="url fn"><?php echo($comment['comment_author']); ?></a>
                                     </div>
                                 </footer>
 
-                                <div class="entry-content">
-                                    <div><?php echo($comment['comment']); ?></div>
+                                <div class="entry-content" >
+                                    <div style="word-break:break-word;"><?php echo($comment['comment']); ?></div>
                                 </div>
                             </article></div>
                       <?php
