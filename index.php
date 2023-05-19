@@ -195,7 +195,7 @@ $has_comments = (count($comments) > 0);
                     <?php
                     foreach ($comments as &$comment) {
                       ?>
-                      <div><article id="comment_<?php echo($comment['id']); ?>" class="hentry" style="background:var(--h);padding:10px;">	
+                      <div><article id="comment_<?php echo($comment['id']); ?>" class="hentry" style="background:var(--h);padding:10px;margin:10px 0px;">	
                                 <footer class="post-info">
                                     <abbr class="published" style="display:flex;justify-content:space-between;">
                                         <div>
@@ -222,7 +222,7 @@ $has_comments = (count($comments) > 0);
 			
                 </section>
             
-                <div id="respond" style="padding:10px;margin-bottom:-20px;text-align: center;">
+                <div id="respond" style="padding:10px;text-align: center;">
 
                     <form action="post_comment.php" method="post" id="commentform" style='position:sticky;'>
 
