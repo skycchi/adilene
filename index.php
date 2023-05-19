@@ -190,12 +190,12 @@ $has_comments = (count($comments) > 0);
                 </div>
                 
                 <section id="comments" class="body" style="overflow-y:auto;overflow-x:hidden;border-bottom:3px solid var(--bc);padding:10px;">
-
+                    No more comments
                     <div id="posts-list" class="hfeed<?php echo($has_comments?' has-comments':''); ?>">
                     <?php
                     foreach ($comments as &$comment) {
                       ?>
-                      <div><article id="comment_<?php echo($comment['id']); ?>" class="hentry" style="background:var(--h);padding:10px;margin:10px 0px;">	
+                      <div><article id="comment_<?php echo($comment['id']); ?>" class="hentry" style="background:var(--h);padding:10px;margin:10px 0px 0px;">	
                                 <footer class="post-info">
                                     <abbr class="published" style="display:flex;justify-content:space-between;">
                                         <div>
