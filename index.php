@@ -222,9 +222,7 @@ $has_comments = (count($comments) > 0);
                 </section>
                 
                 <script>
-                    var out = document.getElementById("comments");
-                    // allow 1px inaccuracy by adding 1
-                    var isScrolledToBottom = out.scrollHeight - out.clientHeight <= out.scrollTop + 1;
+                       $('#comments').scrollTop($('#comments')[0].scrollHeight);
                 </script>
             
                 <div id="respond" style="padding:10px;text-align: center;">
