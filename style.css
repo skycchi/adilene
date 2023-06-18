@@ -395,11 +395,11 @@ i.fas:hover{
     
 }
  
-i.fa-sharp.fa-pause,i.fa-sharp.fa-play,i.fa-sharp.fa-forward,i.fa-sharp.fa-backward{
+i.fa-pause,i.fa-play,i.fa-forward,i.fa-backward{
     color:var(--pink);
 }
 
-i.fa-sharp.fa-play, i.fa-sharp.fa-pause{
+i.fa-play, i.fa-pause{
     font-size:30px !important;
 }
 
