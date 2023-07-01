@@ -13,7 +13,6 @@ var sites = [
     "https://argoxi.neocities.org/",
     "https://burypink.neocities.org/",
     "https://sugarangel.neocities.org/",
-    "https://snipertf2.neocities.org/",
     "https://hellokittyminigun.neocities.org/",
     "https://onlywonder.neocities.org/",
     "https://boothworldindustries.neocities.org/",
@@ -74,7 +73,8 @@ var sites = [
     "https://eternities.neocities.org/",
     "https://mirrordomain.neocities.org/",
     "https://sodagirl.neocities.org/",
-    "https://doqmeat.neocities.org/"
+    "https://doqmeat.neocities.org/",
+    "https://sunnyday.neocities.org/"
 ];
 
 //the name of the ring
