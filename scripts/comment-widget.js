@@ -383,7 +383,7 @@ function createComment(data) {
 function convertTimestamp(timestamp) {
     const vals = timestamp.split('(')[1].split(')')[0].split(',');
     const date = new Date(vals[0], vals[1], vals[2], vals[3], vals[4], vals[5]);
-    return [date.toLocaleString(), date.toLocaleDateString("sah-RU"), date.toUTCStrixng()];
+    return [date.toLocaleString(), date.toLocaleDateString("sah-RU"), date.toUTCString()];
 }
 
 // Handle making replies
