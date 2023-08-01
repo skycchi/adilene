@@ -383,31 +383,36 @@ function createComment(data) {
 function convertTimestamp(timestamp) {
     const vals = timestamp.split('(')[1].split(')')[0].split(',');
     const date = new Date(vals[0], vals[1], vals[2], vals[3], vals[4], vals[5]);
-    return [date.toLocaleString(), date.toLocaleDateString("sah-RU"), date.toUTCString()];
+    var options = {
+        year: "2-digit",
+        month: "2-digit",
+        day: "numeric"
+    };
+    return [date.toLocaleString(), date.toLocaleDateString("en", options).replace(/\//g,'.'), date.toUTCString()];
 }
 
 // Handle making replies
 const link = document.createElement('a');
 link.href = '#c_inputDiv';
-function openReply(id) {
-    if (c_replyingText.style.display == 'none') {
-        c_replyingText.innerHTML = s_replyingText + ` ${id.split('|--|')[0]}...`;
-        c_replyInput.value = id;
-        c_replyingText.style.display = 'block';
-    } else {
-        c_replyingText.innerHTML = '';
-        c_replyInput.value = '';
-        c_replyingText.style.display = 'none';
-    }
-    link.click(); // Jump to the space to type
-}
+//function openReply(id) {
+//    if (c_replyingText.style.display == 'none') {
+//        c_replyingText.innerHTML = s_replyingText + ` ${id.split('|--|')[0]}...`;
+//        c_replyInput.value = id;
+//        c_replyingText.style.display = 'block';
+//    } else {
+//        c_replyingText.innerHTML = '';
+//        c_replyInput.value = '';
+//        c_replyingText.style.display = 'none';
+//    }
+//    link.click(); // Jump to the space to type
+//}
 
 // Handle expanding replies (should only be accessible with collapsed replies enabled)
-function expandReplies(id) {
-    const targetDiv = document.getElementById(`${id}-replies`);
-    if (targetDiv.style.display == 'none') {targetDiv.style.display = 'block'}
-    else {targetDiv.style.display = 'none'}
-}
+//function expandReplies(id) {
+//    const targetDiv = document.getElementById(`${id}-replies`);
+//    if (targetDiv.style.display == 'none') {targetDiv.style.display = 'block'}
+//    else {targetDiv.style.display = 'none'}
+//}
 
 function changePage(dir) {
     const leftButton = document.getElementById('c_leftButton');
