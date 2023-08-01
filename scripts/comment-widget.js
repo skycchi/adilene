@@ -85,15 +85,19 @@ const v_formHtml = `
         <input class="c-input c-nameInput" placeholder="Name" name="entry.${s_nameId}" id="entry.${s_nameId}" type="text" maxlength="${s_maxLengthName}" required>
     </div>
 
-    <div id="c_websiteWrapper" class="c-inputWrapper">
-        <input class="c-input c-websiteInput" placeholder="Website (Optional)" name="entry.${s_websiteId}" id="entry.${s_websiteId}" type="url" pattern="https://.*">
-    </div>
-
     <div id="c_textWrapper" class="c-inputWrapper">
-        <textarea class="c-input c-textInput" placeholder="Comment" name="entry.${s_textId}" id="entry.${s_textId}" rows="1" cols="50"  maxlength="${s_maxLength}" required></textarea>
+        <input class="c-input c-textInput" placeholder="Comment" name="entry.${s_textId}" id="entry.${s_textId}" rows="1" cols="50"  maxlength="${s_maxLength}" required>
+    </div>
+    
+<div class="c_wrap">
+    
+
+<div id="c_websiteWrapper" class="c-inputWrapper">
+        <input class="c-input c-websiteInput" placeholder="Website" name="entry.${s_websiteId}" id="entry.${s_websiteId}" type="url" pattern="https://.*">
     </div>
 
-    <input id="c_submitButton" name="c_submitButton" type="submit" value="${s_submitButtonLabel}" disabled>
+    <div style="display:flex;justify-content:center;"><input id="c_submitButton" name="c_submitButton" type="submit" value="${s_submitButtonLabel}" disabled></div>
+</div>
 `;
 
 // Insert main HTML to page

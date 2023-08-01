@@ -147,7 +147,6 @@ button:hover{
     color: black;
     border: var(--bw) var(--bt) var(--bc);
 	outline: none;
-    margin:0px 0px 10px 0px;
 }
 .c-input:focus{
     border: var(--bw) var(--bt) var(--bc);
@@ -238,7 +237,13 @@ input{
 }
 
 /* Pagination */
-#c_pagination {text-align: center;}
+#c_pagination {
+    text-align: center;
+    margin:10px 0px 0px 0px;
+    display:flex;
+    justify-content:space-between;
+    
+}
 .c-replyButton {
     margin-top: 10px;
     
@@ -248,5 +253,17 @@ input{
     
 }
 .c-paginationButton {
-    margin:0px 10px;
+    
+}
+
+.c_wrap{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+form{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
 }
