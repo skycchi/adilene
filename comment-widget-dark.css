@@ -72,6 +72,18 @@
     --display:flex;
 }
 
+a{
+    text-decoration: none;
+    color:var(--pink);
+    text-shadow: 2px 2px 1px var(--bc);
+    transition:0.3s;
+}
+
+a:hover{
+    letter-spacing: 2px;
+    color:var(--pink);
+}
+
 /* Main */
 button{
     border: var(--bw) var(--bt) var(--bc);
@@ -213,10 +225,10 @@ button:hover{
 .c-site {
     text-decoration: none;
     color: var(--pink);
+
 }
-.c-site:hover {color: white;}
+.c-site:hover {color:var(--pink);}
 .c-timestamp {
-    float: right;
     opacity: 100%;
     font-size:15px;
 }
@@ -261,19 +273,4 @@ form{
     display:flex;
     flex-direction: column;
     gap:10px;
-}
-
-.emoticons{
-    display:flex;
-    flex-direction:row;
-    gap:5px;
-    align-items: center;
-}
-
-i{
-    color:var(--pink);
-}
-
-.emojis{
-    
 }

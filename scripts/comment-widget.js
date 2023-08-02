@@ -32,7 +32,7 @@ const s_maxLength = 500; // The max character length of a comment
 const s_maxLengthName = 10; // The max character length of a name
 const s_commentsOpen = true; // Change to false if you'd like to close your comment section site-wide (Turn it off on Google Forms too!)
 const s_collapsedReplies = true; // True for collapsed replies with a button, false for replies to display automatically
-const s_longTimestamp = false; // True for a date + time, false for just the date
+const s_longTimestamp = true; // True for a date + time, false for just the date
 const s_includeUrlParameters = false; // Makes new comment sections on pages with URL parameters when set to true (If you don't know what this does, leave it disabled)
 
 // Word filter - Censor profanity, etc
@@ -51,7 +51,7 @@ const s_submitButtonLabel = 'Submit';
 const s_loadingText = 'Loading comments...';
 const s_noCommentsText = 'No comments yet!';
 const s_closedCommentsText = 'Comments are closed!';
-const s_websiteText = 'URL'; // The links to websites left by users on their comments
+const s_websiteText = '@'; // The links to websites left by users on their comments
 const s_replyButtonText = 'Reply'; // The button for replying to someone
 const s_replyingText = 'Replying to'; // The text that displays while the user is typing a reply
 const s_expandRepliesText = 'Show Replies';
@@ -349,30 +349,36 @@ function createComment(data) {
     // Set the ID (uses Name + Full Timestamp format)
     const id = data.Name + '|--|' + timestamps[2];
     comment.id = id;
-
-    // Name of user
-    let name = document.createElement('h3');
-    let filteredName = data.Name;
-    if (s_wordFilterOn) {filteredName = filteredName.replace(v_filteredWords, s_filterReplacement)}
-    name.innerText = filteredName;
-    name.className = 'c-name';
-    comment.appendChild(name);
-
-    // Timestamp
-    let time = document.createElement('span');
+    
+     // Timestamp
+    let time = document.createElement('div');
     time.innerText = timestamp;
     time.className = 'c-timestamp';
     comment.appendChild(time);
 
+    
+    let filteredName = data.Name;
+        if (s_wordFilterOn) {filteredName = filteredName.replace(v_filteredWords, s_filterReplacement)}
+   
+
     // Website URL, if one was provided
     if (data.Website) {
         let site = document.createElement('a');
-        site.innerText = s_websiteText;
+        site.innerText = s_websiteText + filteredName;
         site.href = data.Website;
         site.className = 'c-site';
         comment.appendChild(site);
+    } 
+    
+    if (!data.Website){
+        // Name of user
+        let name = document.createElement('h3');
+        
+        name.innerText = filteredName;
+        name.className = 'c-name';
+        comment.appendChild(name);
     }
-
+        
     // Text content
     let text = document.createElement('p');
     let filteredText = data.Text;
@@ -391,9 +397,11 @@ function convertTimestamp(timestamp) {
     var options = {
         year: "2-digit",
         month: "2-digit",
-        day: "numeric"
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit"
     };
-    return [date.toLocaleString(), date.toLocaleDateString("en", options).replace(/\//g,'.'), date.toUTCString()];
+    return [date.toLocaleString("en", options).replace(/\//g,'.'), date.toLocaleDateString("en", options).replace(/\//g,'.'), date.toUTCString()];
 }
 
 // Handle making replies
