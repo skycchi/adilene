@@ -399,7 +399,8 @@ function convertTimestamp(timestamp) {
         month: "2-digit",
         day: "numeric",
         hour: "2-digit",
-        minute: "2-digit"
+        minute: "2-digit",
+        hourCycle: 'h23'
     };
     return [date.toLocaleString("en", options).replace(/\//g,'.'), date.toLocaleDateString("en", options).replace(/\//g,'.'), date.toUTCString()];
 }
