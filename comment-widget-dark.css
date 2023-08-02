@@ -156,10 +156,6 @@ button:hover{
     border: var(--bw) var(--bt) var(--bc);
 }
 
-.c-nameInput:focus{
-    border: var(--bw) var(--bt) var(--bc);
-}
-
 .c-textInput {
     width: calc(100%);
     max-width: 900px;
@@ -265,4 +261,19 @@ form{
     display:flex;
     flex-direction: column;
     gap:10px;
+}
+
+.emoticons{
+    display:flex;
+    flex-direction:row;
+    gap:5px;
+    align-items: center;
+}
+
+i{
+    color:var(--pink);
+}
+
+.emojis{
+    
 }

@@ -82,11 +82,12 @@ const v_formHtml = `
     <h2 id="c_widgetTitle">${s_widgetTitle}</h2>
 
     <div id="c_nameWrapper" class="c-inputWrapper">
-        <input class="c-input c-nameInput" placeholder="Name" name="entry.${s_nameId}" id="entry.${s_nameId}" type="text" maxlength="${s_maxLengthName}" required>
+        <input class="c-input c-nameInput" placeholder="Name" name="entry.${s_nameId}" id="entry.${s_nameId}" maxlength="${s_maxLengthName}" required>
     </div>
 
+
     <div id="c_textWrapper" class="c-inputWrapper">
-        <input class="c-input c-textInput" placeholder="Comment" name="entry.${s_textId}" id="entry.${s_textId}" rows="1" cols="50"  maxlength="${s_maxLength}" required>
+        <input class="c-input c-textInput" placeholder="Comment" name="entry.${s_textId}" id="entry.${s_textId}" maxlength="${s_maxLength}" required>
     </div>
     
 <div class="c_wrap">
