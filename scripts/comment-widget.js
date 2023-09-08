@@ -76,7 +76,7 @@ document.getElementsByTagName('head')[0].appendChild(c_cssLink);
 // HTML Form
 const v_mainHtml = `
     <div id="c_inputDiv">
-        <form id="c_form" onsubmit="v_submitted = true" method="post" target="c_hiddenIframe" action="https://docs.google.com/forms/d/e/${s_formId}/formResponse"></form>
+        <form id="c_form" onsubmit="v_submitted = true;" method="post" target="c_hiddenIframe" action="https://docs.google.com/forms/d/e/${s_formId}/formResponse"></form>
     </div>
     <div id="c_container">${s_loadingText}</div>
 `;
@@ -99,20 +99,10 @@ const v_formHtml = `
         <input class="c-input c-websiteInput" placeholder="Website" name="entry.${s_websiteId}" id="entry.${s_websiteId}" type="url" pattern="https://.*">
     </div>
 
-    <div style="display:flex;justify-content:center;"><input type="button" id="c_submitButton" name="c_submitButton" value="${s_submitButtonLabel}" disabled onclick="submitForm()"></div>
+    <div style="display:flex;justify-content:center;"><input type="submit" id="c_submitButton" name="c_submitButton" value="${s_submitButtonLabel}" disabled onclick="clear();"></div>
 </div>
 `;
 
-function submitForm() {
-   // Get the first form with the name
-   // Usually the form name is not repeated
-   // but duplicate names are possible in HTML
-   // Therefore to work around the issue, enforce the correct index
-   var frm = document.getElementById('c_form');
-   frm.submit(); // Submit the form
-    getComments();
-   frm.reset();  // Reset all form data
-}
 
 // Insert main HTML to page
 document.getElementById('c_widget').innerHTML = v_mainHtml;
@@ -162,6 +152,13 @@ c_replyInput = document.getElementById('entry.' + s_replyId);
 
 // Add the invisible iFrame to the document for catching the default Google Forms submisson page
 let v_submitted = false;
+
+
+function clear(){
+    document.getElementById("c_form").reset();
+}
+
+
 let c_hiddenIframe = document.createElement('iframe');
 c_hiddenIframe.id = 'c_hiddenIframe'; c_hiddenIframe.name = 'c_hiddenIframe'; c_hiddenIframe.style.display = 'none'; c_hiddenIframe.setAttribute('onload', 'if(v_submitted){fixFrame()}');
 c_form.appendChild(c_hiddenIframe);
