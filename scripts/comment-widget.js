@@ -71,6 +71,8 @@ c_cssLink.rel = 'stylesheet';
 c_cssLink.href = s_stylePath;
 document.getElementsByTagName('head')[0].appendChild(c_cssLink);
 
+
+
 // HTML Form
 const v_mainHtml = `
     <div id="c_inputDiv">
@@ -97,9 +99,20 @@ const v_formHtml = `
         <input class="c-input c-websiteInput" placeholder="Website" name="entry.${s_websiteId}" id="entry.${s_websiteId}" type="url" pattern="https://.*">
     </div>
 
-    <div style="display:flex;justify-content:center;"><input id="c_submitButton" name="c_submitButton" type="submit" value="${s_submitButtonLabel}" disabled></div>
+    <div style="display:flex;justify-content:center;"><input type="button" id="c_submitButton" name="c_submitButton" value="${s_submitButtonLabel}" disabled onclick="submitForm()"></div>
 </div>
 `;
+
+function submitForm() {
+   // Get the first form with the name
+   // Usually the form name is not repeated
+   // but duplicate names are possible in HTML
+   // Therefore to work around the issue, enforce the correct index
+   var frm = document.getElementById('c_form');
+   frm.submit(); // Submit the form
+    getComments();
+   frm.reset();  // Reset all form data
+}
 
 // Insert main HTML to page
 document.getElementById('c_widget').innerHTML = v_mainHtml;

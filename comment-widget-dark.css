@@ -85,7 +85,7 @@ a:hover{
 }
 
 /* Main */
-button{
+button, #c_submitButton{
     border: var(--bw) var(--bt) var(--bc);
     outline: none;
     padding: 5px 8px;
@@ -98,7 +98,11 @@ button{
     min-width:84px;
 }
 
-button:hover{
+button:disabled, #c_submitButton:disabled {
+    opacity:0.5;
+}
+
+button:hover, #c_submitButton:hover{
     background-color: var(--pink);
     color:white;
     transition:0.2s;
