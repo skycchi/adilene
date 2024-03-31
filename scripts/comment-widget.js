@@ -76,7 +76,7 @@ document.getElementsByTagName('head')[0].appendChild(c_cssLink);
 // HTML Form
 const v_mainHtml = `
     <div id="c_inputDiv">
-        <form id="c_form" onsubmit="v_submitted = true;" method="post" target="c_hiddenIframe" action="https://docs.google.com/forms/d/e/${s_formId}/formResponse"></form>
+        <form id="c_form" onsubmit="c_submitButton.disabled = true;v_submitted = true;" method="post" target="c_hiddenIframe" action="https://docs.google.com/forms/d/e/${s_formId}/formResponse"></form>
     </div>
     <div id="c_container">${s_loadingText}</div>
 `;
@@ -179,6 +179,11 @@ function getComments() {
     // Reset reply stuff to default
     c_replyingText.style.display = 'none';
     c_replyInput.value = '';
+    
+    // Reset comments
+    document.getElementById(`entry.${s_nameId}`).value = '';
+    document.getElementById(`entry.${s_websiteId}`).value = '';
+    document.getElementById(`entry.${s_textId}`).value = '';
 
     // Get the data
     const url = `https://docs.google.com/spreadsheets/d/${s_sheetId}/gviz/tq?`;
