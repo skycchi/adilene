@@ -53,7 +53,7 @@
             isPlaying = true;
             
             // replace icon with the pause icon
-            playpause_btn.innerHTML = '<i class="fas fa-solid fa-pause"></i>';
+            playpause_btn.innerHTML = '<i class="fas fa-pause"></i>';
         }
  
         // pauses track when pause button is pressed
@@ -62,7 +62,7 @@
             isPlaying = false;
             
             // replace icon with the play icon
-            playpause_btn.innerHTML = '<i class="fas fa-solid fa-play"></i>';
+            playpause_btn.innerHTML = '<i class="fas fa-play"></i>';
         }
  
         // moves to the next track

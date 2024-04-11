@@ -76,14 +76,14 @@ function playTrack() {
   curr_track.play();
   isPlaying = true;
 
-  playpause_btn.innerHTML = '<i class="fa-sharp fa-solid fa-pause"></i>';
+  playpause_btn.innerHTML = '<i class="fas fa-solid fa-pause"></i>';
 }
 
 function pauseTrack() {
   curr_track.pause();
   isPlaying = false;
 
-  playpause_btn.innerHTML = '<i class="fa-sharp fa-solid fa-play"></i>';
+  playpause_btn.innerHTML = '<i class="fas fa-solid fa-play"></i>';
 }
 
 function nextTrack() {
