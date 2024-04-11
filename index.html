@@ -20,15 +20,7 @@
             }
         </script>
         
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-SXD8HK4HW6"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-SXD8HK4HW6');
-        </script>
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase.js"></script>
     </head>
     <style>
         
@@ -128,7 +120,7 @@
                     <header>STATS</header>
                 </div>
                 <div class="inner" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;text-align:center;color:var(--color);">
-                    <div id="root"></div>
+                    <div id="root">...</div>
                     <div>Hits: <span id="hitcount"></span></div>
                     <div>Last Updated: 04.11.24</div>
                 </div>
@@ -228,29 +220,6 @@
             http.send();
         </script>
         
-<!---    
-        <script>
-            var xhttp = new XMLHttpRequest();
-
-            xhttp.onreadystatechange = function() {
-              if (this.readyState == 4 && this.status == 200) {
-                    let repos = JSON.parse(this.responseText);
-                    repos.forEach((repo)=>{
-                        const lastUpdated = new Date(repo.pushed_at);
-                        const yyyy = lastUpdated.getFullYear().toString().substr(-2);
-                        let mm = lastUpdated.getUTCMonth() + 1; // Months start at 0!
-                        let dd = lastUpdated.getUTCDate();
-
-                        const formattedToday = mm + '.' + dd + '.' + yyyy;
-                        document.getElementById("updated").innerHTML = formattedToday;
-                });
-              }
-            };
-            xhttp.open("GET", "https://api.github.com/users/skycchi/repos", true);
-            xhttp.send();
-        </script>
---->
-        
         <script type="text/javascript">
             var sc_project=12578965; 
             var sc_invisible=1; 
@@ -262,23 +231,16 @@
         
         <script src="/scripts/comment-widget.js"></script>
         
-        <script type="module">
-
-            // Import the functions you need from the SDKs you need
-
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
-
-            import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js";
-
-        </script>
-        
         <script defer type='text/javascript'>
             // Your web app's Firebase configuration
             //for reference goto https://firebase.google.com/docs/database/web/start
-            var firebaseConfig = {
+            const firebaseConfig = {
+
                 apiKey: "AIzaSyCeZk8TIsWfhGfD7ZyTloHybiO-7E6B3cQ",
 
                 authDomain: "online-user-counter.firebaseapp.com",
+
+                databaseURL: "https://online-user-counter-default-rtdb.firebaseio.com",
 
                 projectId: "online-user-counter",
 
@@ -289,10 +251,10 @@
                 appId: "1:201622433719:web:2fee36f21385ce4e22c232",
 
                 measurementId: "G-90G2VEMZCZ"
+
             };
             // Initialize Firebase
-            const app = initializeApp(firebaseConfig);
-            const analytics = getAnalytics(app);
+            firebase.initializeApp(firebaseConfig);
             console.log(firebase.database());
         </script>
         
@@ -362,12 +324,11 @@
                     var liveVisitorCounter = data.numChildren();
                     console.log(liveVisitorCounter);
                     var root = document.getElementById('root');
-                    root.innerText = liveVisitorCounter;
+                    root.innerText = liveVisitorCounter + " Online";
 
                 }))
             }
         </script>
-        
 
     </body>
 </html>
