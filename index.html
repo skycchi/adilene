@@ -291,7 +291,8 @@
                 measurementId: "G-90G2VEMZCZ"
             };
             // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
             console.log(firebase.database());
         </script>
         
