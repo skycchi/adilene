@@ -128,92 +128,7 @@
                     <header>STATS</header>
                 </div>
                 <div class="inner" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;text-align:center;color:var(--color);">
-                    <!-- Visitor counter - Main code -->
-                        <script LANGUAGE="JavaScript">
-
-                        function GetCookie (name) 
-                        {  
-                        var arg = name + "=";  
-                        var alen = arg.length;  
-                        var clen = document.cookie.length;  
-                        var i = 0;  
-                        while (i < clen) {
-                        var j = i + alen;    
-                        if (document.cookie.substring(i, j) == arg)      
-                        return getCookieVal (j);    
-                        i = document.cookie.indexOf(" ", i) + 1;    
-                        if (i == 0) break;   
-                        }  
-                        return null;
-                        }
-
-                        function SetCookie (name, value) 
-                        {  
-                        var argv = SetCookie.arguments;  
-                        var argc = SetCookie.arguments.length;  
-                        var expires = (argc > 2) ? argv[2] : null;  
-                        var path = (argc > 3) ? argv[3] : null;  
-                        var domain = (argc > 4) ? argv[4] : null;  
-                        var secure = (argc > 5) ? argv[5] : false;  
-                        document.cookie = name + "=" + escape (value) + 
-                        ((expires == null) ? "" : ("; expires=" + expires.toGMTString())) + 
-                        ((path == null) ? "" : ("; path=" + path)) +  
-                        ((domain == null) ? "" : ("; domain=" + domain)) +    
-                        ((secure == true) ? "; secure" : "");
-                        }
-
-                        function DeleteCookie (name) 
-                        {  
-                        var exp = new Date();  
-                        exp.setTime (exp.getTime() - 1);   
-                        var cval = GetCookie (name);  
-                        document.cookie = name + "=" + cval + "; expires=" + exp.toGMTString();
-                        }
-
-                        var expDays = 30;
-                        var exp = new Date(); 
-                        exp.setTime(exp.getTime() + (expDays*24*60*60*1000));
-
-                        function UserCounterFunction()
-                        {
-                        var count = GetCookie('count')
-                        if(count == null) {
-
-                        SetCookie('count','1')
-                        return 1
-
-                        }
-
-                        else 
-                        {
-                        var newcount = parseInt(count) + 1;
-                        DeleteCookie('count')
-                        SetCookie('count',newcount,exp)
-                        return count
-                        }
-
-                        }
-
-                        function getCookieVal(offset) 
-                        {
-                        var endstr = document.cookie.indexOf (";", offset);
-                        if (endstr == -1)
-                        endstr = document.cookie.length;
-                        return unescape(document.cookie.substring(offset, endstr));
-                        }
-
-                        </script>
-                        <!-- ============= --> 
-
-
-
-
-                        <!-- set TEXT & call to "Visitor counter" (content)  -->
-                        <script LANGUAGE="JavaScript">
-                        document.write(UserCounterFunction() + " Online")
-                        </script>
-                        <!-- ======  -->
-
+                    <div id="root"></div>
                     <div>Hits: <span id="hitcount"></span></div>
                     <div>Last Updated: 04.11.24</div>
                 </div>
@@ -346,5 +261,112 @@
         </script>
         
         <script src="/scripts/comment-widget.js"></script>
+        
+        <script type="module">
+
+            // Import the functions you need from the SDKs you need
+
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js";
+
+        </script>
+        
+        <script defer type='text/javascript'>
+            // Your web app's Firebase configuration
+            //for reference goto https://firebase.google.com/docs/database/web/start
+            var firebaseConfig = {
+                apiKey: "AIzaSyCeZk8TIsWfhGfD7ZyTloHybiO-7E6B3cQ",
+
+                authDomain: "online-user-counter.firebaseapp.com",
+
+                projectId: "online-user-counter",
+
+                storageBucket: "online-user-counter.appspot.com",
+
+                messagingSenderId: "201622433719",
+
+                appId: "1:201622433719:web:2fee36f21385ce4e22c232",
+
+                measurementId: "G-90G2VEMZCZ"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            console.log(firebase.database());
+        </script>
+        
+        <script>
+            function setCookie(cname, cvalue, exdays) {
+                var d = new Date();
+                d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+                var expires = "expires=" + d.toUTCString();
+                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+            }
+
+            function getCookie(cname) {
+                var name = cname + "=";
+                var ca = document.cookie.split(';');
+                for (var i = 0; i < ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+            var track = (xx) => {
+
+                var userStatusDatabaseRef = firebase.database().ref('/tempUser/' + xx);
+
+                var isOfflineForDatabase = {
+                    state: 'offline',
+                    last_changed: firebase.database.ServerValue.TIMESTAMP,
+                };
+
+                var isOnlineForDatabase = {
+                    state: 'online',
+                    last_changed: firebase.database.ServerValue.TIMESTAMP,
+                };
+
+                firebase.database().ref('.info/connected').on('value', function (snapshot) {
+                    if (snapshot.val() == false) {
+                        return;
+                    };
+
+                    userStatusDatabaseRef.onDisconnect().set(isOfflineForDatabase).then(function () {
+                        userStatusDatabaseRef.set(isOnlineForDatabase);
+                    });
+                });
+                checkOnline()
+
+            }
+            var user = getCookie("tracking");
+            if (user != "") {
+                console.log("Welcome again " + user);
+                track(user)
+            } else {
+                user = Date.now().toString(16);
+                if (user != "" && user != null) {
+                    console.log("Welcome new user " + user);
+                    setCookie("tracking", user, 365);
+                    track(user)
+                }
+            }
+
+            function checkOnline() {
+                firebase.database().ref('/tempUser/').orderByChild('state').equalTo("online").on("value", (data => {
+                    var liveVisitorCounter = data.numChildren();
+                    console.log(liveVisitorCounter);
+                    var root = document.getElementById('root');
+                    root.innerText = liveVisitorCounter;
+
+                }))
+            }
+        </script>
+        
+
     </body>
 </html>
