@@ -6,7 +6,7 @@
         <title>VIRTUAL DIVA</title>
         <link rel="shortcut icon" href="https://files.catbox.moe/j2aivj.gif">
         <link rel="stylesheet" href="/style.css">
-        <link rel="stylesheet" href="/comment-widget-dark.css">
+        <link rel="stylesheet" href="/commentwidget.css">
         <script src="https://kit.fontawesome.com/f936906ae0.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
         <script src="https://static.tumblr.com/rtrqcib/VGGnlh8rf/jquery.style-my-tooltips.min.js"></script>
@@ -123,7 +123,7 @@
                 <div class="inner" style="display:flex;flex-direction:column;justify-content:space-between;height:100%;text-align:center;color:var(--color);">
                     <div id="root">...</div>
                     <div>Hits: <span id="hitcount"></span></div>
-                    <div>Last Updated: 04.22.24</div>
+                    <div>Last Updated: 04.23.24</div>
                 </div>
             </div>
             
@@ -221,15 +221,6 @@
             http.send();
         </script>
         
-        <script type="text/javascript">
-            var sc_project=12578965; 
-            var sc_invisible=1; 
-            var sc_security="6530c19b"; 
-        </script>
-        <script type="text/javascript"
-        src="https://www.statcounter.com/counter/counter.js" async>
-        </script>
-        
         <script src="/scripts/comment-widget.js"></script>
         
         <script defer type='text/javascript'>
@@ -309,12 +300,10 @@
             }
             var user = getCookie("tracking");
             if (user != "") {
-                console.log("Welcome again " + user);
                 track(user)
             } else {
                 user = Date.now().toString(16);
                 if (user != "" && user != null) {
-                    console.log("Welcome new user " + user);
                     setCookie("tracking", user, 365);
                     track(user)
                 }
@@ -323,7 +312,6 @@
             function checkOnline() {
                 firebase.database().ref('/tempUser/').orderByChild('state').equalTo("online").on("value", (data => {
                     var liveVisitorCounter = data.numChildren();
-                    console.log(liveVisitorCounter);
                     var root = document.getElementById('root');
                     root.innerText = liveVisitorCounter + " Online";
 

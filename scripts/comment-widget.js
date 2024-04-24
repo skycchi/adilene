@@ -17,7 +17,7 @@
 */
 
 // The values in this section are REQUIRED for the widget to work! Keep them in quotes!
-const s_stylePath = '/comment-widget-dark.css'; // Define the path for the stylesheet (ie. /styles/commentwidget.css)
+const s_stylePath = '/commentwidget.css'; // Define the path for the stylesheet (ie. /styles/commentwidget.css)
 const s_formId = '1FAIpQLSf0kqR2VP-AFdXdRQro4fnSkUEacH9c581nv3jzbzkfu9drtg'; // The Google Form
 const s_nameId = '964082241'; // The Name field ID
 const s_websiteId = '615337128'; // The Website field ID
