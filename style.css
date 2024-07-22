@@ -170,7 +170,7 @@ header{
     z-index:10;
     margin-bottom:var(--bw);
     position:relative;
-    background-image:var(--bgimg);
+    background-image:none;
     background-size:cover;
 }
 
