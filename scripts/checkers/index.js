@@ -4,7 +4,7 @@
 let gameManager;
 
 // When window is loaded
-window.onload = () => {
+window.onload = () =>{
     // Create new GameManager
     gameManager = new GameManager();
     // Initialize the game

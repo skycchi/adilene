@@ -15,34 +15,34 @@
     src:url(https://files.catbox.moe/kyguk9.ttf);
 }
 
-.gakupocontainer::selection {
-    background: #b13d8e;
+.gakupocontainer::selection{
+    background:#b13d8e;
     color:white;
 }
  
-.gakupocontainer::-moz-selection {
-    background: #b13d8e;
+.gakupocontainer::-moz-selection{
+    background:#b13d8e;
     color:white;
 }
 
 .gakupocontainer{
     width:200px;
-    height: 200px;
+    height:200px;
     padding:10px 10px 0px 10px;
 }
 
-#gakuporing {
-    margin: 10px auto;
+#gakuporing{
+    margin:10px auto;
     border:3px solid #b13d8e;
-    background-color: #d0b9c9;
+    background-color:#d0b9c9;
     width:200px;
 }
 
-#gakuporing table {
-    margin: 0 auto;
+#gakuporing table{
+    margin:0 auto;
 }
 
-#gakuporing .webring-info {
+#gakuporing .webring-info{
     text-align:center;
     font-family:Orbitron;
     color:#177eb8;
@@ -58,22 +58,22 @@
 #gakuporing .webring-links a{
     font-size:18px;
     font-family:Pixel Operator;
-    text-decoration: none;
+    text-decoration:none;
     color:#177eb8;
-    text-shadow: 2px 2px 1px #819baa;
+    text-shadow:2px 2px 1px #819baa;
     transition:0.3s;
 }
 
 #gakuporing .webring-links a:hover{
     
-    letter-spacing: normal;
+    letter-spacing:normal;
 }
 
-img {
-    user-drag: none;
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+img{
+    user-drag:none;
+    -webkit-user-drag:none;
+    user-select:none;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
 }

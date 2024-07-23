@@ -22,10 +22,10 @@
         \***************************/
         var newsp, cursp, flash, item=0;
 
-        if (typeof('addRVLoadEvent')!='function') function addRVLoadEvent(funky) {
+        if (typeof('addRVLoadEvent')!='function') function addRVLoadEvent(funky){
           var oldonload=window.onload;
           if (typeof(oldonload)!='function') window.onload=funky;
-          else window.onload=function() {
+          else window.onload=function(){
             if (oldonload) oldonload();
             funky();
           }
@@ -33,7 +33,7 @@
 
         addRVLoadEvent(teleprint);
 
-        function teleprint () { if (document.getElementById) {
+        function teleprint (){ if (document.getElementById){
           var span=document.getElementById("news");
           while (span.childNodes.length) span.removeChild(span.childNodes[0]);
           delay*=1000;
@@ -45,7 +45,7 @@
           ticker();
         }}
 
-        function ticker() {
+        function ticker(){
           var i;
           while (newsp.childNodes.length) newsp.removeChild(newsp.childNodes[0]);
           newsp.appendChild(document.createTextNode(news[item].substring(0,1)));
@@ -58,7 +58,7 @@
           item=++item%news.length;
         }
 
-        function linkit(q) {
+        function linkit(q){
           var a,p,e,l;
           p=news[q].indexOf("www");
           e=news[q].indexOf(" ", p);
@@ -78,12 +78,12 @@
     <style>
         *{
             cursor:default;
-            box-sizing: border-box;
+            box-sizing:border-box;
         }
         
         @font-face{
-            font-family: 'Aachen';
-            src: url(https://static.tumblr.com/pvnotae/YIoqdg2yp/aachen-bold-opentype.otf);
+            font-family:'Aachen';
+            src:url(https://static.tumblr.com/pvnotae/YIoqdg2yp/aachen-bold-opentype.otf);
         }
         ::-webkit-scrollbar{
             display:none;
@@ -93,36 +93,36 @@
             display:none;
         }
         
-        ::selection {
-            background: #697379 !important;
+        ::selection{
+            background:#697379 !important;
             color:white;
         }
 
-        ::-moz-selection {
-            background: #697379 !important;
+        ::-moz-selection{
+            background:#697379 !important;
             color:white;
         }
         
         body{
             background-color:black;
             background-image:none;
-            animation: fadeEffect 1s;
+            animation:fadeEffect 1s;
             text-align:left;
             display:flex;
             flex-direction:column;
-            justify-content: center;
-            align-content: center;
-            align-items: center;
+            justify-content:center;
+            align-content:center;
+            align-items:center;
             font-family:helvetica !important;
             font-size:18px !important;
             overflow:hidden;
-            scrollbar-width: none;
+            scrollbar-width:none;
         }
         
         
-        @keyframes fadeEffect {
-            from {opacity: 0;}
-            to {opacity: 1;}
+        @keyframes fadeEffect{
+            from{opacity:0;}
+            to{opacity:1;}
         }
         
         #phonewrapper{
@@ -137,12 +137,12 @@
             background-color:white;
             overflow:auto;
             z-index:1;
-            scrollbar-width: none;
+            scrollbar-width:none;
         }
         
         #screen::before{
-            box-shadow: 0px 0px 120px 0px rgba(255,255,255,0.5);
-            animation: screenglow 0.15s infinite;
+            box-shadow:0px 0px 120px 0px rgba(255,255,255,0.5);
+            animation:screenglow 0.15s infinite;
         }
         
         @keyframes screenglow{
@@ -162,115 +162,115 @@
             height:490px;
             margin-top:100px;
             margin-left:37px;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          right: 0;
-            pointer-events: none;
+          top:0;
+          left:0;
+          bottom:0;
+          right:0;
+            pointer-events:none;
             display:none;
             z-index:100;
         }
         
-        .crt::after {
-          content: " ";
-          display: block;
-          position: absolute;
+        .crt::after{
+          content:" ";
+          display:block;
+          position:absolute;
             width:292px;
             height:492px;
             margin-top:100px;
             margin-left:37px;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          right: 0;
-          background: rgba(18, 16, 16, 0.1);
-          opacity: 0;
-          z-index: 300;
-          pointer-events: none;
-          animation: flicker 0.15s infinite;
+          top:0;
+          left:0;
+          bottom:0;
+          right:0;
+          background:rgba(18, 16, 16, 0.1);
+          opacity:0;
+          z-index:300;
+          pointer-events:none;
+          animation:flicker 0.15s infinite;
             
         }
-        .crt::before {
-          content: " ";
-          display: block;
-          position: absolute;
+        .crt::before{
+          content:" ";
+          display:block;
+          position:absolute;
             width:292px;
             height:492px;
             margin-top:100px;
             margin-left:37px;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          right: 0;
-          background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-          z-index: 300;
-          background-size: 100% 2px, 3px 100%;
-          pointer-events: none;
+          top:0;
+          left:0;
+          bottom:0;
+          right:0;
+          background:linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+          z-index:300;
+          background-size:100% 2px, 3px 100%;
+          pointer-events:none;
         }
         
-        @keyframes flicker {
-          0% {
-            opacity: 0.27861;
+        @keyframes flicker{
+          0%{
+            opacity:0.27861;
           }
-          5% {
-            opacity: 0.34769;
+          5%{
+            opacity:0.34769;
           }
-          10% {
-            opacity: 0.23604;
+          10%{
+            opacity:0.23604;
           }
-          15% {
-            opacity: 0.90626;
+          15%{
+            opacity:0.90626;
           }
-          20% {
-            opacity: 0.18128;
+          20%{
+            opacity:0.18128;
           }
-          25% {
-            opacity: 0.83891;
+          25%{
+            opacity:0.83891;
           }
-          30% {
-            opacity: 0.65583;
+          30%{
+            opacity:0.65583;
           }
-          35% {
-            opacity: 0.67807;
+          35%{
+            opacity:0.67807;
           }
-          40% {
-            opacity: 0.26559;
+          40%{
+            opacity:0.26559;
           }
-          45% {
-            opacity: 0.84693;
+          45%{
+            opacity:0.84693;
           }
-          50% {
-            opacity: 0.96019;
+          50%{
+            opacity:0.96019;
           }
-          55% {
-            opacity: 0.08594;
+          55%{
+            opacity:0.08594;
           }
-          60% {
-            opacity: 0.20313;
+          60%{
+            opacity:0.20313;
           }
-          65% {
-            opacity: 0.71988;
+          65%{
+            opacity:0.71988;
           }
-          70% {
-            opacity: 0.53455;
+          70%{
+            opacity:0.53455;
           }
-          75% {
-            opacity: 0.37288;
+          75%{
+            opacity:0.37288;
           }
-          80% {
-            opacity: 0.71428;
+          80%{
+            opacity:0.71428;
           }
-          85% {
-            opacity: 0.70419;
+          85%{
+            opacity:0.70419;
           }
-          90% {
-            opacity: 0.7003;
+          90%{
+            opacity:0.7003;
           }
-          95% {
-            opacity: 0.36108;
+          95%{
+            opacity:0.36108;
           }
-          100% {
-            opacity: 0.24387;
+          100%{
+            opacity:0.24387;
           }
         }
         
@@ -294,7 +294,7 @@
         
         #bottom{
             height:30px;
-            background: linear-gradient(180deg, rgba(125,197,218,1) 0%, rgba(80,149,169,1) 100%);
+            background:linear-gradient(180deg, rgba(125,197,218,1) 0%, rgba(80,149,169,1) 100%);
             border-left:4px double #498292;
             border-right:4px solid #498292;
             border-top:4px solid #498292;
@@ -324,15 +324,15 @@
         
         .diaryholders img{
             height:108px;
-            object-fit: cover;
+            object-fit:cover;
             display:block;
             margin-bottom:20px;
         }
         
-        @keyframes glowing {
-          0% { box-shadow: 0 0 3px #B20000; }
-          50% { box-shadow: 0 0 40px #FF0000; }
-          100% { box-shadow: 0 0 3px #B20000; }
+        @keyframes glowing{
+          0%{ box-shadow:0 0 3px #B20000; }
+          50%{ box-shadow:0 0 40px #FF0000; }
+          100%{ box-shadow:0 0 3px #B20000; }
         }
         
         img{
@@ -358,7 +358,7 @@
             background-color:#61987c;
             color:white;
             display:flex;
-            justify-content: space-between;
+            justify-content:space-between;
         }
         
         #status img{
@@ -375,7 +375,7 @@
             font-family:times;
             font-size:25px;
             width:100%;
-            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         }
         
         #diary img{
@@ -391,7 +391,7 @@
         
         #buttons{
             border:4px solid #343447;
-            background: radial-gradient(circle, rgba(90,85,114,1) 0%, rgba(22,22,35,1) 100%);
+            background:radial-gradient(circle, rgba(90,85,114,1) 0%, rgba(22,22,35,1) 100%);
             width:100%;
             color:white;
             
@@ -434,18 +434,18 @@
         
         
         #space{
-            background: url(https://adilene.neocities.org/images/mirainikki/emptyworld.png) center center fixed;
+            background:url(https://adilene.neocities.org/images/mirainikki/emptyworld.png) center center fixed;
             margin:0;
             padding:0;
             position:absolute;
             display:none;
             top:0;
             left:0;
-            width: 100%;
-            height: 100%;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
+            width:100%;
+            height:100%;
+            -webkit-background-size:cover;
+            -moz-background-size:cover;
+            -o-background-size:cover;
             background-size:cover;
             
         }
@@ -523,7 +523,7 @@
                             <br><br>
                             Tormented by solitude, Yukiteru interacts with his imaginary friends Deus Ex Machina, the God of Time and Space, and Muru Muru, Deus' servant. One day, Deus grants Yukiteru's cell phone the ability to record the future for the next 90 days. Yukiteru is then forced to participate in a battle royale with eleven other people, each of whom also have a diary that can predict the future in some unique way.
                             <br><br>
-                            The rules of the game are simple: before the world ends on day 90, the contestants must find and kill all the other contestants, and the last one standing will become Deus' successor.
+                            The rules of the game are simple:before the world ends on day 90, the contestants must find and kill all the other contestants, and the last one standing will become Deus' successor.
 
                             <br><br>
                             
@@ -550,11 +550,11 @@
                             <div class="diaryholders">
                                 <img src="https://adilene.neocities.org/images/mirainikki/first.jpg">
                                 <div style="padding:0px 5px;">
-                                    <b>The First: Amano Yukiteru</b>
+                                    <b>The First:Amano Yukiteru</b>
                                     <br>
-                                    <b>Diary: Random Diary</b>
+                                    <b>Diary:Random Diary</b>
                                     <br>
-                                    <b>Consentes Dii: Jupiter</b>
+                                    <b>Consentes Dii:Jupiter</b>
                                     <br><br>
                                     A reclusive and shy 14-year-old middle school student. He opts to be a bystander and writes about incidents that happen around him in his diary, located within his phone. 
                                     <br><br>
@@ -565,11 +565,11 @@
                             <div class="diaryholders">
                                 <img src="https://adilene.neocities.org/images/mirainikki/second.jpg">
                                 <div style="padding:0px 5px;">
-                                    <b>The Second: Gasai Yuno</b>
+                                    <b>The Second:Gasai Yuno</b>
                                     <br>
-                                    <b>Diary: Yukiteru Diary</b>
+                                    <b>Diary:Yukiteru Diary</b>
                                     <br>
-                                    <b>Consentes Dii: Juno</b>
+                                    <b>Consentes Dii:Juno</b>
                                     <br><br>
                                     Yukiteru's classmate. While a perfect model student on the surface, she is actually a psychopathic yandere who is borderline obsessed with Yukiteru, whom she affectionately calls "Yukki", and kills unhesitatingly to protect him. 
                                     <br><br>
@@ -580,11 +580,11 @@
                             <div class="diaryholders">
                                 <img src="https://adilene.neocities.org/images/mirainikki/third.jpg">
                                 <div style="padding:0px 5px;">
-                                    <b>The Third: Hiyama Takao</b>
+                                    <b>The Third:Hiyama Takao</b>
                                     <br>
-                                    <b>Diary: Murder Diary</b>
+                                    <b>Diary:Murder Diary</b>
                                     <br>
-                                    <b>Consentes Dii: Vulcanus</b>
+                                    <b>Consentes Dii:Vulcanus</b>
                                     <br><br>
                                     Yukiteru and Yuno's school teacher who is secretly a serial killer. He wears a heavy bulletproof trenchcoat with a hat and mask to hide his identity. 
                                     <br><br>
@@ -595,11 +595,11 @@
                             <div class="diaryholders">
                                 <img src="https://adilene.neocities.org/images/mirainikki/fourth.jpg">
                                 <div style="padding:0px 5px;">
-                                    <b>The Fourth:  Kurusu Keigo</b>
+                                    <b>The Fourth: Kurusu Keigo</b>
                                     <br>
-                                    <b>Diary: Criminal Investigation Diary</b>
+                                    <b>Diary:Criminal Investigation Diary</b>
                                     <br>
-                                    <b>Consentes Dii: Mercurius</b>
+                                    <b>Consentes Dii:Mercurius</b>
                                     <br><br>
                                     A police captain who was chosen for the Diary Game to balance out the other users. 
                                     <br><br>
@@ -610,26 +610,26 @@
                             <div class="diaryholders">
                                 <img src="https://adilene.neocities.org/images/mirainikki/fifth.jpg">
                                 <div style="padding:0px 5px;">
-                                    <b>The Fifth: Houjou Reisuke</b>
+                                    <b>The Fifth:Houjou Reisuke</b>
                                     <br>
-                                    <b>Diary: Hyper Vision Diary</b>
+                                    <b>Diary:Hyper Vision Diary</b>
                                     <br>
-                                    <b>Consentes Dii: Ceres</b>
+                                    <b>Consentes Dii:Ceres</b>
                                     <br><br>
                                     An orphaned five-year-old boy who is very intelligent for his age. He is sent to live with Yukiteru and his mother after his parents die.
                                     <br><br>
-                                    His diary is a coloring book that gives a small summary of the activities that he may perform for the day. However, his diary only shows three entries for the day: during the morning, noon, and night.
+                                    His diary is a coloring book that gives a small summary of the activities that he may perform for the day. However, his diary only shows three entries for the day:during the morning, noon, and night.
                                 </div>
                             </div>
 
                             <div class="diaryholders">
                                 <img src="https://adilene.neocities.org/images/mirainikki/sixth.jpg">
                                 <div style="padding:0px 5px;">
-                                    <b>The Sixth: Kasugano Tsubaki</b>
+                                    <b>The Sixth:Kasugano Tsubaki</b>
                                     <br>
-                                    <b>Diary: Clairvoyance Diary</b>
+                                    <b>Diary:Clairvoyance Diary</b>
                                     <br>
-                                    <b>Consentes Dii: Apollo</b>
+                                    <b>Consentes Dii:Apollo</b>
                                     <br><br>
                                     A physically inept girl with bad eyesight, she is the leader of the Omekata cult where she serves as the group's priestess. 
                                     <br><br>
@@ -640,11 +640,11 @@
                             <div class="diaryholders">
                                 <img src="https://adilene.neocities.org/images/mirainikki/seventh.jpg">
                                 <div style="padding:0px 5px;">
-                                    <b>The Seventh: Ikusaba Marco and Mikami Ai</b>
+                                    <b>The Seventh:Ikusaba Marco and Mikami Ai</b>
                                     <br>
-                                    <b>Diaries: Exchange Diaries</b>
+                                    <b>Diaries:Exchange Diaries</b>
                                     <br>
-                                    <b>Consentes Diis: Mars and Venus</b>
+                                    <b>Consentes Diis:Mars and Venus</b>
                                     <br><br>
                                     Originally assumed to be two separate Diary users, Marco and Ai are in fact both the Seventh Diary user. Both orphaned at a young age and sent to the same orphanage, they are a couple and are soon to be  married.
                                     <br><br>
@@ -655,11 +655,11 @@
                             <div class="diaryholders">
                                 <img src="https://adilene.neocities.org/images/mirainikki/eighth.jpg">
                                 <div style="padding:0px 5px;">
-                                    <b>The Eighth: Ueshita Kamado</b>
+                                    <b>The Eighth:Ueshita Kamado</b>
                                     <br>
-                                    <b>Diary: Blog Diary</b>
+                                    <b>Diary:Blog Diary</b>
                                     <br>
-                                    <b>Consentes Dii: Vesta</b>
+                                    <b>Consentes Dii:Vesta</b>
                                     <br><br>
                                     She is in charge of the "Mother's Home" orphanage where Marco and Ai were raised. She cares deeply about her children.
                                     <br><br>
@@ -670,11 +670,11 @@
                             <div class="diaryholders">
                                 <img src="https://adilene.neocities.org/images/mirainikki/ninth.jpg">
                                 <div style="padding:0px 5px;">
-                                    <b>The Ninth: Uryuu Minene</b>
+                                    <b>The Ninth:Uryuu Minene</b>
                                     <br>
-                                    <b>Diary: Escape Diary</b>
+                                    <b>Diary:Escape Diary</b>
                                     <br>
-                                    <b>Consentes Dii: Minerva</b>
+                                    <b>Consentes Dii:Minerva</b>
                                     <br><br>
                                     An infamous atheist terrorist, Minene is a young woman who has hatred towards organized religion, particularly belief towards God. 
                                     <br><br>
@@ -685,11 +685,11 @@
                             <div class="diaryholders">
                                 <img src="https://adilene.neocities.org/images/mirainikki/tenth.jpg">
                                 <div style="padding:0px 5px;">
-                                    <b>The Tenth: Tsukishima Karyuudo</b>
+                                    <b>The Tenth:Tsukishima Karyuudo</b>
                                     <br>
-                                    <b>Diary: Breeder's Diary</b>
+                                    <b>Diary:Breeder's Diary</b>
                                     <br>
-                                    <b>Consentes Dii: Diana</b>
+                                    <b>Consentes Dii:Diana</b>
                                     <br><br>
                                      A rich man with elegant taste, Karyuudo is a dog breeder who loves and cares about his dogs so much that he neglects his family, to the point that his wife leaves him. 
                                     <br><br>
@@ -700,11 +700,11 @@
                             <div class="diaryholders">
                                 <img src="https://adilene.neocities.org/images/mirainikki/eleventh.jpg">
                                 <div style="padding:0px 5px;">
-                                    <b>The Eleventh: John Bacchus</b>
+                                    <b>The Eleventh:John Bacchus</b>
                                     <br>
-                                    <b>Diary: Watcher Diary</b>
+                                    <b>Diary:Watcher Diary</b>
                                     <br>
-                                    <b>Consentes Dii: Bacchus</b>
+                                    <b>Consentes Dii:Bacchus</b>
                                     <br><br>
                                      The Mayor of Sakurami City and the mastermind behind the Diary Game, as he was the one who convinced Deus to create the battle royale to determine Deus' successor. 
                                     <br><br>
@@ -715,11 +715,11 @@
                             <div class="diaryholders">
                                 <img src="https://adilene.neocities.org/images/mirainikki/twelfth.jpg">
                                 <div style="padding:0px 5px;">
-                                    <b>The Twelfth: Hirasaka Yomotsu</b>
+                                    <b>The Twelfth:Hirasaka Yomotsu</b>
                                     <br>
-                                    <b>Diary: Justice Diary</b>
+                                    <b>Diary:Justice Diary</b>
                                     <br>
-                                    <b>Consentes Dii: Pluto</b>
+                                    <b>Consentes Dii:Pluto</b>
                                     <br><br>
                                      Blind and insane, he is a vigilante who acts like a tokusatsu hero. He has superhuman hearing to make up for his blindness.
                                     <br><br>
@@ -762,12 +762,12 @@
         
         
         
-        <audio onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 2000)">
+        <audio onloadeddata="var audioPlayer = this; setTimeout(function(){ audioPlayer.play(); }, 2000)">
             <source src="https://dl.dropboxusercontent.com/s/3qye3ujal0x9ive/static2.mp3" type="audio/mp3" />
         </audio>
         
         <script>
-            function showMain() {
+            function showMain(){
                 var audio = new Audio("https://dl.dropboxusercontent.com/s/3qye3ujal0x9ive/static2.mp3");
                 audio.play();
                 $('#static').fadeIn(100);
@@ -780,7 +780,7 @@
         </script>
         
         <script>
-        function updateTime() {
+        function updateTime(){
         var currentTime = new Date();
         var hours = currentTime.getHours();
         var minutes = currentTime.getMinutes();

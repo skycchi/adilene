@@ -10,7 +10,7 @@
     </head>
     <style>
         
-        @font-face {
+        @font-face{
             src:url(https://dl.dropbox.com/s/mes7b666uvig5wc/Winkle-Regular.otf);
             font-family:winkle;
         }
@@ -20,36 +20,36 @@
             font-family:questrial;
         }
         
-        ::selection {
-            background: #ab937a;
+        ::selection{
+            background:#ab937a;
             color:white;
         }
 
-        ::-moz-selection {
-            background: #ab937a;
+        ::-moz-selection{
+            background:#ab937a;
             color:white;
         }
         
         /* ===== Scrollbar CSS ===== */
         /* Firefox */
-        * {
-        scrollbar-width: thin;
-        scrollbar-color: #ab937a #ffffff;
+        *{
+        scrollbar-width:thin;
+        scrollbar-color:#ab937a #ffffff;
         }
 
         /* Chrome, Edge, and Safari */
-        *::-webkit-scrollbar {
-        width: 12px;
+        *::-webkit-scrollbar{
+        width:12px;
         }
 
-        *::-webkit-scrollbar-track {
-        background: #ffffff;
+        *::-webkit-scrollbar-track{
+        background:#ffffff;
         }
 
-        *::-webkit-scrollbar-thumb {
-        background-color: #ab937a;
-        border-radius: 5px;
-        border: 3px solid #ffffff;
+        *::-webkit-scrollbar-thumb{
+        background-color:#ab937a;
+        border-radius:5px;
+        border:3px solid #ffffff;
         }
         
         body{
@@ -65,12 +65,12 @@
         
         a{
             color:#ab937a;
-            filter: drop-shadow(1px 1px 0 black) drop-shadow(-1px 1px 0 black) drop-shadow(0 -1px 0 black) drop-shadow(1px 0 black);
+            filter:drop-shadow(1px 1px 0 black) drop-shadow(-1px 1px 0 black) drop-shadow(0 -1px 0 black) drop-shadow(1px 0 black);
         }
         
         #title{
             margin-top:25px;
-            filter: drop-shadow(5px 5px 0 black) drop-shadow(-1px 1px 0 black) drop-shadow(0 -1px 0 black) drop-shadow(1px 0 black);
+            filter:drop-shadow(5px 5px 0 black) drop-shadow(-1px 1px 0 black) drop-shadow(0 -1px 0 black) drop-shadow(1px 0 black);
             font-family:winkle;
             font-size:100px;
             color:#ab937a;
@@ -79,48 +79,48 @@
         #titletwo{
             margin-top:20px;
             font-size:40px;
-            filter: drop-shadow(1px 1px 0 #ab937a) drop-shadow(-1px 1px 0 black) drop-shadow(0 -1px 0 black) drop-shadow(1px 0 black);
+            filter:drop-shadow(1px 1px 0 #ab937a) drop-shadow(-1px 1px 0 black) drop-shadow(0 -1px 0 black) drop-shadow(1px 0 black);
         }
         
         .bounce{
-            animation: bounce 3s infinite; 
-            animation-timing-function: cubic-bezier(0.25, 0.85, 0.4, 1);
+            animation:bounce 3s infinite; 
+            animation-timing-function:cubic-bezier(0.25, 0.85, 0.4, 1);
             
         }
         
         .float{
-            animation: floating 3s infinite ease-in-out;
+            animation:floating 3s infinite ease-in-out;
         }
         
-        @keyframes floating {
-            0% { transform: translate(0,  0px); }
-            50%  { transform: translate(0, 15px); }
-            100%   { transform: translate(0, -0px); }    
+        @keyframes floating{
+            0%{ transform:translate(0,  0px); }
+            50% { transform:translate(0, 15px); }
+            100%  { transform:translate(0, -0px); }    
         }
         
-        .letterone { animation-delay:0s; display:inline-block;}
-        .lettertwo { animation-delay:0.2s; display:inline-block;}
-        .letterthree { animation-delay:0.4s; display:inline-block; }
-        .letterfour { animation-delay:0.6s; display:inline-block;}
-        .letterfive { animation-delay:0.8s; display:inline-block;}
-        .lettersix { animation-delay:1s; display:inline-block;}
-        .letterseven { animation-delay:1.2s; display:inline-block;}
-        .lettereight { animation-delay:1.4s; display:inline-block;}
-        .letternine { animation-delay:1.6s; display:inline-block;}
-        .letterten { animation-delay:1.8s; display:inline-block;}
-        .lettereleven { animation-delay:2s; display:inline-block; }
-        .lettertwelve { animation-delay:2.2s; display:inline-block;}
+        .letterone{ animation-delay:0s; display:inline-block;}
+        .lettertwo{ animation-delay:0.2s; display:inline-block;}
+        .letterthree{ animation-delay:0.4s; display:inline-block; }
+        .letterfour{ animation-delay:0.6s; display:inline-block;}
+        .letterfive{ animation-delay:0.8s; display:inline-block;}
+        .lettersix{ animation-delay:1s; display:inline-block;}
+        .letterseven{ animation-delay:1.2s; display:inline-block;}
+        .lettereight{ animation-delay:1.4s; display:inline-block;}
+        .letternine{ animation-delay:1.6s; display:inline-block;}
+        .letterten{ animation-delay:1.8s; display:inline-block;}
+        .lettereleven{ animation-delay:2s; display:inline-block; }
+        .lettertwelve{ animation-delay:2.2s; display:inline-block;}
         
         
-        @keyframes bounce { 0% { transform: scale(1,1) translateY(0); } 10% { transform: scale(1.1,.9) translateY(0); } 30% { transform: scale(.9,1.1) translateY(-30px); } 50% { transform: scale(1.05,.95) translateY(0); } 60% { transform: scale(1,1) translateY(-4px); } 100% { transform: scale(1,1) translateY(0); } }
+        @keyframes bounce{ 0%{ transform:scale(1,1) translateY(0); } 10%{ transform:scale(1.1,.9) translateY(0); } 30%{ transform:scale(.9,1.1) translateY(-30px); } 50%{ transform:scale(1.05,.95) translateY(0); } 60%{ transform:scale(1,1) translateY(-4px); } 100%{ transform:scale(1,1) translateY(0); } }
         
-        @keyframes fadeEffect {
-            from {opacity: 0;}
-            to {opacity: 1;}
+        @keyframes fadeEffect{
+            from{opacity:0;}
+            to{opacity:1;}
         }
         
         #capy{
-            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            border-radius:255px 15px 225px 15px/15px 225px 15px 255px;
             border:10px double #ab937a;
             background-color:white;
             width:50%;
@@ -130,7 +130,7 @@
         }
         
         #description{
-            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            border-radius:255px 15px 225px 15px/15px 225px 15px 255px;
             border:10px double #ab937a;
             background-color:white;
             width:70%;
@@ -140,7 +140,7 @@
         }
         
         #description2{
-            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            border-radius:255px 15px 225px 15px/15px 225px 15px 255px;
             border:10px double #ab937a;
             background-color:white;
             width:70%;
@@ -149,14 +149,14 @@
             padding:20px;
             display:flex;
             gap:10px;
-            justify-content: space-between;
+            justify-content:space-between;
         }
         
         #description img{
             width:100%;
-            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            border-radius:255px 15px 225px 15px/15px 225px 15px 255px;
             border:10px double #ab937a;
-            box-sizing: border-box;
+            box-sizing:border-box;
             
         }
         
@@ -190,12 +190,12 @@
         }
         
         td{
-            padding: 0.8125em 2%;
-            border-bottom: 1px solid #ab937a;
+            padding:0.8125em 2%;
+            border-bottom:1px solid #ab937a;
         }
         
-        summary::marker {
-            display: none;
+        summary::marker{
+            display:none;
             color:#ab937a;
         }
         
@@ -973,7 +973,7 @@
             </tbody>
             </table>
             <br>
-            source: <a href="https://petcapybara.com/2017/07/05/which-zoos-have-capybaras/">petcapybara.com</a>
+            source:<a href="https://petcapybara.com/2017/07/05/which-zoos-have-capybaras/">petcapybara.com</a>
             </details>
             <div id="titletwo">donate to capybara conservation!</div>
             <br>
@@ -982,11 +982,11 @@
             <a href="https://www.patreon.com/capybara_land">Capybara Land</a>
         </div>
         
-        <div style="display:flex;gap:20px;width:100%;justify-content: center;;margin:20px auto">
-            <div id="description" style="width:36.5%;margin:0;box-sizing: border-box;">
+        <div style="display:flex;gap:20px;width:100%;justify-content:center;;margin:20px auto">
+            <div id="description" style="width:36.5%;margin:0;box-sizing:border-box;">
                 <iframe style="max-width:100%;width:100%;height:350px;" src="https://www.youtube.com/embed/QUqCWkPlLLc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
-            <div id="description" style="width:36.5%;margin:0;box-sizing: border-box;">
+            <div id="description" style="width:36.5%;margin:0;box-sizing:border-box;">
                 <iframe style="max-width:100%;width:100%;height:350px;" src="https://www.youtube.com/embed/YaYwasi72K8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </div>
@@ -1013,12 +1013,12 @@
     
         <script>
             var count = 1;
-            function capyClicks() {
+            function capyClicks(){
               $('#blank').hide();
                 var audio = new Audio("https://adilene.neocities.org/music/sounds/squeak.mp3");
                 audio.play();
                 audio.volume = 0.3;
-              document.getElementById("clicks").innerHTML = "capy clicks: " + count++;
+              document.getElementById("clicks").innerHTML = "capy clicks:" + count++;
                 if (count == 11){
                     document.getElementById("count").innerHTML = "the capy has been clicked 10 times! yay!";
                 }
@@ -1038,7 +1038,7 @@
                     document.getElementById("count").innerHTML = "the capy has been clicked 5000 times! are you ok?";
                 }
                 if (count == 10001){
-                    document.getElementById("count").innerHTML = "the capy has been clicked 10000 times! you have won a special prize: 10000 capy clicks.";
+                    document.getElementById("count").innerHTML = "the capy has been clicked 10000 times! you have won a special prize:10000 capy clicks.";
                 }
                 if (count == 50001){
                     document.getElementById("count").innerHTML = "the capy has been clicked 50000 times! the capy and i are a little worried about you.";

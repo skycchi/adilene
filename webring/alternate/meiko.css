@@ -15,34 +15,34 @@
     src:url(https://files.catbox.moe/kyguk9.ttf);
 }
 
-.meikocontainer::selection {
-    background: #bf4812;
+.meikocontainer::selection{
+    background:#bf4812;
     color:white;
 }
  
-.meikocontainer::-moz-selection {
-    background: #bf4812;
+.meikocontainer::-moz-selection{
+    background:#bf4812;
     color:white;
 }
 
 .meikocontainer{
     width:200px;
-    height: 200px;
+    height:200px;
     padding:10px 10px 0px 10px;
 }
 
-#meikoring {
-    margin: 10px auto;
-    background-color: #ffb594;
+#meikoring{
+    margin:10px auto;
+    background-color:#ffb594;
     border:3px solid #bf4812;
     width:200px;
 }
 
-#meikoring table {
-    margin: 0 auto;
+#meikoring table{
+    margin:0 auto;
 }
 
-#meikoring .webring-info {
+#meikoring .webring-info{
     text-align:center;
     font-family:Orbitron;
     color:#bf4812;
@@ -56,22 +56,22 @@
 }
 
 #meikoring .webring-links a{
-    text-decoration: none;
+    text-decoration:none;
     color:#bf4812;
-    text-shadow: 2px 2px 1px #bf8146;
+    text-shadow:2px 2px 1px #bf8146;
     transition:0.3s;
 }
 
 #meikoring .webring-links a:hover{
     
-    letter-spacing: normal;
+    letter-spacing:normal;
 }
 
-img {
-    user-drag: none;
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+img{
+    user-drag:none;
+    -webkit-user-drag:none;
+    user-select:none;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
 }

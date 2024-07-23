@@ -19,22 +19,22 @@ let updateTimer;
 let curr_track = document.getElementById("music");
 
 let track_list = [
-    {
+   {
         name:"Bug",
         artist:"Kairiki Bear",
         path:"https://adilene.neocities.org/music/Bug.mp3"
     },
-    {
+   {
         name:"RRRRafflesia",
         artist:"Utsu-P",
         path:"https://adilene.neocities.org//music/RRRRafflesia.mp3"
     },
-    {
-        name: "Rinne",
+   {
+        name:"Rinne",
         artist:"Hachi",
-        path: "https://adilene.neocities.org//music/Rinne.mp3",
+        path:"https://adilene.neocities.org//music/Rinne.mp3",
     },
-    {
+   {
         name:"Play With Fire",
         artist:"Camellia",
         path:"https://adilene.neocities.org//music/Play With Fire.mp3"
@@ -42,7 +42,7 @@ let track_list = [
 
 ];
 
-function loadTrack(track_index) {
+function loadTrack(track_index){
   clearInterval(updateTimer);
   resetValues();
 
@@ -59,7 +59,7 @@ function loadTrack(track_index) {
 
 }
 
-function resetValues() {
+function resetValues(){
   curr_time.textContent = "0:00";
   total_duration.textContent = "0:00";
   seek_slider.value = 0;
@@ -67,26 +67,26 @@ function resetValues() {
 
 loadTrack(track_index);
 
-function playpauseTrack() {
+function playpauseTrack(){
   if (!isPlaying) playTrack();
   else pauseTrack();
 }
 
-function playTrack() {
+function playTrack(){
   curr_track.play();
   isPlaying = true;
 
   playpause_btn.innerHTML = '<i class="fas fa-solid fa-pause"></i>';
 }
 
-function pauseTrack() {
+function pauseTrack(){
   curr_track.pause();
   isPlaying = false;
 
   playpause_btn.innerHTML = '<i class="fas fa-solid fa-play"></i>';
 }
 
-function nextTrack() {
+function nextTrack(){
   if (track_index < track_list.length - 1)
     track_index += 1;
   else track_index = 0;
@@ -94,7 +94,7 @@ function nextTrack() {
   playTrack();
 }
 
-function prevTrack() {
+function prevTrack(){
   if (track_index > 0)
     track_index -= 1;
   else track_index = track_list.length;
@@ -102,19 +102,19 @@ function prevTrack() {
   playTrack();
 }
 
-function seekTo() {
+function seekTo(){
   seekto = curr_track.duration * (seek_slider.value / 100);
   curr_track.currentTime = seekto;
 }
 
-function setVolume() {
+function setVolume(){
   curr_track.volume = volume_slider.value / 100;
 }
 
-function seekUpdate() {
+function seekUpdate(){
   let seekPosition = 0;
 
-  if (!isNaN(curr_track.duration)) {
+  if (!isNaN(curr_track.duration)){
     seekPosition = curr_track.currentTime * (100 / curr_track.duration);
     seek_slider.value = seekPosition;
 
@@ -123,10 +123,10 @@ function seekUpdate() {
     let durationMinutes = Math.floor(curr_track.duration / 60);
     let durationSeconds = Math.floor(curr_track.duration - durationMinutes * 60);
 
-    if (currentSeconds < 10) { currentSeconds = "0" + currentSeconds; }
-    if (durationSeconds < 10) { durationSeconds = "0" + durationSeconds; }
-    if (currentMinutes < 10) { currentMinutes = currentMinutes; }
-    if (durationMinutes < 10) { durationMinutes = durationMinutes; }
+    if (currentSeconds < 10){ currentSeconds = "0" + currentSeconds; }
+    if (durationSeconds < 10){ durationSeconds = "0" + durationSeconds; }
+    if (currentMinutes < 10){ currentMinutes = currentMinutes; }
+    if (durationMinutes < 10){ durationMinutes = durationMinutes; }
 
     curr_time.textContent = currentMinutes + ":" + currentSeconds;
     total_duration.textContent = durationMinutes + ":" + durationSeconds;

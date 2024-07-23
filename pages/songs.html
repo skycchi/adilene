@@ -19,68 +19,68 @@
             margin:10px;
         }
         
-        @keyframes fadeEffect {
-            from {opacity: 0;}
-            to {opacity: 1;}
+        @keyframes fadeEffect{
+            from{opacity:0;}
+            to{opacity:1;}
         }
         
-        .contain {
+        .contain{
             display:flex;
             flex-direction:column;
-            justify-content: center;
-            align-content: center;
-            align-items: center;
+            justify-content:center;
+            align-content:center;
+            align-items:center;
             width:100%;
-            box-sizing: border-box;
+            box-sizing:border-box;
             margin:auto;
         }
 
-        .show {
-            display: block;
+        .show{
+            display:block;
             transition:1s;
-            animation: fadeEffect 1s;
+            animation:fadeEffect 1s;
             box-sizing:border-box;
         }
         
-        .btn {
-            border: var(--bw) var(--bt) var(--bc);
-            outline: none;
-            padding: 5px 8px;
-            background-color: var(--h);
-            font-family: 'Pixel Operator';
+        .btn{
+            border:var(--bw) var(--bt) var(--bc);
+            outline:none;
+            padding:5px 8px;
+            background-color:var(--h);
+            font-family:'Pixel Operator';
             font-size:16px;
             margin:2px 0px;
             transition:0.2s;
             color:#e74492;
         }
         
-        .btn2 {
-            border: var(--bw) var(--bt) var(--bc);
-            outline: none;
-            padding: 5px 8px;
-            background-color: var(--h);
+        .btn2{
+            border:var(--bw) var(--bt) var(--bc);
+            outline:none;
+            padding:5px 8px;
+            background-color:var(--h);
 
-            font-family: 'Pixel Operator';
+            font-family:'Pixel Operator';
             font-size:16px;
             margin:5px 0px;
             color:var(--pink);
         }
 
-        .btn:hover {
-            background-color: var(--pink);
+        .btn:hover{
+            background-color:var(--pink);
             color:white;
             transition:0.2s;
         }
         
-        .btn2:hover {
-            background-color: var(--pink);
+        .btn2:hover{
+            background-color:var(--pink);
             color:white;
             transition:0.2s;
         }
 
-        .btn.active {
-            background-color: var(--pink);
-            color: white;
+        .btn.active{
+            background-color:var(--pink);
+            color:white;
         }
         
         .tags{
@@ -96,18 +96,18 @@
         .bideocontain{
             width:570px;
             position:relative;
-            animation: fadeEffect 1s;
+            animation:fadeEffect 1s;
         }
         
         .bideo{
             width:570px;
             height:275px;
-            object-fit: Cover;
+            object-fit:Cover;
             display:block;
             border-left:var(--bw) var(--bt) var(--bc);
             border-bottom:var(--bw) var(--bt) var(--bc);
             border-right:var(--bw) var(--bt) var(--bc);
-            box-sizing: border-box;
+            box-sizing:border-box;
             
         }
         
@@ -115,15 +115,15 @@
             width:100%;
         }
         
-        .centered {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        .centered{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
         }
         
         .bideocontain > a:hover{
-            letter-spacing: 0;
+            letter-spacing:0;
         }
         
         iframe{
@@ -132,8 +132,8 @@
         
         #button{
             font-size:20px;
-            border: var(--bw) var(--bt) var(--bc);
-            box-sizing: border-box;
+            border:var(--bw) var(--bt) var(--bc);
+            box-sizing:border-box;
             padding:5px 8px;
             background-color:var(--h);
             position:fixed;
@@ -157,50 +157,50 @@
             text-align:left;
         }
         
-        .collapsible {
-            background-color: var(--h);
-            color: white;
-            padding: 10px;
-            width: 100%;
-            text-align: center;
-            font-size: 15px;
+        .collapsible{
+            background-color:var(--h);
+            color:white;
+            padding:10px;
+            width:100%;
+            text-align:center;
+            font-size:15px;
             transition:0.5s;
             color:var(--pink);
             font-family:'Orbitron';
             font-size:20px;
-            border: var(--bw) var(--bt) var(--bc);
+            border:var(--bw) var(--bt) var(--bc);
         }
         
-        .activated, .collapsible:hover {
-            background-color: var(--pink);
+        .activated, .collapsible:hover{
+            background-color:var(--pink);
             transition:0.5s;
             color:white;
         }
         
-        .content {
-            padding: 0px;
+        .content{
+            padding:0px;
             margin-top:-8px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            background-color: #fff;
-            border: var(--bw) var(--bt) var(--bc);
+            max-height:0;
+            overflow:hidden;
+            transition:max-height 0.3s ease-out;
+            background-color:#fff;
+            border:var(--bw) var(--bt) var(--bc);
             box-sizing:border-box;
         }
         
-        .collapsible:after {
-            content: '\002B';
-            font-weight: bold;
-            float: right;
-            margin-left: 5px;
+        .collapsible:after{
+            content:'\002B';
+            font-weight:bold;
+            float:right;
+            margin-left:5px;
         }
 
-        .activated:after {
-            content: "\2212";
+        .activated:after{
+            content:"\2212";
         }
         
         #myBtnContainer{
-            padding: 5px 10px 7px 10px;
+            padding:5px 10px 7px 10px;
         }
         
         .contain div{
@@ -208,7 +208,7 @@
             max-width:900px;
         }
         
-        @media only screen and (max-width: 590px) {
+        @media only screen and (max-width:590px){
             .bideocontain{
                 width:auto;
             }
@@ -273,7 +273,7 @@
                 <button class="btn" id="kanaria">Kanaria</button>
                         
                 <br>
-                Features other vocal synths: <button class="btn" id="Kaito">feat. Kaito</button> <button class="btn" id="Meiko">feat. Meiko</button> <button class="btn" id="rin">feat. Kagamine Rin</button> <button class="btn" id="len">feat. Kagamine Len</button> <button class="btn" id="luka">feat. Megurine Luka</button> <button class="btn" id="GUMI">feat. GUMI</button>
+                Features other vocal synths:<button class="btn" id="Kaito">feat. Kaito</button> <button class="btn" id="Meiko">feat. Meiko</button> <button class="btn" id="rin">feat. Kagamine Rin</button> <button class="btn" id="len">feat. Kagamine Len</button> <button class="btn" id="luka">feat. Megurine Luka</button> <button class="btn" id="GUMI">feat. GUMI</button>
                 
                 <br>
                 Other:
@@ -304,7 +304,7 @@
             
             <!--- songs start --->
             <div class="J-rock kanaria cover">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="kanaria - Requiem"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="kanaria - Requiem"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=94FQd3qSoz8" target="_blank">
                         <img src="https://img.youtube.com/vi/94FQd3qSoz8/maxresdefault.jpg" class="bideo" draggable="false">
@@ -313,11 +313,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="kanaria">Kanaria</button> <button class="btn2" id="cover">Cover</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="kanaria">Kanaria</button> <button class="btn2" id="cover">Cover</button></div>
             </div>
             
             <div class="J-rock bear">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Kairiki bear - bug"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Kairiki bear - bug"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=FkO8ub83wss" target="_blank">
                         <img src="https://img.youtube.com/vi/FkO8ub83wss/maxresdefault.jpg" class="bideo" draggable="false">
@@ -326,11 +326,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="bear">Kairiki Bear</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="bear">Kairiki Bear</button></div>
             </div>
             
             <div class="Metal Electronic Utsu-P">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Utsu-P - RRRRafflesia"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Utsu-P - RRRRafflesia"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=eD81CsAFmDU" target="_blank">
                         <img src="https://img.youtube.com/vi/eD81CsAFmDU/maxresdefault.jpg" class="bideo" draggable="false">
@@ -339,11 +339,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="Metal">Metal</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="Utsu-P">Utsu-P</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="Metal">Metal</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="Utsu-P">Utsu-P</button></div>
             </div>
             
             <div class="J-pop PinocchioP">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="PinocchioP -  KILLER SPIDER"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="PinocchioP -  KILLER SPIDER"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=-F_iX-La024" target="_blank">
                         <img src="https://img.youtube.com/vi/-F_iX-La024/maxresdefault.jpg" class="bideo" draggable="false">
@@ -352,11 +352,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="PinocchioP">PinocchioP</button> </div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="PinocchioP">PinocchioP</button> </div>
             </div>
             
             <div class="J-rock Hachi">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Hachi - RINNE"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Hachi - RINNE"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=EahYs-8tTjQ" target="_blank">
                         <img src="https://adilene.neocities.org/images/thumbnails/rinne.jpeg" class="bideo" draggable="false">
@@ -365,11 +365,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Hachi">Hachi</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Hachi">Hachi</button></div>
             </div>
             
             <div class="Electronic nekobolo">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="NEKOBOLO -  NONSENSE SPEAKER"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="NEKOBOLO -  NONSENSE SPEAKER"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=m0D-hgRD58o" target="_blank">
                         <img src="https://adilene.neocities.org/images/thumbnails/speaker.jpeg" class="bideo" draggable="false">
@@ -378,11 +378,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="nekobolo">nekobolo</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="nekobolo">nekobolo</button></div>
             </div>
                  
             <div class="J-rock sizimi">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="SIZIMI - 脳内シナプスの叛逆"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="SIZIMI - 脳内シナプスの叛逆"></div>
                 <div class="bideocontain">
                     <a href="https://www.nicovideo.jp/watch/sm25817652" target="_blank">
                         <img src="https://adilene.neocities.org/images/thumbnails/intercerebral.jpeg" class="bideo" draggable="false">
@@ -391,11 +391,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="sizimi">sizimi</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="sizimi">sizimi</button></div>
             </div>
             
             <div class="J-rock Metal Mafumafu">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Mafumafu - MERRY BAD END"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Mafumafu - MERRY BAD END"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=kffrKgAN7tI" target="_blank">
                         <img src="https://img.youtube.com/vi/kffrKgAN7tI/maxresdefault.jpg" class="bideo" draggable="false">
@@ -404,11 +404,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Metal">Metal</button> <button class="btn2" id="Mafumafu">Mafumafu</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Metal">Metal</button> <button class="btn2" id="Mafumafu">Mafumafu</button></div>
             </div>
             
             <div class="J-rock Maretu Remix">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Maretu - FAILURE GIRL"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Maretu - FAILURE GIRL"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=TXfJVNqaHiM" target="_blank">
                         <img src="https://img.youtube.com/vi/TXfJVNqaHiM/maxresdefault.jpg" class="bideo" draggable="false">
@@ -417,11 +417,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Maretu">Maretu</button> <button class="btn2" id="Remix">Remix</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Maretu">Maretu</button> <button class="btn2" id="Remix">Remix</button></div>
             </div>
             
             <div class="J-rock bear">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Kairiki Bear - FAILURE GIRL"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Kairiki Bear - FAILURE GIRL"></div>
                 <div class="bideocontain">
                     <a href="https://www.nicovideo.jp/watch/sm26885931" target="_blank">
                         <img src="https://adilene.neocities.org/images/thumbnails/failuregirl.jpeg" class="bideo" draggable="false">
@@ -430,11 +430,11 @@
                         </div>
                     </a>
                 </div> 
-                <div class="tags">Tagged under: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="bear">Kairiki Bear</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="bear">Kairiki Bear</button></div>
             </div>
             
             <div class="J-rock Electronic powa Remix">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Powapowa-P - STROBE LAST"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Powapowa-P - STROBE LAST"></div>
                 <div class="bideocontain">
                     <a href="https://www.nicovideo.jp/watch/nm13359285" target="_blank">
                         <img src="https://adilene.neocities.org/images/thumbnails/strobelast.jpeg" class="bideo" draggable="false">
@@ -443,11 +443,11 @@
                         </div>
                     </a>
                 </div> 
-                <div class="tags">Tagged under: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="powa">Powapowa-P</button> <button class="btn2" id="Remix">Remix</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="powa">Powapowa-P</button> <button class="btn2" id="Remix">Remix</button></div>
             </div>
             
             <div class="J-rock Electronic nekobolo">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="NEKOBOLO - 自傷無色"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="NEKOBOLO - 自傷無色"></div>
                 <div class="bideocontain">
                     <a href="https://www.nicovideo.jp/watch/sm19870840" target="_blank">
                         <img src="https://adilene.neocities.org/images/thumbnails/inflicted.png" class="bideo" draggable="false">
@@ -456,11 +456,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="nekobolo">nekobolo</button> </div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="nekobolo">nekobolo</button> </div>
             </div>
             
             <div class="Metal Utsu-P rin GUMI Favorites">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Utsu-P - POSTER GIRL'S PRANK"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Utsu-P - POSTER GIRL'S PRANK"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=E4kcWPLtBFM" target="_blank">
                         <img src="https://img.youtube.com/vi/E4kcWPLtBFM/maxresdefault.jpg" class="bideo" draggable="false">
@@ -469,11 +469,11 @@
                         </div>
                     </a>
                 </div> 
-                <div class="tags">Tagged under: <button class="btn2" id="Metal">Metal</button> <button class="btn2" id="Utsu-P">Utsu-P</button> <button class="btn2" id="rin">feat. Kagamine Rin</button> <button class="btn2" id="GUMI">feat. GUMI</button> <button class="btn2" id="Favorites">Favorites</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="Metal">Metal</button> <button class="btn2" id="Utsu-P">Utsu-P</button> <button class="btn2" id="rin">feat. Kagamine Rin</button> <button class="btn2" id="GUMI">feat. GUMI</button> <button class="btn2" id="Favorites">Favorites</button></div>
             </div>
             
             <div class="J-pop Electronic KZ">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="KZ - TELL YOUR WORLD"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="KZ - TELL YOUR WORLD"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=PqJNc9KVIZE" target="_blank">
                         <img src="https://img.youtube.com/vi/PqJNc9KVIZE/maxresdefault.jpg" class="bideo" draggable="false">
@@ -482,11 +482,11 @@
                         </div>
                     </a>
                 </div>   
-                <div class="tags">Tagged under: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="KZ">KZ</button> </div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="KZ">KZ</button> </div>
             </div>
             
             <div class="J-pop J-rock deco">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="DECO*27 - THE VAMPIRE"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="DECO*27 - THE VAMPIRE"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=e1xCOsgWG0M" target="_blank">
                         <img src="https://img.youtube.com/vi/e1xCOsgWG0M/maxresdefault.jpg" class="bideo" draggable="false">
@@ -495,11 +495,11 @@
                         </div>
                     </a>
                 </div>   
-                <div class="tags">Tagged under: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="deco">DECO*27</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="deco">DECO*27</button></div>
             </div>
             
             <div class="J-rock Maretu">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Maretu - ナミダ"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Maretu - ナミダ"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=cDeJQZKEEQo" target="_blank">
                         <img src="https://img.youtube.com/vi/cDeJQZKEEQo/maxresdefault.jpg" class="bideo" draggable="false">
@@ -508,11 +508,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Maretu">Maretu</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Maretu">Maretu</button></div>
             </div>
             
             <div class="Electronic Camellia">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Camellia - PLAY WITH FIRE"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Camellia - PLAY WITH FIRE"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=od4QcDPpNVk" target="_blank">
                         <img src="https://img.youtube.com/vi/od4QcDPpNVk/maxresdefault.jpg" class="bideo" draggable="false">
@@ -521,11 +521,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="Camellia">Camellia</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="Camellia">Camellia</button></div>
             </div>
             
             <div class="J-pop Electronic GigaP rin">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="GigaP - GIMME×GIMME"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="GigaP - GIMME×GIMME"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=ERo-sPa1a5g" target="_blank">
                         <img src="https://img.youtube.com/vi/ERo-sPa1a5g/maxresdefault.jpg" class="bideo" draggable="false">
@@ -534,11 +534,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="GigaP">GigaP</button> <button class="btn2" id="rin">feat. Kagamine Rin</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="GigaP">GigaP</button> <button class="btn2" id="rin">feat. Kagamine Rin</button></div>
             </div>
             
             <div class="J-pop J-rock Supercell Classics">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Supercell - BLACK★ROCK SHOOTER"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Supercell - BLACK★ROCK SHOOTER"></div>
                 <div class="bideocontain">
                     <a href="https://www.nicovideo.jp/watch/sm3645817" target="_blank">
                         <img src="https://adilene.neocities.org/images/thumbnails/shooter.jpeg" class="bideo" draggable="false">
@@ -547,11 +547,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Supercell">Supercell</button> <button class="btn2" id="Classics">Classics</button>  </div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Supercell">Supercell</button> <button class="btn2" id="Classics">Classics</button>  </div>
             </div>
             
             <div class="J-pop J-rock Electronic Wowaka Classics">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Wowaka - TWO-FACED LOVERS"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Wowaka - TWO-FACED LOVERS"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=b_cuMcDWwsI" target="_blank">
                         <img src="https://adilene.neocities.org/images/thumbnails/lovers.jpeg" class="bideo" draggable="false">
@@ -560,11 +560,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="Wowaka">Wowaka</button> <button class="btn2" id="Classics">Classics</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="Wowaka">Wowaka</button> <button class="btn2" id="Classics">Classics</button></div>
             </div>
             
             <div class="Folk MASA">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="MASA - THE FOX'S WEDDING"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="MASA - THE FOX'S WEDDING"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=khNi_6PnvaE" target="_blank">
                         <img src="https://adilene.neocities.org/images/thumbnails/fox.jpeg" class="bideo" draggable="false">
@@ -573,11 +573,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="Folk">Folk</button> <button class="btn2" id="MASA">MASA</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="Folk">Folk</button> <button class="btn2" id="MASA">MASA</button></div>
             </div>
             
             <div class="J-pop PinocchioP">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="PinocchioP - NON-BREATH OBLIGE"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="PinocchioP - NON-BREATH OBLIGE"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=lw7pcm1W5tw" target="_blank">
                         <img src="https://img.youtube.com/vi/lw7pcm1W5tw/maxresdefault.jpg" class="bideo" draggable="false">
@@ -586,11 +586,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="PinocchioP">PinocchioP</button> </div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="PinocchioP">PinocchioP</button> </div>
             </div>
             
             <div class="Electronic Jazz rerulili GUMI Favorites">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="RERULILI - BRAIN FLUID EXPLOSION GIRL"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="RERULILI - BRAIN FLUID EXPLOSION GIRL"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=Ey_NHZNYTeE" target="_blank">
                         <img src="https://img.youtube.com/vi/Ey_NHZNYTeE/maxresdefault.jpg" class="bideo" draggable="false">
@@ -599,12 +599,12 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="Jazz">Jazz</button> <button class="btn2" id="rerulili">rerulili</button> <button class="btn2" id="GUMI">feat. GUMI</button> <button class="btn2" id="Favorites">Favorites</button>
+                <div class="tags">Tagged under:<button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="Jazz">Jazz</button> <button class="btn2" id="rerulili">rerulili</button> <button class="btn2" id="GUMI">feat. GUMI</button> <button class="btn2" id="Favorites">Favorites</button>
                 </div> 
             </div>
             
             <div class="J-pop Electronic mitchie">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Mitchie M - FREELY TOMORROW"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Mitchie M - FREELY TOMORROW"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=KmvydnVTriE" target="_blank">
                         <img src="https://img.youtube.com/vi/KmvydnVTriE/maxresdefault.jpg" class="bideo" draggable="false">
@@ -613,11 +613,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="mitchie">Mitchie M</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="mitchie">Mitchie M</button></div>
             </div>
             
             <div class="J-pop J-rock deco Classics">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="DECO*27 - TWO BREATHS WALKING"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="DECO*27 - TWO BREATHS WALKING"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=cFbWl2aPdTk" target="_blank">
                         <img src="https://adilene.neocities.org/images/thumbnails/twobreathswalking.jpeg" class="bideo" draggable="false">
@@ -626,11 +626,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="deco">DECO*27</button> <button class="btn2" id="Classics">Classics</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="deco">DECO*27</button> <button class="btn2" id="Classics">Classics</button></div>
             </div>
             
             <div class="J-pop J-rock Folk Kurousa-P Classics">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Kurousa-P - SENBONZAKURA"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Kurousa-P - SENBONZAKURA"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=shs0rAiwsGQ" target="_blank">
                         <img src="https://img.youtube.com/vi/shs0rAiwsGQ/maxresdefault.jpg" class="bideo" draggable="false">
@@ -639,11 +639,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Folk">Folk</button> <button class="btn2" id="Kurousa-P">Kurousa-P</button> <button class="btn2" id="Classics">Classics</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Folk">Folk</button> <button class="btn2" id="Kurousa-P">Kurousa-P</button> <button class="btn2" id="Classics">Classics</button></div>
             </div>
             
             <div class="J-rock Electronic UtataP Favorites">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="UtataP - こちら、幸福安心委員会です。"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="UtataP - こちら、幸福安心委員会です。"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=KZUmM-uQVOM&t=115s" target="_blank">
                         <img src="https://adilene.neocities.org/images/thumbnails/happiness.jpeg" class="bideo" draggable="false">
@@ -652,11 +652,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="UtataP">UtataP</button> <button class="btn2" id="Favorites">Favorites</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="UtataP">UtataP</button> <button class="btn2" id="Favorites">Favorites</button></div>
             </div>
             
             <div class="J-rock Wowaka Classics Favorites">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Wowaka - ROLLING GIRL"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Wowaka - ROLLING GIRL"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=vnw8zURAxkU" target="_blank">
                         <img src="https://adilene.neocities.org/images/thumbnails/rollinggirl.jpeg" class="bideo" draggable="false">
@@ -665,11 +665,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Wowaka">Wowaka</button> <button class="btn2" id="Classics">Classics</button> <button class="btn2" id="Favorites">Favorites</button></div> 
+                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Wowaka">Wowaka</button> <button class="btn2" id="Classics">Classics</button> <button class="btn2" id="Favorites">Favorites</button></div> 
             </div>
             
             <div class="Metal Utsu-P">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Utsu-P - BIZARRE FOOD"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Utsu-P - BIZARRE FOOD"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=A8-6JCUxP2c" target="_blank">
                         <img src="https://img.youtube.com/vi/A8-6JCUxP2c/maxresdefault.jpg" class="bideo" draggable="false">
@@ -678,11 +678,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="Metal">Metal</button> <button class="btn2" id="Utsu-P">Utsu-P</button></div> 
+                <div class="tags">Tagged under:<button class="btn2" id="Metal">Metal</button> <button class="btn2" id="Utsu-P">Utsu-P</button></div> 
             </div>
             
             <div class="J-pop J-rock Doriko Classics Favorites">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Doriko - ROMEO AND CINDERELLA"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Doriko - ROMEO AND CINDERELLA"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=kp-plPYAPq8&t=11s" target="_blank">
                         <img src="https://adilene.neocities.org/images/thumbnails/romeoandcinderella.jpeg" class="bideo" draggable="false">
@@ -691,11 +691,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Doriko">Doriko</button> <button class="btn2" id="Classics">Classics</button> <button class="btn2" id="Favorites">Favorites</button> </div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Doriko">Doriko</button> <button class="btn2" id="Classics">Classics</button> <button class="btn2" id="Favorites">Favorites</button> </div>
             </div>
             
             <div class="J-rock Syudou Favorites">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Syudou - カレシのジュード"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Syudou - カレシのジュード"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=8r-_K32fsSU" target="_blank">
                         <img src="https://img.youtube.com/vi/8r-_K32fsSU/maxresdefault.jpg" class="bideo" draggable="false">
@@ -704,11 +704,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Syudou">Syudou</button> <button class="btn2" id="Favorites">Favorites</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Syudou">Syudou</button> <button class="btn2" id="Favorites">Favorites</button></div>
             </div>
             
             <div class="J-rock Hachi GUMI Classics">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Hachi - MATRYOSHKA"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Hachi - MATRYOSHKA"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=HOz-9FzIDf0" target="_blank">
                         <img src="https://adilene.neocities.org/images/thumbnails/matryoshka.jpeg" class="bideo" draggable="false">
@@ -717,11 +717,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Hachi">Hachi</button> <button class="btn2" id="GUMI">feat. GUMI</button> <button class="btn2" id="Classics">Classics</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Hachi">Hachi</button> <button class="btn2" id="GUMI">feat. GUMI</button> <button class="btn2" id="Classics">Classics</button></div>
             </div>
             
             <div class="J-rock Metal Utsu-P">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Utsu-P - OGRE"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Utsu-P - OGRE"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=N9-M-avUjO8" target="_blank">
                         <img src="https://img.youtube.com/vi/N9-M-avUjO8/maxresdefault.jpg" class="bideo" draggable="false">
@@ -730,11 +730,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Metal">Metal</button> <button class="btn2" id="Utsu-P">Utsu-P</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Metal">Metal</button> <button class="btn2" id="Utsu-P">Utsu-P</button></div>
             </div>
             
             <div class="J-pop J-rock Nayutalien">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Nayutalien - ALIEN ALIEN"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Nayutalien - ALIEN ALIEN"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=2t1NMRse6aI" target="_blank">
                         <img src="https://img.youtube.com/vi/2t1NMRse6aI/maxresdefault.jpg" class="bideo" draggable="false">
@@ -743,11 +743,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Nayutalien">Nayutalien</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Nayutalien">Nayutalien</button></div>
             </div>
             
             <div class=" J-pop J-rock Supercell Classics Favorites">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Supercell - WORLD IS MINE"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Supercell - WORLD IS MINE"></div>
                 <div class="bideocontain">
                     <a href="https://www.nicovideo.jp/watch/sm3504435" target="_blank">
                         <img src="https://adilene.neocities.org/images/thumbnails/worldismine.jpeg" class="bideo" draggable="false">
@@ -756,13 +756,13 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-pop">J-pop</button> 
+                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> 
                 <button class="btn2" id="J-rock">J-rock</button> 
                 <button class="btn2" id="Supercell">Supercell</button> <button class="btn2" id="Classics">Classics</button> <button class="btn2" id="Favorites">Favorites</button></div>
             </div>
             
             <div class=" J-rock Jin Remix">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Jin - CHILDREN RECORD [RE:BOOT]"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Jin - CHILDREN RECORD [RE:BOOT]"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=WEVgkh_7_0k" target="_blank">
                         <img src="https://img.youtube.com/vi/WEVgkh_7_0k/maxresdefault.jpg" class="bideo" draggable="false">
@@ -771,11 +771,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Jin">Jin</button> <button class="btn2" id="Remix">Remix</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Jin">Jin</button> <button class="btn2" id="Remix">Remix</button></div>
             </div>
             
             <div class=" J-rock deco">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="DECO*27 - SALAMANDER"></div>                <div class="bideocontain">
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="DECO*27 - SALAMANDER"></div>                <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=-H2PCK7DJsQ" target="_blank">
                         <img src="https://img.youtube.com/vi/-H2PCK7DJsQ/maxresdefault.jpg" class="bideo" draggable="false">
                         <div class="centered">
@@ -783,11 +783,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="deco">DECO*27</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="deco">DECO*27</button></div>
             </div>
             
             <div class=" J-rock PinocchioP Favorites">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="PinocchioP - GOD-ISH"></div>                <div class="bideocontain">
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="PinocchioP - GOD-ISH"></div>                <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=EHBFKhLUVig" target="_blank">
                         <img src="https://img.youtube.com/vi/EHBFKhLUVig/maxresdefault.jpg" class="bideo" draggable="false">
                         <div class="centered">
@@ -795,11 +795,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="PinocchioP">PinocchioP</button> <button class="btn2" id="Favorites">Favorites</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="PinocchioP">PinocchioP</button> <button class="btn2" id="Favorites">Favorites</button></div>
             </div>
 
             <div class=" J-pop J-rock Wowaka">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Wowaka - UNKNOWN MOTHER GOOSE"></div>               
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Wowaka - UNKNOWN MOTHER GOOSE"></div>               
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=P_CSdxSGfaA" target="_blank">
                         <img src="https://img.youtube.com/vi/P_CSdxSGfaA/maxresdefault.jpg" class="bideo" draggable="false">
@@ -808,11 +808,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Wowaka">Wowaka</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Wowaka">Wowaka</button></div>
             </div>
 
             <div class=" Folk J-rock Hachi Classics">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Hachi - 結ンデ開イテ羅刹ト骸"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Hachi - 結ンデ開イテ羅刹ト骸"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=AKffZySqQts" target="_blank">
                         <img src="https://adilene.neocities.org/images/thumbnails/holdrelease.jpeg" class="bideo" draggable="false">
@@ -821,11 +821,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="Folk">Folk</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Hachi">Hachi</button> <button class="btn2" id="Classics">Classics</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="Folk">Folk</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Hachi">Hachi</button> <button class="btn2" id="Classics">Classics</button></div>
             </div>
 
             <div class="Electronic mitchie Kaito">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Mitchie M - OHEDO JULIA NIGHT"></div>                
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Mitchie M - OHEDO JULIA NIGHT"></div>                
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=y3yyYYLyVzw" target="_blank">
                         <img src="https://img.youtube.com/vi/y3yyYYLyVzw/maxresdefault.jpg" class="bideo" draggable="false">
@@ -834,11 +834,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="mitchie">Mitchie M</button> <button class="btn2" id="Kaito">feat. Kaito</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="mitchie">Mitchie M</button> <button class="btn2" id="Kaito">feat. Kaito</button></div>
             </div>
 
             <div class=" J-rock Metal Supercell Classics Favorites">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Supercell - LOVE IS WAR"></div>                <div class="bideocontain">
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Supercell - LOVE IS WAR"></div>                <div class="bideocontain">
                     <a href="https://www.nicovideo.jp/watch/sm2397344" target="_blank">
                         <img src="https://adilene.neocities.org/images/thumbnails/loveiswar.png" class="bideo" draggable="false">
                         <div class="centered">
@@ -846,11 +846,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Metal">Metal</button> <button class="btn2" id="Supercell">Supercell</button> <button class="btn2" id="Classics">Classics</button> <button class="btn2" id="Favorites">Favorites</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Metal">Metal</button> <button class="btn2" id="Supercell">Supercell</button> <button class="btn2" id="Classics">Classics</button> <button class="btn2" id="Favorites">Favorites</button></div>
             </div>
 
             <div class=" J-rock Wowaka luka Classics Favorites">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Wowaka - WORLD'S END DANCEHALL"></div>                
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Wowaka - WORLD'S END DANCEHALL"></div>                
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=ZB75e7vzX0I" target="_blank">
                         <img src="https://adilene.neocities.org/images/thumbnails/dancehall.jpeg" class="bideo" draggable="false">
@@ -859,11 +859,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Wowaka">Wowaka</button> <button class="btn2" id="luka">feat. Megurine Luka</button> <button class="btn2" id="Classics">Classics</button> <button class="btn2" id="Favorites">Favorites</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Wowaka">Wowaka</button> <button class="btn2" id="luka">feat. Megurine Luka</button> <button class="btn2" id="Classics">Classics</button> <button class="btn2" id="Favorites">Favorites</button></div>
             </div>
 
             <div class=" J-rock hiphop Hachi">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Hachi - SANDPLANET"></div>         <div class="bideocontain">
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Hachi - SANDPLANET"></div>         <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=AS4q9yaWJkI" target="_blank">
                         <img src="https://img.youtube.com/vi/AS4q9yaWJkI/maxresdefault.jpg" class="bideo" draggable="false">
                         <div class="centered">
@@ -871,11 +871,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="hiphop">Hip-hop</button> <button class="btn2" id="Hachi">Hachi</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="hiphop">Hip-hop</button> <button class="btn2" id="Hachi">Hachi</button></div>
             </div>
 
             <div class=" J-rock hiphop Syudou Favorites">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Syudou - BITTER CHOCO DECORATION"></div>                
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Syudou - BITTER CHOCO DECORATION"></div>                
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=XCyKJD6uQyg&t=21s" target="_blank">
                         <img src="https://img.youtube.com/vi/XCyKJD6uQyg/maxresdefault.jpg" class="bideo" draggable="false">
@@ -884,11 +884,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="hiphop">Hip-hop</button> <button class="btn2" id="Syudou">Syudou</button> <button class="btn2" id="Favorites">Favorites</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="hiphop">Hip-hop</button> <button class="btn2" id="Syudou">Syudou</button> <button class="btn2" id="Favorites">Favorites</button></div>
             </div>
 
             <div class=" J-rock Jin Favorites">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Jin - ADDITIONAL MEMORY"></div>
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Jin - ADDITIONAL MEMORY"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=q2QfH1JqtkY" target="_blank">
                         <img src="https://img.youtube.com/vi/q2QfH1JqtkY/maxresdefault.jpg" class="bideo" draggable="false">
@@ -897,11 +897,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Jin">Jin</button> <button class="btn2" id="Favorites">Favorites</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Jin">Jin</button> <button class="btn2" id="Favorites">Favorites</button></div>
             </div>
 
             <div class="J-pop J-rock deco">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="DECO*27 - OTOME DISSECTION"></div> <div class="bideocontain">
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="DECO*27 - OTOME DISSECTION"></div> <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=7zwCIz-Ohn4" target="_blank">
                         <img src="https://img.youtube.com/vi/7zwCIz-Ohn4/maxresdefault.jpg" class="bideo" draggable="false">
                         <div class="centered">
@@ -909,11 +909,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="deco">DECO*27</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="deco">DECO*27</button></div>
             </div>
 
             <div class=" J-pop J-rock Jin">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Jin - KAGEROU DAYS"></div>         <div class="bideocontain">
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Jin - KAGEROU DAYS"></div>         <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=EMGyiiTC7sg&t=3s" target="_blank">
                         <img src="https://img.youtube.com/vi/EMGyiiTC7sg/maxresdefault.jpg" class="bideo" draggable="false">
                         <div class="centered">
@@ -921,11 +921,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Jin">Jin</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Jin">Jin</button></div>
             </div>
 
             <div class=" Electronic GigaP">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="GigaP - HIBIKASE"></div>           <div class="bideocontain">
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="GigaP - HIBIKASE"></div>           <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=TkroHwQYpFE" target="_blank">
                         <img src="https://img.youtube.com/vi/TkroHwQYpFE/maxresdefault.jpg" class="bideo" draggable="false">
                         <div class="centered">
@@ -933,11 +933,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="GigaP">GigaP</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="GigaP">GigaP</button></div>
             </div>
 
             <div class=" J-rock Wowaka Classics Favorites">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Wowaka - UNHAPPY REFRAIN"></div>   <div class="bideocontain">
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Wowaka - UNHAPPY REFRAIN"></div>   <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=uMlv9VWAxko" target="_blank">
                         <img src="https://adilene.neocities.org/images/thumbnails/unhappy.jpeg" class="bideo" draggable="false">
                         <div class="centered">
@@ -945,11 +945,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Wowaka">Wowaka</button> <button class="btn2" id="Classics">Classics</button> <button class="btn2" id="Favorites">Favorites</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Wowaka">Wowaka</button> <button class="btn2" id="Classics">Classics</button> <button class="btn2" id="Favorites">Favorites</button></div>
             </div>
 
             <div class=" J-rock Syudou Favorites">
-                <div class="mainheader" style="text-transform: uppercase;"  data-header="Syudou - CALL BOY"></div>           <div class="bideocontain">
+                <div class="mainheader" style="text-transform:uppercase;"  data-header="Syudou - CALL BOY"></div>           <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=FXnzOGTEcuc" target="_blank">
                         <img src="https://img.youtube.com/vi/FXnzOGTEcuc/maxresdefault.jpg" class="bideo" draggable="false">
                         <div class="centered">
@@ -957,19 +957,19 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Syudou">Syudou</button> <button class="btn2" id="Favorites">Favorites</button></div>
+                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Syudou">Syudou</button> <button class="btn2" id="Favorites">Favorites</button></div>
             </div>
         </div>
         
         <script>
-        var $btns = $('.btn').click(function() {
-              if (this.id == 'all') {
+        var $btns = $('.btn').click(function(){
+              if (this.id == 'all'){
                 $('.contain > div').fadeIn(450);
                   $('.Meiko').hide();
                   $('.len').hide();
                   $('.Classical').hide();
                   $('.Cover').hide();
-              } else {
+              } else{
                 var $el = $('.' + this.id).fadeIn(450);
                 $('.contain > div').not($el).hide();
                    
@@ -983,7 +983,7 @@
         var $btns2 = $('.btn2').click(function(){
             var $el2 = $('.' + this.id).fadeIn(450);
             $('.contain > div').not($el2).hide();
-            $('html, body').animate({scrollTop: $('.contain').offset().top}, '500');
+            $('html, body').animate({scrollTop:$('.contain').offset().top}, '500');
 
         });
         </script>
@@ -993,15 +993,15 @@
             
             btn.hide();
 
-            $(window).scroll(function() {
-              if ($(window).scrollTop() > 200) {
+            $(window).scroll(function(){
+              if ($(window).scrollTop() > 200){
                 btn.fadeIn();
-              } else {
+              } else{
                 btn.fadeOut();
               }
             });
 
-            btn.on('click', function(e) {
+            btn.on('click', function(e){
               e.preventDefault();
               $('html, body').animate({scrollTop:0}, '500');
             });
@@ -1011,13 +1011,13 @@
         var coll = document.getElementsByClassName("collapsible");
         var i;
 
-        for (i = 0; i < coll.length; i++) {
-          coll[i].addEventListener("click", function() {
+        for (i = 0; i < coll.length; i++){
+          coll[i].addEventListener("click", function(){
             this.classList.toggle("activated");
             var content = this.nextElementSibling;
             if (content.style.maxHeight){
               content.style.maxHeight = null;
-            } else {
+            } else{
               content.style.maxHeight = content.scrollHeight + "px";
             } 
           });

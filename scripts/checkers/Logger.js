@@ -1,10 +1,10 @@
 // Class used for logging
-class Logger {
+class Logger{
     /**
      * Adds message to the log
-     * @param {string} message Message to log
+     * @param{string} message Message to log
      */
-    static Log(message) {
+    static Log(message){
         let logMessage = document.createElement('p');
         logMessage.innerHTML = message;
 

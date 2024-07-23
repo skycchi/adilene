@@ -15,34 +15,34 @@
     src:url(https://files.catbox.moe/kyguk9.ttf);
 }
 
-.rinlencontainer::selection {
-    background: #242420;
+.rinlencontainer::selection{
+    background:#242420;
     color:white;
 }
  
-.rinlencontainer::-moz-selection {
-    background: #242420;
+.rinlencontainer::-moz-selection{
+    background:#242420;
     color:white;
 }
 
 .rinlencontainer{
     width:200px;
-    height: 200px;
+    height:200px;
     padding:10px 10px 0px 10px;
 }
 
-#rinlenring {
-    margin: 10px auto;
-    background-color: #f4f382;
+#rinlenring{
+    margin:10px auto;
+    background-color:#f4f382;
     border:3px solid #242420;
     width:200px;
 }
 
-#rinlenring table {
-    margin: 0 auto;
+#rinlenring table{
+    margin:0 auto;
 }
 
-#rinlenring .webring-info {
+#rinlenring .webring-info{
     text-align:center;
     font-family:Orbitron;
     color:#242420;
@@ -56,22 +56,22 @@
 }
 
 #rinlenring .webring-links a{
-    text-decoration: none;
+    text-decoration:none;
     color:#242420;
-    text-shadow: 2px 2px 1px #f4f382;
+    text-shadow:2px 2px 1px #f4f382;
     transition:0.3s;
 }
 
 #rinlenring .webring-links a:hover{
     
-    letter-spacing: normal;
+    letter-spacing:normal;
 }
 
-img {
-    user-drag: none;
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+img{
+    user-drag:none;
+    -webkit-user-drag:none;
+    user-select:none;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
 }

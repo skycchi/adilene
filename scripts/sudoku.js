@@ -1,9 +1,9 @@
 // sudokuJS v0.4.4
 // https://github.com/pocketjoso/sudokuJS
-// Author: Jonas Ohlsson
-// License: MIT
+// Author:Jonas Ohlsson
+// License:MIT
 
-(function (window, $, undefined) {
+(function (window, $, undefined){
 	'use strict';
 	/*TODO:
 		--possible additions--
@@ -14,7 +14,7 @@
 	/**
 	* Define a jQuery plugin
 	*/
-    $.fn.sudokuJS = function(opts) {
+    $.fn.sudokuJS = function(opts){
 
 		/*
 		 * constants
@@ -38,7 +38,7 @@
 		/*
 		 * variables
 		 *-----------*/
-		opts = opts || {};
+		opts = opts ||{};
 		var solveMode = SOLVE_MODE_STEP,
 				difficulty = "unknown",
 				candidatesShowing = false,
@@ -55,22 +55,22 @@
 		the score reflects how much increased difficulty the board gets by having the pattern rather than an already solved cell
 		*/
 			strategies = [
-				{title: "openSingles", fn:	openSingles, score : 0.1	},
+				{title:"openSingles", fn:	openSingles, score :0.1	},
 				 //harder for human to spot
-				{title: "singleCandidate", fn:	singleCandidate, score : 9	},
-				{title: "visualElimination", fn:	visualElimination, score : 8	},
+				{title:"singleCandidate", fn:	singleCandidate, score :9	},
+				{title:"visualElimination", fn:	visualElimination, score :8	},
 				//only eliminates one candidate, should have lower score?
-				{title: "nakedPair", fn:	nakedPair, score : 50	},
-				{title: "pointingElimination", fn:	pointingElimination, score : 80	},
+				{title:"nakedPair", fn:	nakedPair, score :50	},
+				{title:"pointingElimination", fn:	pointingElimination, score :80	},
 				//harder for human to spot
-				{title: "hiddenPair", fn:	hiddenPair, score :	90	},
-				{title: "nakedTriplet", fn:	nakedTriplet, score :	100 },
+				{title:"hiddenPair", fn:	hiddenPair, score :	90	},
+				{title:"nakedTriplet", fn:	nakedTriplet, score :	100 },
 				//never gets used unless above strats are turned off?
-				{title: "hiddenTriplet", fn:	hiddenTriplet, score :	140	},
+				{title:"hiddenTriplet", fn:	hiddenTriplet, score :	140	},
 				//never gets used unless above strats are turned off?
-				{title: "nakedQuad", fn:	nakedQuad, score :	150 },
+				{title:"nakedQuad", fn:	nakedQuad, score :	150 },
 				//never gets used unless above strats are turned off?
-				{title: "hiddenQuad", fn:	hiddenQuad, score :	280	}
+				{title:"hiddenQuad", fn:	hiddenQuad, score :	280	}
 			],
 
 
@@ -79,8 +79,8 @@
 
 		/*board variable gets enhanced into list of objects on init:
 			,{
-				val: null
-				,candidates: [
+				val:null
+				,candidates:[
 					]
 			}
 		*/
@@ -121,17 +121,17 @@
 
 
 		//array contains function
-		var contains = function(a, obj) {
-			for (var i = 0; i < a.length; i++) {
-				if (a[i] === obj) {
+		var contains = function(a, obj){
+			for (var i = 0; i < a.length; i++){
+				if (a[i] === obj){
 					return true;
 				}
 			}
 			return false;
 		};
 
-		var uniqueArray = function(a) {
-			var temp = {};
+		var uniqueArray = function(a){
+			var temp ={};
 			for (var i = 0; i < a.length; i++)
 				temp[a[i]] = true;
 			var r = [];
@@ -144,11 +144,11 @@
 
 		/* calcBoardDifficulty
 		 * --------------
-		 *  TYPE: solely based on strategies required to solve board (i.e. single count per strategy)
-		 *  SCORE: distinguish between boards of same difficulty.. based on point system. Needs work.
+		 *  TYPE:solely based on strategies required to solve board (i.e. single count per strategy)
+		 *  SCORE:distinguish between boards of same difficulty.. based on point system. Needs work.
 		 * -----------------------------------------------------------------*/
 		var calcBoardDifficulty = function(usedStrategies){
-			var boardDiff = {};
+			var boardDiff ={};
 			if(usedStrategies.length < 3)
 				boardDiff.level = DIFFICULTY_EASY;
 			else if(usedStrategies.length < 4)
@@ -165,7 +165,7 @@
 				totalScore += freq * stratObj.score;
 			}
 			boardDiff.score = totalScore;
-			//log("totalScore: "+totalScore);
+			//log("totalScore:"+totalScore);
 
 			if(totalScore > 750)
 			// if(totalScore > 2200)
@@ -243,10 +243,10 @@
       boardNumbers = [];
 			boardSize = (!board.length && opts.boardSize) || Math.sqrt(board.length) || 9;
 			$board.attr("data-board-size", boardSize);
-			if(boardSize % 1 !== 0 || Math.sqrt(boardSize) % 1 !== 0) {
-				log("invalid boardSize: "+boardSize);
+			if(boardSize % 1 !== 0 || Math.sqrt(boardSize) % 1 !== 0){
+				log("invalid boardSize:"+boardSize);
 				if(typeof opts.boardErrorFn === "function")
-					opts.boardErrorFn({msg: "invalid board size"});
+					opts.boardErrorFn({msg:"invalid board size"});
 				return;
 			}
 			for (var i=0; i < boardSize; i++){
@@ -258,12 +258,12 @@
 			if(!alreadyEnhanced){
 				//enhance board to handle candidates, and possibly other params
 				for(var j=0; j < boardSize*boardSize ; j++){
-					var cellVal = (typeof board[j] === "undefined") ? null : board[j];
-					var candidates = cellVal === null ? boardNumbers.slice() : nullCandidateList.slice();
-					board[j] = {
-						val: cellVal,
-						candidates: candidates
-						//title: "" possibl add in 'A1. B1...etc
+					var cellVal = (typeof board[j] === "undefined") ? null :board[j];
+					var candidates = cellVal === null ? boardNumbers.slice() :nullCandidateList.slice();
+					board[j] ={
+						val:cellVal,
+						candidates:candidates
+						//title:"" possibl add in 'A1. B1...etc
 					};
 				}
 			}
@@ -281,7 +281,7 @@
 			for(var i=0; i < boardSize*boardSize; i++){
 				htmlString += renderBoardCell(board[i], i);
 
-				if((i+1) % boardSize === 0) {
+				if((i+1) % boardSize === 0){
 					htmlString += "<br>";
 				}
 			}
@@ -296,10 +296,10 @@
 		/* renderBoardCell
 		 * -----------------------------------------------------------------*/
 		var renderBoardCell = function(boardCell, id){
-			var val = (boardCell.val === null) ? "" : boardCell.val;
+			var val = (boardCell.val === null) ? "" :boardCell.val;
 			var candidates = boardCell.candidates || [];
 			var candidatesString = buildCandidatesString(candidates);
-			var maxlength = (boardSize < 10) ? " maxlength='1'" : "";
+			var maxlength = (boardSize < 10) ? " maxlength='1'" :"";
 			return "<div class='sudoku-board-cell'>" +
 						//want to use type=number, but then have to prevent chrome scrolling and up down key behaviors..
 						"<input type='text' pattern='\\d*' novalidate id='input-"+id+"' value='"+val+"'"+maxlength+">" +
@@ -327,8 +327,8 @@
 		 *  updates the UI
 		 * -----------------------------------------------------------------
 		var updateUI = function(opts){
-			var opts = opts || {};
-			var paintNew = (typeof opts.paintNew !== "undefined") ? opts.paintNew : true;
+			var opts = opts ||{};
+			var paintNew = (typeof opts.paintNew !== "undefined") ? opts.paintNew :true;
 			updateUIBoard(paintNew);
 		}*/
 
@@ -343,7 +343,7 @@
 				.each(function(i,v){
 					var $input = $(this);
 					var newVal = board[i].val;
-					//if(newVal && parseInt($input.val()) !== newVal) {
+					//if(newVal && parseInt($input.val()) !== newVal){
 						$input.val(newVal);
 						if(paintNew)
 							$input.addClass("highlight-val");
@@ -360,8 +360,8 @@
 		 *  updates ONE cell on the board with our latest values
 		 * -----------------------------------------------------------------*/
 		 var updateUIBoardCell = function(cellIndex, opts){
-			opts = opts || {};
-			//log("updateUIBoardCell: "+cellIndex);
+			opts = opts ||{};
+			//log("updateUIBoardCell:"+cellIndex);
 			//if(!(opts.mode && opts.mode === "only-candidates")){
 				var newVal = board[cellIndex].val;
 
@@ -401,13 +401,13 @@
 			var cellUpdated = false;
 			for(var i=0; i < candidates.length; i++){
 				//-1 because candidate '1' is at index 0 etc.
-				if(c[candidates[i]-1] !== null) {
+				if(c[candidates[i]-1] !== null){
 					c[candidates[i]-1] = null; //writes to board variable
 					cellUpdated = true;
 				}
 			}
 			if(cellUpdated && solveMode === SOLVE_MODE_STEP)
-				updateUIBoardCell(cell, {mode: "only-candidates"});
+				updateUIBoardCell(cell,{mode:"only-candidates"});
 		};
 
 
@@ -423,8 +423,8 @@
 				for(var j=0; j < candidates.length; j++){
 					var candidate = candidates[j];
 					//-1 because candidate '1' is at index 0 etc.
-					if(c[candidate-1] !== null) {
-						c[candidate-1] = null; //NOTE: also deletes them from board variable
+					if(c[candidate-1] !== null){
+						c[candidate-1] = null; //NOTE:also deletes them from board variable
 						cellsUpdated.push(cells[i]); //will push same cell multiple times
 
 						if(solveMode===SOLVE_MODE_STEP){
@@ -450,7 +450,7 @@
 		};
 
 
-		var resetBoardVariables = function() {
+		var resetBoardVariables = function(){
 			boardFinished = false;
 			boardError = false;
 			onlyUpdatedCandidates = false;
@@ -467,9 +467,9 @@
 			//reset board variable
 			var cands = boardNumbers.slice(0);
 			for(var i=0; i <boardSize*boardSize;i++){
-				board[i] = {
-					val: null,
-					candidates: cands.slice()
+				board[i] ={
+					val:null,
+					candidates:cands.slice()
 				};
 			}
 
@@ -481,7 +481,7 @@
 			updateUIBoard(false);
 		};
 
-		var getNullCandidatesList = function() {
+		var getNullCandidatesList = function(){
 			var l = [];
 			for (var i=0; i < boardSize; i++){
 				l.push(null);
@@ -499,7 +499,7 @@
 					board[i].candidates = resetCandidatesList.slice(); //otherwise same list (not reference!) on every cell
 					if(updateUI !== false)
 						$("#input-"+i+"-candidates").html(buildCandidatesString(resetCandidatesList));
-				} else if(updateUI !== false) {
+				} else if(updateUI !== false){
 						$("#input-"+i+"-candidates").html("");
 				}
 			}
@@ -518,7 +518,7 @@
 		/* indexInHouse
 		 * --------------
 		 *  returns index (0-9) for digit in house, false if not in house
-		 *  NOTE: careful evaluating returned index is IN row, as 0==false.
+		 *  NOTE:careful evaluating returned index is IN row, as 0==false.
 		 * -----------------------------------------------------------------*/
 		 var indexInHouse = function(digit,house){
 			for(var i=0; i < boardSize; i++){
@@ -640,9 +640,9 @@
 					for (var k=0; k < boardSize; k++){
 
 						var boardIndex = houses[i][j][k];
-						if(board[boardIndex].val === null) {
-							emptyCells.push({house: houses[i][j], cell: boardIndex});
-							if(emptyCells.length > 1) {
+						if(board[boardIndex].val === null){
+							emptyCells.push({house:houses[i][j], cell:boardIndex});
+							if(emptyCells.length > 1){
 								//log("more than one empty cell, house area :["+i+"]["+j+"]");
 								break;
 							}
@@ -653,13 +653,13 @@
 						var emptyCell = emptyCells[0];
 						//grab number to fill in in cell
 						var val = numbersLeft(emptyCell.house);
-						if(val.length > 1) {
-							//log("openSingles found more than one answer for: "+emptyCell.cell+" .. board incorrect!");
+						if(val.length > 1){
+							//log("openSingles found more than one answer for:"+emptyCell.cell+" .. board incorrect!");
 							boardError = true; //to force solve all loop to stop
 							return -1; //error
 						}
 
-						//log("fill in single empty cell " + emptyCell.cell+", val: "+val);
+						//log("fill in single empty cell " + emptyCell.cell+", val:"+val);
 
 						setBoardCell(emptyCell.cell, val[0]); //does not update UI
 						if(solveMode===SOLVE_MODE_STEP)
@@ -668,9 +668,9 @@
 						return [emptyCell.cell];
 					}
 					//no empty ells..
-					if(emptyCells.length === 0) {
+					if(emptyCells.length === 0){
 						housesCompleted++;
-						//log(i+" "+j+": "+housesCompleted);
+						//log(i+" "+j+":"+housesCompleted);
 						if(housesCompleted === boardSize){
 							boardFinished = true;
 							return -1; //special case, done
@@ -685,7 +685,7 @@
 		/* visualEliminationOfCandidates
 		 * --------------
 		 * ALWAYS returns false
-		 * -- special compared to other strats: doesn't step - updates whole board,
+		 * -- special compared to other strats:doesn't step - updates whole board,
 		 in one go. Since it also only updates candidates, we can skip straight to next strat, since we know that neither this one nor the one(s) before (that only look at actual numbers on board), will find anything new.
 		 * -----------------------------------------------------------------*/
 		function visualEliminationOfCandidates(){
@@ -774,7 +774,7 @@
 		 * -----------------------------------------------------------------*/
 		function singleCandidate(){
 			//before we start with candidate strategies, we need to update candidates from last round:
-			visualEliminationOfCandidates(); //TODO: a bit hackyy, should probably not be here
+			visualEliminationOfCandidates(); //TODO:a bit hackyy, should probably not be here
 
 			//for each cell
 
@@ -793,7 +793,7 @@
 				if(possibleCandidates.length === 1){
 					var digit = possibleCandidates[0];
 
-					//log("only one candidate in cell: "+digit+" in house. ");
+					//log("only one candidate in cell:"+digit+" in house. ");
 
 
 					setBoardCell(i, digit); //does not update UI
@@ -847,10 +847,10 @@
 						for(var k=0; k < house.length; k++){
 							var cell = house[k];
 
-							if (contains(board[cell].candidates,digit)) {
+							if (contains(board[cell].candidates,digit)){
 								var cellHouses = housesWithCell(cell);
-								var newHouseId = (houseType ===2) ? cellHouses[0] : cellHouses[2];
-								var newHouseTwoId = (houseType ===2) ? cellHouses[1] : cellHouses[2];
+								var newHouseId = (houseType ===2) ? cellHouses[0] :cellHouses[2];
+								var newHouseTwoId = (houseType ===2) ? cellHouses[1] :cellHouses[2];
 
 								//if(cellsWithCandidate.length > 0){ //why thice the same?
 
@@ -891,21 +891,21 @@
 							var altHouse = houses[altHouseType][h[altHouseType]];
 							var cellsEffected = [];
 
-							//log("houses["+houseType+"]["+h[houseType]+"].length: "+houses[houseType][h[houseType]].length);
+							//log("houses["+houseType+"]["+h[houseType]+"].length:"+houses[houseType][h[houseType]].length);
 
 							//need to remove cellsWithCandidate - from cells to remove from
 							for (var x=0; x< altHouse.length; x++){
-								if(!contains(cellsWithCandidate, altHouse[x])) {
+								if(!contains(cellsWithCandidate, altHouse[x])){
 									cellsEffected.push(altHouse[x]);
 								}
 							}
-							//log("houses["+houseType+"]["+h[houseType]+"].length: "+houses[houseType][h[houseType]].length);
+							//log("houses["+houseType+"]["+h[houseType]+"].length:"+houses[houseType][h[houseType]].length);
 
 							//remove all candidates on altHouse, outside of house
 							var cellsUpdated = removeCandidatesFromCells(cellsEffected, [digit]);
 
 							if(cellsUpdated.length > 0){
-								// log("pointing: digit "+digit+", from houseType: "+houseType);
+								// log("pointing:digit "+digit+", from houseType:"+houseType);
 
 								if(solveMode === SOLVE_MODE_STEP)
 									highLightCandidatesOnCells([digit], cellsWithCandidate);
@@ -945,11 +945,11 @@
 					var house = houses[i][j];
 					if(numbersLeft(house).length <= n) //can't eliminate any candidates
 						continue;
-					var combineInfo = []; //{cell: x, candidates: []}, {} ..
+					var combineInfo = []; //{cell:x, candidates:[]},{} ..
 					//combinedCandidates,cellsWithCandidate;
 					var minIndexes = [-1];
 					//log("--------------");
-					//log("house: ["+i+"]["+j+"]");
+					//log("house:["+i+"]["+j+"]");
 
 
 					//checks every combo of n candidates in house, returns pattern, or false
@@ -961,7 +961,7 @@
 			return false; //pattern not found
 
 			function checkCombinedCandidates(house, startIndex){
-				//log("startIndex: "+startIndex);
+				//log("startIndex:"+startIndex);
 				for(var i=Math.max(startIndex, minIndexes[startIndex]); i < boardSize-n+startIndex; i++){
 					//log(i);
 
@@ -1001,10 +1001,10 @@
 
 					}
 
-					combineInfo.push({cell: cell, candidates: cellCandidates});
+					combineInfo.push({cell:cell, candidates:cellCandidates});
 
 
-					if(startIndex < n-1) {
+					if(startIndex < n-1){
 						//still need to go deeper into combo
 						var r = checkCombinedCandidates(house, startIndex+1);
 						//when we come back, check if that's because we found answer.
@@ -1035,7 +1035,7 @@
 						//get all cells in house EXCEPT cellsWithCandidates
 						var cellsEffected = [];
 						for (var y=0; y< boardSize; y++){
-							if(!contains(cellsWithCandidates, house[y])) {
+							if(!contains(cellsWithCandidates, house[y])){
 								cellsEffected.push(house[y]);
 							}
 						}
@@ -1045,7 +1045,7 @@
 
 						//if it does remove candidates, we're succeded!
 						if(cellsUpdated.length > 0){
-							//log("nakedCandidates: ");
+							//log("nakedCandidates:");
 							//log(combinedCandidates);
 
 							if(solveMode === SOLVE_MODE_STEP)
@@ -1059,10 +1059,10 @@
 						}
 					}
 				}
-				if(startIndex > 0) {
+				if(startIndex > 0){
 					//if we added a value to our combo check, but failed to find pattern, we now need drop that value and go back up in chain and continue to check..
 					if(combineInfo.length > startIndex-1){
-						//log("nakedCans: need to pop last added values..");
+						//log("nakedCans:need to pop last added values..");
 						combineInfo.pop();
 					}
 				}
@@ -1119,11 +1119,11 @@
 					var house = houses[i][j];
 					if(numbersLeft(house).length <= n) //can't eliminate any candidates
 						continue;
-					var combineInfo = []; //{candate: x, cellsWithCandidate: []}, {} ..
+					var combineInfo = []; //{candate:x, cellsWithCandidate:[]},{} ..
 					//combinedCandidates,cellsWithCandidate;
 					var minIndexes = [-1];
 					//log("--------------");
-					//log("house: ["+i+"]["+j+"]");
+					//log("house:["+i+"]["+j+"]");
 
 					//checks every combo of n candidates in house, returns pattern, or false
 					var result = checkLockedCandidates(house, 0);
@@ -1134,7 +1134,7 @@
 			return false; //pattern not found
 
 			function checkLockedCandidates(house, startIndex){
-				//log("startIndex: "+startIndex);
+				//log("startIndex:"+startIndex);
 				for(var i=Math.max(startIndex, minIndexes[startIndex]); i <= boardSize-n+startIndex; i++){
 
 					//log(i);
@@ -1171,9 +1171,9 @@
 
 					}
 
-					combineInfo.push({candidate: candidate, cells: possibleCells});
+					combineInfo.push({candidate:candidate, cells:possibleCells});
 
-					if(startIndex < n-1) {
+					if(startIndex < n-1){
 						//still need to go deeper into combo
 						var r = checkLockedCandidates(house, startIndex+1);
 						//when we come back, check if that's because we found answer.
@@ -1210,7 +1210,7 @@
 
 						//if it does remove candidates, we're succeded!
 						if(cellsUpdated.length > 0){
-							//log("hiddenLockedCandidates: ");
+							//log("hiddenLockedCandidates:");
 							//log(combinedCandidates);
 
 							if(solveMode === SOLVE_MODE_STEP)
@@ -1223,7 +1223,7 @@
 						}
 					}
 				}
-				if(startIndex > 0) {
+				if(startIndex > 0){
 					//if we added a value to our combo check, but failed to find pattern, we now need drop that value and go back up in chain and continu to check..
 					if(combineInfo.length > startIndex-1){
 						combineInfo.pop();
@@ -1278,8 +1278,8 @@
 
 		var solveFn = function(i){
 			//log(i);
-			if(boardFinished) {
-				if(!gradingMode) {
+			if(boardFinished){
+				if(!gradingMode){
 					updateUIBoard(false);
 					//log("finished!");
 					//log("usedStrats:")
@@ -1288,7 +1288,7 @@
 					//callback
 					if(typeof opts.boardFinishedFn === "function"){
 						opts.boardFinishedFn({
-							difficultyInfo: calcBoardDifficulty(usedStrategies)
+							difficultyInfo:calcBoardDifficulty(usedStrategies)
 						});
 					}
 				}
@@ -1316,11 +1316,11 @@
 			effectedCells = strat();
 
 			if(effectedCells === false){
-				if(strategies.length > i+1) {
+				if(strategies.length > i+1){
 					return solveFn(i+1);
-				} else {
+				} else{
 					if(typeof opts.boardErrorFn === "function" && !generatingMode)
-						opts.boardErrorFn({msg: "no more strategies"});
+						opts.boardErrorFn({msg:"no more strategies"});
 
 					if(!gradingMode && !generatingMode && solveMode===SOLVE_MODE_ALL)
 						updateUIBoard(false);
@@ -1329,9 +1329,9 @@
 
 			} else if (boardError){
 				if(typeof opts.boardErrorFn === "function")
-					opts.boardErrorFn({msg: "Board incorrect"});
+					opts.boardErrorFn({msg:"Board incorrect"});
 
-				if(solveMode === SOLVE_MODE_ALL) {
+				if(solveMode === SOLVE_MODE_ALL){
 					updateUIBoard(false); //show user current state of board... how much they need to reset for it to work again.
 				}
 
@@ -1340,8 +1340,8 @@
 			} else if(solveMode===SOLVE_MODE_STEP){
 				// if user clicked solve step, and we're only going to fill in a new value (not messing with candidates) - then show user straight away
 				//callback
-				if(typeof opts.boardUpdatedFn === "function") {
-					opts.boardUpdatedFn({cause: strategies[i].title, cellsUpdated: effectedCells});
+				if(typeof opts.boardUpdatedFn === "function"){
+					opts.boardUpdatedFn({cause:strategies[i].title, cellsUpdated:effectedCells});
 				}
 
 				//check if this finished the board
@@ -1350,7 +1350,7 @@
 					//callback
 					if(typeof opts.boardFinishedFn === "function"){
 						opts.boardFinishedFn({
-							difficultyInfo: calcBoardDifficulty(usedStrategies)
+							difficultyInfo:calcBoardDifficulty(usedStrategies)
 						});
 					}
 					//paint the last cell straight away
@@ -1424,9 +1424,9 @@
 				return;  // don't modify candidates when a cell already has a number
 			}
 			var c = boardCell.candidates;
-			c[candidate-1] = c[candidate-1] === null ? candidate : null;
+			c[candidate-1] = c[candidate-1] === null ? candidate :null;
 			if(solveMode === SOLVE_MODE_STEP)
-				updateUIBoardCell(cell, {mode: "only-candidates"});
+				updateUIBoardCell(cell,{mode:"only-candidates"});
 		};
 
 		/* keyboardNumberInput - update our board model
@@ -1440,12 +1440,12 @@
 				return;
 			}
 
-			//log(id+": "+val +" entered.");
+			//log(id+":"+val +" entered.");
 
 			var candidates = getNullCandidatesList(); //[null,null....null];
 
 
-			if (val > 0) { //invalidates Nan
+			if (val > 0){ //invalidates Nan
 				//check that this doesn't make board incorrect
 				var temp = housesWithCell(id);
 				//for each type of house
@@ -1485,11 +1485,11 @@
 							//we don't have this info if user solved it, unless we
 							//always analyze board on init.. but that could be slow.
 
-							//difficultyInfo: null
+							//difficultyInfo:null
 						});
 					}
 				}
-			} else {
+			} else{
 				boardError = false; //reset, in case they fixed board - otherwise, we'll find the error again
 				val = null;
 				//add back candidates to UI cell
@@ -1505,12 +1505,12 @@
 			}
 			//log(board[1].candidates);
 
-			//HACK: remove all errors as soon as they fix one - the other cells just get emptied on board (in UI; already were null in model)
+			//HACK:remove all errors as soon as they fix one - the other cells just get emptied on board (in UI; already were null in model)
 			if($("#input-"+id).hasClass("board-cell--error"))
 				$boardInputs.removeClass("board-cell--error");
 
 			if(typeof opts.boardUpdatedFn === "function")
-				opts.boardUpdatedFn({cause: "user input", cellsUpdated: [id]});
+				opts.boardUpdatedFn({cause:"user input", cellsUpdated:[id]});
 
 			onlyUpdatedCandidates = false;
 		};
@@ -1524,7 +1524,7 @@
 
 		 /* analyzeBoard
 		  * solves a copy of the current board(without updating the UI),
-		  * reports back: error|finished, usedStrategies and difficulty level and score
+		  * reports back:error|finished, usedStrategies and difficulty level and score
 		  * -----------------------------------------------------------------*/
 		 var analyzeBoard = function(){
 			gradingMode = true;
@@ -1532,30 +1532,30 @@
 			var usedStrategiesClone = JSON.parse(JSON.stringify(usedStrategies));
 			var boardClone = JSON.parse(JSON.stringify(board));
 			var canContinue = true;
-			while(canContinue) {
-				var startStrat = onlyUpdatedCandidates ? 2 : 0;
+			while(canContinue){
+				var startStrat = onlyUpdatedCandidates ? 2 :0;
 				canContinue = solveFn(startStrat);
 			}
 
-			var data = {};
+			var data ={};
 			if(boardError){
 				data.error = "Board incorrect";
 			}
-			else {
+			else{
 				data.finished = boardFinished;
 				data.usedStrategies = [];
 				for (var i=0; i<usedStrategies.length; i++){
 					var strat = strategies[i];
 					//only return strategies that were actually used
 					if (typeof usedStrategies[i] !=="undefined"){
-						data.usedStrategies[i] = {
-							title: strat.title,
-							freq: usedStrategies[i]
+						data.usedStrategies[i] ={
+							title:strat.title,
+							freq:usedStrategies[i]
 						};
 					}
 				}
 
-				if (boardFinished) {
+				if (boardFinished){
 					var boardDiff = calcBoardDifficulty(usedStrategies);
 					data.level = boardDiff.level;
 					data.score = boardDiff.score;
@@ -1577,14 +1577,14 @@
 			// DRAW RANDOM CANDIDATE
 			// don't draw already invalidated candidates for cell
 			var invalids = invalidCandidates && invalidCandidates[cellIndex];
-			// TODO: don't use JS filter - not supported enough(?)
+			// TODO:don't use JS filter - not supported enough(?)
 			var candidates = board[cellIndex].candidates.filter(function(candidate){
 				if(!candidate || (invalids && contains(invalids, candidate)))
 					return false;
 				return candidate;
 			});
 			// if cell has 0 candidates - fail to set cell.
-			if(candidates.length === 0) {
+			if(candidates.length === 0){
 				return false;
 			}
 			var randIndex = Math.round ( Math.random() * (candidates.length - 1));
@@ -1602,7 +1602,7 @@
 			}
 			if(setBoardCellWithRandomCandidate(cellIndex)){
 				generateBoardAnswerRecursively(cellIndex + 1);
-			} else {
+			} else{
 				if(cellIndex <= 0)
 					return false;
 				var lastIndex = cellIndex - 1;
@@ -1631,7 +1631,7 @@
 			if(data.level === DIFFICULTY_VERY_HARD)
 				return difficulty !== DIFFICULTY_EASY && difficulty !== DIFFICULTY_MEDIUM && difficulty !== DIFFICULTY_HARD;
 		};
-		var hardEnough = function(data) {
+		var hardEnough = function(data){
 			if(difficulty === DIFFICULTY_EASY)
 				return true;
 			if(difficulty === DIFFICULTY_MEDIUM)
@@ -1651,7 +1651,7 @@
 			} else if(difficulty === DIFFICULTY_MEDIUM){
 				minGiven = 30;
 			}
-      if (boardSize < 9) {
+      if (boardSize < 9){
         minGiven = 4
       }
 			for (var i=0; i < boardSize*boardSize; i++){
@@ -1669,9 +1669,9 @@
 				resetCandidates(false);
 
 				var data = analyzeBoard();
-				if (data.finished !== false && easyEnough(data)) {
+				if (data.finished !== false && easyEnough(data)){
 					given--;
-				} else {
+				} else{
 					// reset - don't dig this cell
 					setBoardCell(cellIndex, val);
 				}
@@ -1684,11 +1684,11 @@
 		var generateBoard = function(diff, callback){
 			if($boardInputs)
 				clearBoard();
-      if (contains(DIFFICULTIES, diff)) {
+      if (contains(DIFFICULTIES, diff)){
         difficulty = diff
-      } else if (boardSize >= 9) {
+      } else if (boardSize >= 9){
         difficulty = DIFFICULTY_MEDIUM
-      } else {
+      } else{
         difficulty = DIFFICULTY_EASY
       }
 			generatingMode = true;
@@ -1726,11 +1726,11 @@
 		/*
 		 * init/API/events
 		 *-----------*/
-		if(!opts.board) {
+		if(!opts.board){
 			initBoard(opts);
 			generateBoard(opts);
 			renderBoard();
-		} else {
+		} else{
 			board = opts.board;
 			initBoard();
 			renderBoard();
@@ -1761,15 +1761,15 @@
 		var solveAll = function(){
 			solveMode = SOLVE_MODE_ALL;
 			var canContinue = true;
-			while(canContinue) {
-				var startStrat = onlyUpdatedCandidates ? 2 : 0;
+			while(canContinue){
+				var startStrat = onlyUpdatedCandidates ? 2 :0;
 				canContinue = solveFn(startStrat);
 			}
 		};
 
 		var solveStep = function(){
 			solveMode = SOLVE_MODE_STEP;
-			var startStrat = onlyUpdatedCandidates ? 2 : 0;
+			var startStrat = onlyUpdatedCandidates ? 2 :0;
 			solveFn(startStrat);
 		};
 
@@ -1798,17 +1798,17 @@
 			editingCandidates = newVal;
 		};
 
-		return {
-			solveAll : solveAll,
-			solveStep : solveStep,
-			analyzeBoard : analyzeBoard,
-			clearBoard : clearBoard,
-			getBoard : getBoard,
-			setBoard : setBoard,
-			hideCandidates : hideCandidates,
-			showCandidates : showCandidates,
-			setEditingCandidates: setEditingCandidates,
-			generateBoard : generateBoard
+		return{
+			solveAll :solveAll,
+			solveStep :solveStep,
+			analyzeBoard :analyzeBoard,
+			clearBoard :clearBoard,
+			getBoard :getBoard,
+			setBoard :setBoard,
+			hideCandidates :hideCandidates,
+			showCandidates :showCandidates,
+			setEditingCandidates:setEditingCandidates,
+			generateBoard :generateBoard
 		};
 	};
 

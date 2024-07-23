@@ -15,35 +15,35 @@
     src:url(https://files.catbox.moe/kyguk9.ttf);
 }
 
-.kaitocontainer::selection {
-    background: #68a2d5;
+.kaitocontainer::selection{
+    background:#68a2d5;
     color:white;
 }
  
-.kaitocontainer::-moz-selection {
-    background: #68a2d5;
+.kaitocontainer::-moz-selection{
+    background:#68a2d5;
     color:white;
 }
 
 .kaitocontainer{
     width:200px;
-    height: 200px;
+    height:200px;
     padding:10px 10px 0px 10px;
 }
 
 
-#kaitoring {
-    margin: 10px auto;
+#kaitoring{
+    margin:10px auto;
     background-color:#dff5ff;
-    border: 3px solid #68a2d5;
+    border:3px solid #68a2d5;
     width:200px;
 }
 
-#kaitoring table {
-    margin: 0 auto;
+#kaitoring table{
+    margin:0 auto;
 }
 
-#kaitoring .webring-info {
+#kaitoring .webring-info{
     text-align:center;
     font-family:Orbitron;
     color:#8f7f5b;
@@ -57,22 +57,22 @@
 }
 
 #kaitoring .webring-links a{
-    text-decoration: none;
+    text-decoration:none;
     color:#8f7f5b;
-    text-shadow: 2px 2px 1px #b9d8f4;
+    text-shadow:2px 2px 1px #b9d8f4;
     transition:0.3s;
 }
 
 #kaitoring .webring-links a:hover{
     
-    letter-spacing: normal;
+    letter-spacing:normal;
 }
 
-img {
-    user-drag: none;
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+img{
+    user-drag:none;
+    -webkit-user-drag:none;
+    user-select:none;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
 }

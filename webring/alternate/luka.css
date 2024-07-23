@@ -15,34 +15,34 @@
     src:url(https://files.catbox.moe/kyguk9.ttf);
 }
 
-.lukacontainer::selection {
-    background: #ee9eb0;
+.lukacontainer::selection{
+    background:#ee9eb0;
     color:white;
 }
  
-.lukacontainer::-moz-selection {
-    background: #ee9eb0;
+.lukacontainer::-moz-selection{
+    background:#ee9eb0;
     color:white;
 }
 
 .lukacontainer{
     width:200px;
-    height: 200px;
+    height:200px;
     padding:10px 10px 0px 10px;
 }
 
-#lukaring {
-    margin: 10px auto;
+#lukaring{
+    margin:10px auto;
     background-color:#ffebe9;
-    border: 3px solid #ee9eb0;
+    border:3px solid #ee9eb0;
     width:200px;
 }
 
-#lukaring table {
-    margin: 0 auto;
+#lukaring table{
+    margin:0 auto;
 }
 
-#lukaring .webring-info {
+#lukaring .webring-info{
     text-align:center;
     font-family:Orbitron;
     color:#ae766e;
@@ -56,22 +56,22 @@
 }
 
 #lukaring .webring-links a{
-    text-decoration: none;
+    text-decoration:none;
     color:#ae766e;
-    text-shadow: 2px 2px 1px #f9bbb3;
+    text-shadow:2px 2px 1px #f9bbb3;
     transition:0.3s;
 }
 
 #lukaring .webring-links a:hover{
     
-    letter-spacing: normal;
+    letter-spacing:normal;
 }
 
-img {
-    user-drag: none;
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+img{
+    user-drag:none;
+    -webkit-user-drag:none;
+    user-select:none;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
 }

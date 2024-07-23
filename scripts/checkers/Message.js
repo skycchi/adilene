@@ -1,10 +1,10 @@
 // This class used to show messages instead of using alert
-class Message {
+class Message{
     /**
-     * @param {object} message Message ot diplay
-     * @param {string} [header] Header to display, optional
+     * @param{object} message Message ot diplay
+     * @param{string} [header] Header to display, optional
      */
-    constructor(message, header) {
+    constructor(message, header){
         this.message = message;
         this.header = header;
     };
@@ -12,7 +12,7 @@ class Message {
     /**
      * Shows the message box
     */
-    Show() {
+    Show(){
         let outerMessageBox = document.createElement('div');
         outerMessageBox.setAttribute('id', 'outerMessageBox');
 
@@ -37,7 +37,7 @@ class Message {
     /**
      * Shows the message box with header without blinking
     */
-    ShowWithHeader() {
+    ShowWithHeader(){
         let outerMessageBox = document.createElement('div');
         outerMessageBox.setAttribute('id', 'outerMessageBox');
 
