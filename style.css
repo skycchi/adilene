@@ -200,7 +200,6 @@ header{
     display:flex;
     flex-direction:column;
     order:3;
-    height:
 }
 
 .links{
@@ -559,7 +558,7 @@ input[type="text"]:focus:hover{
 
 @media only screen and (max-width:1000px){
     .virtualdiva{
-        display:none;
+        font-size:60px;
     }
     
     .container{  
@@ -570,12 +569,9 @@ input[type="text"]:focus:hover{
     .updates{
         display:none;
     }
-    
+
     #mikuheader{
-        margin-left:0;
-        height:130px;
-        background-size:cover;
-        background-repeat:no-repeat;
+        height:155px;
     }
     
     #chatbox{
