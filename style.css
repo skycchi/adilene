@@ -383,10 +383,6 @@ header{
     padding-left:5px;
     color:var(--color);
 }
-
-i.fas:hover{
-    
-}
  
 i.fa-pause,i.fa-play,i.fa-forward,i.fa-backward{
     color:var(--pink);
