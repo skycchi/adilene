@@ -225,6 +225,11 @@ input{
     
 }
 
+#c_pageNumber{
+    display:flex;
+    align-items:center;
+}
+
 .c-replyButton{
     margin-top:10px;
     

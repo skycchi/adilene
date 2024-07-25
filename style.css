@@ -169,7 +169,7 @@ header{
 .container{  
     max-width:100%;
     display:grid;
-    grid-template-rows:279px 306px 139px;
+    grid-template-rows:279px 306px 0.1fr;
     grid-template-columns:23% 1fr 23%;
     grid-auto-flow:row;
     gap:10px;
@@ -187,7 +187,7 @@ header{
     grid-area:main; 
     border:var(--bw) var(--bt) var(--bc);
     box-sizing:border-box;
-    height:662px;
+    height:696px;
     order:2;
     z-index:2;
 }
@@ -498,7 +498,7 @@ button{
     background-color:var(--h);
     font-family:'Pixel Operator';
     font-size:16px;
-    margin:2px 0px;
+    margin:0px;
     transition:0.2s;
     color:var(--pink);
     min-width:84px;

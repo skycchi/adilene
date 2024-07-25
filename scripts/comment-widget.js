@@ -29,7 +29,7 @@ const s_sheetId = '1qBUoNhQbdM1ekGRh16lMXSU8UH39asm3jPEdZcfcSlM'; // The Google 
 // Misc - Other random settings
 const s_commentsPerPage = 10; // The max amount of comments that can be displayed on one page, any number >= 1 (Replies not counted)
 const s_maxLength = 500; // The max character length of a comment
-const s_maxLengthName = 10; // The max character length of a name
+const s_maxLengthName = 20; // The max character length of a name
 const s_commentsOpen = true; // Change to false if you'd like to close your comment section site-wide (Turn it off on Google Forms too!)
 const s_collapsedReplies = true; // True for collapsed replies with a button, false for replies to display automatically
 const s_longTimestamp = true; // True for a date + time, false for just the date
@@ -74,7 +74,7 @@ document.getElementsByTagName('head')[0].appendChild(c_cssLink);
 
 // HTML Form
 const v_mainHtml = `
-    <div id="c_container">${s_loadingText}</div>
+    <div id="c_container"><div style="text-align:center;margin-top:10px;">${s_loadingText}</div></div>
     <div id="c_inputDiv">
         <form id="c_form" onsubmit="c_submitButton.disabled = true;v_submitted = true;" method="post" target="c_hiddenIframe" action="https://docs.google.com/forms/d/e/${s_formId}/formResponse"></form>
     </div>
@@ -95,7 +95,7 @@ const v_formHtml = `
     
 
 <div id="c_websiteWrapper" class="c-inputWrapper">
-        <input class="c-input c-websiteInput" placeholder="Website" name="entry.${s_websiteId}" id="entry.${s_websiteId}" type="url" pattern="https://.*">
+        <input class="c-input c-websiteInput" placeholder="Website URL" name="entry.${s_websiteId}" id="entry.${s_websiteId}" type="url" pattern="https://.*">
     </div>
 
     <div style="display:flex;justify-content:center;"><input type="submit" id="c_submitButton" name="c_submitButton" value="${s_submitButtonLabel}" disabled onclick="clear();"></div>
@@ -338,6 +338,13 @@ function displayComments(comments){
         leftButton.className = 'c-paginationButton';
         pagination.appendChild(leftButton);
 
+        pageNumber = document.createElement('span');
+        pageNumber.innerHTML = v_pageNum;
+        pageNumber.id = 'c_pageNumber';
+        pageNumber.name = 'pageNumber';
+        pageNumber.className = 'c_paginationButton';
+        pagination.appendChild(pageNumber);
+
         rightButton = document.createElement('button');
         rightButton.innerHTML = s_rightButtonText; rightButton.id = 'c_rightButton'; rightButton.name = 'right';
         rightButton.setAttribute('onclick', `changePage(this.name)`);
@@ -471,6 +478,8 @@ function changePage(dir){
         a_commentDivs[i].style.display = 'none';
         if (i >= v_commentMin && i < v_commentMax){a_commentDivs[i].style.display = 'block'}
     }
+
+    pageNumber.innerHTML = v_pageNum;
 
     $("#c_container").animate({ scrollTop: 0 }, "fast");
 }

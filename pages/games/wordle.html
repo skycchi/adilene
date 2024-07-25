@@ -1,37 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
         <link rel="stylesheet/less" type="text/css" href="/pages/games/wordle.less" />
         <script src="https://cdn.jsdelivr.net/npm/less" ></script>
         <link href="/style.css" rel="stylesheet">
         <title>VIRTUAL DIVA</title>
         <link rel="shortcut icon" href="https://files.catbox.moe/j2aivj.gif">
-        
     </head>
-    <style>
-        
-    </style>
     <body>
         <header style="text-align:center;">WORDLE</header>
-        <div style="text-align:center;">
+        <div style="text-align:center; display:flex; flex-direction:column; gap:10px;">
             Directions:Use the keyboard or keys down below to guess a random five letter word. You have six tries to guess the correct word.
+
+            <div id="game">
+                <div id="game-container"></div>
+                <div id="keyboard"></div>
+            </div>
+
+            <div id="controls">
+                <button id="newGameButton">New Game</button>
+                <button id="giveUpButton">Give Up</button>
+            </div>
+        
+            <div>Source code: <a href="https://codepen.io/jfledd/pen/ExwGqrz" target="_blank">Codepen</a></div>
         </div>
-        <div id="game">
-            <div id="game-container"></div>
-            <div id="keyboard"></div>
-        </div>
-        
-        <br>
-        <div id="controls">
-            <button id="newGameButton">New Game</button>
-            <button id="giveUpButton">Give Up</button>
-        </div>
-        
-        <br>
-        
-        <div style="text-align:center;">Source code:<a href="https://codepen.io/jfledd/pen/ExwGqrz" target="_blank">Codepen</a></div>
-        
+
         <script src="/scripts/wordle.js"></script>
     </body>
 </html>

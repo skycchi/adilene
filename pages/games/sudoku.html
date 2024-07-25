@@ -17,11 +17,8 @@
 
         .sudoku-board{
             min-height:22.75rem;
-            margin-bottom:1em;
             box-sizing:border-box;
             display:inline-block;
-            
-            
         }
         /*cell (wrapper) contains both cell input and candidates div*/
         .sudoku-board-cell{
@@ -136,26 +133,27 @@
     </style>
     <body>
         <header style="text-align:center;">SUDOKU</header>
-        <div style="text-align:center;">Directions:Use the keyboard to fill in the grid.</div>
-        <br>
-        <div id="wrap">
-            <div class='sudoku-board'></div>
+        <div style="display:flex; flex-direction:column; gap:10px; width:fit-content; margin:auto; align-items:center;">
+            Directions: Use the keyboard to fill in the grid.
+            <div id="wrap">
+                <div class='sudoku-board'></div>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:10px; align-items:center;">
+                <span>
+                    <button onclick="location.reload();">New Game</button>
+                    <button onclick="mySudokuJS.solveStep();">Hint</button>
+                    <button onclick="mySudokuJS.solveAll();">Solve</button>
+                </span>
+                <span>Difficulty
+                    <button onclick="mySudokuJS.generateBoard('easy');">Easy</button>
+                    <button onclick="mySudokuJS.generateBoard('medium');">Medium</button>
+                    <button onclick="mySudokuJS.generateBoard('hard');">Hard</button>
+                    <button onclick="mySudokuJS.generateBoard('very hard');">Very Hard</button>
+                </span>
+            </div>
+
+            <div>Source code: <a href="https://github.com/pocketjoso/sudokuJS" target="_blank">Github</a></div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:10px;width:fit-content;margin:auto;align-items:center;margin-top:-12px;">
-            <span>
-                <button onclick="location.reload();">New Game</button>
-                <button onclick="mySudokuJS.solveStep();">Hint</button>
-                <button onclick="mySudokuJS.solveAll();">Solve</button>
-            </span>
-            <span>Difficulty 
-                <button onclick="mySudokuJS.generateBoard('easy');">Easy</button>
-                <button onclick="mySudokuJS.generateBoard('medium');">Medium</button>
-                <button onclick="mySudokuJS.generateBoard('hard');">Hard</button>
-                <button onclick="mySudokuJS.generateBoard('very hard');">Very Hard</button>
-            </span> 
-        </div>
-        
-        <div style="text-align:center;margin-top:10px;">Source code:<a href="https://github.com/pocketjoso/sudokuJS" target="_blank">Github</a></div>
 
         <script>
 

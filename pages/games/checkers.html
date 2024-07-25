@@ -263,14 +263,16 @@
     </style>
     <body style="text-align:center">
         <header >CHECKERS</header>
-        <div style="text-align:center">Directions:Move the white pieces and capture the black pieces.</div> <br>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+        <div style="text-align:center">Directions:Move the white pieces and capture the black pieces.</div>
         <div id="log" style="display:none"></div>
         <div id="board" style="margin:auto;">
         <div class="tiles"></div>
         </div>
         <div class="buttons">
-            <button onclick="Play()" style="margin:10px auto;">New Game</button>
+            <button onclick="Play()" style="margin:auto;">New Game</button>
         </div>
-        <div>Source code:<a href="https://github.com/stroibot/Checkers" target="_blank">Github</a></div>
+        <div>Source code: <a href="https://github.com/stroibot/Checkers" target="_blank">Github</a></div>
+        </div>
     </body>
 </html>

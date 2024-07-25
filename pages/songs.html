@@ -42,14 +42,18 @@
             box-sizing:border-box;
         }
         
-        .btn{
+        .btn, .btn2{
+            margin-top:10px;
+        }
+
+/*        .btn{
             border:var(--bw) var(--bt) var(--bc);
             outline:none;
             padding:5px 8px;
             background-color:var(--h);
             font-family:'Pixel Operator';
             font-size:16px;
-            margin:2px 0px;
+            margin:10px 0px;
             transition:0.2s;
             color:#e74492;
         }
@@ -59,10 +63,9 @@
             outline:none;
             padding:5px 8px;
             background-color:var(--h);
-
             font-family:'Pixel Operator';
             font-size:16px;
-            margin:5px 0px;
+            margin:10px 0px;
             color:var(--pink);
         }
 
@@ -76,15 +79,15 @@
             background-color:var(--pink);
             color:white;
             transition:0.2s;
-        }
+        }*/
 
-        .btn.active{
+        .active{
             background-color:var(--pink);
             color:white;
         }
         
         .tags{
-            padding:0px 10px;
+            padding:0px 10px 10px 10px;
             text-align:left;
             border-left:var(--bw) var(--bt) var(--bc);
             border-bottom:var(--bw) var(--bt) var(--bc);
@@ -152,11 +155,7 @@
             color:var(--pink); /* color of the play button */
             font-size:40px;
         }
-        
-        #myBtnContainer{
-            text-align:left;
-        }
-        
+
         .collapsible{
             background-color:var(--h);
             color:white;
@@ -169,6 +168,7 @@
             font-family:'Orbitron';
             font-size:20px;
             border:var(--bw) var(--bt) var(--bc);
+            border-bottom:none;
         }
         
         .activated, .collapsible:hover{
@@ -179,12 +179,12 @@
         
         .content{
             padding:0px;
-            margin-top:-8px;
             max-height:0;
             overflow:hidden;
             transition:max-height 0.3s ease-out;
             background-color:#fff;
             border:var(--bw) var(--bt) var(--bc);
+            border-top:none;
             box-sizing:border-box;
         }
         
@@ -200,7 +200,10 @@
         }
         
         #myBtnContainer{
-            padding:5px 10px 7px 10px;
+            padding:0px 10px 10px 10px;
+            text-align:left;
+            display:flex;
+            flex-flow:column wrap;
         }
         
         .contain div{
@@ -219,10 +222,7 @@
         
     </style>
     <body>
-        
-        
-        <div id="button"><i class="fas fa-arrow-up"></i></div>
-        
+
         <header>SONGS</header>
         Welcome! This is a noncomprehensive list of Hatsune Miku songs that new and old fans alike can enjoy! This list will be updated occasionally.
         <br><br>
@@ -230,70 +230,72 @@
         <br><br>
         Scroll down to begin, or open the 'sort entries' tab below to sort entries by their tags. Entries are sorted by 'all' by default.
         <br><br>
+
         <button class="collapsible">SORT ENTRIES</button>
         <div class="content">
             <div id="myBtnContainer">
-                Genre:
-                <button class="btn active" id="all">All</button>
-                <button class="btn" id="J-pop">J-pop</button>
-                <button class="btn" id="J-rock">J-rock</button>
-                <button class="btn" id="Metal">Metal</button>
-                <button class="btn" id="Electronic">Electronic</button>
-                <button class="btn" id="Folk">Folk</button>
-                <button class="btn" id="hiphop">Hip-hop</button>
-                <button class="btn" id="Classical">Classical</button>
-                <button class="btn" id="Jazz">Jazz</button>
+                <div>
+                    Genre:
+                    <button class="btn active" id="all">All</button>
+                    <button class="btn" id="J-pop">J-pop</button>
+                    <button class="btn" id="J-rock">J-rock</button>
+                    <button class="btn" id="Metal">Metal</button>
+                    <button class="btn" id="Electronic">Electronic</button>
+                    <button class="btn" id="Folk">Folk</button>
+                    <button class="btn" id="hiphop">Hip-hop</button>
+                    <button class="btn" id="Classical">Classical</button>
+                    <button class="btn" id="Jazz">Jazz</button>
+                </div>
                 
-                <br>
-                Producer:
-                <button class="btn" id="Wowaka">Wowaka</button>
-                <button class="btn" id="Syudou">Syudou</button>
-                <button class="btn" id="GigaP">GigaP</button>
-                <button class="btn" id="Jin">Jin</button>
-                <button class="btn" id="deco">DECO*27</button>
-                <button class="btn" id="Hachi">Hachi</button>
-                <button class="btn" id="Supercell">Supercell</button>
-                <button class="btn" id="mitchie">Mitchie M</button>
-                <button class="btn" id="PinocchioP">PinocchioP</button>
-                <button class="btn" id="Nayutalien">Nayutalien</button>
-                <button class="btn" id="Utsu-P">Utsu-P</button>
-                <button class="btn" id="Doriko">Doriko</button>
-                <button class="btn" id="UtataP">UtataP</button> 
-                <button class="btn" id="Kurousa-P">Kurousa-P</button>
-                <button class="btn" id="rerulili">rerulili</button>
-                <button class="btn" id="MASA">MASA</button>
-                <button class="btn" id="Camellia">Camellia</button>
-                <button class="btn" id="Maretu">Maretu</button>
-                <button class="btn" id="KZ">KZ</button>
-                <button class="btn" id="nekobolo">nekobolo</button>
-                <button class="btn" id="powa">Powapowa-P</button>
-                <button class="btn" id="bear">Kairiki Bear</button>
-                <button class="btn" id="Mafumafu">Mafumafu</button>
-                <button class="btn" id="sizimi">sizimi</button>
-                <button class="btn" id="kanaria">Kanaria</button>
+                <div>
+                    Producer:
+                    <button class="btn" id="Wowaka">Wowaka</button>
+                    <button class="btn" id="Syudou">Syudou</button>
+                    <button class="btn" id="GigaP">GigaP</button>
+                    <button class="btn" id="Jin">Jin</button>
+                    <button class="btn" id="deco">DECO*27</button>
+                    <button class="btn" id="Hachi">Hachi</button>
+                    <button class="btn" id="Supercell">Supercell</button>
+                    <button class="btn" id="mitchie">Mitchie M</button>
+                    <button class="btn" id="PinocchioP">PinocchioP</button>
+                    <button class="btn" id="Nayutalien">Nayutalien</button>
+                    <button class="btn" id="Utsu-P">Utsu-P</button>
+                    <button class="btn" id="Doriko">Doriko</button>
+                    <button class="btn" id="UtataP">UtataP</button>
+                    <button class="btn" id="Kurousa-P">Kurousa-P</button>
+                    <button class="btn" id="rerulili">rerulili</button>
+                    <button class="btn" id="MASA">MASA</button>
+                    <button class="btn" id="Camellia">Camellia</button>
+                    <button class="btn" id="Maretu">Maretu</button>
+                    <button class="btn" id="KZ">KZ</button>
+                    <button class="btn" id="nekobolo">nekobolo</button>
+                    <button class="btn" id="powa">Powapowa-P</button>
+                    <button class="btn" id="bear">Kairiki Bear</button>
+                    <button class="btn" id="Mafumafu">Mafumafu</button>
+                    <button class="btn" id="sizimi">sizimi</button>
+                    <button class="btn" id="kanaria">Kanaria</button>
+                </div>
                         
-                <br>
-                Features other vocal synths:<button class="btn" id="Kaito">feat. Kaito</button> <button class="btn" id="Meiko">feat. Meiko</button> <button class="btn" id="rin">feat. Kagamine Rin</button> <button class="btn" id="len">feat. Kagamine Len</button> <button class="btn" id="luka">feat. Megurine Luka</button> <button class="btn" id="GUMI">feat. GUMI</button>
+                <div>
+                 Featuring:
+                    <button class="btn" id="rin">Kagamine Rin</button>
+                    <button class="btn" id="len">Kagamine Len</button>
+                    <button class="btn" id="Kaito">Kaito</button>
+                    <button class="btn" id="Meiko">Meiko</button>
+                    <button class="btn" id="luka">Megurine Luka</button>
+                    <button class="btn" id="GUMI">GUMI</button>
+                </div>
                 
-                <br>
-                Other:
-                <button class="btn" id="Classics">Classics</button>
-                <button class="btn" id="Favorites">Favorites</button>
-                <button class="btn" id="cover">Cover</button>
-                <button class="btn" id="Remix">Remix</button>
+                <div>
+                    Other:
+                    <button class="btn" id="Classics">Classics</button>
+                    <button class="btn" id="Favorites">Favorites</button>
+                    <button class="btn" id="cover">Cover</button>
+                    <button class="btn" id="Remix">Remix</button>
+                </div>
             </div>
         </div>
-        
-        <!--
-        risky game
-        sayoko
-        the song of the singer
-        scissorhands
-        cremation song
-        self-inflicted achromatic
 
-        -->
-        
         <div style="margin-top:10px"></div>
         <div class="contain">
             <!--- nothing atm --->
@@ -313,7 +315,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="kanaria">Kanaria</button> <button class="btn2" id="cover">Cover</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="kanaria">Kanaria</button> <button class="btn2" id="cover">Cover</button></div>
             </div>
             
             <div class="J-rock bear">
@@ -326,7 +328,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="bear">Kairiki Bear</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="bear">Kairiki Bear</button></div>
             </div>
             
             <div class="Metal Electronic Utsu-P">
@@ -339,7 +341,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="Metal">Metal</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="Utsu-P">Utsu-P</button></div>
+                <div class="tags">Tags: <button class="btn2" id="Metal">Metal</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="Utsu-P">Utsu-P</button></div>
             </div>
             
             <div class="J-pop PinocchioP">
@@ -352,7 +354,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="PinocchioP">PinocchioP</button> </div>
+                <div class="tags">Tags: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="PinocchioP">PinocchioP</button> </div>
             </div>
             
             <div class="J-rock Hachi">
@@ -365,7 +367,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Hachi">Hachi</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Hachi">Hachi</button></div>
             </div>
             
             <div class="Electronic nekobolo">
@@ -378,7 +380,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="nekobolo">nekobolo</button></div>
+                <div class="tags">Tags: <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="nekobolo">nekobolo</button></div>
             </div>
                  
             <div class="J-rock sizimi">
@@ -391,7 +393,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="sizimi">sizimi</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="sizimi">sizimi</button></div>
             </div>
             
             <div class="J-rock Metal Mafumafu">
@@ -404,7 +406,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Metal">Metal</button> <button class="btn2" id="Mafumafu">Mafumafu</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Metal">Metal</button> <button class="btn2" id="Mafumafu">Mafumafu</button></div>
             </div>
             
             <div class="J-rock Maretu Remix">
@@ -417,7 +419,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Maretu">Maretu</button> <button class="btn2" id="Remix">Remix</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Maretu">Maretu</button> <button class="btn2" id="Remix">Remix</button></div>
             </div>
             
             <div class="J-rock bear">
@@ -430,7 +432,7 @@
                         </div>
                     </a>
                 </div> 
-                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="bear">Kairiki Bear</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="bear">Kairiki Bear</button></div>
             </div>
             
             <div class="J-rock Electronic powa Remix">
@@ -443,7 +445,7 @@
                         </div>
                     </a>
                 </div> 
-                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="powa">Powapowa-P</button> <button class="btn2" id="Remix">Remix</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="powa">Powapowa-P</button> <button class="btn2" id="Remix">Remix</button></div>
             </div>
             
             <div class="J-rock Electronic nekobolo">
@@ -456,7 +458,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="nekobolo">nekobolo</button> </div>
+                <div class="tags">Tags: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="nekobolo">nekobolo</button> </div>
             </div>
             
             <div class="Metal Utsu-P rin GUMI Favorites">
@@ -469,7 +471,7 @@
                         </div>
                     </a>
                 </div> 
-                <div class="tags">Tagged under:<button class="btn2" id="Metal">Metal</button> <button class="btn2" id="Utsu-P">Utsu-P</button> <button class="btn2" id="rin">feat. Kagamine Rin</button> <button class="btn2" id="GUMI">feat. GUMI</button> <button class="btn2" id="Favorites">Favorites</button></div>
+                <div class="tags">Tags: <button class="btn2" id="Metal">Metal</button> <button class="btn2" id="Utsu-P">Utsu-P</button> <button class="btn2" id="rin">feat. Kagamine Rin</button> <button class="btn2" id="GUMI">feat. GUMI</button> <button class="btn2" id="Favorites">Favorites</button></div>
             </div>
             
             <div class="J-pop Electronic KZ">
@@ -482,7 +484,7 @@
                         </div>
                     </a>
                 </div>   
-                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="KZ">KZ</button> </div>
+                <div class="tags">Tags: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="KZ">KZ</button> </div>
             </div>
             
             <div class="J-pop J-rock deco">
@@ -495,7 +497,7 @@
                         </div>
                     </a>
                 </div>   
-                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="deco">DECO*27</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="deco">DECO*27</button></div>
             </div>
             
             <div class="J-rock Maretu">
@@ -508,7 +510,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Maretu">Maretu</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Maretu">Maretu</button></div>
             </div>
             
             <div class="Electronic Camellia">
@@ -521,7 +523,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="Camellia">Camellia</button></div>
+                <div class="tags">Tags: <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="Camellia">Camellia</button></div>
             </div>
             
             <div class="J-pop Electronic GigaP rin">
@@ -534,7 +536,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="GigaP">GigaP</button> <button class="btn2" id="rin">feat. Kagamine Rin</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="GigaP">GigaP</button> <button class="btn2" id="rin">feat. Kagamine Rin</button></div>
             </div>
             
             <div class="J-pop J-rock Supercell Classics">
@@ -547,7 +549,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Supercell">Supercell</button> <button class="btn2" id="Classics">Classics</button>  </div>
+                <div class="tags">Tags: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Supercell">Supercell</button> <button class="btn2" id="Classics">Classics</button>  </div>
             </div>
             
             <div class="J-pop J-rock Electronic Wowaka Classics">
@@ -560,7 +562,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="Wowaka">Wowaka</button> <button class="btn2" id="Classics">Classics</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="Wowaka">Wowaka</button> <button class="btn2" id="Classics">Classics</button></div>
             </div>
             
             <div class="Folk MASA">
@@ -573,7 +575,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="Folk">Folk</button> <button class="btn2" id="MASA">MASA</button></div>
+                <div class="tags">Tags: <button class="btn2" id="Folk">Folk</button> <button class="btn2" id="MASA">MASA</button></div>
             </div>
             
             <div class="J-pop PinocchioP">
@@ -586,7 +588,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="PinocchioP">PinocchioP</button> </div>
+                <div class="tags">Tags: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="PinocchioP">PinocchioP</button> </div>
             </div>
             
             <div class="Electronic Jazz rerulili GUMI Favorites">
@@ -599,7 +601,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="Jazz">Jazz</button> <button class="btn2" id="rerulili">rerulili</button> <button class="btn2" id="GUMI">feat. GUMI</button> <button class="btn2" id="Favorites">Favorites</button>
+                <div class="tags">Tags: <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="Jazz">Jazz</button> <button class="btn2" id="rerulili">rerulili</button> <button class="btn2" id="GUMI">feat. GUMI</button> <button class="btn2" id="Favorites">Favorites</button>
                 </div> 
             </div>
             
@@ -613,7 +615,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="mitchie">Mitchie M</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="mitchie">Mitchie M</button></div>
             </div>
             
             <div class="J-pop J-rock deco Classics">
@@ -626,7 +628,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="deco">DECO*27</button> <button class="btn2" id="Classics">Classics</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="deco">DECO*27</button> <button class="btn2" id="Classics">Classics</button></div>
             </div>
             
             <div class="J-pop J-rock Folk Kurousa-P Classics">
@@ -639,7 +641,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Folk">Folk</button> <button class="btn2" id="Kurousa-P">Kurousa-P</button> <button class="btn2" id="Classics">Classics</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Folk">Folk</button> <button class="btn2" id="Kurousa-P">Kurousa-P</button> <button class="btn2" id="Classics">Classics</button></div>
             </div>
             
             <div class="J-rock Electronic UtataP Favorites">
@@ -652,7 +654,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="UtataP">UtataP</button> <button class="btn2" id="Favorites">Favorites</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="UtataP">UtataP</button> <button class="btn2" id="Favorites">Favorites</button></div>
             </div>
             
             <div class="J-rock Wowaka Classics Favorites">
@@ -665,7 +667,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Wowaka">Wowaka</button> <button class="btn2" id="Classics">Classics</button> <button class="btn2" id="Favorites">Favorites</button></div> 
+                <div class="tags">Tags: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Wowaka">Wowaka</button> <button class="btn2" id="Classics">Classics</button> <button class="btn2" id="Favorites">Favorites</button></div>
             </div>
             
             <div class="Metal Utsu-P">
@@ -678,7 +680,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="Metal">Metal</button> <button class="btn2" id="Utsu-P">Utsu-P</button></div> 
+                <div class="tags">Tags: <button class="btn2" id="Metal">Metal</button> <button class="btn2" id="Utsu-P">Utsu-P</button></div>
             </div>
             
             <div class="J-pop J-rock Doriko Classics Favorites">
@@ -691,7 +693,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Doriko">Doriko</button> <button class="btn2" id="Classics">Classics</button> <button class="btn2" id="Favorites">Favorites</button> </div>
+                <div class="tags">Tags: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Doriko">Doriko</button> <button class="btn2" id="Classics">Classics</button> <button class="btn2" id="Favorites">Favorites</button> </div>
             </div>
             
             <div class="J-rock Syudou Favorites">
@@ -704,7 +706,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Syudou">Syudou</button> <button class="btn2" id="Favorites">Favorites</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Syudou">Syudou</button> <button class="btn2" id="Favorites">Favorites</button></div>
             </div>
             
             <div class="J-rock Hachi GUMI Classics">
@@ -717,7 +719,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Hachi">Hachi</button> <button class="btn2" id="GUMI">feat. GUMI</button> <button class="btn2" id="Classics">Classics</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Hachi">Hachi</button> <button class="btn2" id="GUMI">feat. GUMI</button> <button class="btn2" id="Classics">Classics</button></div>
             </div>
             
             <div class="J-rock Metal Utsu-P">
@@ -730,7 +732,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Metal">Metal</button> <button class="btn2" id="Utsu-P">Utsu-P</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Metal">Metal</button> <button class="btn2" id="Utsu-P">Utsu-P</button></div>
             </div>
             
             <div class="J-pop J-rock Nayutalien">
@@ -743,7 +745,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Nayutalien">Nayutalien</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Nayutalien">Nayutalien</button></div>
             </div>
             
             <div class=" J-pop J-rock Supercell Classics Favorites">
@@ -756,7 +758,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> 
+                <div class="tags">Tags: <button class="btn2" id="J-pop">J-pop</button>
                 <button class="btn2" id="J-rock">J-rock</button> 
                 <button class="btn2" id="Supercell">Supercell</button> <button class="btn2" id="Classics">Classics</button> <button class="btn2" id="Favorites">Favorites</button></div>
             </div>
@@ -771,7 +773,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Jin">Jin</button> <button class="btn2" id="Remix">Remix</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Jin">Jin</button> <button class="btn2" id="Remix">Remix</button></div>
             </div>
             
             <div class=" J-rock deco">
@@ -783,7 +785,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="deco">DECO*27</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="deco">DECO*27</button></div>
             </div>
             
             <div class=" J-rock PinocchioP Favorites">
@@ -795,7 +797,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="PinocchioP">PinocchioP</button> <button class="btn2" id="Favorites">Favorites</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="PinocchioP">PinocchioP</button> <button class="btn2" id="Favorites">Favorites</button></div>
             </div>
 
             <div class=" J-pop J-rock Wowaka">
@@ -808,7 +810,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Wowaka">Wowaka</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Wowaka">Wowaka</button></div>
             </div>
 
             <div class=" Folk J-rock Hachi Classics">
@@ -821,7 +823,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="Folk">Folk</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Hachi">Hachi</button> <button class="btn2" id="Classics">Classics</button></div>
+                <div class="tags">Tags: <button class="btn2" id="Folk">Folk</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Hachi">Hachi</button> <button class="btn2" id="Classics">Classics</button></div>
             </div>
 
             <div class="Electronic mitchie Kaito">
@@ -834,7 +836,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="mitchie">Mitchie M</button> <button class="btn2" id="Kaito">feat. Kaito</button></div>
+                <div class="tags">Tags: <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="mitchie">Mitchie M</button> <button class="btn2" id="Kaito">feat. Kaito</button></div>
             </div>
 
             <div class=" J-rock Metal Supercell Classics Favorites">
@@ -846,7 +848,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Metal">Metal</button> <button class="btn2" id="Supercell">Supercell</button> <button class="btn2" id="Classics">Classics</button> <button class="btn2" id="Favorites">Favorites</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Metal">Metal</button> <button class="btn2" id="Supercell">Supercell</button> <button class="btn2" id="Classics">Classics</button> <button class="btn2" id="Favorites">Favorites</button></div>
             </div>
 
             <div class=" J-rock Wowaka luka Classics Favorites">
@@ -859,7 +861,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Wowaka">Wowaka</button> <button class="btn2" id="luka">feat. Megurine Luka</button> <button class="btn2" id="Classics">Classics</button> <button class="btn2" id="Favorites">Favorites</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Wowaka">Wowaka</button> <button class="btn2" id="luka">feat. Megurine Luka</button> <button class="btn2" id="Classics">Classics</button> <button class="btn2" id="Favorites">Favorites</button></div>
             </div>
 
             <div class=" J-rock hiphop Hachi">
@@ -871,7 +873,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="hiphop">Hip-hop</button> <button class="btn2" id="Hachi">Hachi</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="hiphop">Hip-hop</button> <button class="btn2" id="Hachi">Hachi</button></div>
             </div>
 
             <div class=" J-rock hiphop Syudou Favorites">
@@ -884,7 +886,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="hiphop">Hip-hop</button> <button class="btn2" id="Syudou">Syudou</button> <button class="btn2" id="Favorites">Favorites</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="hiphop">Hip-hop</button> <button class="btn2" id="Syudou">Syudou</button> <button class="btn2" id="Favorites">Favorites</button></div>
             </div>
 
             <div class=" J-rock Jin Favorites">
@@ -897,7 +899,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Jin">Jin</button> <button class="btn2" id="Favorites">Favorites</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Jin">Jin</button> <button class="btn2" id="Favorites">Favorites</button></div>
             </div>
 
             <div class="J-pop J-rock deco">
@@ -909,7 +911,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="deco">DECO*27</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="deco">DECO*27</button></div>
             </div>
 
             <div class=" J-pop J-rock Jin">
@@ -921,7 +923,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Jin">Jin</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-pop">J-pop</button> <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Jin">Jin</button></div>
             </div>
 
             <div class=" Electronic GigaP">
@@ -933,7 +935,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="GigaP">GigaP</button></div>
+                <div class="tags">Tags: <button class="btn2" id="Electronic">Electronic</button> <button class="btn2" id="GigaP">GigaP</button></div>
             </div>
 
             <div class=" J-rock Wowaka Classics Favorites">
@@ -945,7 +947,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Wowaka">Wowaka</button> <button class="btn2" id="Classics">Classics</button> <button class="btn2" id="Favorites">Favorites</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Wowaka">Wowaka</button> <button class="btn2" id="Classics">Classics</button> <button class="btn2" id="Favorites">Favorites</button></div>
             </div>
 
             <div class=" J-rock Syudou Favorites">
@@ -957,7 +959,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="tags">Tagged under:<button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Syudou">Syudou</button> <button class="btn2" id="Favorites">Favorites</button></div>
+                <div class="tags">Tags: <button class="btn2" id="J-rock">J-rock</button> <button class="btn2" id="Syudou">Syudou</button> <button class="btn2" id="Favorites">Favorites</button></div>
             </div>
         </div>
         
@@ -976,8 +978,6 @@
               }
               $btns.removeClass('active');
               $(this).addClass('active');
-             
-           
         });
             
         var $btns2 = $('.btn2').click(function(){
