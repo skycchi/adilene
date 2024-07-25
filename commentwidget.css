@@ -55,10 +55,11 @@ button:hover, #c_submitButton:hover{
 #c_widget{
     box-sizing:border-box;
     height:100%;
-    overflow:auto;
-    padding:10px;
+    overflow:hidden;
     color:black;
     font-family:Pixel Operator;
+    display:flex;
+    flex-direction:column;
 }
 
 #c_widget button, #c_widget input[type=submit]{
@@ -88,10 +89,15 @@ button:hover, #c_submitButton:hover{
     
 }
 
+#c_container{
+    height:100%;
+    overflow:auto;
+}
+
 #c_inputDiv{
-    margin-bottom:10px;
+    height:auto;
     padding:10px;
-    border:var(--bw) var(--bt) var(--bc);
+    border-top:var(--bw) var(--bt) var(--bc);
 }
 
 #c_widgetTitle{
@@ -145,7 +151,7 @@ button:hover, #c_submitButton:hover{
     display:flex;
     flex-direction:column;
     gap:10px;
-    margin-top:10px;
+    margin:10px;
     padding:10px;
     background-color:var(--h);
 }
@@ -213,7 +219,7 @@ input{
 
 #c_pagination{
     text-align:center;
-    margin:10px 0px 0px 0px;
+    margin:10px;
     display:flex;
     justify-content:space-between;
     

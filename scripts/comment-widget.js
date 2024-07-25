@@ -39,7 +39,6 @@ const s_includeUrlParameters = false; // Makes new comment sections on pages wit
 const s_wordFilterOn = false; // True for on, false for off
 const s_filterReplacement = '****'; // Change what filtered words are censored with (**** is the default)
 const s_filteredWords = [ // Add words to filter by putting them in quotes and separating with commas (ie. 'heck', 'dang')
-    'heck', 'dang'
 ]
 
 // Text - Change what messages/text appear on the form and in the comments section (Mostly self explanatory)
@@ -75,10 +74,10 @@ document.getElementsByTagName('head')[0].appendChild(c_cssLink);
 
 // HTML Form
 const v_mainHtml = `
+    <div id="c_container">${s_loadingText}</div>
     <div id="c_inputDiv">
         <form id="c_form" onsubmit="c_submitButton.disabled = true;v_submitted = true;" method="post" target="c_hiddenIframe" action="https://docs.google.com/forms/d/e/${s_formId}/formResponse"></form>
     </div>
-    <div id="c_container">${s_loadingText}</div>
 `;
 const v_formHtml = `
     <h2 id="c_widgetTitle">${s_widgetTitle}</h2>
@@ -160,7 +159,7 @@ function clear(){
 
 
 let c_hiddenIframe = document.createElement('iframe');
-c_hiddenIframe.id = 'c_hiddenIframe'; c_hiddenIframe.name = 'c_hiddenIframe'; c_hiddenIframe.style.display = 'none'; c_hiddenIframe.setAttribute('onload', 'if(v_submitted){fixFrame()}');
+c_hiddenIframe.id = 'c_hiddenIframe'; c_hiddenIframe.name = 'c_hiddenIframe'; c_hiddenIframe.style.display = 'none'; c_hiddenIframe.setAttribute('onload', 'if(v_submitted){fixFrame();$("#c_container").animate({ scrollTop: 0 }, "fast");}');
 c_form.appendChild(c_hiddenIframe);
 c_hiddenIframe = document.getElementById('c_hiddenIframe');
 
@@ -472,6 +471,8 @@ function changePage(dir){
         a_commentDivs[i].style.display = 'none';
         if (i >= v_commentMin && i < v_commentMax){a_commentDivs[i].style.display = 'block'}
     }
+
+    $("#c_container").animate({ scrollTop: 0 }, "fast");
 }
 
 getComments(); // Run once on page load
