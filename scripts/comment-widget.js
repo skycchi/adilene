@@ -92,16 +92,13 @@ const v_formHtml = `
         </div>
     </div>
 
-    <div class="c_wrap">
-        <div id="c_textWrapper" class="c-inputWrapper">
-            <input class="c-input c-textInput" placeholder="Comment" name="entry.${s_textId}" id="entry.${s_textId}" maxlength="${s_maxLength}" required>
-        </div>
-
-        <div style="display:flex;justify-content:center;">
-            <input type="submit" id="c_submitButton" name="c_submitButton" value="${s_submitButtonLabel}" disabled onclick="clear();">
-        </div>
+    <div id="c_textWrapper" class="c-inputWrapper">
+        <textarea class="c-input c-textInput" placeholder="Comment" name="entry.${s_textId}" id="entry.${s_textId}" maxlength="${s_maxLength}" rows="3" required></textarea>
     </div>
 
+    <div style="display:flex;justify-content:center;">
+        <input type="submit" id="c_submitButton" name="c_submitButton" value="${s_submitButtonLabel}" disabled onclick="clear();">
+    </div>
 `;
 
 
