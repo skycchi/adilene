@@ -140,9 +140,10 @@
 
                     <div class="inner" style="display:flex; flex-direction:column; justify-content:space-between; height:100%; text-align:center; color:var(--color);">
                         <div id="root">...</div>
+                        <div>Views: <span id="viewcount"></span></div>
                         <div>Hits: <span id="hitcount"></span></div>
                         <div>Last Updated: <span id="lastupdated"></span></div>
-                        <img src="https://files.catbox.moe/ctl9r4.png" style="margin:auto; margin-top:5px;" draggable="false">
+                        <img src="https://files.catbox.moe/ctl9r4.png" style="margin:auto; margin-top:6px;" draggable="false">
                     </div>
                 </div>
 
@@ -186,7 +187,8 @@
 
                                 <div class="volume">
                                     <div style="margin-right:5px;">Volume</div>
-                                    <input type="range" min="1" max="100" value="20" class="volume_slider" onchange="setVolume()">
+                                    <input type="range" min="1" max="100" value="25" class="volume_slider" onchange="setVolume()">
+
                                 </div>
                             </div>
 
@@ -227,7 +229,15 @@
                         num_str += num_arr[i];
                         if ( (num_arr.length-1 - i) % 3 == 0 && (num_arr.length-1 - i) != 0 ){num_str += ",";}
                     }
-                    document.getElementById("hitcount").innerHTML = num_str;
+                    document.getElementById("viewcount").innerHTML = num_str;
+
+                    var num_arr2 = site_data.info.hits.toString().split("");
+                    var num_str2 = "";
+                    for (i = 0; i < num_arr2.length; i++){
+                        num_str2 += num_arr2[i];
+                        if ( (num_arr2.length-1 - i) % 3 == 0 && (num_arr2.length-1 - i) != 0 ){num_str2 += ",";}
+                    }
+                    document.getElementById("hitcount").innerHTML = num_str2;
                 }
             };
             http.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=adilene", true);

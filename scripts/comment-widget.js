@@ -101,6 +101,7 @@ const v_formHtml = `
             <input type="submit" id="c_submitButton" name="c_submitButton" value="${s_submitButtonLabel}" disabled onclick="clear();">
         </div>
     </div>
+
 `;
 
 

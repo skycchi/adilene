@@ -139,6 +139,7 @@ button:hover, #c_submitButton:hover{
 }
 
 #c_submitButton{
+    width:100%;
 }
 
 #c_replyingText{
