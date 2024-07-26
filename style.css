@@ -556,23 +556,24 @@ input[type="text"]:focus:hover{
 
 @media only screen and (max-width:1000px){
     .virtualdiva{
-        font-size:60px;
+        font-size:55px;
+    }
+
+    .main{
+        height:500px;
     }
     
     .container{  
         display:flex;
         flex-direction:column; 
     }
-    
-    .updates{
-        display:none;
-    }
 
     #mikuheader{
         height:155px;
     }
     
-    #chatbox{
-        height:400px;
+    #c_widget{
+        height:450px !important;
     }
+
 }
