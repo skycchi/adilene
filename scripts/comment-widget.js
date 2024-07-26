@@ -82,24 +82,25 @@ const v_mainHtml = `
 const v_formHtml = `
     <h2 id="c_widgetTitle">${s_widgetTitle}</h2>
 
-    <div id="c_nameWrapper" class="c-inputWrapper">
-        <input class="c-input c-nameInput" placeholder="Name" name="entry.${s_nameId}" id="entry.${s_nameId}" maxlength="${s_maxLengthName}" required>
+    <div class="c_wrap">
+        <div id="c_nameWrapper" class="c-inputWrapper">
+            <input class="c-input c-nameInput" placeholder="Name" name="entry.${s_nameId}" id="entry.${s_nameId}" maxlength="${s_maxLengthName}" required>
+        </div>
+
+        <div id="c_websiteWrapper" class="c-inputWrapper">
+            <input class="c-input c-websiteInput" placeholder="Site URL" name="entry.${s_websiteId}" id="entry.${s_websiteId}" type="url" pattern="https://.*">
+        </div>
     </div>
 
+    <div class="c_wrap">
+        <div id="c_textWrapper" class="c-inputWrapper">
+            <input class="c-input c-textInput" placeholder="Comment" name="entry.${s_textId}" id="entry.${s_textId}" maxlength="${s_maxLength}" required>
+        </div>
 
-    <div id="c_textWrapper" class="c-inputWrapper">
-        <input class="c-input c-textInput" placeholder="Comment" name="entry.${s_textId}" id="entry.${s_textId}" maxlength="${s_maxLength}" required>
+        <div style="display:flex;justify-content:center;">
+            <input type="submit" id="c_submitButton" name="c_submitButton" value="${s_submitButtonLabel}" disabled onclick="clear();">
+        </div>
     </div>
-    
-<div class="c_wrap">
-    
-
-<div id="c_websiteWrapper" class="c-inputWrapper">
-        <input class="c-input c-websiteInput" placeholder="Website URL" name="entry.${s_websiteId}" id="entry.${s_websiteId}" type="url" pattern="https://.*">
-    </div>
-
-    <div style="display:flex;justify-content:center;"><input type="submit" id="c_submitButton" name="c_submitButton" value="${s_submitButtonLabel}" disabled onclick="clear();"></div>
-</div>
 `;
 
 

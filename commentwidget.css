@@ -12,8 +12,6 @@
     --pink:#e74492;
     --bt:solid;
     --color:#000;
-    --marginleft:-120px;
-    --bgimg:url(mikuheader.png);
     --display:flex;
 }
 
@@ -86,7 +84,8 @@ button:hover, #c_submitButton:hover{
 }
 
 #c_widget button:disabled:hover, #c_widget input[type=submit]:disabled:hover{
-    
+    background-color:var(--h);
+    color:var(--pink);
 }
 
 #c_container{
@@ -210,6 +209,7 @@ button:hover, #c_submitButton:hover{
     margin:0;
     font-family:'Pixel Operator';
     color:black;
+    word-wrap:break-word;
 }
 
 input{
@@ -222,7 +222,6 @@ input{
     margin:10px;
     display:flex;
     justify-content:space-between;
-    
 }
 
 #c_pageNumber{
