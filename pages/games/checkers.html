@@ -102,7 +102,8 @@
 
     #board{
         height:458px;
-        width:458;
+        width:100%;
+        max-width:500px;
         margin:0;
         display:flex;
         align-items:center;
@@ -262,9 +263,11 @@
     }
     </style>
     <body style="text-align:center">
-        <header >CHECKERS</header>
-        <div style="display:flex; flex-direction:column; gap:10px;">
+        <header>CHECKERS</header>
         <div style="text-align:center">Directions:Move the white pieces and capture the black pieces.</div>
+        <br>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+
         <div id="log" style="display:none"></div>
         <div id="board" style="margin:auto;">
         <div class="tiles"></div>

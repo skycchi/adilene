@@ -133,18 +133,19 @@
     </style>
     <body>
         <header style="text-align:center;">SUDOKU</header>
+        <div style="text-align:center;">Directions: Use the keyboard to fill in the grid.</div>
+        <br>
         <div style="display:flex; flex-direction:column; gap:10px; width:fit-content; margin:auto; align-items:center;">
-            Directions: Use the keyboard to fill in the grid.
             <div id="wrap">
                 <div class='sudoku-board'></div>
             </div>
             <div style="display:flex; flex-direction:column; gap:10px; align-items:center;">
-                <span>
+                <span style="display:flex; gap:10px;">
                     <button onclick="location.reload();">New Game</button>
                     <button onclick="mySudokuJS.solveStep();">Hint</button>
                     <button onclick="mySudokuJS.solveAll();">Solve</button>
                 </span>
-                <span>Difficulty
+                <span style="display:flex; gap:10px;">
                     <button onclick="mySudokuJS.generateBoard('easy');">Easy</button>
                     <button onclick="mySudokuJS.generateBoard('medium');">Medium</button>
                     <button onclick="mySudokuJS.generateBoard('hard');">Hard</button>

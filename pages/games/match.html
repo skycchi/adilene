@@ -23,6 +23,7 @@
 
         #wrapper{
             display:flex;
+            margin:0;
         }
 
         .memory-game{
@@ -83,6 +84,7 @@
         <header style='text-align:center;'>MIKU MATCH</header>
         <div style="display:flex; gap:10px; justify-content:center; flex-direction:column; align-items:center; padding-bottom:10px;">
             <div style="text-align:center;">Directions:Click on any card to flip it over. Try matching all of the cards!</div>
+            <br>
             <div id="wrapper">
                 <section class="memory-game" style="height:100%">
                     <div class="memory-card" data-framework="miku">
@@ -139,7 +141,6 @@
                 </section>
                 <script src="/scripts/memory.js"></script>
             </div>
-
 
             <button onclick="location.reload();">New Game</button>
             <div>Source code: <a href="https://github.com/code-sketch/memory-game" target="_blank">Github</a></div>
