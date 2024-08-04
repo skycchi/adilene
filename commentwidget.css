@@ -1,86 +1,12 @@
-@font-face{
-    font-family:'Pixel Operator';
-    src:url(https://files.catbox.moe/kyguk9.ttf);
-}
-
-:root{
-    --b:white; /* container bgs */
-    --bw:3px; /* border width */
-    --bc:#34f2ff; /* border color */
-    --bcc:#34f2ff; /* border color outset */
-    --h:#dbfcff; /* header bgs */
-    --pink:#e74492;
-    --bt:solid;
-    --color:#000;
-    --display:flex;
-}
-
-a{
-    text-decoration:none;
-    color:var(--pink);
-    text-shadow:2px 2px 1px var(--bc);
-    transition:0.3s;
-}
-
-a:hover{
-    letter-spacing:2px;
-    color:var(--pink);
-}
-
-button, #c_submitButton{
-    border:var(--bw) var(--bt) var(--bc);
-    outline:none;
-    padding:5px 8px;
-    background-color:var(--h);
-    font-family:'Pixel Operator';
-    font-size:16px;
-    margin:2px 0px;
-    transition:0.2s;
-    color:var(--pink);
-    min-width:84px;
-}
-
-button:disabled, #c_submitButton:disabled{
-    opacity:0.5;
-}
-
-button:hover, #c_submitButton:hover{
-    background-color:var(--pink);
-    color:white;
-    transition:0.2s;
-}
-
 #c_widget{
     box-sizing:border-box;
     height:100%;
     overflow:hidden;
     color:black;
-    font-family:Pixel Operator;
+    font-family:var(--font);
     display:flex;
     flex-direction:column;
-}
-
-#c_widget button, #c_widget input[type=submit]{
-	border:var(--bw) var(--bt) var(--bc);
-    outline:none;
-    padding:5px 8px;
-    background-color:var(--h);
-    font-family:'Pixel Operator';
-    font-size:16px;
-    margin:2px 0px;
-    transition:0.2s;
-    color:var(--pink);
-    min-width:84px;
-}
-
-#c_widget button:hover, #c_widget input[type=submit]:hover{
-    background-color:var(--pink);
-    color:white;
-    transition:0.2s;
-}
-
-#c_widget button:disabled, #c_widget input[type=submit]:disabled{
-    opacity:60%;
+    border-top:var(--bw) var(--bt) var(--bc);
 }
 
 #c_widget button:disabled:hover, #c_widget input[type=submit]:disabled:hover{
@@ -133,8 +59,8 @@ button:hover, #c_submitButton:hover{
     width:calc(100%);
     max-width:900px;
     resize:none;
-    font-family:'Pixel Operator';
-    font-size:18px;
+    font-family:var(--font);
+    font-size:var(--size);
     display:block;
 }
 
@@ -154,6 +80,7 @@ button:hover, #c_submitButton:hover{
     margin:10px;
     padding:10px;
     background-color:var(--h);
+    text-align:left; 
 }
 
 .c-reply{
@@ -181,41 +108,26 @@ button:hover, #c_submitButton:hover{
 }
 
 .c-name{
-    display:inline-block;
     margin:0;
-    margin-right:10px;
-    padding:0;
-    font-weight:normal;
-    font-size:20px;
-    color:var(--pink);
-    text-shadow:2px 2px 1px var(--bc);
-}
-
-.c-site{
-    text-decoration:none;
-    color:var(--pink);
-
-}
-
-.c-site:hover{
-    color:var(--pink);
+    font-size:var(--size);
+    font-weight:bold;
 }
 
 .c-timestamp{
     opacity:100%;
-    font-size:15px;
+    font-size:12px;
 }
 
 .c-text{
     margin:0;
-    font-family:'Pixel Operator';
+    font-family:var(--font);
     color:black;
     word-wrap:break-word;
 }
 
 input{
-    font-family:'Pixel Operator';
-    font-size:18px;
+    font-family:var(--font);
+    font-size:var(--size);
 }
 
 #c_pagination{
@@ -228,20 +140,6 @@ input{
 #c_pageNumber{
     display:flex;
     align-items:center;
-}
-
-.c-replyButton{
-    margin-top:10px;
-    
-}
-
-.c-expandButton{
-    margin-top:10px;
-    
-}
-
-.c-paginationButton{
-    
 }
 
 .c_wrap{

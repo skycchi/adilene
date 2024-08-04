@@ -4,12 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=0.6">
         <title>ERROR 404</title>
-        <link rel="shortcut icon" href="https://adilene.neocities.org/images/error.gif">
+        <link rel="shortcut icon" href="/images/error.gif">
         <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     </head>
     <style>
         body{
             background-color:#020183;
+            background-image:none;
             text-align:left;
             margin:auto; 
             padding:10px;
@@ -27,8 +28,10 @@
         }
     </style>
     <body>
+        <div class="lines"></div>
+        
         <audio autoplay id="leek">
-            <source src="https://adilene.neocities.org/music/Ievan%20Polkka.mp3">
+            <source src="/music/Ievan%20Polkka.mp3">
         </audio>
 
         <div id="message">
@@ -40,11 +43,11 @@
             Technical Information:<br><br>
             *** STOP: 0x000000C1 (0x61AF2FF8, 0xEDCCAEBE, 0xB663BAE9, 0x8E2DF694)
         </div>
+        
         <div class="error">
-            <img src="https://adilene.neocities.org/images/hachunehd.gif">
+            <img src="/images/hachunehd.gif">
         </div>
 
-      
         <script>
             var audio = document.getElementById("leek");
             audio.onended = function(){

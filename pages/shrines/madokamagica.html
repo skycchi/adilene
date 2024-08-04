@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="https://adilene.neocities.org/images//pmmm/f1942355.gif">
+        <link rel="shortcut icon" href="/images/pmmm/f1942355.gif">
         <title>magica.</title>
         <script src="https://kit.fontawesome.com/f936906ae0.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -19,13 +19,12 @@
             overflow:hidden;
             text-shadow:rgb(255, 255, 255) 3px 0px 0px, rgb(255, 255, 255) 2.83487px 0.981584px 0px, rgb(255, 255, 255) 2.35766px 1.85511px 0px, rgb(255, 255, 255) 1.62091px 2.52441px 0px, rgb(255, 255, 255) 0.705713px 2.91581px 0px, rgb(255, 255, 255) -0.287171px 2.98622px 0px, rgb(255, 255, 255) -1.24844px 2.72789px 0px, rgb(255, 255, 255) -2.07227px 2.16926px 0px, rgb(255, 255, 255) -2.66798px 1.37182px 0px, rgb(255, 255, 255) -2.96998px 0.42336px 0px, rgb(255, 255, 255) -2.94502px -0.571704px 0px, rgb(255, 255, 255) -2.59586px -1.50383px 0px, rgb(255, 255, 255) -1.96093px -2.27041px 0px, rgb(255, 255, 255) -1.11013px -2.78704px 0px, rgb(255, 255, 255) -0.137119px -2.99686px 0px, rgb(255, 255, 255) 0.850987px -2.87677px 0px, rgb(255, 255, 255) 1.74541px -2.43999px 0px, rgb(255, 255, 255) 2.44769px -1.73459px 0px, rgb(255, 255, 255) 2.88051px -0.838247px 0px;
             background-color:#fbcecd;
-            background-image:url("https://adilene.neocities.org/images/pmmm/background.jpeg");
+            background-image:url("/images/pmmm/background.jpeg");
         }
         
         #wrapper{
             display:flex;
             height:100vh;
-            
         }
         
         .left, .right{
@@ -157,16 +156,14 @@
     </style>
     <body onclick="clicksound.playclip()">
         <audio autoplay loop id="musicbox">
-            <source src="https://files.catbox.moe/5snybp.mp3">
+            <source src="/music/pmmm.mp3">
         </audio>
-        
-        
-        
+ 
         <div id="wrapper">
             <div class="left">
                 <div style="position:absolute;top:0;left:0;display:flex;align-items:center;gap:10px;">
                     <div class="circle">
-                        <img src="https://files.catbox.moe/d2po2k.png">
+                        <img src="/images/pmmm/kyubey.png">
                     </div>
                     <div class="hearts"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i></div> 
                 </div>
@@ -174,7 +171,7 @@
                 <div class="content">
                     
                     <div class="magica">
-                        <img src="https://files.catbox.moe/eua3jl.png">
+                        <img src="/images/pmmm/madoka.png">
                     </div>
                     <div class="dialogue">
                         A gentle and friendly girl living an ordinary life. <span class="red">Madoka</span> has a loving family and is surrounded by good friends.
@@ -184,7 +181,7 @@
                 
                  <div class="content hidden">
                     <div class="magica">
-                        <img src="https://files.catbox.moe/89p2ng.png">
+                        <img src="/images/pmmm/homura.png">
                     </div>
                     <div class="dialogue">
                         A seemingly cold and antisocial girl, <span class="red">Homura</span> is first seen by Madoka in a dream of her fighting a monster.
@@ -193,7 +190,7 @@
                 
                 <div class="content hidden">
                     <div class="magica">
-                        <img src="https://files.catbox.moe/pvm4p2.png">
+                        <img src="/images/pmmm/sayaka.png">
                     </div>
                     <div class="dialogue">
                         She is Madoka's best friend. Tomboyish, confident, and a little brash, <span class="red">Sayaka</span> upholds a strong sense of justice.
@@ -202,7 +199,7 @@
                 
                 <div class="content hidden">
                     <div class="magica">
-                        <img src="https://files.catbox.moe/aq1idg.png">
+                        <img src="/images/pmmm/mami.png">
                     </div>
                     <div class="dialogue">
                         A magical girl who rescues Madoka and Sayaka from a witch. <span class="red">Mami</span> is a powerful and experienced veteran.
@@ -211,18 +208,18 @@
                 
                 <div class="content hidden">
                     <div class="magica">
-                        <img src="https://files.catbox.moe/ip3y9x.png">
+                        <img src="/images/pmmm/kyoko.png">
                     </div>
                     <div class="dialogue">
                         A veteran magical girl who is abrasive, fiery, and self-centered. <span class="red">Kyoko</span> fights only for herself.
                     </div>
                 </div>
                 
-                
                 <div style="position:absolute;left:0;right:0;text-align:center;width:80%;bottom:50px;animation:floating 0.5s infinite ease-in-out;color:#f08389;z-index:3;">
                     <i class="fas fa-heart"></i>
                 </div>
             </div>
+            
             <div class="right">
                 <div onmouseover="mouseoversound.playclip()" onclick="clicksound.playclip()">Save</div>
                 <div onmouseover="mouseoversound.playclip()" onclick="clicksound.playclip()">Load</div>
@@ -288,8 +285,8 @@
 
             //Initialize two sound clips with 1 fallback file each:
 
-            var mouseoversound=createsoundbite("https://a.tumblr.com/tumblr_ojrn7aGBii1w2e2oyo1.mp3")
-            var clicksound=createsoundbite("https://a.tumblr.com/tumblr_ojrmy55yUN1w2e2oyo1.mp3")
+            var mouseoversound=createsoundbite("/music/sounds/mouseover.mp3")
+            var clicksound=createsoundbite("/music/sounds/click.mp3")
 
         </script>
         

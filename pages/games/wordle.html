@@ -5,12 +5,15 @@
         <script src="https://cdn.jsdelivr.net/npm/less" ></script>
         <link href="/style.css" rel="stylesheet">
         <title>VIRTUAL DIVA</title>
-        <link rel="shortcut icon" href="https://files.catbox.moe/j2aivj.gif">
+        <link rel="shortcut icon" href="/images/bullet.gif">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <header style="text-align:center;">WORDLE</header>
-        <div style="text-align:center;">Directions:Use the keyboard or keys down below to guess a random five letter word. You have six tries to guess the correct word.</div>
-        <br>
+        <header>WORDLE</header>
+        <div><b>Directions:</b> Use the keyboard or keys down below to guess a random five letter word. You have six tries to guess the correct word.</div>
+        
+        <br><br>
+        
         <div style="text-align:center; display:flex; flex-direction:column; gap:10px;">
             <div id="game">
                 <div id="game-container"></div>
@@ -22,7 +25,7 @@
                 <button id="giveUpButton">Give Up</button>
             </div>
         
-            <div>Source code: <a href="https://codepen.io/jfledd/pen/ExwGqrz" target="_blank">Codepen</a></div>
+            <div><b>Source code:</b> <a href="https://codepen.io/jfledd/pen/ExwGqrz" target="_blank">Codepen</a></div>
         </div>
 
         <script src="/scripts/wordle.js"></script>

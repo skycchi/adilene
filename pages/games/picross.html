@@ -2,18 +2,17 @@
     <head>
         <link href="/style.css" rel="stylesheet">
         <title>VIRTUAL DIVA</title>
-        <link rel="shortcut icon" href="https://files.catbox.moe/j2aivj.gif">
-        
+        <link rel="shortcut icon" href="/images/bullet.gif">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <style>
-        
         table.nonogram.classic{
-            font-family:"Pixel Operator";
+            font-family:var(--font);
             background-color:white;
             border-spacing:0;
             border-collapse:collapse;
             empty-cells:show;
-            font-size:20px;
+            font-size:var(--size);
             margin:auto;
         }
 
@@ -50,7 +49,7 @@
             padding:0;
             width:30px;
             height:30px;
-            border:3px solid var(--bc);
+            border:var(--bw) solid var(--bc);
         }
 
         table.nonogram.classic tr.nonogram_separation_row td{
@@ -97,7 +96,7 @@
 
         /* employ */
         table.nonogram.classic td.nonogram_empty_cell{
-            background-image:url('https://adilene.neocities.org/images/empty_cell.gif');
+            background-image:url('/images/games/empty_cell.gif');
             background-repeat:no-repeat;
         }
 
@@ -105,52 +104,100 @@
         }
 
         table.nonogram.classic tr.nonogram_row:hover td.nonogram_empty_cell{
-            background-image:url('https://adilene.neocities.org/images/hovered_empty_cell.gif');
+            background-image:url('/images/games/hovered_empty_cell.gif');
             background-repeat:no-repeat;
         }
 
         table.nonogram.classic td.nonogram_empty_cell.nonogram_hovered_column{
-            background-image:url('https://adilene.neocities.org/images/hovered_empty_cell.gif');
+            background-image:url('/images/games/hovered_empty_cell.gif');
             background-repeat:no-repeat;
         }
         
         .controls{
             display:flex; 
             justify-content:center;
+            align-items:center;
             gap:0px 10px;
             margin-top:10px;
         }
         
         input{
-            font-family:'Pixel Operator';
+            font-family:var(--font);
             font-size:18px;
+        }
+        
+        label{
+            font-weight:bold
+        }
+        
+        #wrap{
+            display:flex;
+            justify-content:center;
+            align-items:center; 
+        }
+        
+        .message{
+            width:100%;
+            position:absolute;
+            will-change:opacity, visibility;
+            z-index:99999999;
+        }
+
+        .message.hide{
+            visibility:hidden;
+            opacity:0;
+            transition:visibility 0s linear 300ms, opacity 300ms;
+        }
+
+        .message.show{
+            visibility:visible;
+            opacity:1;
+            transition:visibility 0s linear 0s, opacity 300ms;
+        }
+
+        .text{
+            height:200px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+            color:white;
+            background:var(--pink);
+            letter-spacing:0.2rem;
+            margin:10px;
         }
         
     </style>
     <body style="text-align:center;">
-        <header>
-        PICROSS
-        </header>
+        <header>PICROSS</header>
         Nonograms, also known as Picross, are puzzles in which cells in a grid must be colored or left blank according to numbers at the side of the grid to reveal a hidden picture.<br><br>
-        Directions:The objective is to correctly fill in randomly chosen squares using the numbers on the top and sides. Click on any square to color it in. Click on any square twice to mark it with an x. Correctly filling in all of the squares will earn you a congratulations message!<br><br>
+        <b>Directions:</b> The objective is to correctly fill in randomly chosen squares using the numbers on the top and sides. Click on any square to color it in. Click on any square twice to mark it with an x.<br><br>
+        
+        <br>
+        
         <div id="demo">
-            <div id="nonogram"></div>
+            <div id="wrap">
+                <div id="nonogram"></div>
+            </div>
+            
             <div class="controls">
                 <div>
-                    <label for="width">Width</label>
+                    <label for="width">Width:</label>
                     <input id="width" type="number" value="5" min="2" max="10" />
                     </div>
                     <div>
-                    <label for="height">Height</label>
+                    <label for="height">Height:</label>
                     <input id="height" type="number" value="5" min="2" max="10" />
                     </div>
                     <div>
                 </div>
             </div>
+            
             <div class="controls">
-                <label for="difficulty_slider">Difficulty</label>
+                <label for="difficulty_slider">Difficulty:</label>
                 <input style="border:none; max-width:400px;" id="difficulty_slider" type="range" min="2" max="7" value="2"/>
             </div>
+            
             <div class="controls">
                 <div>
                     <button id="play">New Game</button>
@@ -164,11 +211,55 @@
             </div>
         </div>
         
-        <div style="margin-top:15px;">
-            Source code: <a href="https://github.com/DomenicoDeFelice/Pi-Nonograms" target="_blank">Github</a>
+        <div style="margin-top:10px;">
+            <b>Source code:</b> <a href="https://github.com/DomenicoDeFelice/Pi-Nonograms" target="_blank">Github</a>
         </div>
 
-    <script src="/scripts/picross.js"></script>
-        
+        <script>
+            function MessageDisplay(){
+                const element = document.createElement('div');
+                element.classList.add('message', 'hide');
+
+                const text = document.createElement('h4');
+                text.classList.add('text');
+                text.innerHTML = 'Solved! &acute;&#32;&xdtri;&#32;&grave;';
+
+                element.appendChild(text);
+
+                let isVisible = false;
+                const duration = 1000;
+
+                function show(value){
+                    if(isVisible) return;
+
+                    if(!(value && typeof value === 'string')) return;
+
+                    text.innerHTML = value;
+
+                    element.classList.remove('hide');
+                    element.classList.add('show');
+                    isVisible = true;
+
+                    setTimeout(hide, duration);
+                }
+
+                function hide(){
+                    element.classList.remove('show');
+                    element.classList.add('hide');
+                    isVisible = false;
+                }
+
+                console.log("solved");
+
+                return{
+                    element, 
+                    show
+                }
+            }
+
+            const message = MessageDisplay()
+            document.getElementById("wrap").appendChild(message.element);
+        </script>
+        <script src="/scripts/picross.js"></script>
     </body>
 </html>

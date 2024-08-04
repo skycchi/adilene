@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/style.css" rel="stylesheet">
+        <title>VIRTUAL DIVA</title>
+        <link rel="shortcut icon" href="/images/bullet.gif">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <script src="/scripts/dom-to-image.js"></script>
+        <script src="/scripts/fileSaver.js"></script>
+    </head>
+    <style>
+        :root{
+            --border:var(--bc);
+            --background:var(--h);
+            --filter:var(--bc);
+        }
+        
+        #quiz{
+            display:flex; 
+            flex-direction:column;
+            justify-content:center;
+            gap:10px;
+        }
+        
+        form{
+            text-align:left; 
+        }
+        
+        .question{
+            text-align:center; 
+            font-weight:bold;
+        }
+        
+        button{
+            width:fit-content;
+        }
+        
+        [ctr]{
+            margin:auto;
+            width:300px;
+            height:fit-content;
+            user-select:none;
+            pointer-events:none;
+        }
+        
+        [node]{
+            border:var(--bw) var(--bt) var(--border);
+            background-color:var(--background);
+            padding:10px;
+        }
+        
+        #flex{
+            display:flex;
+            justify-content:flex-start;
+            align-items:center; 
+            margin-bottom:12px;
+            height:100px;
+        }
+        
+        #flex > div > img{
+            width:100px;
+            height:fit-content;
+            border:var(--bw) var(--bt) var(--border);
+            padding:4px;
+            background-color:white;
+            display:block;
+        }
+        
+        #flex > div:nth-child(2){
+            padding:10px 0px 10px 10px;
+            display:flex;
+            justify-content:center;
+            align-content:center;
+            align-items:center;
+            width:100%;
+            height:100%;
+        }
+        
+        #link{
+            filter:drop-shadow(0 2px var(--filter)) drop-shadow( 2px 0 var(--filter)) drop-shadow( 0 -2px var(--filter)) drop-shadow(-2px 0 var(--filter));
+        }
+        
+        label{
+            display:flex;
+            align-items:center;
+            position:relative;
+        }
+        
+        label input{
+            opacity:0;
+            cursor:pointer;
+        }
+        
+        .checkmark{
+            position:absolute;
+            height:15px;
+            width:15px;
+            background-color:var(--bc);
+            border-radius:50%;
+        }
+        
+        label:hover input ~ .checkmark {
+            background-color:var(--pink);
+        }
+
+        label input:checked ~ .checkmark {
+            background-color:var(--pink);
+        }
+    </style>
+    <body>
+        <!-- personalities
+
+        miku: sweet, cute, bright, happy, kind, friendly, childish
+        rin: brash, loud, excitable, bright, silly, childish, stubborn
+        len: shy, responsible, calm, childish
+        luka: smart, shy, kind, calm
+        meiko: strong, chill, stubborn, brash, loud
+        kaito: kind, friendly, bright, silly
+        teto: weird, childish
+        gakupo: weird
+
+        -->
+        
+        <header>VOCALOID QUIZ</header>
+        <div class="description">Ever wondered what VOCALOID you would be? No? Find out anyway by taking this quiz! (Disclaimer: Not all VOCALOIDS are available. Maybe one day...)</div>
+        
+        <br><br id="start">
+        
+        <div id="quiz">
+            <form id="f" name="f" autocomplete="off">
+                <div class="question">
+                    QUESTION 1<br>
+                    Let's start with a simple question! How are you doing?
+                </div>
+                <label><input type="radio" name="one" value="1"><span class="checkmark"></span>I'm doing great!</label>
+                <label><input type="radio" name="one" value="2"><span class="checkmark"></span>Alright, I think.</label>
+                <label><input type="radio" name="one" value="3"><span class="checkmark"></span>It could be better...</label>
+                <label><input type="radio" name="one" value="4"><span class="checkmark"></span>Bad. I'm doing bad.</label>
+
+                <br><br>
+
+                <div class="question">
+                    QUESTION 2<br>
+                    
+                </div>
+                <label><input type="radio" name="two" value="1"><span class="checkmark"></span>YOUR ANSWER 1</label>
+                <label><input type="radio" name="two" value="2"><span class="checkmark"></span>YOUR ANSWER 2</label>
+                <label><input type="radio" name="two" value="3"><span class="checkmark"></span>YOUR ANSWER 3</label>
+                <label><input type="radio" name="two" value="4"><span class="checkmark"></span>YOUR ANSWER 4</label>
+
+                <br><br>
+
+                <div class="question">
+                    QUESTION 3<br>
+                </div>
+                <label><input type="radio" name="three" value="1"><span class="checkmark"></span>YOUR ANSWER 1</label>
+                <label><input type="radio" name="three" value="2"><span class="checkmark"></span>YOUR ANSWER 2</label>
+                <label><input type="radio" name="three" value="3"><span class="checkmark"></span>YOUR ANSWER 3</label>
+                <label><input type="radio" name="three" value="4"><span class="checkmark"></span>YOUR ANSWER 4</label>
+
+                <br><br>
+
+                <div class="question">
+                    QUESTION 4<br>
+                </div>
+                <label><input type="radio" name="four" value="1"><span class="checkmark"></span>YOUR ANSWER 1</label>
+                <label><input type="radio" name="four" value="2"><span class="checkmark"></span>YOUR ANSWER 2</label>
+                <label><input type="radio" name="four" value="3"><span class="checkmark"></span>YOUR ANSWER 3</label>
+                <label><input type="radio" name="four" value="4"><span class="checkmark"></span>YOUR ANSWER 4</label>
+
+                <br><br>
+
+                <div class="question">
+                    QUESTION 5<br>
+                </div>
+                <label><input type="radio" name="five" value="1"><span class="checkmark"></span>YOUR ANSWER 1</label>
+                <label><input type="radio" name="five" value="2"><span class="checkmark"></span>YOUR ANSWER 2</label>
+                <label><input type="radio" name="five" value="3"><span class="checkmark"></span>YOUR ANSWER 3</label>
+                <label><input type="radio" name="five" value="4"><span class="checkmark"></span>YOUR ANSWER 4</label>
+
+                <br><br>
+
+                <div class="question">
+                    FINAL QUESTION<br>
+                    This is a free question! Which VOCALOID do you hope you'll get?
+                </div>
+                <label><input type="radio" name="six" value="1"><span class="checkmark"></span>Hatsune Miku</label>
+                <label><input type="radio" name="six" value="2"><span class="checkmark"></span>Kagamine Rin</label>
+                <label><input type="radio" name="six" value="3"><span class="checkmark"></span>Kagamine Len</label>
+                <label><input type="radio" name="six" value="4"><span class="checkmark"></span>Megurine Luka</label>
+                <label><input type="radio" name="six" value="5"><span class="checkmark"></span>MEIKO</label>
+                <label><input type="radio" name="six" value="6"><span class="checkmark"></span>KAITO</label>
+                <label><input type="radio" name="six" value="7"><span class="checkmark"></span>Kasane Teto</label>
+                <label><input type="radio" name="six" value="8"><span class="checkmark"></span>Kamui Gakupo</label>
+                <label><input type="radio" name="six" value="9"><span class="checkmark"></span>It doesn't matter to me!</label>
+                
+                <br><br>
+            </form>
+            
+            <div id="submit">
+                <button onclick="process()">Submit</button>
+            </div>
+
+            <div>
+                <b>Source code:</b> <a href="https://web.archive.org/web/20020808072522if_/http://www.peachie.nu/quiztutorial.html" target="_blank">peachie.nu</a>
+            </div>
+        </div>
+
+        <script src="/scripts/quiz.js"></script>
+    </body>
+</html>

@@ -3,26 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=0.35">
-        <link rel="shortcut icon" href="https://adilene.neocities.org/images/yttd/yourturntodie.ico">
+        <link rel="shortcut icon" href="/images/yttd/yourturntodie.ico">
         <title>YOUR TURN TO DIE</title>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     </head>
     <style>
-        
-        
         body{
             background-image:none;
             background-color:black;
         }
         
-        #wrapper{
-            
-        }
-        
         #game{
             width:816px;
             height:624px;
-            background-image:url(https://adilene.neocities.org/images/yttd/yourturntogo/title.png);
+            background-image:url(/images/yttd/yourturntogo/title.png);
             position:fixed;
             top:0;
             left:0;
@@ -60,26 +54,21 @@
         
     </style>
     <body>
-        
         <audio autoplay loop id="go">
-            <source src="https://dl.dropboxusercontent.com/s/8dh875udn64a9dd/Your%20Turn%20To%20Die%20OST%2001.%20Your%20Turn%20To%20Go.mp3">
+            <source src="/music/Your%20Turn%20To%20Go.mp3">
         </audio>
-        
-        
-        
+
         <div id="wrapper">
-            
             <div id="game">
                 <div class="gamecontrols">
-                    <img src="https://adilene.neocities.org/images/yttd/yourturntogo/begin2.png" onmouseover="this.src='https://adilene.neocities.org/images/yttd/yourturntogo/begin.png';" onmouseout="this.src='https://adilene.neocities.org/images/yttd/yourturntogo/begin2.png';" draggable="false" onclick="begin();">
-                    <img src="https://adilene.neocities.org/images/yttd/yourturntogo/continue.png" draggable="false" style="opacity:0.6">
-                    <img src="https://adilene.neocities.org/images/yttd/yourturntogo/chapters2.png" onmouseover="this.src='https://adilene.neocities.org/images/yttd/yourturntogo/chapters.png';" onmouseout="this.src='https://adilene.neocities.org/images/yttd/yourturntogo/chapters2.png';" draggable="false">
-                    <img src="https://adilene.neocities.org/images/yttd/yourturntogo/options2.png" onmouseover="this.src='https://adilene.neocities.org/images/yttd/yourturntogo/options.png';" onmouseout="this.src='https://adilene.neocities.org/images/yttd/yourturntogo/options2.png';" draggable="false">
+                    <img src="/images/yttd/yourturntogo/begin2.png" onmouseover="this.src='/images/yttd/yourturntogo/begin.png';" onmouseout="this.src='/images/yttd/yourturntogo/begin2.png';" draggable="false" onclick="begin();">
+                    <img src="/images/yttd/yourturntogo/continue.png" draggable="false" style="opacity:0.6">
+                    <img src="/images/yttd/yourturntogo/chapters2.png" onmouseover="this.src='/images/yttd/yourturntogo/chapters.png';" onmouseout="this.src='/images/yttd/yourturntogo/chapters2.png';" draggable="false">
+                    <img src="/images/yttd/yourturntogo/options2.png" onmouseover="this.src='/images/yttd/yourturntogo/options.png';" onmouseout="this.src='/images/yttd/yourturntogo/options2.png';" draggable="false">
                 </div>
             </div>
             
             <iframe src="yttd.html" width="816" height="624" frameborder="0" name="yttd" id="yttd"></iframe>
-            
         </div>
         
         <script>
@@ -92,11 +81,11 @@
                var go = document.getElementById("go");
                go.pause();
                $('#game').delay(200).fadeOut(100);
-               var start = new Audio("https://dl.dropboxusercontent.com/s/bsflg4o1yjdpndd/soundlogo42.ogg");
+               var start = new Audio("/music/sounds/start.ogg");
                start.play();
                start.volume = 0.5;
                $('#yttd').delay(3500).fadeIn(100);
-               var exploration = new Audio("https://dl.dropboxusercontent.com/s/6t1jd2fx3urrfad/Your%20Turn%20To%20Die%20OST%2005.%20Exploration%20A.mp3");
+               var exploration = new Audio("/music/Exploration%20A.mp3");
                setTimeout(function(){
                   exploration.play();
 
@@ -108,13 +97,11 @@
         </script>
         
         <script>
-            var click = new Audio("https://dl.dropboxusercontent.com/s/x6pqvcmteo8itly/select05.ogg");
+            var click = new Audio("/music/sounds/select.ogg");
             document.onclick = function(){
                 click.play();
             }
             click.volume = 0.5;
         </script>
-        
-
     </body>
 </html>

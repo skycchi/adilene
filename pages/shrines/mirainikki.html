@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="https://adilene.neocities.org/images/mirainikki/status/bunny.png">
+        <link rel="shortcut icon" href="/images/mirainikki/status/bunny.png">
         <title>DEAD END...?</title>
         <script src="https://kit.fontawesome.com/f936906ae0.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -85,6 +85,7 @@
             font-family:'Aachen';
             src:url(https://static.tumblr.com/pvnotae/YIoqdg2yp/aachen-bold-opentype.otf);
         }
+        
         ::-webkit-scrollbar{
             display:none;
         }
@@ -119,7 +120,6 @@
             scrollbar-width:none;
         }
         
-        
         @keyframes fadeEffect{
             from{opacity:0;}
             to{opacity:1;}
@@ -138,6 +138,8 @@
             overflow:auto;
             z-index:1;
             scrollbar-width:none;
+            display:flex;
+            flex-direction:column;
         }
         
         #screen::before{
@@ -156,122 +158,122 @@
         }
         
         #static{
-            background-image:url('https://adilene.neocities.org/images/mirainikki/static.gif');
+            background-image:url('/images/mirainikki/static.gif');
             position:absolute;
             width:292px;
             height:490px;
             margin-top:100px;
             margin-left:37px;
-          top:0;
-          left:0;
-          bottom:0;
-          right:0;
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
             pointer-events:none;
             display:none;
             z-index:100;
         }
         
         .crt::after{
-          content:" ";
-          display:block;
-          position:absolute;
+            content:" ";
+            display:block;
+            position:absolute;
             width:292px;
             height:492px;
             margin-top:100px;
             margin-left:37px;
-          top:0;
-          left:0;
-          bottom:0;
-          right:0;
-          background:rgba(18, 16, 16, 0.1);
-          opacity:0;
-          z-index:300;
-          pointer-events:none;
-          animation:flicker 0.15s infinite;
-            
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
+            background:rgba(18, 16, 16, 0.1);
+            opacity:0;
+            z-index:300;
+            pointer-events:none;
+            animation:flicker 0.15s infinite;
         }
+        
         .crt::before{
-          content:" ";
-          display:block;
-          position:absolute;
+            content:" ";
+            display:block;
+            position:absolute;
             width:292px;
             height:492px;
             margin-top:100px;
             margin-left:37px;
-          top:0;
-          left:0;
-          bottom:0;
-          right:0;
-          background:linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-          z-index:300;
-          background-size:100% 2px, 3px 100%;
-          pointer-events:none;
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
+            background:linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index:300;
+            background-size:100% 2px, 3px 100%;
+            pointer-events:none;
         }
         
         @keyframes flicker{
-          0%{
-            opacity:0.27861;
-          }
-          5%{
-            opacity:0.34769;
-          }
-          10%{
-            opacity:0.23604;
-          }
-          15%{
-            opacity:0.90626;
-          }
-          20%{
-            opacity:0.18128;
-          }
-          25%{
-            opacity:0.83891;
-          }
-          30%{
-            opacity:0.65583;
-          }
-          35%{
-            opacity:0.67807;
-          }
-          40%{
-            opacity:0.26559;
-          }
-          45%{
-            opacity:0.84693;
-          }
-          50%{
-            opacity:0.96019;
-          }
-          55%{
-            opacity:0.08594;
-          }
-          60%{
-            opacity:0.20313;
-          }
-          65%{
-            opacity:0.71988;
-          }
-          70%{
-            opacity:0.53455;
-          }
-          75%{
-            opacity:0.37288;
-          }
-          80%{
-            opacity:0.71428;
-          }
-          85%{
-            opacity:0.70419;
-          }
-          90%{
-            opacity:0.7003;
-          }
-          95%{
-            opacity:0.36108;
-          }
-          100%{
-            opacity:0.24387;
-          }
+            0%{
+                opacity:0.27861;
+            }
+            5%{
+                opacity:0.34769;
+            }
+            10%{
+                opacity:0.23604;
+            }
+            15%{
+                opacity:0.90626;
+            }
+            20%{
+                opacity:0.18128;
+            }
+            25%{
+                opacity:0.83891;
+            }
+            30%{
+                opacity:0.65583;
+            }
+            35%{
+                opacity:0.67807;
+            }
+            40%{
+                opacity:0.26559;
+            }
+            45%{
+                opacity:0.84693;
+            }
+            50%{
+                opacity:0.96019;
+            }
+            55%{
+                opacity:0.08594;
+            }
+            60%{
+                opacity:0.20313;
+            }
+            65%{
+                opacity:0.71988;
+            }
+            70%{
+                opacity:0.53455;
+            }
+            75%{
+                opacity:0.37288;
+            }
+            80%{
+                opacity:0.71428;
+            }
+            85%{
+                opacity:0.70419;
+            }
+            90%{
+                opacity:0.7003;
+            }
+            95%{
+                opacity:0.36108;
+            }
+            100%{
+                opacity:0.24387;
+            }
         }
         
         #screen2{
@@ -330,9 +332,9 @@
         }
         
         @keyframes glowing{
-          0%{ box-shadow:0 0 3px #B20000; }
-          50%{ box-shadow:0 0 40px #FF0000; }
-          100%{ box-shadow:0 0 3px #B20000; }
+            0%{ box-shadow:0 0 3px #B20000; }
+            50%{ box-shadow:0 0 40px #FF0000; }
+            100%{ box-shadow:0 0 3px #B20000; }
         }
         
         img{
@@ -367,7 +369,6 @@
             filter:brightness(90%);
         }
 
-        
         #diary{
             padding:5px;
             background-color:#4e9172;
@@ -388,13 +389,11 @@
             padding:3px;
         }
         
-        
         #buttons{
             border:4px solid #343447;
             background:radial-gradient(circle, rgba(90,85,114,1) 0%, rgba(22,22,35,1) 100%);
             width:100%;
             color:white;
-            
         }
         
         #buttons td{
@@ -408,10 +407,6 @@
             font-size:16px !important;
             padding:0;
             margin:0;
-        }
-        
-        .hover{
-            
         }
         
         .phonetitle{
@@ -434,7 +429,7 @@
         
         
         #space{
-            background:url(https://adilene.neocities.org/images/mirainikki/emptyworld.png) center center fixed;
+            background:url(/images/mirainikki/emptyworld.png) center center fixed;
             margin:0;
             padding:0;
             position:absolute;
@@ -447,7 +442,6 @@
             -moz-background-size:cover;
             -o-background-size:cover;
             background-size:cover;
-            
         }
         
         a{
@@ -461,10 +455,10 @@
         <div id="space"></div>
         
         <audio autoplay loop id="ambiance">
-            <source src="https://dl.dropboxusercontent.com/s/hx3nyi810xfjv5i/silence%20sound%20effect%20%28empty%20room%29.mp3">
+            <source src="/music/sounds/silence.mp3">
         </audio>
         
-        <audio id="eternalloneliness" preload="auto" src="https://adilene.neocities.org/music/eternal%20time%20and%20space.mp3"></audio>
+        <audio id="eternalloneliness" preload="auto" src="/music/eternal%20time%20and%20space.mp3"></audio>
         
         <div id="phonewrapper">
             <div id="outer">
@@ -475,17 +469,17 @@
                         <div id="topwrapper">
                             <div id="status">
                                 <div style="display:flex;">
-                                    <img src="https://adilene.neocities.org/images/mirainikki/status/signal2.png" draggable="false">
-                                    <img src="https://adilene.neocities.org/images/mirainikki/status/battery.png" draggable="false">
+                                    <img src="/images/mirainikki/status/signal2.png" draggable="false">
+                                    <img src="/images/mirainikki/status/battery.png" draggable="false">
                                 </div>
                                 <div style="display:flex;">
-                                    <img id="mail" src="https://adilene.neocities.org/images/mirainikki/status/mail2.png" draggable="false">
-                                    <img src="https://adilene.neocities.org/images/mirainikki/status/globe2.png" draggable="false">
+                                    <img id="mail" src="/images/mirainikki/status/mail2.png" draggable="false">
+                                    <img src="/images/mirainikki/status/globe2.png" draggable="false">
                                 </div>
                                 <div id="time"></div>
                             </div>
                             <table id="diary">
-                                <td width="25%"><img src="https://adilene.neocities.org/images/mirainikki/status/bunny.png" draggable="false"></td>
+                                <td width="25%"><img src="/images/mirainikki/status/bunny.png" draggable="false"></td>
                                 <td width="50%">Diary</td>
                                 <td width="25%"></td>
                             </table>
@@ -512,8 +506,8 @@
                         </div>
                         
                         <!-- infostart -->
-                        <div id="maininfo" style="padding:5px;text-align:center;display:none;font-size:16px;">
-                            <img src="https://adilene.neocities.org/images/mirainikki/logo.png" draggable="false">
+                        <div id="maininfo" style="padding:5px; text-align:center; display:none; font-size:16px;">
+                            <img src="/images/mirainikki/logo.png" draggable="false">
                             <br><br>
                             Mirai Nikki (未来日記, Future Diary) is a Japanese anime and manga series written and illustrated by Sakae Esuno.
                             <br><br>
@@ -536,7 +530,7 @@
                             <!-- charas -->
                             <div class="phonetitle">Diary Holders</div>
                             <br>
-                            <img src="https://adilene.neocities.org/images/mirainikki/holders.gif">
+                            <img src="/images/mirainikki/holders.gif">
                             <br>
                             <br>
                             There are a total of 12 Diary Holders, with each player assigned a number based on the order that Deus modified their diary. 
@@ -547,8 +541,9 @@
                             Each Diary Holder is inspired by a Consentes Dii (Olympian God).
                             <br>
                             <br>
+                            
                             <div class="diaryholders">
-                                <img src="https://adilene.neocities.org/images/mirainikki/first.jpg">
+                                <img src="/images/mirainikki/first.jpg">
                                 <div style="padding:0px 5px;">
                                     <b>The First:Amano Yukiteru</b>
                                     <br>
@@ -563,7 +558,7 @@
                             </div>
 
                             <div class="diaryholders">
-                                <img src="https://adilene.neocities.org/images/mirainikki/second.jpg">
+                                <img src="/images/mirainikki/second.jpg">
                                 <div style="padding:0px 5px;">
                                     <b>The Second:Gasai Yuno</b>
                                     <br>
@@ -578,7 +573,7 @@
                             </div>
 
                             <div class="diaryholders">
-                                <img src="https://adilene.neocities.org/images/mirainikki/third.jpg">
+                                <img src="/images/mirainikki/third.jpg">
                                 <div style="padding:0px 5px;">
                                     <b>The Third:Hiyama Takao</b>
                                     <br>
@@ -593,7 +588,7 @@
                             </div>
 
                             <div class="diaryholders">
-                                <img src="https://adilene.neocities.org/images/mirainikki/fourth.jpg">
+                                <img src="/images/mirainikki/fourth.jpg">
                                 <div style="padding:0px 5px;">
                                     <b>The Fourth: Kurusu Keigo</b>
                                     <br>
@@ -608,7 +603,7 @@
                             </div>
 
                             <div class="diaryholders">
-                                <img src="https://adilene.neocities.org/images/mirainikki/fifth.jpg">
+                                <img src="/images/mirainikki/fifth.jpg">
                                 <div style="padding:0px 5px;">
                                     <b>The Fifth:Houjou Reisuke</b>
                                     <br>
@@ -623,7 +618,7 @@
                             </div>
 
                             <div class="diaryholders">
-                                <img src="https://adilene.neocities.org/images/mirainikki/sixth.jpg">
+                                <img src="/images/mirainikki/sixth.jpg">
                                 <div style="padding:0px 5px;">
                                     <b>The Sixth:Kasugano Tsubaki</b>
                                     <br>
@@ -638,7 +633,7 @@
                             </div>
 
                             <div class="diaryholders">
-                                <img src="https://adilene.neocities.org/images/mirainikki/seventh.jpg">
+                                <img src="/images/mirainikki/seventh.jpg">
                                 <div style="padding:0px 5px;">
                                     <b>The Seventh:Ikusaba Marco and Mikami Ai</b>
                                     <br>
@@ -653,7 +648,7 @@
                             </div>
 
                             <div class="diaryholders">
-                                <img src="https://adilene.neocities.org/images/mirainikki/eighth.jpg">
+                                <img src="/images/mirainikki/eighth.jpg">
                                 <div style="padding:0px 5px;">
                                     <b>The Eighth:Ueshita Kamado</b>
                                     <br>
@@ -668,7 +663,7 @@
                             </div>
 
                             <div class="diaryholders">
-                                <img src="https://adilene.neocities.org/images/mirainikki/ninth.jpg">
+                                <img src="/images/mirainikki/ninth.jpg">
                                 <div style="padding:0px 5px;">
                                     <b>The Ninth:Uryuu Minene</b>
                                     <br>
@@ -683,7 +678,7 @@
                             </div>
 
                             <div class="diaryholders">
-                                <img src="https://adilene.neocities.org/images/mirainikki/tenth.jpg">
+                                <img src="/images/mirainikki/tenth.jpg">
                                 <div style="padding:0px 5px;">
                                     <b>The Tenth:Tsukishima Karyuudo</b>
                                     <br>
@@ -698,7 +693,7 @@
                             </div>
 
                             <div class="diaryholders">
-                                <img src="https://adilene.neocities.org/images/mirainikki/eleventh.jpg">
+                                <img src="/images/mirainikki/eleventh.jpg">
                                 <div style="padding:0px 5px;">
                                     <b>The Eleventh:John Bacchus</b>
                                     <br>
@@ -713,7 +708,7 @@
                             </div>
 
                             <div class="diaryholders">
-                                <img src="https://adilene.neocities.org/images/mirainikki/twelfth.jpg">
+                                <img src="/images/mirainikki/twelfth.jpg">
                                 <div style="padding:0px 5px;">
                                     <b>The Twelfth:Hirasaka Yomotsu</b>
                                     <br>
@@ -727,9 +722,7 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        
-                        
+
                         <div id="bottomwrapper">
                             <table id="buttons">
                                 <tr>
@@ -740,9 +733,11 @@
                             </table>
                         </div>
                     </div>
+                    
                     <div id="bar"></div>
                 </div>
             </div>
+            
             <div id="bottom"></div>
         </div>
         
@@ -759,16 +754,14 @@
             $('#happyend').delay(4250).fadeOut(40);
             $('#deadend').delay(4250).fadeIn(40);
         </script>
-        
-        
-        
+
         <audio onloadeddata="var audioPlayer = this; setTimeout(function(){ audioPlayer.play(); }, 2000)">
-            <source src="https://dl.dropboxusercontent.com/s/3qye3ujal0x9ive/static2.mp3" type="audio/mp3" />
+            <source src="/music/sounds/static.mp3" type="audio/mp3" />
         </audio>
         
         <script>
             function showMain(){
-                var audio = new Audio("https://dl.dropboxusercontent.com/s/3qye3ujal0x9ive/static2.mp3");
+                var audio = new Audio("/music/sounds/static.mp3");
                 audio.play();
                 $('#static').fadeIn(100);
                 $('#static').delay(1250).fadeOut(100);
@@ -780,22 +773,22 @@
         </script>
         
         <script>
-        function updateTime(){
-        var currentTime = new Date();
-        var hours = currentTime.getHours();
-        var minutes = currentTime.getMinutes();
-        var seconds = currentTime.getSeconds();
-        if (minutes < 10){
-            minutes = "0" + minutes;
-        }
-        if (seconds < 10){
-            seconds = "0" + seconds;
-        }
-        var v = hours + ":" + minutes;
-        setTimeout("updateTime()",1000);
-        document.getElementById('time').innerHTML=v;
-        }
-        updateTime();
+            function updateTime(){
+                var currentTime = new Date();
+                var hours = currentTime.getHours();
+                var minutes = currentTime.getMinutes();
+                var seconds = currentTime.getSeconds();
+                if (minutes < 10){
+                    minutes = "0" + minutes;
+                }
+                if (seconds < 10){
+                    seconds = "0" + seconds;
+                }
+                var v = hours + ":" + minutes;
+                setTimeout("updateTime()",1000);
+                document.getElementById('time').innerHTML=v;
+            }
+            updateTime();
         </script>
         
         <script>
@@ -812,8 +805,7 @@
             
             setInterval(function(){
                 document.getElementById("eternalloneliness").play();
-      
-                }, 10000)
+            }, 10000)
         </script>
         
         

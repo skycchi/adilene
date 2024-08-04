@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>VIRTUAL DIVA</title>
-        <link rel="shortcut icon" href="https://files.catbox.moe/j2aivj.gif">
+        <link rel="shortcut icon" href="/images/bullet.gif">
         <link href="/style.css" rel="stylesheet" type="text/css" media="all">
         <script src="https://kit.fontawesome.com/f936906ae0.js" crossorigin="anonymous"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -41,45 +41,6 @@
             animation:fadeEffect 1s;
             box-sizing:border-box;
         }
-        
-        .btn, .btn2{
-            margin-top:10px;
-        }
-
-/*        .btn{
-            border:var(--bw) var(--bt) var(--bc);
-            outline:none;
-            padding:5px 8px;
-            background-color:var(--h);
-            font-family:'Pixel Operator';
-            font-size:16px;
-            margin:10px 0px;
-            transition:0.2s;
-            color:#e74492;
-        }
-        
-        .btn2{
-            border:var(--bw) var(--bt) var(--bc);
-            outline:none;
-            padding:5px 8px;
-            background-color:var(--h);
-            font-family:'Pixel Operator';
-            font-size:16px;
-            margin:10px 0px;
-            color:var(--pink);
-        }
-
-        .btn:hover{
-            background-color:var(--pink);
-            color:white;
-            transition:0.2s;
-        }
-        
-        .btn2:hover{
-            background-color:var(--pink);
-            color:white;
-            transition:0.2s;
-        }*/
 
         .active{
             background-color:var(--pink);
@@ -87,13 +48,16 @@
         }
         
         .tags{
-            padding:0px 10px 10px 10px;
+            padding:10px;
             text-align:left;
             border-left:var(--bw) var(--bt) var(--bc);
             border-bottom:var(--bw) var(--bt) var(--bc);
             border-right:var(--bw) var(--bt) var(--bc);
             box-sizing:border-box;
-            width:570px;
+            display:flex;
+            align-items:center;
+            gap:10px;
+            flex-wrap:wrap;
         }
         
         .bideocontain{
@@ -111,7 +75,6 @@
             border-bottom:var(--bw) var(--bt) var(--bc);
             border-right:var(--bw) var(--bt) var(--bc);
             box-sizing:border-box;
-            
         }
         
         .bideocontain img{
@@ -133,59 +96,32 @@
             display:block;
         }
         
-        #button{
-            font-size:20px;
-            border:var(--bw) var(--bt) var(--bc);
-            box-sizing:border-box;
-            padding:5px 8px;
-            background-color:var(--h);
-            position:fixed;
-            z-index:999999999999999;
-            bottom:10px;
-            right:10px;
-            color:#e74492;
-        }
-        
-        #button:hover{
-            
-        }
-        
         i.fas.fa-play{
             background:none;
-            color:var(--pink); /* color of the play button */
+            color:var(--pink);
             font-size:40px;
         }
 
         .collapsible{
-            background-color:var(--h);
-            color:white;
-            padding:10px;
             width:100%;
-            text-align:center;
-            font-size:15px;
             transition:0.5s;
-            color:var(--pink);
-            font-family:'Orbitron';
-            font-size:20px;
-            border:var(--bw) var(--bt) var(--bc);
-            border-bottom:none;
+            font-family:var(--hfont);
+            font-size:27px;
+            letter-spacing:3px;
+            padding:10px;
+            line-height:100%;
+            border-radius:10px 10px 0px 0px;
         }
         
-        .activated, .collapsible:hover{
+        .collapsible:hover{
             background-color:var(--pink);
-            transition:0.5s;
-            color:white;
+            color:var(--pink);
         }
         
         .content{
-            padding:0px;
             max-height:0;
             overflow:hidden;
             transition:max-height 0.3s ease-out;
-            background-color:#fff;
-            border:var(--bw) var(--bt) var(--bc);
-            border-top:none;
-            box-sizing:border-box;
         }
         
         .collapsible:after{
@@ -194,21 +130,64 @@
             float:right;
             margin-left:5px;
         }
-
+        
+        .collapsible:hover:after{
+            color:white;
+        }
+        
+        .activated{
+            background-color:var(--pink);
+        }
+        
         .activated:after{
             content:"\2212";
+            color:white;
         }
         
         #myBtnContainer{
-            padding:0px 10px 10px 10px;
-            text-align:left;
             display:flex;
             flex-flow:column wrap;
+            gap:10px;
+            padding:10px;
+            background-color:#fff;
+            border:var(--bw) var(--bt) var(--bc);
+            border-top:none;
+        }
+        
+        .contain{
+            display:flex;
+            flex-direction:column;
+            gap:10px;
+            margin-top:10px;
         }
         
         .contain div{
             width:100%;
             max-width:900px;
+        }
+        
+        /* deprecated */
+        .mainheader{ 
+            color:var(--pink);
+            font-family:var(--hfont);
+            font-size:27px;
+            letter-spacing:3px;
+            border:var(--bw) var(--bt) var(--bc);
+            outline:var(--bw) var(--bt) white;
+            outline-offset:-8px;
+            padding:10px;
+            background-color:var(--h);
+            line-height:100%;
+            border-radius:10px 10px 0px 0px;
+        }
+        
+        .mainheader:before{
+            content:attr(data-header);
+            text-shadow: rgb(255, 255, 255) 2px 0px 0px, rgb(255, 255, 255) 1.75517px 0.958851px 0px, rgb(255, 255, 255) 1.0806px 1.68294px 0px, rgb(255, 255, 255) 0.141474px 1.99499px 0px, rgb(255, 255, 255) -0.832294px 1.81859px 0px, rgb(255, 255, 255) -1.60229px 1.19694px 0px, rgb(255, 255, 255) -1.97999px 0.28224px 0px, rgb(255, 255, 255) -1.87291px -0.701566px 0px, rgb(255, 255, 255) -1.30729px -1.51361px 0px, rgb(255, 255, 255) -0.421592px -1.95506px 0px, rgb(255, 255, 255) 0.567324px -1.91785px 0px, rgb(255, 255, 255) 1.41734px -1.41108px 0px, rgb(255, 255, 255) 1.92034px -0.558831px 0px;
+        }
+        
+        .ctitle{
+            text-shadow: rgb(255, 255, 255) 2px 0px 0px, rgb(255, 255, 255) 1.75517px 0.958851px 0px, rgb(255, 255, 255) 1.0806px 1.68294px 0px, rgb(255, 255, 255) 0.141474px 1.99499px 0px, rgb(255, 255, 255) -0.832294px 1.81859px 0px, rgb(255, 255, 255) -1.60229px 1.19694px 0px, rgb(255, 255, 255) -1.97999px 0.28224px 0px, rgb(255, 255, 255) -1.87291px -0.701566px 0px, rgb(255, 255, 255) -1.30729px -1.51361px 0px, rgb(255, 255, 255) -0.421592px -1.95506px 0px, rgb(255, 255, 255) 0.567324px -1.91785px 0px, rgb(255, 255, 255) 1.41734px -1.41108px 0px, rgb(255, 255, 255) 1.92034px -0.558831px 0px;
         }
         
         @media only screen and (max-width:590px){
@@ -222,19 +201,19 @@
         
     </style>
     <body>
-
         <header>SONGS</header>
         Welcome! This is a noncomprehensive list of Hatsune Miku songs that new and old fans alike can enjoy! This list will be updated occasionally.
         <br><br>
-        If you would like to see a song added to this list or if you see any errors, feel free to shoot me an email at <a href="mailto:a@adilene.net">a@adilene.net</a>! You can also leave a message in the chatbox!
+        If you would like to see a song added to this list or if you see any errors, feel free to shoot me an email at <a href="mailto:a@adilene.net">a@adilene.net</a>! You can also leave a message in the comments box!
         <br><br>
         Scroll down to begin, or open the 'sort entries' tab below to sort entries by their tags. Entries are sorted by 'all' by default.
-        <br><br>
+        
+        <br><br><br>
 
-        <button class="collapsible">SORT ENTRIES</button>
+        <button class="collapsible"><span class="ctitle">SORT ENTRIES</span></button>
         <div class="content">
             <div id="myBtnContainer">
-                <div>
+                <div style="display:flex; flex-wrap:wrap; align-items:baseline; gap:10px;">
                     Genre:
                     <button class="btn active" id="all">All</button>
                     <button class="btn" id="J-pop">J-pop</button>
@@ -247,7 +226,7 @@
                     <button class="btn" id="Jazz">Jazz</button>
                 </div>
                 
-                <div>
+                <div style="display:flex; flex-wrap:wrap; align-items:baseline; gap:10px;">
                     Producer:
                     <button class="btn" id="Wowaka">Wowaka</button>
                     <button class="btn" id="Syudou">Syudou</button>
@@ -276,7 +255,7 @@
                     <button class="btn" id="kanaria">Kanaria</button>
                 </div>
                         
-                <div>
+                <div style="display:flex; flex-wrap:wrap; align-items:baseline; gap:10px;">
                  Featuring:
                     <button class="btn" id="rin">Kagamine Rin</button>
                     <button class="btn" id="len">Kagamine Len</button>
@@ -286,7 +265,7 @@
                     <button class="btn" id="GUMI">GUMI</button>
                 </div>
                 
-                <div>
+                <div style="display:flex; flex-wrap:wrap; align-items:baseline; gap:10px;">
                     Other:
                     <button class="btn" id="Classics">Classics</button>
                     <button class="btn" id="Favorites">Favorites</button>
@@ -296,12 +275,10 @@
             </div>
         </div>
 
-        <div style="margin-top:10px"></div>
         <div class="contain">
             <!--- nothing atm --->
-            
             <div class="Meiko len Classical" style="display:none;">
-                Nothing at the moment! <br><br> <img src="https://adilene.neocities.org/images/error.gif">
+                Nothing at the moment! <br><br> <img src="/images/error.gif">
             </div>
             
             <!--- songs start --->
@@ -361,7 +338,7 @@
                 <div class="mainheader" style="text-transform:uppercase;"  data-header="Hachi - RINNE"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=EahYs-8tTjQ" target="_blank">
-                        <img src="https://adilene.neocities.org/images/thumbnails/rinne.jpeg" class="bideo" draggable="false">
+                        <img src="/images/thumbnails/rinne.jpeg" class="bideo" draggable="false">
                         <div class="centered">
                             <i class="fas fa-play"></i>
                         </div>
@@ -374,7 +351,7 @@
                 <div class="mainheader" style="text-transform:uppercase;"  data-header="NEKOBOLO -  NONSENSE SPEAKER"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=m0D-hgRD58o" target="_blank">
-                        <img src="https://adilene.neocities.org/images/thumbnails/speaker.jpeg" class="bideo" draggable="false">
+                        <img src="/images/thumbnails/speaker.jpeg" class="bideo" draggable="false">
                         <div class="centered">
                             <i class="fas fa-play"></i>
                         </div>
@@ -387,7 +364,7 @@
                 <div class="mainheader" style="text-transform:uppercase;"  data-header="SIZIMI - 脳内シナプスの叛逆"></div>
                 <div class="bideocontain">
                     <a href="https://www.nicovideo.jp/watch/sm25817652" target="_blank">
-                        <img src="https://adilene.neocities.org/images/thumbnails/intercerebral.jpeg" class="bideo" draggable="false">
+                        <img src="/images/thumbnails/intercerebral.jpeg" class="bideo" draggable="false">
                         <div class="centered">
                             <i class="fas fa-play"></i>
                         </div>
@@ -426,7 +403,7 @@
                 <div class="mainheader" style="text-transform:uppercase;"  data-header="Kairiki Bear - FAILURE GIRL"></div>
                 <div class="bideocontain">
                     <a href="https://www.nicovideo.jp/watch/sm26885931" target="_blank">
-                        <img src="https://adilene.neocities.org/images/thumbnails/failuregirl.jpeg" class="bideo" draggable="false">
+                        <img src="/images/thumbnails/failuregirl.jpeg" class="bideo" draggable="false">
                         <div class="centered">
                             <i class="fas fa-play"></i>
                         </div>
@@ -439,7 +416,7 @@
                 <div class="mainheader" style="text-transform:uppercase;"  data-header="Powapowa-P - STROBE LAST"></div>
                 <div class="bideocontain">
                     <a href="https://www.nicovideo.jp/watch/nm13359285" target="_blank">
-                        <img src="https://adilene.neocities.org/images/thumbnails/strobelast.jpeg" class="bideo" draggable="false">
+                        <img src="/images/thumbnails/strobelast.jpeg" class="bideo" draggable="false">
                         <div class="centered">
                             <i class="fas fa-play"></i>
                         </div>
@@ -452,7 +429,7 @@
                 <div class="mainheader" style="text-transform:uppercase;"  data-header="NEKOBOLO - 自傷無色"></div>
                 <div class="bideocontain">
                     <a href="https://www.nicovideo.jp/watch/sm19870840" target="_blank">
-                        <img src="https://adilene.neocities.org/images/thumbnails/inflicted.png" class="bideo" draggable="false">
+                        <img src="/images/thumbnails/inflicted.png" class="bideo" draggable="false">
                         <div class="centered">
                             <i class="fas fa-play"></i>
                         </div>
@@ -543,7 +520,7 @@
                 <div class="mainheader" style="text-transform:uppercase;"  data-header="Supercell - BLACK★ROCK SHOOTER"></div>
                 <div class="bideocontain">
                     <a href="https://www.nicovideo.jp/watch/sm3645817" target="_blank">
-                        <img src="https://adilene.neocities.org/images/thumbnails/shooter.jpeg" class="bideo" draggable="false">
+                        <img src="/images/thumbnails/shooter.jpeg" class="bideo" draggable="false">
                         <div class="centered">
                             <i class="fas fa-play"></i>
                         </div>
@@ -556,7 +533,7 @@
                 <div class="mainheader" style="text-transform:uppercase;"  data-header="Wowaka - TWO-FACED LOVERS"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=b_cuMcDWwsI" target="_blank">
-                        <img src="https://adilene.neocities.org/images/thumbnails/lovers.jpeg" class="bideo" draggable="false">
+                        <img src="/images/thumbnails/lovers.jpeg" class="bideo" draggable="false">
                         <div class="centered">
                             <i class="fas fa-play"></i>
                         </div>
@@ -569,7 +546,7 @@
                 <div class="mainheader" style="text-transform:uppercase;"  data-header="MASA - THE FOX'S WEDDING"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=khNi_6PnvaE" target="_blank">
-                        <img src="https://adilene.neocities.org/images/thumbnails/fox.jpeg" class="bideo" draggable="false">
+                        <img src="/images/thumbnails/fox.jpeg" class="bideo" draggable="false">
                         <div class="centered">
                             <i class="fas fa-play"></i>
                         </div>
@@ -622,7 +599,7 @@
                 <div class="mainheader" style="text-transform:uppercase;"  data-header="DECO*27 - TWO BREATHS WALKING"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=cFbWl2aPdTk" target="_blank">
-                        <img src="https://adilene.neocities.org/images/thumbnails/twobreathswalking.jpeg" class="bideo" draggable="false">
+                        <img src="/images/thumbnails/twobreathswalking.jpeg" class="bideo" draggable="false">
                         <div class="centered">
                             <i class="fas fa-play"></i>
                         </div>
@@ -648,7 +625,7 @@
                 <div class="mainheader" style="text-transform:uppercase;"  data-header="UtataP - こちら、幸福安心委員会です。"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=KZUmM-uQVOM&t=115s" target="_blank">
-                        <img src="https://adilene.neocities.org/images/thumbnails/happiness.jpeg" class="bideo" draggable="false">
+                        <img src="/images/thumbnails/happiness.jpeg" class="bideo" draggable="false">
                         <div class="centered">
                             <i class="fas fa-play"></i>
                         </div>
@@ -661,7 +638,7 @@
                 <div class="mainheader" style="text-transform:uppercase;"  data-header="Wowaka - ROLLING GIRL"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=vnw8zURAxkU" target="_blank">
-                        <img src="https://adilene.neocities.org/images/thumbnails/rollinggirl.jpeg" class="bideo" draggable="false">
+                        <img src="/images/thumbnails/rollinggirl.jpeg" class="bideo" draggable="false">
                         <div class="centered">
                             <i class="fas fa-play"></i>
                         </div>
@@ -687,7 +664,7 @@
                 <div class="mainheader" style="text-transform:uppercase;"  data-header="Doriko - ROMEO AND CINDERELLA"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=kp-plPYAPq8&t=11s" target="_blank">
-                        <img src="https://adilene.neocities.org/images/thumbnails/romeoandcinderella.jpeg" class="bideo" draggable="false">
+                        <img src="/images/thumbnails/romeoandcinderella.jpeg" class="bideo" draggable="false">
                         <div class="centered">
                             <i class="fas fa-play"></i>
                         </div>
@@ -713,7 +690,7 @@
                 <div class="mainheader" style="text-transform:uppercase;"  data-header="Hachi - MATRYOSHKA"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=HOz-9FzIDf0" target="_blank">
-                        <img src="https://adilene.neocities.org/images/thumbnails/matryoshka.jpeg" class="bideo" draggable="false">
+                        <img src="/images/thumbnails/matryoshka.jpeg" class="bideo" draggable="false">
                         <div class="centered">
                             <i class="fas fa-play"></i>
                         </div>
@@ -752,7 +729,7 @@
                 <div class="mainheader" style="text-transform:uppercase;"  data-header="Supercell - WORLD IS MINE"></div>
                 <div class="bideocontain">
                     <a href="https://www.nicovideo.jp/watch/sm3504435" target="_blank">
-                        <img src="https://adilene.neocities.org/images/thumbnails/worldismine.jpeg" class="bideo" draggable="false">
+                        <img src="/images/thumbnails/worldismine.jpeg" class="bideo" draggable="false">
                         <div class="centered">
                             <i class="fas fa-play"></i>
                         </div>
@@ -817,7 +794,7 @@
                 <div class="mainheader" style="text-transform:uppercase;"  data-header="Hachi - 結ンデ開イテ羅刹ト骸"></div>
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=AKffZySqQts" target="_blank">
-                        <img src="https://adilene.neocities.org/images/thumbnails/holdrelease.jpeg" class="bideo" draggable="false">
+                        <img src="/images/thumbnails/holdrelease.jpeg" class="bideo" draggable="false">
                         <div class="centered">
                             <i class="fas fa-play"></i>
                         </div>
@@ -842,7 +819,7 @@
             <div class=" J-rock Metal Supercell Classics Favorites">
                 <div class="mainheader" style="text-transform:uppercase;"  data-header="Supercell - LOVE IS WAR"></div>                <div class="bideocontain">
                     <a href="https://www.nicovideo.jp/watch/sm2397344" target="_blank">
-                        <img src="https://adilene.neocities.org/images/thumbnails/loveiswar.png" class="bideo" draggable="false">
+                        <img src="/images/thumbnails/loveiswar.png" class="bideo" draggable="false">
                         <div class="centered">
                             <i class="fas fa-play"></i>
                         </div>
@@ -855,7 +832,7 @@
                 <div class="mainheader" style="text-transform:uppercase;"  data-header="Wowaka - WORLD'S END DANCEHALL"></div>                
                 <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=ZB75e7vzX0I" target="_blank">
-                        <img src="https://adilene.neocities.org/images/thumbnails/dancehall.jpeg" class="bideo" draggable="false">
+                        <img src="/images/thumbnails/dancehall.jpeg" class="bideo" draggable="false">
                         <div class="centered">
                             <i class="fas fa-play"></i>
                         </div>
@@ -941,7 +918,7 @@
             <div class=" J-rock Wowaka Classics Favorites">
                 <div class="mainheader" style="text-transform:uppercase;"  data-header="Wowaka - UNHAPPY REFRAIN"></div>   <div class="bideocontain">
                     <a href="https://www.youtube.com/watch?v=uMlv9VWAxko" target="_blank">
-                        <img src="https://adilene.neocities.org/images/thumbnails/unhappy.jpeg" class="bideo" draggable="false">
+                        <img src="/images/thumbnails/unhappy.jpeg" class="bideo" draggable="false">
                         <div class="centered">
                             <i class="fas fa-play"></i>
                         </div>
@@ -964,66 +941,46 @@
         </div>
         
         <script>
-        var $btns = $('.btn').click(function(){
-              if (this.id == 'all'){
-                $('.contain > div').fadeIn(450);
-                  $('.Meiko').hide();
-                  $('.len').hide();
-                  $('.Classical').hide();
-                  $('.Cover').hide();
-              } else{
-                var $el = $('.' + this.id).fadeIn(450);
-                $('.contain > div').not($el).hide();
-                   
-              }
-              $btns.removeClass('active');
-              $(this).addClass('active');
-        });
-            
-        var $btns2 = $('.btn2').click(function(){
-            var $el2 = $('.' + this.id).fadeIn(450);
-            $('.contain > div').not($el2).hide();
-            $('html, body').animate({scrollTop:$('.contain').offset().top}, '500');
+            var $btns = $('.btn').click(function(){
+                  if (this.id == 'all'){
+                    $('.contain > div').fadeIn(450);
+                      $('.Meiko').hide();
+                      $('.len').hide();
+                      $('.Classical').hide();
+                      $('.Cover').hide();
+                  } else{
+                    var $el = $('.' + this.id).fadeIn(450);
+                    $('.contain > div').not($el).hide();
 
-        });
-        </script>
-        
-        <script>
-            var btn = $('#button');
-            
-            btn.hide();
-
-            $(window).scroll(function(){
-              if ($(window).scrollTop() > 200){
-                btn.fadeIn();
-              } else{
-                btn.fadeOut();
-              }
+                  }
+                  $btns.removeClass('active');
+                  $(this).addClass('active');
             });
 
-            btn.on('click', function(e){
-              e.preventDefault();
-              $('html, body').animate({scrollTop:0}, '500');
+            var $btns2 = $('.btn2').click(function(){
+                var $el2 = $('.' + this.id).fadeIn(450);
+                $('.contain > div').not($el2).hide();
+                $('html, body').animate({scrollTop:$('.contain').offset().top - 10}, '500');
+
             });
         </script>
         
         <script>
-        var coll = document.getElementsByClassName("collapsible");
-        var i;
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
 
-        for (i = 0; i < coll.length; i++){
-          coll[i].addEventListener("click", function(){
-            this.classList.toggle("activated");
-            var content = this.nextElementSibling;
-            if (content.style.maxHeight){
-              content.style.maxHeight = null;
-            } else{
-              content.style.maxHeight = content.scrollHeight + "px";
-            } 
-          });
-        }
-        </script>
-        
+            for (i = 0; i < coll.length; i++){
+              coll[i].addEventListener("click", function(){
+                this.classList.toggle("activated");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                  content.style.maxHeight = null;
+                } else{
+                  content.style.maxHeight = content.scrollHeight + "px";
+                } 
+              });
+            }
+        </script>       
 
     </body>
 </html>

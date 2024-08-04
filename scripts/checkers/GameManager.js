@@ -97,19 +97,55 @@ class GameManager{
      * @param{number} player Player who won 
      */
     EndTheGame(player){
-        let messageText = 'player ' + player + ' wins!';
+        function MessageDisplay(){
+            const element = document.createElement('div');
+            element.classList.add('message', 'hide');
 
-        Logger.Log(messageText);
+            const text = document.createElement('h4');
+            text.classList.add('text');
+            text.innerHTML = 'Solved! &acute;&#32;&xdtri;&#32;&grave;';
 
-        let message = document.createElement('p');
+            element.appendChild(text);
 
-        if (player === 1){
-            message.innerHTML = messageText;
-        } else{
-            message.innerHTML = 'congratulations!';
+            let isVisible = false;
+            const duration = 1000;
+
+            function show(value){
+                if(isVisible) return;
+
+                if(!(value && typeof value === 'string')) return;
+
+                text.innerHTML = value;
+
+                element.classList.remove('hide');
+                element.classList.add('show');
+                isVisible = true;
+
+                setTimeout(hide, duration);
+            }
+
+            function hide(){
+                element.classList.remove('show');
+                element.classList.add('hide');
+                isVisible = false;
+            }
+
+            console.log("solved");
+
+            return{
+                element, 
+                show
+            }
         }
 
-        new Message(message, player === 1 ? 'you lose!' :'you win!').ShowWithHeader();
+        const message = MessageDisplay()
+        document.getElementById("wrap").appendChild(message.element); 
+
+        if (player === 1){
+            message.show(`You lose... &#176;&#12525;&#176;`);
+        } else{
+            message.show(`You win! &acute;&#32;&xdtri;&#32;&grave;`);
+        }
 
         // Stop the game
         this.Stop();

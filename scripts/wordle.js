@@ -492,7 +492,7 @@ function Game(){
   }
   
   function handleCorrectGuess(){
-    message.show(`Congratulations, Wordle solved!`)
+    message.show(`Solved! &acute;&#32;&xdtri;&#32;&grave;`)
   }
   
   function startGame(){

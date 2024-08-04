@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=0.35">
-        <link rel="shortcut icon" href="https://adilene.neocities.org/images/yttd/yourturntodie.ico">
+        <link rel="shortcut icon" href="/images/yttd/yourturntodie.ico">
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <title>YOUR TURN TO DIE</title>
         <script src="https://kit.fontawesome.com/f936906ae0.js" crossorigin="anonymous"></script>
@@ -14,12 +14,12 @@
     <style>
         @font-face{
             font-family:'YTTD';
-            src:url(https://files.catbox.moe/0f9tqg.ttf);
+            src:url(/fonts/yttd.ttf);
         }
 
         @font-face{
             font-family:'Yuzu';
-            src:url(https://files.catbox.moe/4hipgc.ttf);
+            src:url(/fonts/yuzu.ttf);
         }
         
         ::-webkit-scrollbar{
@@ -143,7 +143,7 @@
         }
         
         .main{
-            background-image:url(https://adilene.neocities.org/images/yttd/backgroundone.png);
+            background-image:url(/images/yttd/backgroundone.png);
             width:690px;
             height:430px;
             display:flex;
@@ -219,7 +219,7 @@
         
         .logo{
             width:100%;
-            background-image:url(https://adilene.neocities.org/images/yttd/backblue.jpg);
+            background-image:url(/images/yttd/backblue.jpg);
             background-attachment:fixed;
         }
         
@@ -241,7 +241,6 @@
             justify-content:center;
             align-content:center;
             align-items:center;
-            
         }
         
         .maingame{
@@ -257,7 +256,7 @@
         
         .maingameback{
             width:100%;
-            background-image:url(https://adilene.neocities.org/images/yttd/main2.jpg);
+            background-image:url(/images/yttd/main2.jpg);
             background-attachment:fixed;
         }
         
@@ -288,7 +287,7 @@
             background-color:none;
             width:190px;
             height:295px;
-            perspective:1000px; /* Remove this if you don't want the 3D effect */
+            perspective:1000px;
         }
         
         .flip-card img{
@@ -296,7 +295,6 @@
             height:295px;
         }
 
-        /* This container is needed to position the front and back side */
         .flip-card-inner{
             position:relative;
             width:100%;
@@ -306,30 +304,26 @@
             transform-style:preserve-3d;
         }
 
-        /* Do an horizontal flip when you move the mouse over the flip box container */
         .flip-card:hover .flip-card-inner{
             transform:rotateY(180deg);
         }
 
-        /* Position the front and back side */
         .flip-card-front, .flip-card-back{
             position:absolute;
             width:100%;
             height:100%;
-            -webkit-backface-visibility:hidden; /* Safari */
+            -webkit-backface-visibility:hidden;
             backface-visibility:hidden;
         }
 
-        /* Style the front side (fallback if image is missing) */
         .flip-card-front{
             background-color:none;
             color:black;
             border-radius:10px;
         }
 
-        /* Style the back side */
         .flip-card-back{
-            background-image:url(https://adilene.neocities.org/images/yttd/maingame/cardback.png);
+            background-image:url(/images/yttd/maingame/cardback.png);
             color:#fff;
             transform:rotateY(180deg);
             border-radius:10px;
@@ -343,282 +337,280 @@
         
     </style>
     <body>
-        
-        
         <div class="logo">
-            <img src="https://adilene.neocities.org/images/yttd/splat.png" style="max-width:100%;margin-bottom:-7px;" draggable="false">
+            <img src="/images/yttd/splat.png" style="max-width:100%;margin-bottom:-7px;" draggable="false">
             <div class="inner" >
-                <img src="https://adilene.neocities.org/images/yttd/YourTurnToDieTitle.png" style="max-width:60%" id="oneOpen" draggable="false">
+                <img src="/images/yttd/YourTurnToDieTitle.png" style="max-width:60%" id="oneOpen" draggable="false">
             </div>
         </div>
         
         <table class="characters">
-                <tr>
-                    <td><img src="https://adilene.neocities.org/images/yttd/pixels/kouAlice.png" draggable="false"></td>
-                    <td><img src="https://adilene.neocities.org/images/yttd/pixels/kouReko.png" draggable="false"></td>
-                    <td><img src="https://adilene.neocities.org/images/yttd/pixels/kouShin.png" draggable="false"></td>
-                    <td><img src="https://adilene.neocities.org/images/yttd/pixels/kouKai.png" draggable="false"></td>
-                    <td><img src="https://adilene.neocities.org/images/yttd/pixels/kouQtaro.png" draggable="false"></td>
-                    <td><img src="https://adilene.neocities.org/images/yttd/pixels/kouJoe.png" draggable="false"></td>
-                    <td><img src="https://adilene.neocities.org/images/yttd/pixels/kouSara.png" draggable="false"></td>
-                    <td><img src="https://adilene.neocities.org/images/yttd/pixels/kouKeiji.png" draggable="false"></td>
-                    <td><img src="https://adilene.neocities.org/images/yttd/pixels/kouGin.png" draggable="false"></td>
-                    <td><img src="https://adilene.neocities.org/images/yttd/pixels/kouMishima.png" draggable="false"></td>
-                    <td><img src="https://adilene.neocities.org/images/yttd/pixels/kouNao.png" draggable="false"></td>
-                    <td><img src="https://adilene.neocities.org/images/yttd/pixels/kouKanna.png" draggable="false"></td>
-                </tr>
-            </table>
+            <tr>
+                <td><img src="/images/yttd/pixels/kouAlice.png" draggable="false"></td>
+                <td><img src="/images/yttd/pixels/kouReko.png" draggable="false"></td>
+                <td><img src="/images/yttd/pixels/kouShin.png" draggable="false"></td>
+                <td><img src="/images/yttd/pixels/kouKai.png" draggable="false"></td>
+                <td><img src="/images/yttd/pixels/kouQtaro.png" draggable="false"></td>
+                <td><img src="/images/yttd/pixels/kouJoe.png" draggable="false"></td>
+                <td><img src="/images/yttd/pixels/kouSara.png" draggable="false"></td>
+                <td><img src="/images/yttd/pixels/kouKeiji.png" draggable="false"></td>
+                <td><img src="/images/yttd/pixels/kouGin.png" draggable="false"></td>
+                <td><img src="/images/yttd/pixels/kouMishima.png" draggable="false"></td>
+                <td><img src="/images/yttd/pixels/kouNao.png" draggable="false"></td>
+                <td><img src="/images/yttd/pixels/kouKanna.png" draggable="false"></td>
+            </tr>
+        </table>
         
         <div class="contents">
             <div id="container" style="margin-top:35px;">
-                <div id="title"><img src="https://adilene.neocities.org/images/yttd/tessen.png" draggable="false"><div style="margin:0 1%;">Summary</div><img src="https://adilene.neocities.org/images/yttd/tessen.png" style="transform:scale(-1, 1);" draggable="false"></div>
+                <div id="title"><img src="/images/yttd/tessen.png" draggable="false"><div style="margin:0 1%;">Summary</div><img src="/images/yttd/tessen.png" style="transform:scale(-1, 1);" draggable="false"></div>
                 Kimi ga Shine ―Tasuketsu Death Game― (Your Turn To Die ―Death Game By Majority―) is a free online Japanese visual novel created and developed by Nankidai. It was originally released on NicoNico for the browser. With permission, it's been translated into English by vgperson as Your Turn to Die -Death Game By Majority-.
                 <br><br>
                 The plot revolves around Sara Chidouin and her friend Joe Tazuna, who are kidnapped and forced into playing a Death Game by a mysterious organization. They meet 10 others in the same situation as them, trapped in a facility with no way to escape other than play along.
             </div>
 
             <br>
+            
             <!--- main characters --->
             <div id="container" class="one" data-aos="fade">
-                <div id="title" style="margin-bottom:8px"><img src="https://adilene.neocities.org/images/yttd/tessen.png" draggable="false"><div style="margin:0 1%;">Main Characters</div><img src="https://adilene.neocities.org/images/yttd/tessen.png" style="transform:scale(-1, 1);" draggable="false"></div>
+                <div id="title" style="margin-bottom:8px"><img src="/images/yttd/tessen.png" draggable="false"><div style="margin:0 1%;">Main Characters</div><img src="/images/yttd/tessen.png" style="transform:scale(-1, 1);" draggable="false"></div>
                 Participants of the Death Game, whom you meet after surviving the First Trial.<br><br>
                 Controls<br>Touch a person's face to hear their statement.<br><br>
                 <div>
-                <table class="grayscale" border="0" cellpadding="0" cellspacing="0">
-                    <tr>    
-                        <td>
-                            <a class="tablinks" onclick="openCity(event, 'sara')" id="defaultOpen"><img src="https://adilene.neocities.org/images/yttd/icons/sara.png" draggable="false"></a>
-                        </td>
-                        <td>
-                            <a class="tablinks" onclick="openCity(event, 'joe')"><img src="https://adilene.neocities.org/images/yttd/icons/joe.png" draggable="false"></a>
-                        </td>
-                        <td>
-                            <a class="tablinks" onclick="openCity(event, 'keiji')"><img src="https://adilene.neocities.org/images/yttd/icons/keiji.png" draggable="false"></a>
-                        </td>
-                        <td>
-                            <a class="tablinks" onclick="openCity(event, 'kanna')"><img src="https://adilene.neocities.org/images/yttd/icons/kanna.png" draggable="false"></a>
-                        </td>
-                        <td>
-                            <a class="tablinks" onclick="openCity(event, 'qtaro')"><img src="https://adilene.neocities.org/images/yttd/icons/qtaro.png" draggable="false"></a>
-                        </td>
-                        <td>
-                            <a class="tablinks" onclick="openCity(event, 'shin')"><img src="https://adilene.neocities.org/images/yttd/icons/shin.png" draggable="false"></a>
-                        </td>
-                    </tr>
-                </table>
+                    <table class="grayscale" border="0" cellpadding="0" cellspacing="0">
+                        <tr>    
+                            <td>
+                                <a class="tablinks" onclick="openCity(event, 'sara')" id="defaultOpen"><img src="/images/yttd/icons/sara.png" draggable="false"></a>
+                            </td>
+                            <td>
+                                <a class="tablinks" onclick="openCity(event, 'joe')"><img src="/images/yttd/icons/joe.png" draggable="false"></a>
+                            </td>
+                            <td>
+                                <a class="tablinks" onclick="openCity(event, 'keiji')"><img src="/images/yttd/icons/keiji.png" draggable="false"></a>
+                            </td>
+                            <td>
+                                <a class="tablinks" onclick="openCity(event, 'kanna')"><img src="/images/yttd/icons/kanna.png" draggable="false"></a>
+                            </td>
+                            <td>
+                                <a class="tablinks" onclick="openCity(event, 'qtaro')"><img src="/images/yttd/icons/qtaro.png" draggable="false"></a>
+                            </td>
+                            <td>
+                                <a class="tablinks" onclick="openCity(event, 'shin')"><img src="/images/yttd/icons/shin.png" draggable="false"></a>
+                            </td>
+                        </tr>
+                    </table>
 
-                <div class="main">
-                    <img src="https://adilene.neocities.org/images/yttd/name.png" width="142" height="72" style="z-index:1">
-                    <img src="https://adilene.neocities.org/images/yttd/dialogue.png" width="690" style="z-index:1">
-                    <div id="sara" class="tabcontent">
-                        <img src="https://adilene.neocities.org/images/yttd/sprites/sara.png" draggable="false">
-                        <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Sara</div>
-                        <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">My name is Sara Chidouin.</div>
+                    <div class="main">
+                        <img src="/images/yttd/name.png" width="142" height="72" style="z-index:1">
+                        <img src="/images/yttd/dialogue.png" width="690" style="z-index:1">
+                        <div id="sara" class="tabcontent">
+                            <img src="/images/yttd/sprites/sara.png" draggable="false">
+                            <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Sara</div>
+                            <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">My name is Sara Chidouin.</div>
+                        </div>
+                        <div id="joe" class="tabcontent">
+                            <img src="/images/yttd/sprites/joe.png" draggable="false">
+                            <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Joe</div>
+                            <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">I'm Jou Tazuna, but everyone calls me Joe. Me and Sara are high school classmates.</div>
+                        </div>
+                        <div id="keiji" class="tabcontent">
+                            <img src="/images/yttd/sprites/keiji.png" draggable="false">
+                            <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Keiji</div>
+                            <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">My name's Keiji Shinogi. Workin' as a policeman.</div>
+                        </div>
+                        <div id="kanna" class="tabcontent">
+                            <img src="/images/yttd/sprites/kanna.png" draggable="false">
+                            <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Kanna</div>
+                            <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">I'll say... I'm Kanna Kizuchi...</div>
+                        </div>
+                        <div id="qtaro" class="tabcontent">
+                            <img src="/images/yttd/sprites/qtaro.png" draggable="false">
+                            <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Qtaro</div>
+                            <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">Q-taro Burgerberg! I'm a baseball player! Second-string, though!</div>
+                        </div>
+                        <div id="shin" class="tabcontent">
+                            <img src="/images/yttd/sprites/shin.png" draggable="false">
+                            <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Sou</div>
+                            <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">My name's Sou Hiyori. Err... well. Just a job-hopper. Ahaha...</div>
+                        </div>
+                        <div id="reko" class="tabcontent">
+                            <img src="/images/yttd/sprites/reko.png" draggable="false">
+                            <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Reko</div>
+                            <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">...Name's Reko Yabusame. I'm a singer-songwriter.</div>
+                        </div>
+                        <div id="nao" class="tabcontent">
+                            <img src="/images/yttd/sprites/nao.png" draggable="false">
+                            <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Nao</div>
+                            <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">My name is Nao Egokoro! It's thanks to Professor Mishima that I attend an art college now!</div>
+                        </div>
+                        <div id="kai" class="tabcontent">
+                            <img src="/images/yttd/sprites/kai.png" draggable="false">
+                            <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Kai</div>
+                            <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">...I am Kai Satou. I'm a rather unremarkable homemaker.</div>
+                        </div>
+                        <div id="gin" class="tabcontent">
+                            <img src="/images/yttd/sprites/gin.png" draggable="false">
+                            <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Gin</div>
+                            <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">My name is Gin Ibushi, woof! I'm a 6th grader, meow!</div>
+                        </div>
+                        <div id="alice" class="tabcontent">
+                            <img src="/images/yttd/sprites/alice.png" draggable="false">
+                            <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Alice</div>
+                            <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">My real name is Alice Yabusame... I'm Reko's older brother.</div>
+                        </div>
+                        <div id="mishima" class="tabcontent">
+                            <img src="/images/yttd/sprites/mishima.png" draggable="false">
+                            <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Mishima</div>
+                            <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">Hello, I am Kazumi Mishima. I teach at a certain high school... Mwahaha...</div>
+                        </div>
                     </div>
-                    <div id="joe" class="tabcontent">
-                        <img src="https://adilene.neocities.org/images/yttd/sprites/joe.png" draggable="false">
-                        <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Joe</div>
-                        <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">I'm Jou Tazuna, but everyone calls me Joe. Me and Sara are high school classmates.</div>
-                    </div>
-                    <div id="keiji" class="tabcontent">
-                        <img src="https://adilene.neocities.org/images/yttd/sprites/keiji.png" draggable="false">
-                        <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Keiji</div>
-                        <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">My name's Keiji Shinogi. Workin' as a policeman.</div>
-                    </div>
-                    <div id="kanna" class="tabcontent">
-                        <img src="https://adilene.neocities.org/images/yttd/sprites/kanna.png" draggable="false">
-                        <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Kanna</div>
-                        <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">I'll say... I'm Kanna Kizuchi...</div>
-                    </div>
-                    <div id="qtaro" class="tabcontent">
-                        <img src="https://adilene.neocities.org/images/yttd/sprites/qtaro.png" draggable="false">
-                        <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Qtaro</div>
-                        <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">Q-taro Burgerberg! I'm a baseball player! Second-string, though!</div>
-                    </div>
-                    <div id="shin" class="tabcontent">
-                        <img src="https://adilene.neocities.org/images/yttd/sprites/shin.png" draggable="false">
-                        <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Sou</div>
-                        <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">My name's Sou Hiyori. Err... well. Just a job-hopper. Ahaha...</div>
-                    </div>
-                    <div id="reko" class="tabcontent">
-                        <img src="https://adilene.neocities.org/images/yttd/sprites/reko.png" draggable="false">
-                        <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Reko</div>
-                        <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">...Name's Reko Yabusame. I'm a singer-songwriter.</div>
-                    </div>
-                    <div id="nao" class="tabcontent">
-                        <img src="https://adilene.neocities.org/images/yttd/sprites/nao.png" draggable="false">
-                        <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Nao</div>
-                        <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">My name is Nao Egokoro! It's thanks to Professor Mishima that I attend an art college now!</div>
-                    </div>
-                    <div id="kai" class="tabcontent">
-                        <img src="https://adilene.neocities.org/images/yttd/sprites/kai.png" draggable="false">
-                        <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Kai</div>
-                        <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">...I am Kai Satou. I'm a rather unremarkable homemaker.</div>
-                    </div>
-                    <div id="gin" class="tabcontent">
-                        <img src="https://adilene.neocities.org/images/yttd/sprites/gin.png" draggable="false">
-                        <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Gin</div>
-                        <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">My name is Gin Ibushi, woof! I'm a 6th grader, meow!</div>
-                    </div>
-                    <div id="alice" class="tabcontent">
-                        <img src="https://adilene.neocities.org/images/yttd/sprites/alice.png" draggable="false">
-                        <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Alice</div>
-                        <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">My real name is Alice Yabusame... I'm Reko's older brother.</div>
-                    </div>
-                    <div id="mishima" class="tabcontent">
-                        <img src="https://adilene.neocities.org/images/yttd/sprites/mishima.png" draggable="false">
-                        <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Mishima</div>
-                        <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">Hello, I am Kazumi Mishima. I teach at a certain high school... Mwahaha...</div>
-                    </div>
-                </div>
 
-                <table class="grayscale" border="0" cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td>
-                            <a class="tablinks" onclick="openCity(event, 'reko')"><img src="https://adilene.neocities.org/images/yttd/icons/reko.png" draggable="false"></a>
-                        </td>
-                        <td>
-                            <a class="tablinks" onclick="openCity(event, 'nao')"><img src="https://adilene.neocities.org/images/yttd/icons/nao.png" draggable="false"></a>
-                        </td>
-                        <td>
-                            <a class="tablinks" onclick="openCity(event, 'kai')"><img src="https://adilene.neocities.org/images/yttd/icons/kai.png" draggable="false"></a>
-                        </td>
-                        <td>
-                            <a class="tablinks" onclick="openCity(event, 'gin')"><img src="https://adilene.neocities.org/images/yttd/icons/gin.png" draggable="false"></a>
-                        </td>
-                        <td>
-                            <a class="tablinks" onclick="openCity(event, 'alice')"><img src="https://adilene.neocities.org/images/yttd/icons/alice.png" draggable="false"></a>
-                        </td>
-                        <td>
-                            <a class="tablinks" onclick="openCity(event, 'mishima')"><img src="https://adilene.neocities.org/images/yttd/icons/mishima.png" draggable="false"></a>
-                        </td>
-                    </tr>
-                </table>
+                    <table class="grayscale" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td>
+                                <a class="tablinks" onclick="openCity(event, 'reko')"><img src="/images/yttd/icons/reko.png" draggable="false"></a>
+                            </td>
+                            <td>
+                                <a class="tablinks" onclick="openCity(event, 'nao')"><img src="/images/yttd/icons/nao.png" draggable="false"></a>
+                            </td>
+                            <td>
+                                <a class="tablinks" onclick="openCity(event, 'kai')"><img src="/images/yttd/icons/kai.png" draggable="false"></a>
+                            </td>
+                            <td>
+                                <a class="tablinks" onclick="openCity(event, 'gin')"><img src="/images/yttd/icons/gin.png" draggable="false"></a>
+                            </td>
+                            <td>
+                                <a class="tablinks" onclick="openCity(event, 'alice')"><img src="/images/yttd/icons/alice.png" draggable="false"></a>
+                            </td>
+                            <td>
+                                <a class="tablinks" onclick="openCity(event, 'mishima')"><img src="/images/yttd/icons/mishima.png" draggable="false"></a>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
 
             <br>
+            
             <!--- dummies --->
             <div id="container" data-aos="fade">
-                <div id="title" style="margin-bottom:8px;"><img src="https://adilene.neocities.org/images/yttd/tessen.png" draggable="false"><div style="margin:0 1%;">Dummies</div><img src="https://adilene.neocities.org/images/yttd/tessen.png" style="transform:scale(-1, 1);" draggable="false"></div>
+                <div id="title" style="margin-bottom:8px;"><img src="/images/yttd/tessen.png" draggable="false"><div style="margin:0 1%;">Dummies</div><img src="/images/yttd/tessen.png" style="transform:scale(-1, 1);" draggable="false"></div>
                 The dummies are dolls with the AI of participants who died during the First Trial of the Death Game.<br><br>
                 Controls<br>Click on the dialogue box to move on to the next person's statement.<br><br>
                 <div class="dummies">
-                    <img src="https://adilene.neocities.org/images/yttd/backgroundtop.png" draggable="false">
+                    <img src="/images/yttd/backgroundtop.png" draggable="false">
                 </div>
                 <div class="dummies">
-                    <a><img src="https://adilene.neocities.org/images/yttd/hinako.png" draggable="false"></a>
-                    <a><img src="https://adilene.neocities.org/images/yttd/anzu.png" draggable="false"></a>
-                    <a><img src="https://adilene.neocities.org/images/yttd/hayasaka.png" draggable="false"></a>
-                    <a><img src="https://adilene.neocities.org/images/yttd/ranmaru.png" draggable="false"></a>
-                    <a><img src="https://adilene.neocities.org/images/yttd/mai.png" draggable="false"></a>
-                    <a><img src="https://adilene.neocities.org/images/yttd/kurumada.png" draggable="false"></a>
+                    <a><img src="/images/yttd/hinako.png" draggable="false"></a>
+                    <a><img src="/images/yttd/anzu.png" draggable="false"></a>
+                    <a><img src="/images/yttd/hayasaka.png" draggable="false"></a>
+                    <a><img src="/images/yttd/ranmaru.png" draggable="false"></a>
+                    <a><img src="/images/yttd/mai.png" draggable="false"></a>
+                    <a><img src="/images/yttd/kurumada.png" draggable="false"></a>
                 </div>
                 <div class="dialogue" style="background-color:black;">
-                    <img src="https://adilene.neocities.org/images/yttd/name.png" width="142" height="72" style="z-index:1">
-                    <img src="https://adilene.neocities.org/images/yttd/dialogue.png" width="692" style="z-index:1">
+                    <img src="/images/yttd/name.png" width="142" height="72" style="z-index:1">
+                    <img src="/images/yttd/dialogue.png" width="692" style="z-index:1">
                     <div class="twocontent" id="twoOpen">
-                        <img src="https://adilene.neocities.org/images/yttd/sprites/kurumada.png" draggable="false">
+                        <img src="/images/yttd/sprites/kurumada.png" draggable="false">
                         <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Kurumada</div>
                         <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">Bwahaha... Good to meet you. ...I'm Kurumada.</div>
                     </div>
                     <div class="twocontent">
-                        <img src="https://adilene.neocities.org/images/yttd/sprites/hinako.png" draggable="false">
+                        <img src="/images/yttd/sprites/hinako.png" draggable="false">
                         <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Hinako</div>
                         <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">...Hinako.</div>
                     </div>
                     <div class="twocontent hidden">
-                        <img src="https://adilene.neocities.org/images/yttd/sprites/anzu.png" draggable="false">
+                        <img src="/images/yttd/sprites/anzu.png" draggable="false">
                         <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Anzu</div>
                         <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">I'm Anzu, a high-schooler.</div>
                     </div>
                     <div class="twocontent hidden">
-                        <img src="https://adilene.neocities.org/images/yttd/sprites/hayasaka.png" draggable="false">
+                        <img src="/images/yttd/sprites/hayasaka.png" draggable="false">
                         <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Hayasaka</div>
                         <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">I'm Hayasaka. H... Hoo boy...</div>
                     </div>
                     <div class="twocontent hidden">
-                        <img src="https://adilene.neocities.org/images/yttd/sprites/ranmaru.png" draggable="false">
+                        <img src="/images/yttd/sprites/ranmaru.png" draggable="false">
                         <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Ranmaru</div>
                         <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">...Uhh, Sara, was it? I'm Ranmaru. I'm in high-school like you.</div>
                     </div>
                     <div class="twocontent hidden">
-                        <img src="https://adilene.neocities.org/images/yttd/sprites/mai.png" draggable="false">
+                        <img src="/images/yttd/sprites/mai.png" draggable="false">
                         <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Mai</div>
                         <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">My name's Mai! Let's get along!</div>
                     </div>
                     <div style="position:absolute;z-index:9;margin-bottom:-4px;width:690px;">
-                    <img src="https://adilene.neocities.org/images/yttd/down.gif" draggable="false"></div>
+                    <img src="/images/yttd/down.gif" draggable="false"></div>
                 </div>
             </div>
             
             <!--- floor masters --->
             <div id="container" data-aos="fade" style="margin-top:40px;">
-                <div id="title" style="margin-bottom:8px;"><img src="https://adilene.neocities.org/images/yttd/tessen.png" draggable="false"><div style="margin:0 1%;">Floor Masters</div><img src="https://adilene.neocities.org/images/yttd/tessen.png" style="transform:scale(-1, 1);" draggable="false"></div>
+                <div id="title" style="margin-bottom:8px;"><img src="/images/yttd/tessen.png" draggable="false"><div style="margin:0 1%;">Floor Masters</div><img src="/images/yttd/tessen.png" style="transform:scale(-1, 1);" draggable="false"></div>
                 The floor masters serve as guides for their respective floors. They guide the main characters through various trials and the Main Game.<br>
                 <br>
                 Controls<br>Click on the dialogue box to move on to the next person's statement.
                 <br><br>
                 
                 <div class="twodialogue" style="background-color:black;margin-top:495px">
-                    <div class="threecontent" id="threeOpen" style="background-image:url(https://adilene.neocities.org/images/yttd/meisterback.png);width:692px;background-size:contain;">
+                    <div class="threecontent" id="threeOpen" style="background-image:url(/images/yttd/meisterback.png);width:692px;background-size:contain;">
                         <div style="margin-top:65px;"></div>
-                        <img src="https://adilene.neocities.org/images/yttd/sprites/meister.png" draggable="false">
+                        <img src="/images/yttd/sprites/meister.png" draggable="false">
                         <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Meister</div>
                         <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">I’m the master of the room. You can call me Meister.
                         </div>
                     </div>
-                    <div class="threecontent" style="background-image:url(https://adilene.neocities.org/images/yttd/sueback.png);width:692px;background-size:contain;">
+                    <div class="threecontent" style="background-image:url(/images/yttd/sueback.png);width:692px;background-size:contain;">
                         <div style="margin-top:65px;"></div>
-                        <img src="https://adilene.neocities.org/images/yttd/sprites/sue%20miley.png" draggable="false">
+                        <img src="/images/yttd/sprites/sue%20miley.png" draggable="false">
                         <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Sue Miley</div>
                         <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">Heehee. My name is Sue Miley, the Laughing Doll. I am the doll who will guide you on the first and second floors. Ehee.
                         </div>
                     </div>
-                    <div class="threecontent hidden" style="background-image:url(https://adilene.neocities.org/images/yttd/rioback.png);width:692px;background-size:contain;">
+                    <div class="threecontent hidden" style="background-image:url(/images/yttd/rioback.png);width:692px;background-size:contain;">
                         <div style="margin-top:65px;"></div>
-                        <img src="https://adilene.neocities.org/images/yttd/sprites/rio%20ranger.png" draggable="false">
+                        <img src="/images/yttd/sprites/rio%20ranger.png" draggable="false">
                         <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Rio Ranger</div>
                         <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">I'm the Dressup Doll, Rio Ranger! I'm gonna support y'all on the third floor! Best regaaards!</div>
                     </div>
-                    <div class="threecontent hidden" style="background-image:url(https://adilene.neocities.org/images/yttd/tiaback.png);width:692px;background-size:contain;">
+                    <div class="threecontent hidden" style="background-image:url(/images/yttd/tiaback.png);width:692px;background-size:contain;">
                         <div style="margin-top:65px;"></div>
-                        <img src="https://adilene.neocities.org/images/yttd/sprites/tia%20safalin.png" draggable="false">
+                        <img src="/images/yttd/sprites/tia%20safalin.png" draggable="false">
                         <div class="text" style="width:142px;height:72px;margin-top:-223px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Tia<br> Safalin</div>
                         <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">Good to meet you, everyoneee... I am the Vice Floor Master of the third floor, the Crying Doll, Tia Safalin...</div>
                     </div>
-                    <div class="threecontent hidden" style="background-image:url(https://adilene.neocities.org/images/yttd/gashuback.png);width:692px;background-size:contain;">
+                    <div class="threecontent hidden" style="background-image:url(/images/yttd/gashuback.png);width:692px;background-size:contain;">
                         <div style="margin-top:65px;"></div>
-                        <img src="https://adilene.neocities.org/images/yttd/sprites/gashu.png" draggable="false">
+                        <img src="/images/yttd/sprites/gashu.png" draggable="false">
                         <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Gashu</div>
                         <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">I am a receptionist doll here to support you in your time living on the third floor. I can trade and explain the prizes.</div>
                     </div>
-                    <div class="threecontent hidden" style="background-image:url(https://adilene.neocities.org/images/yttd/midoriback.png);width:692px;background-size:contain;">
+                    <div class="threecontent hidden" style="background-image:url(/images/yttd/midoriback.png);width:692px;background-size:contain;">
                         <div style="margin-top:65px;"></div>
-                        <img src="https://adilene.neocities.org/images/yttd/sprites/midori.png" draggable="false">
+                        <img src="/images/yttd/sprites/midori.png" draggable="false">
                         <div class="text" style="width:142px;height:72px;margin-top:-225px;display:flex;justify-content:center;align-content:center;align-items:center;color:#FFFFA0;">Midori</div>
                         <div class="text" style="width:690px;height:158px;text-align:left;padding:20px;box-sizing:border-box;margin-top:-155px;">I’m your Floor Master for the fourth floor! Hello!</div>
                     </div>
                     <div style="position:absolute;z-index:9;margin-bottom:-4px;width:690px;">
-                    <img src="https://adilene.neocities.org/images/yttd/down.gif" draggable="false"></div>
+                    <img src="/images/yttd/down.gif" draggable="false"></div>
                     <div style="margin-top:-230px;display:flex;flex-direction:column;">
-                    <img src="https://adilene.neocities.org/images/yttd/name.png" width="142" height="72" style="z-index:1">
-                    <img src="https://adilene.neocities.org/images/yttd/dialogue.png" width="692" style="z-index:1">
+                    <img src="/images/yttd/name.png" width="142" height="72" style="z-index:1">
+                    <img src="/images/yttd/dialogue.png" width="692" style="z-index:1">
                     </div>
                 </div>
             </div>
         </div>
-        
-        
-        
+ 
         <!--- main game --->
         <div class="maingameback">
             <div class="transition"></div>
 
             <div class="maingame" data-aos="fade-up">
-                <img src="https://adilene.neocities.org/images/yttd/maingame/roles.png" draggable="false">
+                <img src="/images/yttd/maingame/roles.png" draggable="false">
                 <div id="container" style="margin-top:40px;" data-aos="fade">
-                    <div id="title" style="margin-bottom:8px;"><img src="https://adilene.neocities.org/images/yttd/tessen.png" draggable="false"><div style="margin:0 1%;">Main Game</div><img src="https://adilene.neocities.org/images/yttd/tessen.png" style="transform:scale(-1, 1);" draggable="false"></div>
+                    <div id="title" style="margin-bottom:8px;"><img src="/images/yttd/tessen.png" draggable="false"><div style="margin:0 1%;">Main Game</div><img src="/images/yttd/tessen.png" style="transform:scale(-1, 1);" draggable="false"></div>
 
                     "The basic rules are quite simple. One person will be selected by majority vote, and that person will die. That is all."
                     <br><br>
@@ -626,7 +618,7 @@
                 </div>
 
                 <div id="container" data-aos="fade">
-                    <div id="title" style="margin-bottom:8px;"><img src="https://adilene.neocities.org/images/yttd/tessen.png" draggable="false"><div style="margin:0 1%;">Roles</div><img src="https://adilene.neocities.org/images/yttd/tessen.png" style="transform:scale(-1, 1);" draggable="false"></div>
+                    <div id="title" style="margin-bottom:8px;"><img src="/images/yttd/tessen.png" draggable="false"><div style="margin:0 1%;">Roles</div><img src="/images/yttd/tessen.png" style="transform:scale(-1, 1);" draggable="false"></div>
                     The Main Game has four roles. Each has a different consequence for receiving the majority vote.<br><br>
                     Controls<br>
                     Hover over a card to view its respective role.
@@ -635,7 +627,7 @@
                     <div class="flip-card" style="margin-right:5px;">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <img src="https://adilene.neocities.org/images/yttd/maingame/commonercard.png" draggable="false">
+                                <img src="/images/yttd/maingame/commonercard.png" draggable="false">
                             </div>
                             <div class="flip-card-back">
                                 <div style="font-size:30px;text-shadow:-1px 0 #f82825, 0 1px #f82825, 1px 0 #f82825, 0 -1px #f82825;">Commoner</div>
@@ -649,7 +641,7 @@
                     <div class="flip-card" style="margin-right:5px;">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <img src="https://adilene.neocities.org/images/yttd/maingame/keymastercard.png" draggable="false">
+                                <img src="/images/yttd/maingame/keymastercard.png" draggable="false">
                             </div>
                             <div class="flip-card-back">
                                 <div style="font-size:30px;text-shadow:-1px 0 #f82825, 0 1px #f82825, 1px 0 #f82825, 0 -1px #f82825;">Keymaster</div>
@@ -663,7 +655,7 @@
                     <div class="flip-card" style="margin-right:5px;">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <img src="https://adilene.neocities.org/images/yttd/maingame/sagecard.png" draggable="false">
+                                <img src="/images/yttd/maingame/sagecard.png" draggable="false">
                             </div>
                             <div class="flip-card-back">
                                 <div style="font-size:30px;text-shadow:-1px 0 #f82825, 0 1px #f82825, 1px 0 #f82825, 0 -1px #f82825;">Sage</div>
@@ -676,7 +668,7 @@
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <img src="https://adilene.neocities.org/images/yttd/maingame/sacrificecard.png" draggable="false">
+                                <img src="/images/yttd/maingame/sacrificecard.png" draggable="false">
                             </div>
                             <div class="flip-card-back">
                                 <div style="font-size:30px;text-shadow:-1px 0 #f82825, 0 1px #f82825, 1px 0 #f82825, 0 -1px #f82825;">Sacrifice</div>
@@ -695,49 +687,42 @@
         <!--- sign here --->
         <div class="contents" style="padding-top:30px;">
             <div id="container" data-aos="fade">
-                <div id="title" style="margin-bottom:8px;"><img src="https://adilene.neocities.org/images/yttd/tessen.png" draggable="false"><div style="margin:0 1%;">Ready To Play?</div><img src="https://adilene.neocities.org/images/yttd/tessen.png" style="transform:scale(-1, 1);" draggable="false"></div>
+                <div id="title" style="margin-bottom:8px;"><img src="/images/yttd/tessen.png" draggable="false"><div style="margin:0 1%;">Ready To Play?</div><img src="/images/yttd/tessen.png" style="transform:scale(-1, 1);" draggable="false"></div>
                 Just sign here.<br><br>
                 <a href="https://vgperson.com/games/yourturntodie.htm" target="_blank">
-                    <img src="https://adilene.neocities.org/images/yttd/signhere.png" draggable="false" style="margin-top:-5px;" onmouseover="this.src='https://adilene.neocities.org/images/yttd/signherehover.gif';" onmouseout="this.src='https://adilene.neocities.org/images/yttd/signhere.png';">
+                    <img src="/images/yttd/signhere.png" draggable="false" style="margin-top:-5px;" onmouseover="this.src='/images/yttd/signherehover.gif';" onmouseout="this.src='/images/yttd/signhere.png';">
                 </a>
             </div>
             But before that, let us hold one final majority vote.
-            <br>
-            <br>
-            <br>
+            <br><br><br>
         </div>
 
-        
         <script>
             (function(){
+                var $hints = $('.twocontent');
+                var i = 0;
 
-            var $hints = $('.twocontent');
-            var i = 0;
-
-            $('.dialogue').on('click', function(){
-                i = (i + 1) % $hints.length;
-                $hints.hide().eq(i).show();
-            });
-
+                $('.dialogue').on('click', function(){
+                    i = (i + 1) % $hints.length;
+                    $hints.hide().eq(i).show();
+                });
             })();
         </script>
         
         <script>
             (function(){
+                var $hints = $('.threecontent');
+                var i = 0;
 
-            var $hints = $('.threecontent');
-            var i = 0;
-
-            $('.twodialogue').on('click', function(){
-                i = (i + 1) % $hints.length;
-                $hints.hide().eq(i).show();
-            });
-
+                $('.twodialogue').on('click', function(){
+                    i = (i + 1) % $hints.length;
+                    $hints.hide().eq(i).show();
+                });
             })();
         </script>
         
         <script>
-            var click = new Audio("https://dl.dropboxusercontent.com/s/x6pqvcmteo8itly/select05.ogg");
+            var click = new Audio("/music/sounds/click.mp3");
             document.onclick = function(){
                 click.play();
             }
@@ -745,36 +730,34 @@
         </script>
         
         <script>
-        function openCity(evt, cityName){
-          var i, tabcontent, tablinks;
-          tabcontent = document.getElementsByClassName("tabcontent");
-          for (i = 0; i < tabcontent.length; i++){
-            tabcontent[i].style.display = "none";
-          }
-          tablinks = document.getElementsByClassName("tablinks");
-          for (i = 0; i < tablinks.length; i++){
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-          }
-          document.getElementById(cityName).style.display = "block";
-          evt.currentTarget.className += " active";
-        }
-        </script>
-        <script>
-            // Get the element with id="defaultOpen" and click on it
-            document.getElementById("defaultOpen").click();
+            function openCity(evt, cityName){
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++){
+                tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++){
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(cityName).style.display = "block";
+              evt.currentTarget.className += " active";
+            }
         </script>
         
+        <script>
+            document.getElementById("defaultOpen").click();
+        </script>
         <script>
             document.getElementById("threeOpen").click();
         </script>
-        
         <script>
             document.getElementById("twoOpen").click();
         </script>
-        
         <script> 
             document.getElementById("oneOpen").click();
         </script>
+        
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
             AOS.init();

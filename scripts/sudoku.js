@@ -1478,7 +1478,52 @@
 				//check if that finished board
 				if(isBoardFinished()){
 					boardFinished = true;
-					log("user finished board!");
+                    
+                    function MessageDisplay(){
+                        const element = document.createElement('div');
+                        element.classList.add('message', 'hide');
+
+                        const text = document.createElement('h4');
+                        text.classList.add('text');
+                        text.innerHTML = 'Solved! &acute;&#32;&xdtri;&#32;&grave;';
+
+                        element.appendChild(text);
+
+                        let isVisible = false;
+                        const duration = 1000;
+
+                        function show(value){
+                            if(isVisible) return;
+
+                            if(!(value && typeof value === 'string')) return;
+
+                            text.innerHTML = value;
+
+                            element.classList.remove('hide');
+                            element.classList.add('show');
+                            isVisible = true;
+
+                            setTimeout(hide, duration);
+                        }
+
+                        function hide(){
+                            element.classList.remove('show');
+                            element.classList.add('hide');
+                            isVisible = false;
+                        }
+
+                        console.log("solved");
+
+                        return{
+                            element, 
+                            show
+                        }
+                    }
+
+                    const message = MessageDisplay()
+                    document.getElementById("wrap").appendChild(message.element);
+                    message.show(`Solved! &acute;&#32;&xdtri;&#32;&grave;`);
+                    
 					if(typeof opts.boardFinishedFn === "function"){
 						opts.boardFinishedFn({
 							//we rate the board via what strategies was used to solve it

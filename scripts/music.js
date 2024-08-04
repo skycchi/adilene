@@ -22,22 +22,22 @@ let track_list = [
    {
         name:"Bug",
         artist:"Kairiki Bear",
-        path:"https://adilene.neocities.org/music/Bug.mp3"
+        path:"/music/Bug.mp3"
     },
    {
         name:"RRRRafflesia",
         artist:"Utsu-P",
-        path:"https://adilene.neocities.org//music/RRRRafflesia.mp3"
+        path:"/music/RRRRafflesia.mp3"
     },
    {
         name:"Rinne",
         artist:"Hachi",
-        path:"https://adilene.neocities.org//music/Rinne.mp3",
+        path:"/music/Rinne.mp3",
     },
    {
         name:"Play With Fire",
         artist:"Camellia",
-        path:"https://adilene.neocities.org//music/Play With Fire.mp3"
+        path:"/music/Play With Fire.mp3"
     },
 
 ];
@@ -110,6 +110,8 @@ function seekTo(){
 function setVolume(){
   curr_track.volume = volume_slider.value / 100;
 }
+
+setVolume();
 
 function seekUpdate(){
   let seekPosition = 0;

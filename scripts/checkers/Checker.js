@@ -26,10 +26,7 @@ class Checker{
      * Makes checker a king by changing 'king' property to true and adding specific style
     */
     MakeKing(){
-        let kingStyle = document.createElement('i');
-        kingStyle.classList.add('em', 'em-crown');
-
-        this.element.appendChild(kingStyle);
+        this.element.classList.add('king');
         this.king = true;
     };
 
