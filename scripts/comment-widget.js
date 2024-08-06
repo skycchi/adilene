@@ -372,11 +372,12 @@ function createComment(data){
     
      // Timestamp
     let time = document.createElement('div');
-    time.innerText = timestamp;
     time.className = 'c-timestamp';
+    let calendar = timestamp.split(' ')[0];
+    let clock = timestamp.split(' ')[2];
+    time.innerHTML = "<div>" + calendar + "</div><div>" + clock + "</div>";
     comment.appendChild(time);
 
-    
     let filteredName = data.Name;
         if (s_wordFilterOn){filteredName = filteredName.replace(v_filteredWords, s_filterReplacement)}
    
@@ -417,12 +418,12 @@ function convertTimestamp(timestamp){
     var options ={
         year:"2-digit",
         month:"2-digit",
-        day:"numeric",
+        day:"2-digit",
         hour:"2-digit",
         minute:"2-digit",
         hourCycle:'h23'
     };
-    return [date.toLocaleString("en", options).replace(/\//g,'.'), date.toLocaleDateString("en", options).replace(/\//g,'.'), date.toUTCString()];
+    return [date.toLocaleString("en", options).replaceAll('/','.').replaceAll(',',' '), date.toLocaleDateString("en", options).replaceAll('/','.').replaceAll(',',' '), date.toUTCString()];
 }
 
 // Handle making replies
