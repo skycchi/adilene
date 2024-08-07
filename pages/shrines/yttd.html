@@ -8,8 +8,6 @@
         <title>YOUR TURN TO DIE</title>
         <script src="https://kit.fontawesome.com/f936906ae0.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <script src="https://static.tumblr.com/rtrqcib/VGGnlh8rf/jquery.style-my-tooltips.min.js"></script>
-        <script>(function($){$(document).ready(function(){$("a[title]").style_my_tooltips({tip_follows_cursor:true,tip_delay_time:100,tip_fade_speed:100,attribute:"title"});});})(jQuery);</script>
     </head>
     <style>
         @font-face{
@@ -21,7 +19,7 @@
             font-family:'Yuzu';
             src:url(/fonts/yuzu.ttf);
         }
-        
+
         ::-webkit-scrollbar{
             display:none;
         }
@@ -39,7 +37,7 @@
             background:#f82825;
             color:white;
         }
-        
+
         body{
             text-align:center;
             display:flex;
@@ -56,19 +54,19 @@
             overflow:auto;
             scrollbar-width:none;
         }
-        
+
         a{
             color:white;
             text-shadow:0 0 10px #f82825,0 0 10px #f82825,0 0 10px #f82825,0 0 10px #f82825;
         }
-        
+
         #container{
             padding:10px;
             width:690px;
             box-sizing:border-box;
             margin:20px;
         }
-        
+
         #title{
             font-family:'Yuzu';
             font-size:45px;
@@ -79,16 +77,16 @@
             align-items:center;
             justify-content:center;
         }
-        
+
         #title img{
             width:24%;
         }
-        
+
         .grayscale{
             display:flex;
             flex-basis:100%;
         }
-        
+
         .grayscale img{
             -webkit-filter:grayscale(100%);
             transition:0.3s;
@@ -96,52 +94,52 @@
             flex-basis:100%;
             width:115px;
         }
-        
+
         .grayscale img:hover{
             -webkit-filter:grayscale(0%);
             transition:0.3s;
         }
-        
+
         .dummies{
             display:flex;
             flex-basis:100%;
             justify-content:center;
             margin-bottom:-75px;
         }
-        
+
         .dummies img{
             max-width:100%;
             max-height:100%;
         }
-        
+
         .masters{
             display:flex;
             flex-basis:100%;
             justify-content:center;
             margin:auto;
         }
-        
+
         .masters img{
             max-width:692px;
         }
-        
+
         .dialogue{
             display:flex;
             flex-direction:column;
             justify-content:flex-end;
         }
-        
+
         .twodialogue{
             display:flex;
             flex-direction:column;
             justify-content:flex-end;
         }
-        
+
         table{
             border-collapse:collapse;
             border-spacing:0;
         }
-        
+
         .main{
             background-image:url(/images/yttd/backgroundone.png);
             width:690px;
@@ -151,62 +149,62 @@
             justify-content:flex-end;
             float:none;
         }
-        
+
         .info{
             width:690px;
             height:430px;
             position:absolute;
         }
-        
+
         .info img{
             z-index:-1;
         }
-        
+
         .tabcontent{
             position:absolute;
             display:none;
             width:690px;
         }
-  
+
         .tabcontent img{
             height:425px;
             z-index:-1;
         }
-        
+
         .twocontent{
             position:absolute;
             width:690px;
         }
-  
+
         .twocontent img{
             height:425px;
             z-index:-1;
         }
-        
+
         .twocontent .hidden{
             display:none;
         }
-        
+
         .threecontent{
             position:absolute;
             width:690px;
         }
-  
+
         .threecontent img{
             height:425px;
             z-index:-1;
         }
-        
+
         .threecontent .hidden{
             display:none;
         }
-        
+
         .active img{
             -webkit-filter:none;
             filter:none;
             transition:0.3s;
         }
-        
+
         .text{
             color:white;
             z-index:4;
@@ -216,22 +214,22 @@
             user-select:none;
             -moz-user-select:none;
         }
-        
+
         .logo{
             width:100%;
             background-image:url(/images/yttd/backblue.jpg);
             background-attachment:fixed;
         }
-        
+
         .inner{
             background-color:#000;
             width:100%;
         }
-        
+
         .inner img{
             animation:fadeEffect 2s;
         }
-        
+
         .contents{
             background-color:black;
             width:100%;
@@ -242,7 +240,7 @@
             align-content:center;
             align-items:center;
         }
-        
+
         .maingame{
             display:flex;
             flex-direction:column;
@@ -253,43 +251,43 @@
             width:100%;
             margin-top:50px;
         }
-        
+
         .maingameback{
             width:100%;
             background-image:url(/images/yttd/main2.jpg);
             background-attachment:fixed;
         }
-        
+
         .transition{
             height:120px;
             background:linear-gradient(to bottom,rgba(0,0,0,1.00) 50%,rgba(0,0,0,0.00));
             width:100%;
         }
-        
+
         .transitiontwo{
             height:120px;
             background:linear-gradient(to top,rgba(0,0,0,1.00) 50%,rgba(0,0,0,0.00));
             width:100%;
         }
-        
+
         .characters{
             width:100%;
             background-color:black;
         }
-        
+
         .characters img{
             max-width:100%;
             max-height:100%;
             margin:30px 0px 0px 0px;
         }
-        
+
         .flip-card{
             background-color:none;
             width:190px;
             height:295px;
             perspective:1000px;
         }
-        
+
         .flip-card img{
             width:190px;
             height:295px;
@@ -334,7 +332,7 @@
             flex-direction:column;
             justify-content:center;
         }
-        
+
     </style>
     <body>
         <div class="logo">
@@ -343,7 +341,7 @@
                 <img src="/images/yttd/YourTurnToDieTitle.png" style="max-width:60%" id="oneOpen" draggable="false">
             </div>
         </div>
-        
+
         <table class="characters">
             <tr>
                 <td><img src="/images/yttd/pixels/kouAlice.png" draggable="false"></td>
@@ -360,7 +358,7 @@
                 <td><img src="/images/yttd/pixels/kouKanna.png" draggable="false"></td>
             </tr>
         </table>
-        
+
         <div class="contents">
             <div id="container" style="margin-top:35px;">
                 <div id="title"><img src="/images/yttd/tessen.png" draggable="false"><div style="margin:0 1%;">Summary</div><img src="/images/yttd/tessen.png" style="transform:scale(-1, 1);" draggable="false"></div>
@@ -370,7 +368,7 @@
             </div>
 
             <br>
-            
+
             <!--- main characters --->
             <div id="container" class="one" data-aos="fade">
                 <div id="title" style="margin-bottom:8px"><img src="/images/yttd/tessen.png" draggable="false"><div style="margin:0 1%;">Main Characters</div><img src="/images/yttd/tessen.png" style="transform:scale(-1, 1);" draggable="false"></div>
@@ -378,7 +376,7 @@
                 Controls<br>Touch a person's face to hear their statement.<br><br>
                 <div>
                     <table class="grayscale" border="0" cellpadding="0" cellspacing="0">
-                        <tr>    
+                        <tr>
                             <td>
                                 <a class="tablinks" onclick="openCity(event, 'sara')" id="defaultOpen"><img src="/images/yttd/icons/sara.png" draggable="false"></a>
                             </td>
@@ -491,7 +489,7 @@
             </div>
 
             <br>
-            
+
             <!--- dummies --->
             <div id="container" data-aos="fade">
                 <div id="title" style="margin-bottom:8px;"><img src="/images/yttd/tessen.png" draggable="false"><div style="margin:0 1%;">Dummies</div><img src="/images/yttd/tessen.png" style="transform:scale(-1, 1);" draggable="false"></div>
@@ -545,7 +543,7 @@
                     <img src="/images/yttd/down.gif" draggable="false"></div>
                 </div>
             </div>
-            
+
             <!--- floor masters --->
             <div id="container" data-aos="fade" style="margin-top:40px;">
                 <div id="title" style="margin-bottom:8px;"><img src="/images/yttd/tessen.png" draggable="false"><div style="margin:0 1%;">Floor Masters</div><img src="/images/yttd/tessen.png" style="transform:scale(-1, 1);" draggable="false"></div>
@@ -553,7 +551,7 @@
                 <br>
                 Controls<br>Click on the dialogue box to move on to the next person's statement.
                 <br><br>
-                
+
                 <div class="twodialogue" style="background-color:black;margin-top:495px">
                     <div class="threecontent" id="threeOpen" style="background-image:url(/images/yttd/meisterback.png);width:692px;background-size:contain;">
                         <div style="margin-top:65px;"></div>
@@ -602,7 +600,7 @@
                 </div>
             </div>
         </div>
- 
+
         <!--- main game --->
         <div class="maingameback">
             <div class="transition"></div>
@@ -683,7 +681,7 @@
             </div>
             <div class="transitiontwo"></div>
         </div>
-        
+
         <!--- sign here --->
         <div class="contents" style="padding-top:30px;">
             <div id="container" data-aos="fade">
@@ -708,7 +706,7 @@
                 });
             })();
         </script>
-        
+
         <script>
             (function(){
                 var $hints = $('.threecontent');
@@ -720,7 +718,7 @@
                 });
             })();
         </script>
-        
+
         <script>
             var click = new Audio("/music/sounds/click.mp3");
             document.onclick = function(){
@@ -728,7 +726,7 @@
             }
             click.volume = 0.5;
         </script>
-        
+
         <script>
             function openCity(evt, cityName){
               var i, tabcontent, tablinks;
@@ -744,7 +742,7 @@
               evt.currentTarget.className += " active";
             }
         </script>
-        
+
         <script>
             document.getElementById("defaultOpen").click();
         </script>
@@ -754,10 +752,10 @@
         <script>
             document.getElementById("twoOpen").click();
         </script>
-        <script> 
+        <script>
             document.getElementById("oneOpen").click();
         </script>
-        
+
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
             AOS.init();

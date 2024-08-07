@@ -19,7 +19,7 @@
     background:#b13d8e;
     color:white;
 }
- 
+
 .gakupocontainer::-moz-selection{
     background:#b13d8e;
     color:white;
@@ -65,7 +65,7 @@
 }
 
 #gakuporing .webring-links a:hover{
-    
+
     letter-spacing:normal;
 }
 

@@ -19,7 +19,7 @@
     background:#ee9eb0;
     color:white;
 }
- 
+
 .lukacontainer::-moz-selection{
     background:#ee9eb0;
     color:white;
@@ -63,7 +63,7 @@
 }
 
 #lukaring .webring-links a:hover{
-    
+
     letter-spacing:normal;
 }
 

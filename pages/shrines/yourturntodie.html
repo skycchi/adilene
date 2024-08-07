@@ -12,7 +12,7 @@
             background-image:none;
             background-color:black;
         }
-        
+
         #game{
             width:816px;
             height:624px;
@@ -24,7 +24,7 @@
             bottom:0;
             margin:auto;
         }
-        
+
         .gamecontrols{
             display:flex;
             flex-direction:column;
@@ -32,11 +32,11 @@
             bottom:100px;
             left:90px;
         }
-        
+
         .gamecontrols img{
             padding:1px 0px;
         }
-        
+
         iframe{
             position:relative;
             border:none;
@@ -47,11 +47,11 @@
             bottom:0;
             margin:auto;
         }
-        
+
         #yttd{
             display:none;
         }
-        
+
     </style>
     <body>
         <audio autoplay loop id="go">
@@ -67,15 +67,15 @@
                     <img src="/images/yttd/yourturntogo/options2.png" onmouseover="this.src='/images/yttd/yourturntogo/options.png';" onmouseout="this.src='/images/yttd/yourturntogo/options2.png';" draggable="false">
                 </div>
             </div>
-            
+
             <iframe src="yttd.html" width="816" height="624" frameborder="0" name="yttd" id="yttd"></iframe>
         </div>
-        
+
         <script>
             var audio = document.getElementById("go");
             audio.volume = 0.5;
         </script>
-        
+
         <script>
            function begin(){
                var go = document.getElementById("go");
@@ -93,9 +93,9 @@
                //exploration.play();
                exploration.loop = "true";
                exploration.volume = 0.5;
-            } 
+            }
         </script>
-        
+
         <script>
             var click = new Audio("/music/sounds/select.ogg");
             document.onclick = function(){

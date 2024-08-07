@@ -110,8 +110,8 @@ class AI{
 
     /**
      * Attacks enemy
-     * @param{Tile[]} tiles 
-     * @param{Checker[]} checkers 
+     * @param{Tile[]} tiles
+     * @param{Checker[]} checkers
      */
     DoJump(tiles, checkers){
         let found = false;

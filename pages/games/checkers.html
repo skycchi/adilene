@@ -222,13 +222,13 @@
             box-shadow:inset 0 0 0.75em 0.25em #e74492;
             transition-duration:0.3s;
         }
-        
+
         #wrap{
             display:flex;
             justify-content:center;
-            align-items:center; 
+            align-items:center;
         }
-        
+
         .message{
             width:100%;
             position:absolute;
@@ -259,7 +259,7 @@
             letter-spacing:0.2rem;
             margin:10px;
         }
-        
+
         .king{
             background:#FFD700;
         }
@@ -267,23 +267,23 @@
     <body style="text-align:center">
         <header>CHECKERS</header>
         <div style="text-align:center"><b>Directions:</b> Move the white pieces and capture the black pieces.</div>
-        
+
         <br><br>
-        
+
         <div style="display:flex; flex-direction:column; gap:10px;">
 
             <div id="log" style="display:none"></div>
-            
+
             <div id="wrap">
                 <div id="board" style="margin:auto;">
                     <div class="tiles"></div>
                 </div>
             </div>
-            
+
             <div class="buttons">
                 <button onclick="Play()" style="margin:auto;">New Game</button>
             </div>
-            
+
             <div><b>Source code:</b> <a href="https://github.com/stroibot/Checkers" target="_blank">Github</a></div>
         </div>
     </body>

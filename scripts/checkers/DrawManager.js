@@ -36,7 +36,7 @@ class DrawManger{
     };
 
     /**
-     * 
+     *
      * @param{Checker} thisChecker The checker from which we don't need to remove 'selected' class
      * @param{Checker[]} checkers Array of all player's checkers
      */
@@ -116,14 +116,14 @@ class DrawManger{
                         console.log("solved");
 
                         return{
-                            element, 
+                            element,
                             show
                         }
                     }
 
                     const message = MessageDisplay()
-                    document.getElementById("wrap").appendChild(message.element); 
-                    
+                    document.getElementById("wrap").appendChild(message.element);
+
                     message.show(`You must attack!`);
                 } else{
                     gameManager.drawManager.RemoveHelp(attackCheckers);

@@ -94,7 +94,7 @@ class GameManager{
 
     /**
      * Ends the game, logs and displays the winner
-     * @param{number} player Player who won 
+     * @param{number} player Player who won
      */
     EndTheGame(player){
         function MessageDisplay(){
@@ -133,13 +133,13 @@ class GameManager{
             console.log("solved");
 
             return{
-                element, 
+                element,
                 show
             }
         }
 
         const message = MessageDisplay()
-        document.getElementById("wrap").appendChild(message.element); 
+        document.getElementById("wrap").appendChild(message.element);
 
         if (player === 1){
             message.show(`You lose... &#176;&#12525;&#176;`);

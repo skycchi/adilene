@@ -63,7 +63,7 @@ else{
             <div class='webring-info'>${ringName} WEBRING</div>
             <div class='webring-links'>
                 <a target='_parent' href='${sites[previousIndex]}'><i class="fas fa-angle-left" style='margin-right:10px;'></i></a>
-                <a href='https://adilene.net/' target='_parent'>Index</a> · <a onclick='randomSite()' target='_parent'>Random</a> 
+                <a href='https://adilene.net/' target='_parent'>Index</a> · <a onclick='randomSite()' target='_parent'>Random</a>
                 <a target='_parent' href='${sites[nextIndex]}'><i class="fas fa-angle-right" style='margin-left:10px;'></i></a>
             </div>
         </td>

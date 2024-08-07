@@ -112,30 +112,30 @@
             background-image:url('/images/games/hovered_empty_cell.gif');
             background-repeat:no-repeat;
         }
-        
+
         .controls{
-            display:flex; 
+            display:flex;
             justify-content:center;
             align-items:center;
             gap:0px 10px;
             margin-top:10px;
         }
-        
+
         input{
             font-family:var(--font);
             font-size:18px;
         }
-        
+
         label{
             font-weight:bold
         }
-        
+
         #wrap{
             display:flex;
             justify-content:center;
-            align-items:center; 
+            align-items:center;
         }
-        
+
         .message{
             width:100%;
             position:absolute;
@@ -166,20 +166,20 @@
             letter-spacing:0.2rem;
             margin:10px;
         }
-        
+
     </style>
     <body style="text-align:center;">
         <header>PICROSS</header>
         Nonograms, also known as Picross, are puzzles in which cells in a grid must be colored or left blank according to numbers at the side of the grid to reveal a hidden picture.<br><br>
         <b>Directions:</b> The objective is to correctly fill in randomly chosen squares using the numbers on the top and sides. Click on any square to color it in. Click on any square twice to mark it with an x.<br><br>
-        
+
         <br>
-        
+
         <div id="demo">
             <div id="wrap">
                 <div id="nonogram"></div>
             </div>
-            
+
             <div class="controls">
                 <div>
                     <label for="width">Width:</label>
@@ -192,12 +192,12 @@
                     <div>
                 </div>
             </div>
-            
+
             <div class="controls">
                 <label for="difficulty_slider">Difficulty:</label>
                 <input style="border:none; max-width:400px;" id="difficulty_slider" type="range" min="2" max="7" value="2"/>
             </div>
-            
+
             <div class="controls">
                 <div>
                     <button id="play">New Game</button>
@@ -210,7 +210,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div style="margin-top:10px;">
             <b>Source code:</b> <a href="https://github.com/DomenicoDeFelice/Pi-Nonograms" target="_blank">Github</a>
         </div>
@@ -252,7 +252,7 @@
                 console.log("solved");
 
                 return{
-                    element, 
+                    element,
                     show
                 }
             }

@@ -21,23 +21,23 @@
             background-color:#fbcecd;
             background-image:url("/images/pmmm/background.jpeg");
         }
-        
+
         #wrapper{
             display:flex;
             height:100vh;
         }
-        
+
         .left, .right{
             border:5px solid #f08389;
         }
-        
+
         .left{
             width:80%;
             display:flex;
             align-items:flex-end;
             border-right:none;
         }
-        
+
         .right{
             width:20%;
             border-left:none;
@@ -49,7 +49,7 @@
             user-select:none;
             justify-content:space-between;
         }
-        
+
         .right > div{
             border:5px solid #f08389;
             border-radius:25px;
@@ -57,11 +57,11 @@
             background:linear-gradient(0deg, rgba(251,206,205,1) 0%, rgba(255,255,255,1) 100%);
             outline:5px solid white;
         }
-        
+
         .right > div:hover{
             color:#b73c51;
         }
-        
+
         .dialogue{
             width:70%;
             border:5px solid #f08389;
@@ -76,7 +76,7 @@
             z-index:9999999999999999999;
             user-select:none;
         }
-        
+
         @keyframes move-it{
             0%{
                 background-position:initial;
@@ -85,13 +85,13 @@
                 background-position:100px 0px;
             }
         }
-        
+
         @keyframes floating{
             0%{ transform:translate(0,  0px); }
             50% { transform:translate(0, 5px); }
-            100%  { transform:translate(0, -0px); }    
+            100%  { transform:translate(0, -0px); }
         }
-        
+
         .magica{
             position:absolute;
             z-index:-1;
@@ -101,14 +101,14 @@
             width:80%;
             user-select:none;
         }
-        
+
         .magica img{
             display:block;
             width:auto;
             height:700px;
             margin:auto;
         }
-        
+
         .hidden{
             display:none;
         }
@@ -116,11 +116,11 @@
         .content{
             width:100%;
         }
-        
+
         .red{
             color:#b73c51;
         }
-        
+
         .circle{
             border:5px solid #f08389;
             border-bottom-right-radius:70px;
@@ -131,7 +131,7 @@
             width:150px;
             height:150px;
         }
-        
+
         .circle img{
             position:absolute;
             height:150px;
@@ -139,7 +139,7 @@
             transform:scaleX(-1);
             margin-left:0px;
         }
-        
+
         .hearts{
             margin-top:-50px;
             padding:10px 30px 10px 20px;
@@ -158,27 +158,27 @@
         <audio autoplay loop id="musicbox">
             <source src="/music/pmmm.mp3">
         </audio>
- 
+
         <div id="wrapper">
             <div class="left">
                 <div style="position:absolute;top:0;left:0;display:flex;align-items:center;gap:10px;">
                     <div class="circle">
                         <img src="/images/pmmm/kyubey.png">
                     </div>
-                    <div class="hearts"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i></div> 
+                    <div class="hearts"><i class="fas fa-heart"></i><i class="fas fa-heart"></i><i class="fas fa-heart"></i></div>
                 </div>
-                
+
                 <div class="content">
-                    
+
                     <div class="magica">
                         <img src="/images/pmmm/madoka.png">
                     </div>
                     <div class="dialogue">
                         A gentle and friendly girl living an ordinary life. <span class="red">Madoka</span> has a loving family and is surrounded by good friends.
                     </div>
-                    
+
                 </div>
-                
+
                  <div class="content hidden">
                     <div class="magica">
                         <img src="/images/pmmm/homura.png">
@@ -187,7 +187,7 @@
                         A seemingly cold and antisocial girl, <span class="red">Homura</span> is first seen by Madoka in a dream of her fighting a monster.
                     </div>
                 </div>
-                
+
                 <div class="content hidden">
                     <div class="magica">
                         <img src="/images/pmmm/sayaka.png">
@@ -196,7 +196,7 @@
                         She is Madoka's best friend. Tomboyish, confident, and a little brash, <span class="red">Sayaka</span> upholds a strong sense of justice.
                     </div>
                 </div>
-                
+
                 <div class="content hidden">
                     <div class="magica">
                         <img src="/images/pmmm/mami.png">
@@ -205,7 +205,7 @@
                         A magical girl who rescues Madoka and Sayaka from a witch. <span class="red">Mami</span> is a powerful and experienced veteran.
                     </div>
                 </div>
-                
+
                 <div class="content hidden">
                     <div class="magica">
                         <img src="/images/pmmm/kyoko.png">
@@ -214,12 +214,12 @@
                         A veteran magical girl who is abrasive, fiery, and self-centered. <span class="red">Kyoko</span> fights only for herself.
                     </div>
                 </div>
-                
+
                 <div style="position:absolute;left:0;right:0;text-align:center;width:80%;bottom:50px;animation:floating 0.5s infinite ease-in-out;color:#f08389;z-index:3;">
                     <i class="fas fa-heart"></i>
                 </div>
             </div>
-            
+
             <div class="right">
                 <div onmouseover="mouseoversound.playclip()" onclick="clicksound.playclip()">Save</div>
                 <div onmouseover="mouseoversound.playclip()" onclick="clicksound.playclip()">Load</div>
@@ -230,7 +230,7 @@
                 <div onmouseover="mouseoversound.playclip()" onclick="clicksound.playclip()" class="red">Quit</div>
             </div>
         </div>
-        
+
         <script>
             (function(){
 
@@ -244,7 +244,7 @@
 
             })();
         </script>
-        
+
         <script>
 
             // Mouseover/ Click sound effect- by JavaScript Kit (www.javascriptkit.com)
@@ -289,7 +289,7 @@
             var clicksound=createsoundbite("/music/sounds/click.mp3")
 
         </script>
-        
+
         <script>
             var audio = document.getElementById("musicbox");
             audio.volume = 0.5;

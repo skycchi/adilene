@@ -110,7 +110,7 @@ class Checker{
         if (newPosition[0] > this.board.boardSize || newPosition[1] > this.board.boardSize || newPosition[0] < 0 || newPosition[1] < 0){
             return false;
         }
-    
+
         let dx = newPosition[1] - this.position[1];
         let dy = newPosition[0] - this.position[0];
 

@@ -13,12 +13,12 @@
             src:url(/fonts/winkle-regular.otf);
             font-family:winkle;
         }
-        
+
         @font-face{
             src:url(/fonts/questrial.otf);
             font-family:questrial;
         }
-        
+
         ::selection{
             background:#ab937a;
             color:white;
@@ -28,7 +28,7 @@
             background:#ab937a;
             color:white;
         }
-        
+
         *{
             scrollbar-width:thin;
             scrollbar-color:#ab937a #ffffff;
@@ -47,7 +47,7 @@
             border-radius:5px;
             border:3px solid #ffffff;
         }
-        
+
         body{
             background-color:white;
             background-image:url(/images/capybara/background.jpeg);
@@ -58,12 +58,12 @@
             text-align:center;
             overflow:auto;
         }
-        
+
         a{
             color:#ab937a;
             filter:drop-shadow(1px 1px 0 black) drop-shadow(-1px 1px 0 black) drop-shadow(0 -1px 0 black) drop-shadow(1px 0 black);
         }
-        
+
         #title{
             margin-top:25px;
             filter:drop-shadow(5px 5px 0 black) drop-shadow(-1px 1px 0 black) drop-shadow(0 -1px 0 black) drop-shadow(1px 0 black);
@@ -71,29 +71,29 @@
             font-size:100px;
             color:#ab937a;
         }
-        
+
         #titletwo{
             margin-top:20px;
             font-size:40px;
             filter:drop-shadow(1px 1px 0 #ab937a) drop-shadow(-1px 1px 0 black) drop-shadow(0 -1px 0 black) drop-shadow(1px 0 black);
         }
-        
+
         .bounce{
-            animation:bounce 3s infinite; 
+            animation:bounce 3s infinite;
             animation-timing-function:cubic-bezier(0.25, 0.85, 0.4, 1);
-            
+
         }
-        
+
         .float{
             animation:floating 3s infinite ease-in-out;
         }
-        
+
         @keyframes floating{
             0%{ transform:translate(0,  0px); }
             50% { transform:translate(0, 15px); }
-            100%  { transform:translate(0, -0px); }    
+            100%  { transform:translate(0, -0px); }
         }
-        
+
         .letterone{ animation-delay:0s; display:inline-block;}
         .lettertwo{ animation-delay:0.2s; display:inline-block;}
         .letterthree{ animation-delay:0.4s; display:inline-block; }
@@ -106,15 +106,15 @@
         .letterten{ animation-delay:1.8s; display:inline-block;}
         .lettereleven{ animation-delay:2s; display:inline-block; }
         .lettertwelve{ animation-delay:2.2s; display:inline-block;}
-        
-        
+
+
         @keyframes bounce{ 0%{ transform:scale(1,1) translateY(0); } 10%{ transform:scale(1.1,.9) translateY(0); } 30%{ transform:scale(.9,1.1) translateY(-30px); } 50%{ transform:scale(1.05,.95) translateY(0); } 60%{ transform:scale(1,1) translateY(-4px); } 100%{ transform:scale(1,1) translateY(0); } }
-        
+
         @keyframes fadeEffect{
             from{opacity:0;}
             to{opacity:1;}
         }
-        
+
         #capy{
             border-radius:255px 15px 225px 15px/15px 225px 15px 255px;
             border:10px double #ab937a;
@@ -124,7 +124,7 @@
             margin:20px auto;
             padding:20px;
         }
-        
+
         #description{
             border-radius:255px 15px 225px 15px/15px 225px 15px 255px;
             border:10px double #ab937a;
@@ -134,7 +134,7 @@
             margin:20px auto;
             padding:20px;
         }
-        
+
         #description2{
             border-radius:255px 15px 225px 15px/15px 225px 15px 255px;
             border:10px double #ab937a;
@@ -147,23 +147,23 @@
             gap:10px;
             justify-content:space-between;
         }
-        
+
         #description img{
             width:100%;
             border-radius:255px 15px 225px 15px/15px 225px 15px 255px;
             border:10px double #ab937a;
             box-sizing:border-box;
         }
-        
+
         #capy img{
             width:300px;
             max-width:100%;
         }
-        
+
         #capy img:active{
             animation:smol 0.15s alternate ease-in;;
         }
-        
+
         @keyframes smol{
             0%{
                 transform:scale(1);
@@ -175,69 +175,69 @@
                 transform:scale(1);
             }
         }
-        
+
         #count{
             margin:10px;
         }
-        
+
         #clicks{
             margin:10px;
         }
-        
+
         td{
             padding:0.8125em 2%;
             border-bottom:1px solid #ab937a;
         }
-        
+
         summary::marker{
             display:none;
             color:#ab937a;
         }
-        
+
     </style>
     <body>
         <audio autoplay loop id="mars">
             <source src="/music/cats%20on%20mars.mp3">
         </audio>
-        
+
         <div id="titletwo" class="float">welcome to the</div>
         <div id="title" class="float"><span class="bounce letterone">C</span><span class="bounce lettertwo">A</span><span class="bounce letterthree">P</span><span class="bounce letterfour">Y</span><span class="bounce letterfive">B</span><span class="bounce lettersix">A</span><span class="bounce letterseven">R</span><span class="bounce lettereight">A</span> <span class="bounce letternine">C</span><span class="bounce letterten">L</span><span class="bounce lettereleven">U</span><span class="bounce lettertwelve">B</span></div>
-        
+
         <div id="capy">
             <img src="/images/capybara/capybara.png" onclick="capyClicks()" draggable="false">
             <div id="clicks">click the capy!</div>
             <div id="count"></div>
         </div>
-        
+
         <div id="description" style="margin:auto;">
             <div id="titletwo">wait... what the hell is a capybara?</div>
-            
+
             <br>
-            
+
             capybaras are the biggest rodents in the world. they are also the best animal.
-            
+
             <br><br>
-            
+
             <img src="https://pyxis.nymag.com/v1/imgs/6ab/753/eb7f186c80dc1e468bbdd4ca116204a2da-26-capybara-yuzu.jpg">
-            
+
             <br><br>
-            
+
             capybaras are the chillest animals you will ever encounter.
-            
+
             <div id="titletwo">why do you like them so much?</div>
-            
+
             <br>
-            
+
             because they're so cute and huggable.
-            
+
             <div id="titletwo">where can i see a capybara?</div>
-            
+
             <br>
-            
-            capybaras live in central and south america. if you're not near any of those places, the zoo is your best bet. 
-            
+
+            capybaras live in central and south america. if you're not near any of those places, the zoo is your best bet.
+
             <br><br>
-            
+
             <details>
                 <summary>
                 here is a list of zoos that house capybaras!
@@ -984,44 +984,44 @@
                 <br>
                 source:<a href="https://petcapybara.com/2017/07/05/which-zoos-have-capybaras/">petcapybara.com</a>
             </details>
-            
+
             <div id="titletwo">donate to capybara conservation!</div>
-            
+
             <br>
-            
+
             <a href="https://gifts.worldwildlife.org/gift-center/gifts/Species-Adoptions/Capybara">Adopt a Capybara!</a>
-            
+
             <br>
-            
+
             <a href="https://petcapybara.com/2021/12/11/the-capybara-rescue-fund/">Stacy's Funny Farm</a>
-            
+
             <br>
-            
+
             <a href="https://www.patreon.com/capybara_land">Capybara Land</a>
         </div>
-        
+
         <div style="display:flex;gap:20px;width:100%;justify-content:center;;margin:20px auto">
             <div id="description" style="width:36.5%;margin:0;box-sizing:border-box;">
                 <iframe style="max-width:100%;width:100%;height:350px;" src="https://www.youtube.com/embed/QUqCWkPlLLc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
-            
+
             <div id="description" style="width:36.5%;margin:0;box-sizing:border-box;">
                 <iframe style="max-width:100%;width:100%;height:350px;" src="https://www.youtube.com/embed/YaYwasi72K8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </div>
-        
+
         <div id="description">
             <div id="titletwo" style="width:100%">want to join the capybara club?</div>
-            
+
             <br>
-            
+
             add this secret button to your website. if someone asks, tell them you're a part of the secret capybara club. do not elaborate.
-            
+
             <br><br>
-            
+
             <img src="/images/buttons/capybara.gif" style="width:88px;height:auto; border:none;border-radius:0px;">
         </div>
-        
+
         <div id="description2" style="margin:auto">
             <img src="/images/capybara/g5gelu.gif"><img src="/images/capybara/z0lf3s.gif"><img src="/images/capybara/c1zl8i.gif"><img src="/images/capybara/7eo8t9.gif"><img src="/images/capybara/clh3rq.gif"><img src="/images/capybara/7rz6tp.gif"><img src="/images/capybara/umj4q9.gif"><img src="/images/capybara/9sqpok.gif"><img src="/images/capybara/hcojr6.gif"><img src="/images/capybara/aoumcs.gif">
         </div>
@@ -1030,7 +1030,7 @@
             var audio = document.getElementById("mars");
             audio.volume = 0.3;
         </script>
-    
+
         <script>
             var count = 1;
             function capyClicks(){
@@ -1039,7 +1039,7 @@
                 audio.play();
                 audio.volume = 0.3;
                 document.getElementById("clicks").innerHTML = "capy clicks:" + count++;
-                
+
                 if (count == 11){
                     document.getElementById("count").innerHTML = "the capy has been clicked 10 times! yay!";
                 }

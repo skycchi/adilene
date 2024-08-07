@@ -19,7 +19,7 @@
             box-sizing:border-box;
             display:inline-block;
         }
-        
+
         /*cell (wrapper) contains both cell input and candidates div*/
         .sudoku-board-cell{
             display:inline-block;
@@ -28,7 +28,7 @@
             background:white;
             max-width:11.11111%;
         }
-        
+
         /*rules for drawing the black lines dividing houses
         -- specific for board size 9! need diff rules for diff board sizes
         */
@@ -37,19 +37,19 @@
             border-style:solid;
             border-left-color:var(--bc);
         }
-        
+
         [data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(n):nth-of-type(-n+9){
             border-top-width:var(--bw);
             border-style:solid;
             border-top-color:var(--bc);
         }
-        
+
         [data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(3n){
             border-right-width:var(--bw);
             border-style:solid;
             border-right-color:var(--bc);
         }
-        
+
         [data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(n+19):nth-of-type(-n+27),
         [data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(n+46):nth-of-type(-n+54),
         [data-board-size="9"].sudoku-board .sudoku-board-cell:nth-of-type(n+73):nth-of-type(-n+81){
@@ -76,13 +76,13 @@
         .sudoku-board-cell .highlight-val{
             color:#e74492;
         }
-        
+
         /*highligt incorrect input*/
         .sudoku-board-cell .board-cell--error{
             background:#d00;
             color:#eee;
         }
-        
+
         /*wrapper that hold the candidates for each cell*/
         .sudoku-board-cell .candidates{
             display:none; /*hidden by default*/
@@ -96,13 +96,13 @@
             line-height:0;
             text-align:justify;
         }
-        
+
         .sudoku-board .candidates:after{
             content:"";
             display:inline-block;
             width:100%;
         }
-        
+
         /* when board cells start to get narrower because of small screen,
         reduce letter spacing for candidates to make them still fit*/
         @media(max-width:23em){
@@ -110,7 +110,7 @@
             letter-spacing:-2px;
             }
         }
-        
+
         .showCandidates .candidates{
             display:block;
         }
@@ -124,22 +124,22 @@
             *display:inline;
             *zoom:1;
         }
-        
+
         /*.candidates div*/.candidate--highlight{
             background-color:yellow;
         }
-        
+
         /*.candidates div*/.candidate--to-remove{
             background-color:red;
             color:white;
         }
-        
+
         #wrap{
             display:flex;
             justify-content:center;
-            align-items:center; 
+            align-items:center;
         }
-        
+
         .message{
             width:100%;
             position:absolute;
@@ -175,21 +175,21 @@
     <body>
         <header style="text-align:center;">SUDOKU</header>
         <div style="text-align:center;"><b>Directions:</b> Use the keyboard to fill in the grid.</div>
-        
+
         <br><br>
-        
+
         <div style="display:flex; flex-direction:column; gap:10px; width:fit-content; margin:auto; align-items:center;">
             <div id="wrap">
                 <div class="sudoku-board" id="sudoku-board"></div>
             </div>
-            
+
             <div style="display:flex; flex-direction:column; gap:10px; align-items:center;">
                 <span style="display:flex; gap:10px;">
                     <button onclick="location.reload();">New Game</button>
                     <button onclick="mySudokuJS.solveStep();">Hint</button>
                     <button onclick="mySudokuJS.solveAll();">Solve</button>
                 </span>
-                
+
                 <span style="display:flex; gap:10px;">
                     <button onclick="mySudokuJS.generateBoard('easy');">Easy</button>
                     <button onclick="mySudokuJS.generateBoard('medium');">Medium</button>

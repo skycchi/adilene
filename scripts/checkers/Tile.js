@@ -26,7 +26,7 @@ class Tile{
         } else if (distance === Math.sqrt(2) * 2){
             return 2;
         }
-        
+
         return 0;
     };
 };

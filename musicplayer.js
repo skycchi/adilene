@@ -30,7 +30,7 @@ function loadTrack(track_index){
     // set an interval of 1000 milliseconds for updating the seek slider
     updateTimer = setInterval(seekUpdate, 1000);
 
-    // move to the next track if the current one finishes playing 
+    // move to the next track if the current one finishes playing
     curr_track.addEventListener("ended", nextTrack);
 }
 
@@ -104,17 +104,17 @@ function seekUpdate(){
         let durationSeconds = Math.floor(curr_track.duration - durationMinutes * 60);
 
         // adding a zero to the single digit time values
-        if (currentSeconds < 10){ 
-            currentSeconds = "0" + currentSeconds; 
+        if (currentSeconds < 10){
+            currentSeconds = "0" + currentSeconds;
         }
-        if (durationSeconds < 10){ 
-            durationSeconds = "0" + durationSeconds; 
+        if (durationSeconds < 10){
+            durationSeconds = "0" + durationSeconds;
         }
-        if (currentMinutes < 10){ 
-            currentMinutes = currentMinutes; 
+        if (currentMinutes < 10){
+            currentMinutes = currentMinutes;
         }
-        if (durationMinutes < 10){ 
-            durationMinutes = durationMinutes; 
+        if (durationMinutes < 10){
+            durationMinutes = durationMinutes;
         }
 
         curr_time.textContent = currentMinutes + ":" + currentSeconds;

@@ -25,7 +25,7 @@ function checkForMatch(){
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
 
     isMatch ? disableCards() :unflipCards();
-    
+
     if($('.memory-game .memory-card.flip').length === $('.memory-game .memory-card').length){
         function MessageDisplay(){
             const element = document.createElement('div');
@@ -63,12 +63,12 @@ function checkForMatch(){
             console.log("solved");
 
             return{
-                element, 
+                element,
                 show
             }
         }
 
-        const message = MessageDisplay()
+        const message = MessageDisplay();
         document.getElementById("wrap").appendChild(message.element);
         message.show(`Solved! &acute;&#32;&xdtri;&#32;&grave;`);
     }

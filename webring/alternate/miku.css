@@ -19,7 +19,7 @@
     background:#34f2ff;
     color:white;
 }
- 
+
 .mikucontainer::-moz-selection{
     background:#34f2ff;
     color:white;
@@ -63,7 +63,7 @@
 }
 
 #mikuring .webring-links a:hover{
-    
+
     letter-spacing:normal;
 }
 

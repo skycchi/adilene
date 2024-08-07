@@ -1478,7 +1478,7 @@
 				//check if that finished board
 				if(isBoardFinished()){
 					boardFinished = true;
-                    
+
                     function MessageDisplay(){
                         const element = document.createElement('div');
                         element.classList.add('message', 'hide');
@@ -1515,7 +1515,7 @@
                         console.log("solved");
 
                         return{
-                            element, 
+                            element,
                             show
                         }
                     }
@@ -1523,7 +1523,7 @@
                     const message = MessageDisplay()
                     document.getElementById("wrap").appendChild(message.element);
                     message.show(`Solved! &acute;&#32;&xdtri;&#32;&grave;`);
-                    
+
 					if(typeof opts.boardFinishedFn === "function"){
 						opts.boardFinishedFn({
 							//we rate the board via what strategies was used to solve it

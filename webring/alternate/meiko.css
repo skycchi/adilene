@@ -19,7 +19,7 @@
     background:#bf4812;
     color:white;
 }
- 
+
 .meikocontainer::-moz-selection{
     background:#bf4812;
     color:white;
@@ -63,7 +63,7 @@
 }
 
 #meikoring .webring-links a:hover{
-    
+
     letter-spacing:normal;
 }
 

@@ -19,7 +19,7 @@
     background:#242420;
     color:white;
 }
- 
+
 .rinlencontainer::-moz-selection{
     background:#242420;
     color:white;
@@ -63,7 +63,7 @@
 }
 
 #rinlenring .webring-links a:hover{
-    
+
     letter-spacing:normal;
 }
 

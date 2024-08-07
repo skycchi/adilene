@@ -19,7 +19,7 @@
     background:#68a2d5;
     color:white;
 }
- 
+
 .kaitocontainer::-moz-selection{
     background:#68a2d5;
     color:white;
@@ -64,7 +64,7 @@
 }
 
 #kaitoring .webring-links a:hover{
-    
+
     letter-spacing:normal;
 }
 
