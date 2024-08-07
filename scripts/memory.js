@@ -68,7 +68,7 @@ function checkForMatch(){
             }
         }
 
-        const message = MessageDisplay()
+        const message = MessageDisplay();
         document.getElementById("wrap").appendChild(message.element);
         message.show(`Solved! &acute;&#32;&xdtri;&#32;&grave;`);
     }
